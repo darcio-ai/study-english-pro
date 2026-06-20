@@ -13,6 +13,7 @@ import { Route as AuthRouteImport } from './routes/auth'
 import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/route'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AuthenticatedProgressRouteImport } from './routes/_authenticated/progress'
+import { Route as AuthenticatedPlacementRouteImport } from './routes/_authenticated/placement'
 import { Route as AuthenticatedExerciseRouteImport } from './routes/_authenticated/exercise'
 import { Route as AuthenticatedDashboardRouteImport } from './routes/_authenticated/dashboard'
 
@@ -35,6 +36,11 @@ const AuthenticatedProgressRoute = AuthenticatedProgressRouteImport.update({
   path: '/progress',
   getParentRoute: () => AuthenticatedRouteRoute,
 } as any)
+const AuthenticatedPlacementRoute = AuthenticatedPlacementRouteImport.update({
+  id: '/placement',
+  path: '/placement',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
 const AuthenticatedExerciseRoute = AuthenticatedExerciseRouteImport.update({
   id: '/exercise',
   path: '/exercise',
@@ -51,6 +57,7 @@ export interface FileRoutesByFullPath {
   '/auth': typeof AuthRoute
   '/dashboard': typeof AuthenticatedDashboardRoute
   '/exercise': typeof AuthenticatedExerciseRoute
+  '/placement': typeof AuthenticatedPlacementRoute
   '/progress': typeof AuthenticatedProgressRoute
 }
 export interface FileRoutesByTo {
@@ -58,6 +65,7 @@ export interface FileRoutesByTo {
   '/auth': typeof AuthRoute
   '/dashboard': typeof AuthenticatedDashboardRoute
   '/exercise': typeof AuthenticatedExerciseRoute
+  '/placement': typeof AuthenticatedPlacementRoute
   '/progress': typeof AuthenticatedProgressRoute
 }
 export interface FileRoutesById {
@@ -67,13 +75,20 @@ export interface FileRoutesById {
   '/auth': typeof AuthRoute
   '/_authenticated/dashboard': typeof AuthenticatedDashboardRoute
   '/_authenticated/exercise': typeof AuthenticatedExerciseRoute
+  '/_authenticated/placement': typeof AuthenticatedPlacementRoute
   '/_authenticated/progress': typeof AuthenticatedProgressRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/auth' | '/dashboard' | '/exercise' | '/progress'
+  fullPaths:
+    | '/'
+    | '/auth'
+    | '/dashboard'
+    | '/exercise'
+    | '/placement'
+    | '/progress'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/auth' | '/dashboard' | '/exercise' | '/progress'
+  to: '/' | '/auth' | '/dashboard' | '/exercise' | '/placement' | '/progress'
   id:
     | '__root__'
     | '/'
@@ -81,6 +96,7 @@ export interface FileRouteTypes {
     | '/auth'
     | '/_authenticated/dashboard'
     | '/_authenticated/exercise'
+    | '/_authenticated/placement'
     | '/_authenticated/progress'
   fileRoutesById: FileRoutesById
 }
@@ -120,6 +136,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedProgressRouteImport
       parentRoute: typeof AuthenticatedRouteRoute
     }
+    '/_authenticated/placement': {
+      id: '/_authenticated/placement'
+      path: '/placement'
+      fullPath: '/placement'
+      preLoaderRoute: typeof AuthenticatedPlacementRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
     '/_authenticated/exercise': {
       id: '/_authenticated/exercise'
       path: '/exercise'
@@ -140,12 +163,14 @@ declare module '@tanstack/react-router' {
 interface AuthenticatedRouteRouteChildren {
   AuthenticatedDashboardRoute: typeof AuthenticatedDashboardRoute
   AuthenticatedExerciseRoute: typeof AuthenticatedExerciseRoute
+  AuthenticatedPlacementRoute: typeof AuthenticatedPlacementRoute
   AuthenticatedProgressRoute: typeof AuthenticatedProgressRoute
 }
 
 const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
   AuthenticatedDashboardRoute: AuthenticatedDashboardRoute,
   AuthenticatedExerciseRoute: AuthenticatedExerciseRoute,
+  AuthenticatedPlacementRoute: AuthenticatedPlacementRoute,
   AuthenticatedProgressRoute: AuthenticatedProgressRoute,
 }
 
