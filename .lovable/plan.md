@@ -1,92 +1,126 @@
-# Plano: Teste de Nível + Nome do Usuário
+# Plano: Exercícios de Áudio e Fala
 
-## Objetivo
-Adicionar um teste de proficiência de 25 questões ao app e permitir que o usuário veja/edite seu nome no dashboard.
+Adicionar 3 modos de prática com áudio: Listening, Speaking (leitura em voz alta) e Speaking livre (responder pergunta falando).
+
+## Suposições (me avise se quiser mudar)
+- **Voz (TTS)**: Lovable AI `openai/gpt-4o-mini-tts` (sem custo extra, já configurado)
+- **Transcrição (STT)**: Lovable AI `openai/gpt-4o-mini-transcribe`
+- **Avaliação**: `google/gemini-3-flash-preview` (mesmo que já usamos)
+- **Onde aparecem**: nova aba/seção dedicada no dashboard — "Listening" e "Speaking" como cards separados de "Praticar" (escrita)
 
 ---
 
 ## 1. Banco de Dados
 
-Nova tabela `public.profiles`:
-- `user_id` (uuid, PK, referencia auth.users)
-- `display_name` (text, nullable)
-- `placement_done` (boolean, default false)
-- `created_at`, `updated_at`
+Estender tabela `exercises` com colunas opcionais:
+- `mode` text default `'writing'` — `'writing' | 'listening' | 'speaking_read' | 'speaking_free'`
+- `audio_script` text — texto a ser falado pelo TTS (para listening)
+- `expected_response` text — resposta-modelo esperada (para speaking livre)
 
-Trigger `on_auth_user_created`: ao criar conta, insere perfil com `display_name` vindo de `raw_user_meta_data->>'full_name'` (ou email como fallback).
+Estender `attempts`:
+- `audio_url` text nullable — referência ao áudio gravado (opcional, só se quiser histórico de gravações)
+- `transcript` text nullable — transcrição da fala do usuário
 
-RLS + GRANTs: usuário autenticado pode ler/alterar apenas seu próprio perfil.
+Sem nova tabela. Sem bucket de storage por enquanto (áudio só fica em memória durante a sessão — economiza storage).
 
----
-
-## 2. Autenticação — Campo "Nome"
-
-Na tela `/auth`, aba "Criar conta" ganha um campo **Nome** (obrigatório).
-O nome é enviado no `user_metadata: { full_name: nome }` do `signUp`.
-Login com Google já traz `full_name` automaticamente.
+Seed: gerar ~30 exercícios de listening e ~30 de speaking via migration, por nível.
 
 ---
 
-## 3. Fluxo após Login
+## 2. Servidor — 3 novas server functions
 
-O layout `_authenticated/route.tsx` consulta `profiles.placement_done`:
-- Se `false` (primeiro acesso) → redireciona para `/placement`
-- Se `true` → segue normalmente para o dashboard
+**`src/lib/tts.functions.ts`** — `synthesizeSpeech({ text, voice })`
+- Chama Lovable AI TTS, retorna áudio em base64 (formato mp3)
+- Frases curtas → resposta única, sem streaming (mais simples no mobile)
+- Voz padrão: `alloy` (clara, neutra)
 
----
+**`src/lib/stt.functions.ts`** — `transcribeAudio({ audioBase64, mimeType })`
+- Recebe áudio do usuário em base64
+- Encaminha multipart para `/v1/audio/transcriptions`, language=`en`
+- Retorna `{ text }`
 
-## 4. Teste de Nível — Rota `/placement`
+**`src/lib/evaluate-speaking.functions.ts`** — `evaluateSpeaking({ original, transcript, mode, level })`
+- Usa Gemini para comparar a transcrição com o esperado
+- Retorna `{ score, accuracy_pct, mispronounced_words: string[], feedback_pt, corrected_text }`
+- Prompt diferente para "leitura" (comparação literal) vs "livre" (avalia se a resposta faz sentido + gramática)
 
-### Estrutura das 25 questões (múltipla escolha A/B/C/D):
-
-| Faixa | Quantidade | Nível CEFR | Conteúdo |
-|-------|-----------|------------|----------|
-| 1–8   | 8         | A1–A2      | Present/past simple, articles (a/an/the), basic prepositions, can/could, common collocations |
-| 9–17  | 9         | B1         | Present perfect, modal verbs (should/must), conditionals (1st/2nd), phrasal verbs, passive voice |
-| 18–25 | 8         | B2         | Past perfect, mixed conditionals, reported speech, relative clauses, advanced collocations |
-
-### Funcionamento da página:
-- Uma questão por vez, com barra de progresso
-- Não é possível voltar (decisão final)
-- ~4–6 minutos no total
-- Mobile-first (botões grandes, fonte legível)
-
-### Resultado:
-| Acertos | Nível atribuído |
-|---------|----------------|
-| 0–8     | beginner       |
-| 9–16    | intermediate   |
-| 17–25   | advanced       |
-
-### Ao finalizar:
-1. Salva nível em `user_progress.level`
-2. Marca `profiles.placement_done = true`
-3. Mostra tela de resultado com parabéns + nível descrito
-4. Botão "Começar a praticar" → `/exercise`
+Todas com `requireSupabaseAuth`.
 
 ---
 
-## 5. Dashboard — Nome + Refazer Teste
+## 3. Cliente — 3 novas rotas
 
-- Substitui `user.email` por `profiles.display_name` (com email pequeno abaixo)
-- Permite editar o nome inline (clica no nome → input → salva)
-- Botão "Refazer teste de nível" que reseta `placement_done = false` e redireciona para `/placement`
+### `/listening` — Ouvir e escrever
+1. Carrega exercise (mode=`listening`)
+2. Botão grande "▶️ Ouvir" → chama TTS, toca áudio (pode tocar de novo até 3x)
+3. Textarea: "Escreva o que você ouviu"
+4. "Verificar" → mesma `correctGrammar` que já temos, mas compara com `audio_script`
+5. Mostra score + texto correto + erros
+
+### `/speaking` — Ler em voz alta
+1. Mostra frase em inglês (texto grande, legível)
+2. Botão "🎤 Pressione para falar" (mobile-first: tap-to-record com `MediaRecorder`)
+3. Indicador visual de gravação (onda animada simples)
+4. Stop → envia áudio → STT → `evaluateSpeaking` modo `read`
+5. Resultado: score de precisão, palavras pronunciadas incorretamente destacadas em vermelho, áudio modelo para reescutar (TTS)
+
+### `/speaking-free` — Conversação
+1. Mostra pergunta em PT + EN ("Talk about your weekend / Conte sobre seu fim de semana")
+2. Mesmo fluxo de gravação
+3. `evaluateSpeaking` modo `free` → avalia fluência + gramática + relevância
+4. Mostra transcrição do que falou + feedback em PT + versão corrigida
 
 ---
 
-## Arquivos novos/modificados
+## 4. Componente de gravação reutilizável
+
+`src/components/audio-recorder.tsx`:
+- `MediaRecorder` com fallback `audio/webm` → `audio/mp4` (Safari iOS)
+- Pede permissão do mic explicando o motivo
+- Limite: 30 segundos
+- Validação: rejeita gravação < 1KB (vazia)
+- Estado visual: idle → recording (com timer) → processing → done
+- Acessível: aria-label, suporte a teclado
+
+---
+
+## 5. Dashboard — adicionar acesso
+
+Substituir o único botão "Praticar agora" por um grid 2x2 mobile:
+- 📝 Escrever
+- 🎧 Ouvir  
+- 🎤 Falar (leitura)
+- 💬 Conversar
+
+Cada um leva à rota correspondente.
+
+---
+
+## Custos / Performance
+
+- TTS: ~$0.015 por minuto de áudio gerado (frases curtas = ~$0.001 cada)
+- STT: ~$0.006 por minuto transcrito
+- Cache: TTS de frases idênticas não é cacheado nesta v1 (manter simples). Posso adicionar cache no Supabase Storage depois se ficar caro.
+
+---
+
+## Arquivos
 
 | Ação | Arquivo |
 |------|---------|
-| Criar | `supabase/migrations/..._profiles.sql` |
-| Criar | `src/lib/placement-questions.ts` |
-| Criar | `src/routes/_authenticated/placement.tsx` |
-| Editar | `src/routes/auth.tsx` |
-| Editar | `src/routes/_authenticated/route.tsx` |
-| Editar | `src/routes/_authenticated/dashboard.tsx` |
-| Editar | `src/routeTree.gen.ts` (auto) |
+| Migration | `..._audio_modes.sql` (alter tables + seed) |
+| Criar | `src/lib/tts.functions.ts` |
+| Criar | `src/lib/stt.functions.ts` |
+| Criar | `src/lib/evaluate-speaking.functions.ts` |
+| Criar | `src/components/audio-recorder.tsx` |
+| Criar | `src/routes/_authenticated/listening.tsx` |
+| Criar | `src/routes/_authenticated/speaking.tsx` |
+| Criar | `src/routes/_authenticated/speaking-free.tsx` |
+| Editar | `src/routes/_authenticated/dashboard.tsx` (grid de modos) |
+| Editar | `src/lib/correct-grammar.functions.ts` (aceitar `expected` opcional para listening) |
 
 ---
 
-## Resumo para o usuário
-Você terá um teste de 25 questões de múltipla escolha (progressão A1→B2) que define seu nível automaticamente. Pode refazer quando quiser. Seu nome aparece no dashboard e pode ser editado.
+## Para o usuário (resumo simples)
+
+Você terá 3 novos modos: ouvir uma frase em inglês e escrever, ler uma frase em voz alta e receber score de pronúncia, e responder perguntas falando livremente. Tudo no celular, usando o microfone. Posso começar?
