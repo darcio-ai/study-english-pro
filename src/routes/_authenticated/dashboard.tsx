@@ -3,7 +3,7 @@ import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
 import { formatDistanceToNow } from "date-fns";
 import { ptBR } from "date-fns/locale";
-import { LogOut, BookOpen, Flame, Award, ArrowRight, BarChart3 } from "lucide-react";
+import { LogOut, BookOpen, Flame, Award, BarChart3, Pencil, RotateCcw, Check, X } from "lucide-react";
 import { toast } from "sonner";
 
 import { supabase } from "@/integrations/supabase/client";
@@ -35,6 +35,21 @@ function Dashboard() {
   const navigate = useNavigate();
   const queryClient = useQueryClient();
   const [levelMenuOpen, setLevelMenuOpen] = useState(false);
+  const [editingName, setEditingName] = useState(false);
+  const [nameDraft, setNameDraft] = useState("");
+
+  const profileQuery = useQuery({
+    queryKey: ["profile", user.id],
+    queryFn: async () => {
+      const { data, error } = await supabase
+        .from("profiles")
+        .select("display_name, placement_done")
+        .eq("user_id", user.id)
+        .maybeSingle();
+      if (error) throw error;
+      return data;
+    },
+  });
 
   const progressQuery = useQuery({
     queryKey: ["user_progress", user.id],
@@ -98,25 +113,85 @@ function Dashboard() {
     navigate({ to: "/auth", replace: true });
   }
 
+  async function saveName() {
+    const trimmed = nameDraft.trim();
+    if (!trimmed) {
+      toast.error("Nome não pode ficar vazio");
+      return;
+    }
+    const { error } = await supabase
+      .from("profiles")
+      .update({ display_name: trimmed })
+      .eq("user_id", user.id);
+    if (error) {
+      toast.error("Erro ao salvar nome");
+      return;
+    }
+    setEditingName(false);
+    queryClient.invalidateQueries({ queryKey: ["profile", user.id] });
+    toast.success("Nome atualizado");
+  }
+
+  async function retakePlacement() {
+    const { error } = await supabase
+      .from("profiles")
+      .update({ placement_done: false })
+      .eq("user_id", user.id);
+    if (error) {
+      toast.error("Erro ao reiniciar teste");
+      return;
+    }
+    navigate({ to: "/placement" });
+  }
+
   const p = progressQuery.data;
   const attempts = attemptsQuery.data ?? [];
+  const displayName = profileQuery.data?.display_name ?? user.email?.split("@")[0] ?? "Você";
 
   return (
     <main className="min-h-screen bg-gray-50 dark:bg-gray-900 px-4 py-6">
       <div className="max-w-lg mx-auto">
         {/* Header */}
-        <div className="flex items-start justify-between mb-6">
-          <div>
-            <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
-              Olá! 👋
-            </h1>
-            <p className="text-sm text-gray-600 dark:text-gray-400 truncate max-w-[180px] sm:max-w-[260px]">
+        <div className="flex items-start justify-between mb-6 gap-3">
+          <div className="min-w-0 flex-1">
+            <p className="text-xs text-gray-500 dark:text-gray-400">Olá 👋</p>
+            {editingName ? (
+              <div className="flex items-center gap-1 mt-1">
+                <input
+                  autoFocus
+                  value={nameDraft}
+                  onChange={(e) => setNameDraft(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") saveName();
+                    if (e.key === "Escape") setEditingName(false);
+                  }}
+                  className="flex-1 min-w-0 px-2 py-1 text-xl font-bold rounded-lg border border-indigo-300 dark:border-indigo-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                />
+                <button onClick={saveName} className="p-2 rounded-lg bg-indigo-600 text-white" aria-label="Salvar">
+                  <Check className="size-4" />
+                </button>
+                <button onClick={() => setEditingName(false)} className="p-2 rounded-lg text-gray-500" aria-label="Cancelar">
+                  <X className="size-4" />
+                </button>
+              </div>
+            ) : (
+              <button
+                onClick={() => { setNameDraft(displayName); setEditingName(true); }}
+                className="group flex items-center gap-2 text-left"
+              >
+                <h1 className="text-2xl font-bold text-gray-900 dark:text-white truncate">
+                  {displayName}
+                </h1>
+                <Pencil className="size-4 text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity" />
+              </button>
+            )}
+            <p className="text-xs text-gray-500 dark:text-gray-500 truncate mt-0.5">
               {user.email}
             </p>
           </div>
           <button
             onClick={logout}
-            className="p-2 rounded-lg text-gray-600 hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-800 transition-colors"
+            className="p-2 rounded-lg text-gray-600 hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-800 transition-colors flex-shrink-0"
             aria-label="Sair"
           >
             <LogOut className="size-5" />
