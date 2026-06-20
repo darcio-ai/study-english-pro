@@ -110,7 +110,7 @@ function Dashboard() {
             <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
               Olá! 👋
             </h1>
-            <p className="text-sm text-gray-600 dark:text-gray-400 truncate max-w-[220px]">
+            <p className="text-sm text-gray-600 dark:text-gray-400 truncate max-w-[180px] sm:max-w-[260px]">
               {user.email}
             </p>
           </div>
