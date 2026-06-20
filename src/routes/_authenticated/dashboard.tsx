@@ -205,10 +205,11 @@ function Dashboard() {
             ) : (
               <button
                 onClick={() => { setNameDraft(displayName); setEditingName(true); }}
-                className="group flex items-center gap-2 text-left"
+                className="flex items-center gap-1.5 text-left"
+                aria-label="Editar nome"
               >
                 <h1 className="text-2xl font-bold text-gray-900 dark:text-white truncate">{displayName}</h1>
-                <Pencil className="size-4 text-gray-400 opacity-0 group-hover:opacity-100" />
+                <Pencil className="size-4 text-gray-400 shrink-0" />
               </button>
             )}
           </div>
