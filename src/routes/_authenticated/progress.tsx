@@ -150,14 +150,15 @@ function ProgressPage() {
 
             <ChartCard title="Exercícios por categoria">
               <ResponsiveContainer width="100%" height={220}>
-                <BarChart data={byFocus} margin={{ left: -10, right: 8, top: 8, bottom: 24 }}>
+                <BarChart data={byFocus} margin={{ left: 0, right: 0, top: 8, bottom: 32 }}>
                   <CartesianGrid strokeDasharray="3 3" stroke="rgba(120,120,140,0.2)" />
                   <XAxis
                     dataKey="name"
                     tick={{ fontSize: 10 }}
-                    angle={-25}
+                    angle={-30}
                     textAnchor="end"
                     interval={0}
+                    height={50}
                   />
                   <YAxis allowDecimals={false} tick={{ fontSize: 12 }} />
                   <Tooltip
