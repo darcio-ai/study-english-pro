@@ -14,7 +14,116 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      attempts: {
+        Row: {
+          correction: Json | null
+          created_at: string | null
+          exercise_id: string | null
+          grammar_focus: string | null
+          id: string
+          level: string | null
+          score: number | null
+          user_id: string
+          user_input: string
+        }
+        Insert: {
+          correction?: Json | null
+          created_at?: string | null
+          exercise_id?: string | null
+          grammar_focus?: string | null
+          id?: string
+          level?: string | null
+          score?: number | null
+          user_id: string
+          user_input: string
+        }
+        Update: {
+          correction?: Json | null
+          created_at?: string | null
+          exercise_id?: string | null
+          grammar_focus?: string | null
+          id?: string
+          level?: string | null
+          score?: number | null
+          user_id?: string
+          user_input?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "attempts_exercise_id_fkey"
+            columns: ["exercise_id"]
+            isOneToOne: false
+            referencedRelation: "exercises"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      exercises: {
+        Row: {
+          content: string | null
+          created_at: string | null
+          grammar_focus: string
+          id: string
+          level: string
+          model_answer: string
+          prompt_en: string
+          prompt_pt: string
+          type: string
+        }
+        Insert: {
+          content?: string | null
+          created_at?: string | null
+          grammar_focus: string
+          id?: string
+          level: string
+          model_answer: string
+          prompt_en: string
+          prompt_pt: string
+          type: string
+        }
+        Update: {
+          content?: string | null
+          created_at?: string | null
+          grammar_focus?: string
+          id?: string
+          level?: string
+          model_answer?: string
+          prompt_en?: string
+          prompt_pt?: string
+          type?: string
+        }
+        Relationships: []
+      }
+      user_progress: {
+        Row: {
+          created_at: string | null
+          exercises_completed: number | null
+          id: string
+          last_activity_at: string | null
+          level: string
+          streak_days: number | null
+          user_id: string
+        }
+        Insert: {
+          created_at?: string | null
+          exercises_completed?: number | null
+          id?: string
+          last_activity_at?: string | null
+          level?: string
+          streak_days?: number | null
+          user_id: string
+        }
+        Update: {
+          created_at?: string | null
+          exercises_completed?: number | null
+          id?: string
+          last_activity_at?: string | null
+          level?: string
+          streak_days?: number | null
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
