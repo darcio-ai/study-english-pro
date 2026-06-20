@@ -22,7 +22,9 @@ export type Database = {
           grammar_focus: string | null
           id: string
           level: string | null
+          mode: string | null
           score: number | null
+          transcript: string | null
           user_id: string
           user_input: string
         }
@@ -33,7 +35,9 @@ export type Database = {
           grammar_focus?: string | null
           id?: string
           level?: string | null
+          mode?: string | null
           score?: number | null
+          transcript?: string | null
           user_id: string
           user_input: string
         }
@@ -44,7 +48,9 @@ export type Database = {
           grammar_focus?: string | null
           id?: string
           level?: string | null
+          mode?: string | null
           score?: number | null
+          transcript?: string | null
           user_id?: string
           user_input?: string
         }
@@ -60,33 +66,42 @@ export type Database = {
       }
       exercises: {
         Row: {
+          audio_script: string | null
           content: string | null
           created_at: string | null
+          expected_response: string | null
           grammar_focus: string
           id: string
           level: string
+          mode: string
           model_answer: string
           prompt_en: string
           prompt_pt: string
           type: string
         }
         Insert: {
+          audio_script?: string | null
           content?: string | null
           created_at?: string | null
+          expected_response?: string | null
           grammar_focus: string
           id?: string
           level: string
+          mode?: string
           model_answer: string
           prompt_en: string
           prompt_pt: string
           type: string
         }
         Update: {
+          audio_script?: string | null
           content?: string | null
           created_at?: string | null
+          expected_response?: string | null
           grammar_focus?: string
           id?: string
           level?: string
+          mode?: string
           model_answer?: string
           prompt_en?: string
           prompt_pt?: string

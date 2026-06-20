@@ -12,8 +12,11 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as AuthRouteImport } from './routes/auth'
 import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/route'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AuthenticatedSpeakingFreeRouteImport } from './routes/_authenticated/speaking-free'
+import { Route as AuthenticatedSpeakingRouteImport } from './routes/_authenticated/speaking'
 import { Route as AuthenticatedProgressRouteImport } from './routes/_authenticated/progress'
 import { Route as AuthenticatedPlacementRouteImport } from './routes/_authenticated/placement'
+import { Route as AuthenticatedListeningRouteImport } from './routes/_authenticated/listening'
 import { Route as AuthenticatedExerciseRouteImport } from './routes/_authenticated/exercise'
 import { Route as AuthenticatedDashboardRouteImport } from './routes/_authenticated/dashboard'
 
@@ -31,6 +34,17 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AuthenticatedSpeakingFreeRoute =
+  AuthenticatedSpeakingFreeRouteImport.update({
+    id: '/speaking-free',
+    path: '/speaking-free',
+    getParentRoute: () => AuthenticatedRouteRoute,
+  } as any)
+const AuthenticatedSpeakingRoute = AuthenticatedSpeakingRouteImport.update({
+  id: '/speaking',
+  path: '/speaking',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
 const AuthenticatedProgressRoute = AuthenticatedProgressRouteImport.update({
   id: '/progress',
   path: '/progress',
@@ -39,6 +53,11 @@ const AuthenticatedProgressRoute = AuthenticatedProgressRouteImport.update({
 const AuthenticatedPlacementRoute = AuthenticatedPlacementRouteImport.update({
   id: '/placement',
   path: '/placement',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
+const AuthenticatedListeningRoute = AuthenticatedListeningRouteImport.update({
+  id: '/listening',
+  path: '/listening',
   getParentRoute: () => AuthenticatedRouteRoute,
 } as any)
 const AuthenticatedExerciseRoute = AuthenticatedExerciseRouteImport.update({
@@ -57,16 +76,22 @@ export interface FileRoutesByFullPath {
   '/auth': typeof AuthRoute
   '/dashboard': typeof AuthenticatedDashboardRoute
   '/exercise': typeof AuthenticatedExerciseRoute
+  '/listening': typeof AuthenticatedListeningRoute
   '/placement': typeof AuthenticatedPlacementRoute
   '/progress': typeof AuthenticatedProgressRoute
+  '/speaking': typeof AuthenticatedSpeakingRoute
+  '/speaking-free': typeof AuthenticatedSpeakingFreeRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/auth': typeof AuthRoute
   '/dashboard': typeof AuthenticatedDashboardRoute
   '/exercise': typeof AuthenticatedExerciseRoute
+  '/listening': typeof AuthenticatedListeningRoute
   '/placement': typeof AuthenticatedPlacementRoute
   '/progress': typeof AuthenticatedProgressRoute
+  '/speaking': typeof AuthenticatedSpeakingRoute
+  '/speaking-free': typeof AuthenticatedSpeakingFreeRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -75,8 +100,11 @@ export interface FileRoutesById {
   '/auth': typeof AuthRoute
   '/_authenticated/dashboard': typeof AuthenticatedDashboardRoute
   '/_authenticated/exercise': typeof AuthenticatedExerciseRoute
+  '/_authenticated/listening': typeof AuthenticatedListeningRoute
   '/_authenticated/placement': typeof AuthenticatedPlacementRoute
   '/_authenticated/progress': typeof AuthenticatedProgressRoute
+  '/_authenticated/speaking': typeof AuthenticatedSpeakingRoute
+  '/_authenticated/speaking-free': typeof AuthenticatedSpeakingFreeRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -85,10 +113,22 @@ export interface FileRouteTypes {
     | '/auth'
     | '/dashboard'
     | '/exercise'
+    | '/listening'
     | '/placement'
     | '/progress'
+    | '/speaking'
+    | '/speaking-free'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/auth' | '/dashboard' | '/exercise' | '/placement' | '/progress'
+  to:
+    | '/'
+    | '/auth'
+    | '/dashboard'
+    | '/exercise'
+    | '/listening'
+    | '/placement'
+    | '/progress'
+    | '/speaking'
+    | '/speaking-free'
   id:
     | '__root__'
     | '/'
@@ -96,8 +136,11 @@ export interface FileRouteTypes {
     | '/auth'
     | '/_authenticated/dashboard'
     | '/_authenticated/exercise'
+    | '/_authenticated/listening'
     | '/_authenticated/placement'
     | '/_authenticated/progress'
+    | '/_authenticated/speaking'
+    | '/_authenticated/speaking-free'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -129,6 +172,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/_authenticated/speaking-free': {
+      id: '/_authenticated/speaking-free'
+      path: '/speaking-free'
+      fullPath: '/speaking-free'
+      preLoaderRoute: typeof AuthenticatedSpeakingFreeRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/speaking': {
+      id: '/_authenticated/speaking'
+      path: '/speaking'
+      fullPath: '/speaking'
+      preLoaderRoute: typeof AuthenticatedSpeakingRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
     '/_authenticated/progress': {
       id: '/_authenticated/progress'
       path: '/progress'
@@ -141,6 +198,13 @@ declare module '@tanstack/react-router' {
       path: '/placement'
       fullPath: '/placement'
       preLoaderRoute: typeof AuthenticatedPlacementRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/listening': {
+      id: '/_authenticated/listening'
+      path: '/listening'
+      fullPath: '/listening'
+      preLoaderRoute: typeof AuthenticatedListeningRouteImport
       parentRoute: typeof AuthenticatedRouteRoute
     }
     '/_authenticated/exercise': {
@@ -163,15 +227,21 @@ declare module '@tanstack/react-router' {
 interface AuthenticatedRouteRouteChildren {
   AuthenticatedDashboardRoute: typeof AuthenticatedDashboardRoute
   AuthenticatedExerciseRoute: typeof AuthenticatedExerciseRoute
+  AuthenticatedListeningRoute: typeof AuthenticatedListeningRoute
   AuthenticatedPlacementRoute: typeof AuthenticatedPlacementRoute
   AuthenticatedProgressRoute: typeof AuthenticatedProgressRoute
+  AuthenticatedSpeakingRoute: typeof AuthenticatedSpeakingRoute
+  AuthenticatedSpeakingFreeRoute: typeof AuthenticatedSpeakingFreeRoute
 }
 
 const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
   AuthenticatedDashboardRoute: AuthenticatedDashboardRoute,
   AuthenticatedExerciseRoute: AuthenticatedExerciseRoute,
+  AuthenticatedListeningRoute: AuthenticatedListeningRoute,
   AuthenticatedPlacementRoute: AuthenticatedPlacementRoute,
   AuthenticatedProgressRoute: AuthenticatedProgressRoute,
+  AuthenticatedSpeakingRoute: AuthenticatedSpeakingRoute,
+  AuthenticatedSpeakingFreeRoute: AuthenticatedSpeakingFreeRoute,
 }
 
 const AuthenticatedRouteRouteWithChildren =
