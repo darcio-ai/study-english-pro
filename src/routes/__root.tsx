@@ -84,6 +84,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
+      { name: "twitter:title", content: "EnglishUp — Inglês para brasileiros" },
+      { name: "description", content: "English Journey Pro is a web application designed to help Brazilian Portuguese speakers learn English." },
+      { property: "og:description", content: "English Journey Pro is a web application designed to help Brazilian Portuguese speakers learn English." },
+      { name: "twitter:description", content: "English Journey Pro is a web application designed to help Brazilian Portuguese speakers learn English." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/94a6a83a-b30d-43eb-8d9e-4918dfcc77e4/id-preview-b6dd6270--033e9678-c7a1-4c68-b62c-dd5892360112.lovable.app-1781917234219.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/94a6a83a-b30d-43eb-8d9e-4918dfcc77e4/id-preview-b6dd6270--033e9678-c7a1-4c68-b62c-dd5892360112.lovable.app-1781917234219.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
