@@ -1,126 +1,167 @@
-# Plano: Exercícios de Áudio e Fala
 
-Adicionar 3 modos de prática com áudio: Listening, Speaking (leitura em voz alta) e Speaking livre (responder pergunta falando).
+## Diagnóstico do Estado Atual
 
-## Suposições (me avise se quiser mudar)
-- **Voz (TTS)**: Lovable AI `openai/gpt-4o-mini-tts` (sem custo extra, já configurado)
-- **Transcrição (STT)**: Lovable AI `openai/gpt-4o-mini-transcribe`
-- **Avaliação**: `google/gemini-3-flash-preview` (mesmo que já usamos)
-- **Onde aparecem**: nova aba/seção dedicada no dashboard — "Listening" e "Speaking" como cards separados de "Praticar" (escrita)
+O EnglishUp já tem uma base sólida e cobre os 4 skills:
 
----
+| Skill | Implementação | Status |
+|---|---|---|
+| Escrita | Exercícios com correção IA (score, erros detalhados) | ✅ Bom |
+| Listening | TTS + transcrição (3 plays) | ✅ Bom |
+| Speaking | STT + avaliação de pronúncia + conversação livre | ✅ Bom |
+| Leitura | **Não existe** | ❌ Ausente |
+| Teste de Nível | 25 questões A1-A2/B1/B2 | ✅ Funcional |
 
-## 1. Banco de Dados
+**Pontos fortes:** Correção em tempo real com IA, interface limpa, 4 modos de prática, streak básico.
 
-Estender tabela `exercises` com colunas opcionais:
-- `mode` text default `'writing'` — `'writing' | 'listening' | 'speaking_read' | 'speaking_free'`
-- `audio_script` text — texto a ser falado pelo TTS (para listening)
-- `expected_response` text — resposta-modelo esperada (para speaking livre)
-
-Estender `attempts`:
-- `audio_url` text nullable — referência ao áudio gravado (opcional, só se quiser histórico de gravações)
-- `transcript` text nullable — transcrição da fala do usuário
-
-Sem nova tabela. Sem bucket de storage por enquanto (áudio só fica em memória durante a sessão — economiza storage).
-
-Seed: gerar ~30 exercícios de listening e ~30 de speaking via migration, por nível.
+**Pontos críticos de aprendizado:** sem caminho estruturado, sem revisão de erros, sem adaptação de dificuldade, pouco conteúdo por modo (~8 exercícios), sem gamificação significativa.
 
 ---
 
-## 2. Servidor — 3 novas server functions
+## 7 Recomendações Priorizadas
 
-**`src/lib/tts.functions.ts`** — `synthesizeSpeech({ text, voice })`
-- Chama Lovable AI TTS, retorna áudio em base64 (formato mp3)
-- Frases curtas → resposta única, sem streaming (mais simples no mobile)
-- Voz padrão: `alloy` (clara, neutra)
+### 1. Sistema de Lições Estruturadas (Alta prioridade)
 
-**`src/lib/stt.functions.ts`** — `transcribeAudio({ audioBase64, mimeType })`
-- Recebe áudio do usuário em base64
-- Encaminha multipart para `/v1/audio/transcriptions`, language=`en`
-- Retorna `{ text }`
+**Problema:** Exercícios aleatórios não criam progressão perceptível. O usuário não sente "terminei o capítulo de Present Perfect".
 
-**`src/lib/evaluate-speaking.functions.ts`** — `evaluateSpeaking({ original, transcript, mode, level })`
-- Usa Gemini para comparar a transcrição com o esperado
-- Retorna `{ score, accuracy_pct, mispronounced_words: string[], feedback_pt, corrected_text }`
-- Prompt diferente para "leitura" (comparação literal) vs "livre" (avalia se a resposta faz sentido + gramática)
+**Solução:** Criar `lessons` (lições) organizadas em `units` (unidades). Cada lição é um bloco sequencial de 5-8 exercícios de múltiplos modos (escrita → listening → speaking) sobre o mesmo tema gramatical.
 
-Todas com `requireSupabaseAuth`.
+```text
+Unidade 1: Present Simple
+  Lição 1.1: Forma afirmativa (5 exercícios)
+  Lição 1.2: Forma negativa e perguntas (5 exercícios)
+  Lição 1.3: Reading + Listening + Speaking mistos (5 exercícios)
+  Quiz de revisão (3 questões rápidas)
+```
 
----
-
-## 3. Cliente — 3 novas rotas
-
-### `/listening` — Ouvir e escrever
-1. Carrega exercise (mode=`listening`)
-2. Botão grande "▶️ Ouvir" → chama TTS, toca áudio (pode tocar de novo até 3x)
-3. Textarea: "Escreva o que você ouviu"
-4. "Verificar" → mesma `correctGrammar` que já temos, mas compara com `audio_script`
-5. Mostra score + texto correto + erros
-
-### `/speaking` — Ler em voz alta
-1. Mostra frase em inglês (texto grande, legível)
-2. Botão "🎤 Pressione para falar" (mobile-first: tap-to-record com `MediaRecorder`)
-3. Indicador visual de gravação (onda animada simples)
-4. Stop → envia áudio → STT → `evaluateSpeaking` modo `read`
-5. Resultado: score de precisão, palavras pronunciadas incorretamente destacadas em vermelho, áudio modelo para reescutar (TTS)
-
-### `/speaking-free` — Conversação
-1. Mostra pergunta em PT + EN ("Talk about your weekend / Conte sobre seu fim de semana")
-2. Mesmo fluxo de gravação
-3. `evaluateSpeaking` modo `free` → avalia fluência + gramática + relevância
-4. Mostra transcrição do que falou + feedback em PT + versão corrigida
+**Impacto no aprendizado:** Contextualização progressiva + mix de skills no mesmo tema = retenção 3x maior (princípio da variação de prática).
 
 ---
 
-## 4. Componente de gravação reutilizável
+### 2. Repetição Espaçada de Erros — "Fila de Revisão" (Alta prioridade)
 
-`src/components/audio-recorder.tsx`:
-- `MediaRecorder` com fallback `audio/webm` → `audio/mp4` (Safari iOS)
-- Pede permissão do mic explicando o motivo
-- Limite: 30 segundos
-- Validação: rejeita gravação < 1KB (vazia)
-- Estado visual: idle → recording (com timer) → processing → done
-- Acessível: aria-label, suporte a teclado
+**Problema:** Erros corrigidos são esquecidos. O usuário nunca revê o que errou.
 
----
+**Solução:** Toda tentativa com score < 70 entra numa "fila de revisão" (`review_queue` no banco). O sistema sugere 3-5 revisões diárias no dashboard, usando intervalos crescentes (1 dia → 3 dias → 7 dias → 14 dias).
 
-## 5. Dashboard — adicionar acesso
+- Cada revisão reaproveita o mesmo exercício mas com dica contextual
+- Se acertar a revisão, sobe o intervalo. Se errar, volta para 1 dia
+- Badge "Mestre da Revisão" para quem completar 20 revisões
 
-Substituir o único botão "Praticar agora" por um grid 2x2 mobile:
-- 📝 Escrever
-- 🎧 Ouvir  
-- 🎤 Falar (leitura)
-- 💬 Conversar
-
-Cada um leva à rota correspondente.
+**Impacto:** Converte erros em oportunidades de aprendizado real. Baseado na curva do esquecimento de Ebbinghaus.
 
 ---
 
-## Custos / Performance
+### 3. Dificuldade Adaptativa Automática (Média-Alta prioridade)
 
-- TTS: ~$0.015 por minuto de áudio gerado (frases curtas = ~$0.001 cada)
-- STT: ~$0.006 por minuto transcrito
-- Cache: TTS de frases idênticas não é cacheado nesta v1 (manter simples). Posso adicionar cache no Supabase Storage depois se ficar caro.
+**Problema:** O nível do usuário é definido uma vez no placement e raramente muda. Alguém que evoluiu fica preso em exercícios fáceis.
 
----
+**Solução:** Algoritmo simples baseado nas últimas 10 tentativas:
+- Média ≥ 85 e ≥ 7 acertos consecutivos → oferece subir de nível
+- Média ≤ 40 por 5 tentativas → sugere descer ou revisar fundamentos
+- Mudança é sempre proposta ao usuário, nunca automática (dá controle)
 
-## Arquivos
-
-| Ação | Arquivo |
-|------|---------|
-| Migration | `..._audio_modes.sql` (alter tables + seed) |
-| Criar | `src/lib/tts.functions.ts` |
-| Criar | `src/lib/stt.functions.ts` |
-| Criar | `src/lib/evaluate-speaking.functions.ts` |
-| Criar | `src/components/audio-recorder.tsx` |
-| Criar | `src/routes/_authenticated/listening.tsx` |
-| Criar | `src/routes/_authenticated/speaking.tsx` |
-| Criar | `src/routes/_authenticated/speaking-free.tsx` |
-| Editar | `src/routes/_authenticated/dashboard.tsx` (grid de modos) |
-| Editar | `src/lib/correct-grammar.functions.ts` (aceitar `expected` opcional para listening) |
+**Impacto:** Zona de Desconforto Produtiva — nem fácil demais (tédio) nem difícil demais (frustração).
 
 ---
 
-## Para o usuário (resumo simples)
+### 4. Mural de Fraquezas + Recomendações Personalizadas (Média prioridade)
 
-Você terá 3 novos modos: ouvir uma frase em inglês e escrever, ler uma frase em voz alta e receber score de pronúncia, e responder perguntas falando livremente. Tudo no celular, usando o microfone. Posso começar?
+**Problema:** O gráfico de progresso mostra médias, mas não diz "você erra artigos 70% das vezes".
+
+**Solução:** Página `/weaknesses` que analisa as últimas 50 tentativas e agrupa por:
+- Grammar focus mais errado (ex: "Third Person Singular: 65% de erros")
+- Tipo de erro recorrente (ex: "Esquece artigo 'a/an' em 8/10 casos")
+- Skill mais fraco (ex: "Speaking: nota média 52 vs Writing: 78")
+
+Recomendação automática: "Você errou 'Present Perfect' 5 vezes. Que tal revisar a Lição 2.3?"
+
+---
+
+### 5. Modo Leitura com Compreensão (Média prioridade)
+
+**Problema:** Não há prática de leitura. É um dos 4 skills do Cambridge/Oxford.
+
+**Solução:** `/reading` com textos curtos (100-200 palavras) por nível:
+- Texto com destaque de vocabulário-chave (hover mostra tradução)
+- 3 questões de múltipla escolha de compreensão
+- IA explica por que a alternativa correta é a certa e por que as outras estão erradas
+
+Temas: emails de trabalho, notícias simples, histórias curtas, diálogos.
+
+---
+
+### 6. Flashcards de Vocabulário com SRS (Média prioridade)
+
+**Problema:** Não há acumulação de vocabulário pessoal. Cada exercício é isolado.
+
+**Solução:** Durante qualquer exercício, o usuário pode "salvar" uma palavra/frase. Isso cria um flashcard pessoal na tabela `user_vocabulary`.
+
+- Modo `/vocabulary` mostra os flashcards do usuário
+- Sistema SRS simples: Novo → Revisar em 1 dia → 3 dias → 7 dias → 14 dias → 30 dias
+- Front: palavra em EN + contexto da frase original
+- Back: tradução PT + áudio TTS da pronúncia
+
+**Impacto:** Vocaubulário pessoal = mais relevante que listas genéricas.
+
+---
+
+### 7. Gamificação com Sentido: Conquistas e Metas Diárias (Baixa-Média prioridade)
+
+**Problema:** Streak sozinho não motiva a longo prazo.
+
+**Solução:**
+- **Metas diárias simples:** "Pratique 10 min" / "Complete 3 exercícios" / "Acerte 2 no speaking"
+- **Conquistas desbloqueáveis com critérios de aprendizado real:**
+  - "Perfeccionista" — 10 exercícios com score 100
+  - "Poliglota da Voz" — usou todos os 4 skills no mesmo dia
+  - "Revisor" — completou 20 revisões da fila
+  - "Em ascensão" — subiu de nível pela primeira vez
+  - "Falante Nativo" — 30 dias de streak
+- **XP por atividade** com bônus de combo (fazer 3 dias seguidos = +20% XP)
+
+**Impacto:** Metas diárias focadas em tempo/esforço (não apenas acertos) reduzem ansiedade de performance.
+
+---
+
+## Plano de Implementação Sugerido
+
+### Fase 1 — Fundamentos (semana 1-2)
+1. Criar schema de `lessons` + `user_lesson_progress` + `review_queue`
+2. Agrupar exercícios existentes em ~6 lições por nível (18 lições totais)
+3. Implementar fila de revisão com intervalos simples
+4. Atualizar dashboard para mostrar "Próxima lição" + "Revisões pendentes"
+
+### Fase 2 — Inteligência (semana 3-4)
+1. Algoritmo de dificuldade adaptativa (análise das últimas 10 tentativas)
+2. Página de Mural de Fraquezas (`/weaknesses`)
+3. Flashcards de vocabulário (`user_vocabulary` + SRS básico)
+
+### Fase 3 — Expansão (semana 5-6)
+1. Modo Leitura (`/reading`) com 6 textos por nível
+2. Sistema de conquistas + metas diárias
+3. Mais exercícios (seed): dobrar quantidade por modo e nível
+
+### Fase 4 — Polimento (semana 7-8)
+1. Múltiplas vozes TTS + velocidade ajustável
+2. Lembretes diários via push (se o usuário permitir)
+3. A/B test de layout no dashboard para maximizar engajamento
+
+---
+
+## O Que NÃO Recomendo Agora
+
+- **Chatbot de conversação livre contínuo** — custo de IA alto, valor pedagógico questionável sem estrutura
+- **Leaderboards públicos** — demora ter base de usuários, pode desmotivar iniciantes
+- **Sistema de "vidas" ou penalidades** — aumenta ansiedade, reduz prática
+- **Vídeo aulas** — fora do escopo do app de prática; manter foco em "fazer" não "assistir"
+
+---
+
+## Estimativa de Custo de IA
+
+Com as mudanças propostas, o consumo de IA aumentaria ~2-3x (mais correções em revisão, novos modos). Para ~100 usuários ativos/dia fazendo 5 exercícios cada:
+- Hoje: ~$2-3/dia
+- Após Fase 1+2: ~$5-8/dia
+- Após Fase 3+4: ~$8-12/dia
+
+Isso é controlável. A fila de revisão reutiliza os mesmos exercícios (sem custo de geração de conteúdo novo), e o modo leitura pode usar correção mais simples (múltipla escolha = 1 chamada de IA por texto, não por usuário).
