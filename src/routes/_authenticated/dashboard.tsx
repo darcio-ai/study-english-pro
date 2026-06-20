@@ -265,6 +265,23 @@ function Dashboard() {
           </Link>
         </div>
 
+        {/* Placement test banner — show prominently if not done */}
+        {!placementDone && (
+          <Link
+            to="/placement"
+            className="block mb-3 p-4 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 text-white hover:shadow-xl transition-all"
+          >
+            <div className="flex items-center gap-3">
+              <Sparkles className="size-6 shrink-0" />
+              <div className="flex-1 min-w-0">
+                <p className="text-sm font-bold">Descubra seu nível</p>
+                <p className="text-xs opacity-90">Faça o teste rápido em 5 minutos</p>
+              </div>
+              <span className="text-xl">→</span>
+            </div>
+          </Link>
+        )}
+
         {/* Hero CTA: Next Lesson */}
         {nextLesson && (
           <Link
