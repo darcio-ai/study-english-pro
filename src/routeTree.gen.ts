@@ -12,13 +12,19 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as AuthRouteImport } from './routes/auth'
 import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/route'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AuthenticatedWeaknessesRouteImport } from './routes/_authenticated/weaknesses'
+import { Route as AuthenticatedVocabularyRouteImport } from './routes/_authenticated/vocabulary'
 import { Route as AuthenticatedSpeakingFreeRouteImport } from './routes/_authenticated/speaking-free'
 import { Route as AuthenticatedSpeakingRouteImport } from './routes/_authenticated/speaking'
+import { Route as AuthenticatedReadingRouteImport } from './routes/_authenticated/reading'
 import { Route as AuthenticatedProgressRouteImport } from './routes/_authenticated/progress'
 import { Route as AuthenticatedPlacementRouteImport } from './routes/_authenticated/placement'
 import { Route as AuthenticatedListeningRouteImport } from './routes/_authenticated/listening'
+import { Route as AuthenticatedLessonsRouteImport } from './routes/_authenticated/lessons'
 import { Route as AuthenticatedExerciseRouteImport } from './routes/_authenticated/exercise'
 import { Route as AuthenticatedDashboardRouteImport } from './routes/_authenticated/dashboard'
+import { Route as AuthenticatedAchievementsRouteImport } from './routes/_authenticated/achievements'
+import { Route as AuthenticatedLessonIdRouteImport } from './routes/_authenticated/lesson.$id'
 
 const AuthRoute = AuthRouteImport.update({
   id: '/auth',
@@ -34,6 +40,16 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AuthenticatedWeaknessesRoute = AuthenticatedWeaknessesRouteImport.update({
+  id: '/weaknesses',
+  path: '/weaknesses',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
+const AuthenticatedVocabularyRoute = AuthenticatedVocabularyRouteImport.update({
+  id: '/vocabulary',
+  path: '/vocabulary',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
 const AuthenticatedSpeakingFreeRoute =
   AuthenticatedSpeakingFreeRouteImport.update({
     id: '/speaking-free',
@@ -43,6 +59,11 @@ const AuthenticatedSpeakingFreeRoute =
 const AuthenticatedSpeakingRoute = AuthenticatedSpeakingRouteImport.update({
   id: '/speaking',
   path: '/speaking',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
+const AuthenticatedReadingRoute = AuthenticatedReadingRouteImport.update({
+  id: '/reading',
+  path: '/reading',
   getParentRoute: () => AuthenticatedRouteRoute,
 } as any)
 const AuthenticatedProgressRoute = AuthenticatedProgressRouteImport.update({
@@ -60,6 +81,11 @@ const AuthenticatedListeningRoute = AuthenticatedListeningRouteImport.update({
   path: '/listening',
   getParentRoute: () => AuthenticatedRouteRoute,
 } as any)
+const AuthenticatedLessonsRoute = AuthenticatedLessonsRouteImport.update({
+  id: '/lessons',
+  path: '/lessons',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
 const AuthenticatedExerciseRoute = AuthenticatedExerciseRouteImport.update({
   id: '/exercise',
   path: '/exercise',
@@ -70,77 +96,124 @@ const AuthenticatedDashboardRoute = AuthenticatedDashboardRouteImport.update({
   path: '/dashboard',
   getParentRoute: () => AuthenticatedRouteRoute,
 } as any)
+const AuthenticatedAchievementsRoute =
+  AuthenticatedAchievementsRouteImport.update({
+    id: '/achievements',
+    path: '/achievements',
+    getParentRoute: () => AuthenticatedRouteRoute,
+  } as any)
+const AuthenticatedLessonIdRoute = AuthenticatedLessonIdRouteImport.update({
+  id: '/lesson/$id',
+  path: '/lesson/$id',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/auth': typeof AuthRoute
+  '/achievements': typeof AuthenticatedAchievementsRoute
   '/dashboard': typeof AuthenticatedDashboardRoute
   '/exercise': typeof AuthenticatedExerciseRoute
+  '/lessons': typeof AuthenticatedLessonsRoute
   '/listening': typeof AuthenticatedListeningRoute
   '/placement': typeof AuthenticatedPlacementRoute
   '/progress': typeof AuthenticatedProgressRoute
+  '/reading': typeof AuthenticatedReadingRoute
   '/speaking': typeof AuthenticatedSpeakingRoute
   '/speaking-free': typeof AuthenticatedSpeakingFreeRoute
+  '/vocabulary': typeof AuthenticatedVocabularyRoute
+  '/weaknesses': typeof AuthenticatedWeaknessesRoute
+  '/lesson/$id': typeof AuthenticatedLessonIdRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/auth': typeof AuthRoute
+  '/achievements': typeof AuthenticatedAchievementsRoute
   '/dashboard': typeof AuthenticatedDashboardRoute
   '/exercise': typeof AuthenticatedExerciseRoute
+  '/lessons': typeof AuthenticatedLessonsRoute
   '/listening': typeof AuthenticatedListeningRoute
   '/placement': typeof AuthenticatedPlacementRoute
   '/progress': typeof AuthenticatedProgressRoute
+  '/reading': typeof AuthenticatedReadingRoute
   '/speaking': typeof AuthenticatedSpeakingRoute
   '/speaking-free': typeof AuthenticatedSpeakingFreeRoute
+  '/vocabulary': typeof AuthenticatedVocabularyRoute
+  '/weaknesses': typeof AuthenticatedWeaknessesRoute
+  '/lesson/$id': typeof AuthenticatedLessonIdRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/_authenticated': typeof AuthenticatedRouteRouteWithChildren
   '/auth': typeof AuthRoute
+  '/_authenticated/achievements': typeof AuthenticatedAchievementsRoute
   '/_authenticated/dashboard': typeof AuthenticatedDashboardRoute
   '/_authenticated/exercise': typeof AuthenticatedExerciseRoute
+  '/_authenticated/lessons': typeof AuthenticatedLessonsRoute
   '/_authenticated/listening': typeof AuthenticatedListeningRoute
   '/_authenticated/placement': typeof AuthenticatedPlacementRoute
   '/_authenticated/progress': typeof AuthenticatedProgressRoute
+  '/_authenticated/reading': typeof AuthenticatedReadingRoute
   '/_authenticated/speaking': typeof AuthenticatedSpeakingRoute
   '/_authenticated/speaking-free': typeof AuthenticatedSpeakingFreeRoute
+  '/_authenticated/vocabulary': typeof AuthenticatedVocabularyRoute
+  '/_authenticated/weaknesses': typeof AuthenticatedWeaknessesRoute
+  '/_authenticated/lesson/$id': typeof AuthenticatedLessonIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
     | '/auth'
+    | '/achievements'
     | '/dashboard'
     | '/exercise'
+    | '/lessons'
     | '/listening'
     | '/placement'
     | '/progress'
+    | '/reading'
     | '/speaking'
     | '/speaking-free'
+    | '/vocabulary'
+    | '/weaknesses'
+    | '/lesson/$id'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/auth'
+    | '/achievements'
     | '/dashboard'
     | '/exercise'
+    | '/lessons'
     | '/listening'
     | '/placement'
     | '/progress'
+    | '/reading'
     | '/speaking'
     | '/speaking-free'
+    | '/vocabulary'
+    | '/weaknesses'
+    | '/lesson/$id'
   id:
     | '__root__'
     | '/'
     | '/_authenticated'
     | '/auth'
+    | '/_authenticated/achievements'
     | '/_authenticated/dashboard'
     | '/_authenticated/exercise'
+    | '/_authenticated/lessons'
     | '/_authenticated/listening'
     | '/_authenticated/placement'
     | '/_authenticated/progress'
+    | '/_authenticated/reading'
     | '/_authenticated/speaking'
     | '/_authenticated/speaking-free'
+    | '/_authenticated/vocabulary'
+    | '/_authenticated/weaknesses'
+    | '/_authenticated/lesson/$id'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -172,6 +245,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/_authenticated/weaknesses': {
+      id: '/_authenticated/weaknesses'
+      path: '/weaknesses'
+      fullPath: '/weaknesses'
+      preLoaderRoute: typeof AuthenticatedWeaknessesRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/vocabulary': {
+      id: '/_authenticated/vocabulary'
+      path: '/vocabulary'
+      fullPath: '/vocabulary'
+      preLoaderRoute: typeof AuthenticatedVocabularyRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
     '/_authenticated/speaking-free': {
       id: '/_authenticated/speaking-free'
       path: '/speaking-free'
@@ -184,6 +271,13 @@ declare module '@tanstack/react-router' {
       path: '/speaking'
       fullPath: '/speaking'
       preLoaderRoute: typeof AuthenticatedSpeakingRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/reading': {
+      id: '/_authenticated/reading'
+      path: '/reading'
+      fullPath: '/reading'
+      preLoaderRoute: typeof AuthenticatedReadingRouteImport
       parentRoute: typeof AuthenticatedRouteRoute
     }
     '/_authenticated/progress': {
@@ -207,6 +301,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedListeningRouteImport
       parentRoute: typeof AuthenticatedRouteRoute
     }
+    '/_authenticated/lessons': {
+      id: '/_authenticated/lessons'
+      path: '/lessons'
+      fullPath: '/lessons'
+      preLoaderRoute: typeof AuthenticatedLessonsRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
     '/_authenticated/exercise': {
       id: '/_authenticated/exercise'
       path: '/exercise'
@@ -221,27 +322,53 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedDashboardRouteImport
       parentRoute: typeof AuthenticatedRouteRoute
     }
+    '/_authenticated/achievements': {
+      id: '/_authenticated/achievements'
+      path: '/achievements'
+      fullPath: '/achievements'
+      preLoaderRoute: typeof AuthenticatedAchievementsRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/lesson/$id': {
+      id: '/_authenticated/lesson/$id'
+      path: '/lesson/$id'
+      fullPath: '/lesson/$id'
+      preLoaderRoute: typeof AuthenticatedLessonIdRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
   }
 }
 
 interface AuthenticatedRouteRouteChildren {
+  AuthenticatedAchievementsRoute: typeof AuthenticatedAchievementsRoute
   AuthenticatedDashboardRoute: typeof AuthenticatedDashboardRoute
   AuthenticatedExerciseRoute: typeof AuthenticatedExerciseRoute
+  AuthenticatedLessonsRoute: typeof AuthenticatedLessonsRoute
   AuthenticatedListeningRoute: typeof AuthenticatedListeningRoute
   AuthenticatedPlacementRoute: typeof AuthenticatedPlacementRoute
   AuthenticatedProgressRoute: typeof AuthenticatedProgressRoute
+  AuthenticatedReadingRoute: typeof AuthenticatedReadingRoute
   AuthenticatedSpeakingRoute: typeof AuthenticatedSpeakingRoute
   AuthenticatedSpeakingFreeRoute: typeof AuthenticatedSpeakingFreeRoute
+  AuthenticatedVocabularyRoute: typeof AuthenticatedVocabularyRoute
+  AuthenticatedWeaknessesRoute: typeof AuthenticatedWeaknessesRoute
+  AuthenticatedLessonIdRoute: typeof AuthenticatedLessonIdRoute
 }
 
 const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
+  AuthenticatedAchievementsRoute: AuthenticatedAchievementsRoute,
   AuthenticatedDashboardRoute: AuthenticatedDashboardRoute,
   AuthenticatedExerciseRoute: AuthenticatedExerciseRoute,
+  AuthenticatedLessonsRoute: AuthenticatedLessonsRoute,
   AuthenticatedListeningRoute: AuthenticatedListeningRoute,
   AuthenticatedPlacementRoute: AuthenticatedPlacementRoute,
   AuthenticatedProgressRoute: AuthenticatedProgressRoute,
+  AuthenticatedReadingRoute: AuthenticatedReadingRoute,
   AuthenticatedSpeakingRoute: AuthenticatedSpeakingRoute,
   AuthenticatedSpeakingFreeRoute: AuthenticatedSpeakingFreeRoute,
+  AuthenticatedVocabularyRoute: AuthenticatedVocabularyRoute,
+  AuthenticatedWeaknessesRoute: AuthenticatedWeaknessesRoute,
+  AuthenticatedLessonIdRoute: AuthenticatedLessonIdRoute,
 }
 
 const AuthenticatedRouteRouteWithChildren =
