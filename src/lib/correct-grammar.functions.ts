@@ -59,13 +59,13 @@ Student answer: "${data.userInput}"`;
     const gateway = createLovableAiGatewayProvider(apiKey);
 
     try {
-      const { output } = await generateText({
+      const { experimental_output } = await generateText({
         model: gateway("google/gemini-3-flash-preview"),
         system: systemPrompt,
         prompt: userMessage,
         experimental_output: Output.object({ schema: CorrectionSchema as never }),
       });
-      return output as Correction;
+      return experimental_output as Correction;
     } catch (err: unknown) {
       const msg = err instanceof Error ? err.message : String(err);
       if (msg.includes("429")) {
