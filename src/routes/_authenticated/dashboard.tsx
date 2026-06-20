@@ -166,7 +166,9 @@ function Dashboard() {
   async function saveName() {
     const trimmed = nameDraft.trim();
     if (!trimmed) return toast.error("Nome vazio");
-    const { error } = await supabase.from("profiles").update({ display_name: trimmed }).eq("user_id", user.id);
+    const { error } = await supabase
+      .from("profiles")
+      .upsert({ user_id: user.id, display_name: trimmed }, { onConflict: "user_id" });
     if (error) return toast.error("Erro ao salvar");
     setEditingName(false);
     queryClient.invalidateQueries({ queryKey: ["profile", user.id] });

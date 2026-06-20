@@ -1,14 +1,14 @@
-## Problemas
+## Causa
 
-1. **Editar nome não é descoberto**: o lápis só aparece no hover (`opacity-0 group-hover:opacity-100`), invisível no mobile. O clique no nome até funciona, mas o usuário não sabe.
-2. **Teste de nível**: a rota `/placement` existe mas não há nenhum link visível no dashboard nem em "More".
+O nome em minúsculo vem do fallback `user.email?.split("@")[0]` — não existe linha em `profiles` para você. O `update` no `saveName` filtra por `user_id`, encontra 0 linhas e não dá erro, então parece que "não salva".
 
-## Mudanças (UI apenas, sem mexer em schema)
+A linha de `profiles` só é criada pelo trigger `handle_new_user` para contas novas; usuários criados antes do trigger ficaram sem registro.
 
-**`src/routes/_authenticated/dashboard.tsx`**
-- Tornar o lápis de editar nome sempre visível (remover `opacity-0 group-hover:opacity-100`, deixar discreto com `text-gray-400`).
-- Adicionar um card/botão "Fazer teste de nível" que leva para `/placement`:
-  - Se `profiles.placement_done === false` (ou null), mostrar em destaque logo abaixo do header como um banner clicável ("Descubra seu nível em 5 min →").
-  - Se já fez, mostrar um link discreto "Refazer teste de nível" junto da linha de Track/Level/XP ou no grid de navegação inferior (4ª coluna ao lado de Lições/Fraquezas/Progresso).
+## Mudanças
 
-Sem mudanças em backend, rotas novas ou lógica de negócio.
+**`src/routes/_authenticated/dashboard.tsx`** (apenas frontend):
+
+- Trocar o `update` em `saveName` por um `upsert` em `profiles` com `onConflict: "user_id"`, inserindo `{ user_id, display_name: trimmed }`. Assim funciona tanto para quem já tem perfil quanto para quem não tem.
+- Após salvar, invalidar `["profile", user.id]` (já é feito).
+
+Sem migration, sem mudança de schema. Resolve o caso atual e qualquer outro usuário antigo sem linha em `profiles`.
