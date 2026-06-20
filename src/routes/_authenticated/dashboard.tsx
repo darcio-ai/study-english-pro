@@ -349,7 +349,7 @@ function Dashboard() {
         </div>
 
         {/* Bottom nav links */}
-        <div className="mt-5 grid grid-cols-3 gap-2 text-sm">
+        <div className="mt-5 grid grid-cols-4 gap-2 text-sm">
           <Link to="/lessons" className="flex flex-col items-center gap-1 py-2.5 rounded-lg bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:border-indigo-300">
             <BookOpen className="size-4 text-indigo-600" />
             <span className="text-xs text-gray-700 dark:text-gray-300">Lições</span>
@@ -361,6 +361,10 @@ function Dashboard() {
           <Link to="/progress" className="flex flex-col items-center gap-1 py-2.5 rounded-lg bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:border-indigo-300">
             <BarChart3 className="size-4 text-emerald-600" />
             <span className="text-xs text-gray-700 dark:text-gray-300">Progresso</span>
+          </Link>
+          <Link to="/placement" className="flex flex-col items-center gap-1 py-2.5 rounded-lg bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:border-indigo-300">
+            <GraduationCap className="size-4 text-teal-600" />
+            <span className="text-xs text-gray-700 dark:text-gray-300">Nivelar</span>
           </Link>
         </div>
 
