@@ -3,7 +3,7 @@ import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
 import { formatDistanceToNow } from "date-fns";
 import { ptBR } from "date-fns/locale";
-import { LogOut, Flame, BarChart3, Pencil, Check, X, RefreshCw, Trophy, BookOpen, Brain, Target, Zap } from "lucide-react";
+import { LogOut, Flame, BarChart3, Pencil, Check, X, RefreshCw, Trophy, BookOpen, Brain, Target, Zap, Sparkles, GraduationCap } from "lucide-react";
 import { toast } from "sonner";
 
 import { supabase } from "@/integrations/supabase/client";
@@ -179,6 +179,7 @@ function Dashboard() {
   const nextLesson = nextLessonQuery.data;
   const recentAttempts = recentAttemptsQuery.data ?? [];
   const unlockedCount = achievementsQuery.data ?? 0;
+  const placementDone = profileQuery.data?.placement_done === true;
 
   return (
     <main className="min-h-screen bg-gray-50 dark:bg-gray-900 px-4 py-6 pb-20">
@@ -205,10 +206,11 @@ function Dashboard() {
             ) : (
               <button
                 onClick={() => { setNameDraft(displayName); setEditingName(true); }}
-                className="group flex items-center gap-2 text-left"
+                className="flex items-center gap-1.5 text-left"
+                aria-label="Editar nome"
               >
                 <h1 className="text-2xl font-bold text-gray-900 dark:text-white truncate">{displayName}</h1>
-                <Pencil className="size-4 text-gray-400 opacity-0 group-hover:opacity-100" />
+                <Pencil className="size-4 text-gray-400 shrink-0" />
               </button>
             )}
           </div>
@@ -262,6 +264,23 @@ function Dashboard() {
             <StatCard icon={<Trophy className="size-4 text-amber-500" />} label="Conquistas" value={unlockedCount} />
           </Link>
         </div>
+
+        {/* Placement test banner — show prominently if not done */}
+        {!placementDone && (
+          <Link
+            to="/placement"
+            className="block mb-3 p-4 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 text-white hover:shadow-xl transition-all"
+          >
+            <div className="flex items-center gap-3">
+              <Sparkles className="size-6 shrink-0" />
+              <div className="flex-1 min-w-0">
+                <p className="text-sm font-bold">Descubra seu nível</p>
+                <p className="text-xs opacity-90">Faça o teste rápido em 5 minutos</p>
+              </div>
+              <span className="text-xl">→</span>
+            </div>
+          </Link>
+        )}
 
         {/* Hero CTA: Next Lesson */}
         {nextLesson && (
@@ -330,7 +349,7 @@ function Dashboard() {
         </div>
 
         {/* Bottom nav links */}
-        <div className="mt-5 grid grid-cols-3 gap-2 text-sm">
+        <div className="mt-5 grid grid-cols-4 gap-2 text-sm">
           <Link to="/lessons" className="flex flex-col items-center gap-1 py-2.5 rounded-lg bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:border-indigo-300">
             <BookOpen className="size-4 text-indigo-600" />
             <span className="text-xs text-gray-700 dark:text-gray-300">Lições</span>
@@ -342,6 +361,10 @@ function Dashboard() {
           <Link to="/progress" className="flex flex-col items-center gap-1 py-2.5 rounded-lg bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:border-indigo-300">
             <BarChart3 className="size-4 text-emerald-600" />
             <span className="text-xs text-gray-700 dark:text-gray-300">Progresso</span>
+          </Link>
+          <Link to="/placement" className="flex flex-col items-center gap-1 py-2.5 rounded-lg bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:border-indigo-300">
+            <GraduationCap className="size-4 text-teal-600" />
+            <span className="text-xs text-gray-700 dark:text-gray-300">Nivelar</span>
           </Link>
         </div>
 
