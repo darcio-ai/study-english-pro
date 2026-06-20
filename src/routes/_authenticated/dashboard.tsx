@@ -3,7 +3,7 @@ import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
 import { formatDistanceToNow } from "date-fns";
 import { ptBR } from "date-fns/locale";
-import { LogOut, Flame, BarChart3, Pencil, Check, X, RefreshCw, Trophy, BookOpen, Brain, Target, Zap } from "lucide-react";
+import { LogOut, Flame, BarChart3, Pencil, Check, X, RefreshCw, Trophy, BookOpen, Brain, Target, Zap, Sparkles, GraduationCap } from "lucide-react";
 import { toast } from "sonner";
 
 import { supabase } from "@/integrations/supabase/client";
