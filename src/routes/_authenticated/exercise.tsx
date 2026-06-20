@@ -123,7 +123,7 @@ function ExercisePage() {
       user_id: user.id,
       exercise_id: exercise.id,
       user_input: userInput,
-      correction: correction as unknown as Record<string, unknown>,
+      correction: correction as unknown as never,
       score: correction.score,
       grammar_focus: exercise.grammar_focus,
       level: userLevel,
