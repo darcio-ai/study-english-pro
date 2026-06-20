@@ -320,3 +320,16 @@ function StatCard({
     </div>
   );
 }
+
+function ModeCard({ to, emoji, label, sub }: { to: string; emoji: string; label: string; sub: string }) {
+  return (
+    <Link
+      to={to}
+      className="flex flex-col items-center justify-center gap-1 py-5 px-3 rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:border-indigo-400 hover:shadow-md active:scale-95 transition-all min-h-[110px]"
+    >
+      <span className="text-3xl">{emoji}</span>
+      <span className="text-sm font-semibold text-gray-900 dark:text-white">{label}</span>
+      <span className="text-[11px] text-gray-500 dark:text-gray-400">{sub}</span>
+    </Link>
+  );
+}
