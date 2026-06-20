@@ -244,10 +244,26 @@ function Dashboard() {
 
         {/* Practice modes */}
         <div className="grid grid-cols-2 gap-3">
-          <ModeCard to="/exercise" emoji="📝" label="Escrever" sub="Gramática" />
-          <ModeCard to="/listening" emoji="🎧" label="Ouvir" sub="Listening" />
-          <ModeCard to="/speaking" emoji="🎤" label="Falar" sub="Pronúncia" />
-          <ModeCard to="/speaking-free" emoji="💬" label="Conversar" sub="Speaking livre" />
+          <Link to="/exercise" className="flex flex-col items-center justify-center gap-1 py-5 px-3 rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:border-indigo-400 hover:shadow-md active:scale-95 transition-all min-h-[110px]">
+            <span className="text-3xl">📝</span>
+            <span className="text-sm font-semibold text-gray-900 dark:text-white">Escrever</span>
+            <span className="text-[11px] text-gray-500 dark:text-gray-400">Gramática</span>
+          </Link>
+          <Link to="/listening" className="flex flex-col items-center justify-center gap-1 py-5 px-3 rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:border-indigo-400 hover:shadow-md active:scale-95 transition-all min-h-[110px]">
+            <span className="text-3xl">🎧</span>
+            <span className="text-sm font-semibold text-gray-900 dark:text-white">Ouvir</span>
+            <span className="text-[11px] text-gray-500 dark:text-gray-400">Listening</span>
+          </Link>
+          <Link to="/speaking" className="flex flex-col items-center justify-center gap-1 py-5 px-3 rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:border-indigo-400 hover:shadow-md active:scale-95 transition-all min-h-[110px]">
+            <span className="text-3xl">🎤</span>
+            <span className="text-sm font-semibold text-gray-900 dark:text-white">Falar</span>
+            <span className="text-[11px] text-gray-500 dark:text-gray-400">Pronúncia</span>
+          </Link>
+          <Link to="/speaking-free" className="flex flex-col items-center justify-center gap-1 py-5 px-3 rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:border-indigo-400 hover:shadow-md active:scale-95 transition-all min-h-[110px]">
+            <span className="text-3xl">💬</span>
+            <span className="text-sm font-semibold text-gray-900 dark:text-white">Conversar</span>
+            <span className="text-[11px] text-gray-500 dark:text-gray-400">Speaking livre</span>
+          </Link>
         </div>
         <div className="mt-3 flex items-center justify-center gap-4 text-sm">
           <Link
