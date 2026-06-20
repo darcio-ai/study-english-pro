@@ -126,7 +126,7 @@ function ProgressPage() {
           <div className="space-y-6">
             <ChartCard title="Notas dos últimos 7 dias">
               <ResponsiveContainer width="100%" height={200}>
-                <LineChart data={byDay} margin={{ left: -10, right: 8, top: 8, bottom: 0 }}>
+                <LineChart data={byDay} margin={{ left: 0, right: 4, top: 8, bottom: 0 }}>
                   <CartesianGrid strokeDasharray="3 3" stroke="rgba(120,120,140,0.2)" />
                   <XAxis dataKey="label" tick={{ fontSize: 12 }} />
                   <YAxis domain={[0, 100]} tick={{ fontSize: 12 }} />
