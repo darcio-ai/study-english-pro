@@ -16,6 +16,7 @@ import { Route as AuthenticatedWeaknessesRouteImport } from './routes/_authentic
 import { Route as AuthenticatedVocabularyRouteImport } from './routes/_authenticated/vocabulary'
 import { Route as AuthenticatedSpeakingFreeRouteImport } from './routes/_authenticated/speaking-free'
 import { Route as AuthenticatedSpeakingRouteImport } from './routes/_authenticated/speaking'
+import { Route as AuthenticatedReviewRouteImport } from './routes/_authenticated/review'
 import { Route as AuthenticatedReadingRouteImport } from './routes/_authenticated/reading'
 import { Route as AuthenticatedProgressRouteImport } from './routes/_authenticated/progress'
 import { Route as AuthenticatedPlacementRouteImport } from './routes/_authenticated/placement'
@@ -59,6 +60,11 @@ const AuthenticatedSpeakingFreeRoute =
 const AuthenticatedSpeakingRoute = AuthenticatedSpeakingRouteImport.update({
   id: '/speaking',
   path: '/speaking',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
+const AuthenticatedReviewRoute = AuthenticatedReviewRouteImport.update({
+  id: '/review',
+  path: '/review',
   getParentRoute: () => AuthenticatedRouteRoute,
 } as any)
 const AuthenticatedReadingRoute = AuthenticatedReadingRouteImport.update({
@@ -119,6 +125,7 @@ export interface FileRoutesByFullPath {
   '/placement': typeof AuthenticatedPlacementRoute
   '/progress': typeof AuthenticatedProgressRoute
   '/reading': typeof AuthenticatedReadingRoute
+  '/review': typeof AuthenticatedReviewRoute
   '/speaking': typeof AuthenticatedSpeakingRoute
   '/speaking-free': typeof AuthenticatedSpeakingFreeRoute
   '/vocabulary': typeof AuthenticatedVocabularyRoute
@@ -136,6 +143,7 @@ export interface FileRoutesByTo {
   '/placement': typeof AuthenticatedPlacementRoute
   '/progress': typeof AuthenticatedProgressRoute
   '/reading': typeof AuthenticatedReadingRoute
+  '/review': typeof AuthenticatedReviewRoute
   '/speaking': typeof AuthenticatedSpeakingRoute
   '/speaking-free': typeof AuthenticatedSpeakingFreeRoute
   '/vocabulary': typeof AuthenticatedVocabularyRoute
@@ -155,6 +163,7 @@ export interface FileRoutesById {
   '/_authenticated/placement': typeof AuthenticatedPlacementRoute
   '/_authenticated/progress': typeof AuthenticatedProgressRoute
   '/_authenticated/reading': typeof AuthenticatedReadingRoute
+  '/_authenticated/review': typeof AuthenticatedReviewRoute
   '/_authenticated/speaking': typeof AuthenticatedSpeakingRoute
   '/_authenticated/speaking-free': typeof AuthenticatedSpeakingFreeRoute
   '/_authenticated/vocabulary': typeof AuthenticatedVocabularyRoute
@@ -174,6 +183,7 @@ export interface FileRouteTypes {
     | '/placement'
     | '/progress'
     | '/reading'
+    | '/review'
     | '/speaking'
     | '/speaking-free'
     | '/vocabulary'
@@ -191,6 +201,7 @@ export interface FileRouteTypes {
     | '/placement'
     | '/progress'
     | '/reading'
+    | '/review'
     | '/speaking'
     | '/speaking-free'
     | '/vocabulary'
@@ -209,6 +220,7 @@ export interface FileRouteTypes {
     | '/_authenticated/placement'
     | '/_authenticated/progress'
     | '/_authenticated/reading'
+    | '/_authenticated/review'
     | '/_authenticated/speaking'
     | '/_authenticated/speaking-free'
     | '/_authenticated/vocabulary'
@@ -271,6 +283,13 @@ declare module '@tanstack/react-router' {
       path: '/speaking'
       fullPath: '/speaking'
       preLoaderRoute: typeof AuthenticatedSpeakingRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/review': {
+      id: '/_authenticated/review'
+      path: '/review'
+      fullPath: '/review'
+      preLoaderRoute: typeof AuthenticatedReviewRouteImport
       parentRoute: typeof AuthenticatedRouteRoute
     }
     '/_authenticated/reading': {
@@ -348,6 +367,7 @@ interface AuthenticatedRouteRouteChildren {
   AuthenticatedPlacementRoute: typeof AuthenticatedPlacementRoute
   AuthenticatedProgressRoute: typeof AuthenticatedProgressRoute
   AuthenticatedReadingRoute: typeof AuthenticatedReadingRoute
+  AuthenticatedReviewRoute: typeof AuthenticatedReviewRoute
   AuthenticatedSpeakingRoute: typeof AuthenticatedSpeakingRoute
   AuthenticatedSpeakingFreeRoute: typeof AuthenticatedSpeakingFreeRoute
   AuthenticatedVocabularyRoute: typeof AuthenticatedVocabularyRoute
@@ -364,6 +384,7 @@ const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
   AuthenticatedPlacementRoute: AuthenticatedPlacementRoute,
   AuthenticatedProgressRoute: AuthenticatedProgressRoute,
   AuthenticatedReadingRoute: AuthenticatedReadingRoute,
+  AuthenticatedReviewRoute: AuthenticatedReviewRoute,
   AuthenticatedSpeakingRoute: AuthenticatedSpeakingRoute,
   AuthenticatedSpeakingFreeRoute: AuthenticatedSpeakingFreeRoute,
   AuthenticatedVocabularyRoute: AuthenticatedVocabularyRoute,

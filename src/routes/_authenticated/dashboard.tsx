@@ -355,7 +355,7 @@ function Dashboard() {
                   <div className="flex-1 min-w-0">
                     <p className="text-sm font-medium text-gray-900 dark:text-white truncate">{a.grammar_focus ?? "—"}</p>
                     <p className="text-xs text-gray-500">
-                      {formatDistanceToNow(new Date(a.created_at), { addSuffix: true, locale: ptBR })}
+                      {a.created_at ? formatDistanceToNow(new Date(a.created_at), { addSuffix: true, locale: ptBR }) : ""}
                     </p>
                   </div>
                   <span className={`text-sm font-bold ${
