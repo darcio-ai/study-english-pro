@@ -249,12 +249,21 @@ function Dashboard() {
         >
           Praticar agora →
         </Link>
-        <Link
-          to="/progress"
-          className="mt-3 flex items-center justify-center gap-2 text-sm text-indigo-600 dark:text-indigo-400 hover:underline"
-        >
-          <BarChart3 className="size-4" /> Ver progresso
-        </Link>
+        <div className="mt-3 flex items-center justify-center gap-4 text-sm">
+          <Link
+            to="/progress"
+            className="flex items-center gap-1.5 text-indigo-600 dark:text-indigo-400 hover:underline"
+          >
+            <BarChart3 className="size-4" /> Ver progresso
+          </Link>
+          <span className="text-gray-300 dark:text-gray-700">·</span>
+          <button
+            onClick={retakePlacement}
+            className="flex items-center gap-1.5 text-gray-600 dark:text-gray-400 hover:underline"
+          >
+            <RotateCcw className="size-4" /> Refazer teste
+          </button>
+        </div>
 
         {/* Recent attempts */}
         <section className="mt-8">
