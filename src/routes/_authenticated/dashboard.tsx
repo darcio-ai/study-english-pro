@@ -179,6 +179,7 @@ function Dashboard() {
   const nextLesson = nextLessonQuery.data;
   const recentAttempts = recentAttemptsQuery.data ?? [];
   const unlockedCount = achievementsQuery.data ?? 0;
+  const placementDone = profileQuery.data?.placement_done === true;
 
   return (
     <main className="min-h-screen bg-gray-50 dark:bg-gray-900 px-4 py-6 pb-20">
