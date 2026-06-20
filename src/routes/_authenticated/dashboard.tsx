@@ -242,13 +242,13 @@ function Dashboard() {
           />
         </div>
 
-        {/* CTA */}
-        <Link
-          to="/exercise"
-          className="block w-full py-4 px-6 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-center font-semibold shadow-sm transition-colors"
-        >
-          Praticar agora →
-        </Link>
+        {/* Practice modes */}
+        <div className="grid grid-cols-2 gap-3">
+          <ModeCard to="/exercise" emoji="📝" label="Escrever" sub="Gramática" />
+          <ModeCard to="/listening" emoji="🎧" label="Ouvir" sub="Listening" />
+          <ModeCard to="/speaking" emoji="🎤" label="Falar" sub="Pronúncia" />
+          <ModeCard to="/speaking-free" emoji="💬" label="Conversar" sub="Speaking livre" />
+        </div>
         <div className="mt-3 flex items-center justify-center gap-4 text-sm">
           <Link
             to="/progress"
