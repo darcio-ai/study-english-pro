@@ -223,9 +223,9 @@ function ExercisePage() {
                 value={userInput}
                 onChange={(e) => setUserInput(e.target.value)}
                 disabled={!!correction}
-                rows={3}
+                rows={4}
                 placeholder="Escreva sua resposta em inglês..."
-                className="mt-4 w-full px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 resize-y min-h-[88px] disabled:opacity-70"
+                className="mt-4 w-full px-3 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 resize-y min-h-[96px] text-base disabled:opacity-70"
               />
 
               {!correction && (

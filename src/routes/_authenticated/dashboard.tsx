@@ -110,7 +110,7 @@ function Dashboard() {
             <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
               Olá! 👋
             </h1>
-            <p className="text-sm text-gray-600 dark:text-gray-400 truncate max-w-[220px]">
+            <p className="text-sm text-gray-600 dark:text-gray-400 truncate max-w-[180px] sm:max-w-[260px]">
               {user.email}
             </p>
           </div>
@@ -134,12 +134,12 @@ function Dashboard() {
             {p ? <LevelPill level={p.level} interactive /> : <span className="text-xs">…</span>}
           </button>
           {levelMenuOpen && p && (
-            <div className="absolute z-10 mt-2 flex flex-col gap-1 p-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-lg">
+            <div className="absolute z-10 left-0 mt-2 flex flex-col gap-1 p-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-lg min-w-[160px]">
               {LEVELS.map((l) => (
                 <button
                   key={l}
                   onClick={() => changeLevel(l)}
-                  className="text-left px-2 py-1.5 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700"
+                  className="text-left px-3 py-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 min-h-[44px]"
                 >
                   <LevelPill level={l} />
                 </button>
