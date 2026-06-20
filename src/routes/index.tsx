@@ -1,13 +1,18 @@
-import { createFileRoute, redirect } from "@tanstack/react-router";
+import { createFileRoute, useNavigate } from "@tanstack/react-router";
+import { useEffect } from "react";
 
 export const Route = createFileRoute("/")({
-  ssr: false,
-  beforeLoad: async () => {
-    const { supabase } = await import("@/integrations/supabase/client");
-    const { data } = await supabase.auth.getUser();
-    if (data.user) {
-      throw redirect({ to: "/dashboard" });
-    }
-    throw redirect({ to: "/auth" });
-  },
+  component: IndexPage,
 });
+
+function IndexPage() {
+  const navigate = useNavigate();
+  useEffect(() => {
+    navigate({ to: "/auth" });
+  }, [navigate]);
+  return (
+    <div className="flex min-h-screen items-center justify-center bg-gray-50 dark:bg-gray-900">
+      <div className="size-8 border-4 border-indigo-600 border-t-transparent rounded-full animate-spin" />
+    </div>
+  );
+}
