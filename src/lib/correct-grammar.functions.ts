@@ -63,7 +63,7 @@ Student answer: "${data.userInput}"`;
         model: gateway("google/gemini-3-flash-preview"),
         system: systemPrompt,
         prompt: userMessage,
-        experimental_output: Output.object({ schema: CorrectionSchema }),
+        experimental_output: Output.object({ schema: CorrectionSchema as never }),
       });
       return output as Correction;
     } catch (err: unknown) {
