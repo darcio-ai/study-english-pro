@@ -1,0 +1,2 @@
+DROP POLICY IF EXISTS "Users can delete their own achievements" ON public.user_achievements;
+CREATE POLICY "no_direct_delete_user_achievements" ON public.user_achievements FOR DELETE TO authenticated USING (false);
