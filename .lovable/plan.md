@@ -1,51 +1,53 @@
-## Resumo
+# Trilha Geral estilo Duolingo
 
-As duas questões detectadas são **vulnerabilidades de controle de acesso** no banco de dados. Nenhuma delas exige mudança no código do app — a correção é puramente no banco de dados, adicionando políticas de segurança (RLS) que bloqueiam operações não autorizadas.
+Hoje o app tem só trilhas **Vendas** e **Tecnologia**, ambas com vocabulário profissional avançado. Vou adicionar uma terceira trilha **Geral** (🌍) com lições curtas e progressivas — do "Hello, my name is..." até conversas do dia a dia — no formato Duolingo.
 
----
+## O que vai mudar
 
-### Questão 1 — Critical
-**"Users can arbitrarily grant themselves achievements"**
+### 1. Seletor de trilha (Lições)
+Adicionar botão **🌍 Geral** ao lado de Vendas e Tecnologia em `src/routes/_authenticated/lessons.tsx`. A infraestrutura de trilhas já existe (`Track = "sales" | "tech" | "general"`), só falta expor e popular conteúdo.
 
-A tabela `user_achievements` não tem uma política INSERT. Um usuário autenticado pode inserir conquistas para qualquer conta (incluindo outras pessoas). No app, a inserção só acontece via função servidor (`grantAchievements`), que usa `supabaseAdmin` (service role). O problema é que nada impede um usuário malicioso de chamar a API diretamente.
+### 2. Novas lições "Geral" (nível beginner)
+Criar ~15 lições curtas em migration SQL, cobrindo o básico do básico:
 
-**Correção:** Adicionar uma política RESTRICTIVE INSERT que nega todas as inserções diretas. A função servidor continua funcionando porque o service role bypassa RLS.
+```text
+Unidade 1 — Primeiros contatos
+  1. Hello & Goodbye (olá, tchau, bom dia)
+  2. My name is... (apresentar-se)
+  3. Numbers 1–20
+  4. How are you? (respostas simples)
 
----
+Unidade 2 — Sobre você
+  5. I am / You are (verbo to be)
+  6. Family (mother, father, sister...)
+  7. Colors & basic adjectives
+  8. Where are you from? (países/nacionalidades)
 
-### Questão 2 — Warning
-**"Attempt records can be modified or deleted by anyone"**
+Unidade 3 — Dia a dia
+  9. Days of the week
+  10. Food & drinks (I like / I don't like)
+  11. Time (What time is it?)
+  12. Weather (It's sunny/cold/raining)
 
-A tabela `attempts` só tem políticas SELECT e INSERT. Não há políticas UPDATE ou DELETE. O app nunca faz UPDATE/DELETE em tentativas, mas a ausência de políticas explícitas deixa brecha para manipulação futura.
-
-**Correção:** Adicionar políticas RESTRICTIVE UPDATE e DELETE que negam qualquer modificação ou exclusão de registros de tentativas.
-
----
-
-### Execução
-
-Criar uma migration SQL com:
-
-```sql
--- user_achievements: bloquear INSERT direto (server function bypassa via service role)
-CREATE POLICY "No direct insert on user_achievements"
-  ON public.user_achievements
-  FOR INSERT
-  TO public
-  WITH CHECK (false);
-
--- attempts: bloquear UPDATE e DELETE
-CREATE POLICY "No update on attempts"
-  ON public.attempts
-  FOR UPDATE
-  TO public
-  USING (false);
-
-CREATE POLICY "No delete on attempts"
-  ON public.attempts
-  FOR DELETE
-  TO public
-  USING (false);
+Unidade 4 — Ações simples
+  13. Present simple (I work, I live, I study)
+  14. Can / Can't (habilidades)
+  15. Shopping (How much is it?)
 ```
 
-Após aplicar a migration, marcar ambas as questões como corrigidas no scanner.
+Cada lição terá 4–6 exercícios de tipos variados (escrita curta, listening, speaking guiado) — mesmo formato dos exercícios que já existem, só com vocabulário controlado e frases curtas.
+
+### 3. Nível "beginner" real
+As lições Geral só aparecem em `beginner`. Isso dá ao usuário iniciante um caminho claro sem esbarrar em jargão de vendas/tech.
+
+## Detalhes técnicos
+
+- **Migration**: `INSERT INTO lessons` (~15 linhas) + `INSERT INTO exercises` (~70 linhas), tudo `track='general'`, `level='beginner'`. Sem mudança de schema — as tabelas já suportam.
+- **Frontend**: só adicionar `"general"` ao array `["sales", "tech"]` em `lessons.tsx` (linha ~104). Labels e emoji já existem em `TRACK_LABEL`/`TRACK_EMOJI`.
+- **Sem mudanças** em: dashboard, exercícios, review, vocabulário, achievements — tudo já é agnóstico de trilha.
+
+## Perguntas rápidas antes de eu escrever
+
+1. **Quantas lições no total?** Sugiro começar com ~15 (as 4 unidades acima). Prefere mais/menos?
+2. **Exercícios por lição:** 4–6 exercícios curtos (padrão atual) — ok?
+3. **Só nível beginner** por enquanto, ou já criar intermediate/advanced Geral também?
