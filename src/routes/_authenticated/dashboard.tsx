@@ -238,7 +238,7 @@ function Dashboard() {
             )}
           </div>
 
-          {(["sales", "tech"] as Track[]).map((t) => (
+          {(["general", "sales", "tech"] as Track[]).map((t) => (
             <button
               key={t}
               onClick={() => changeTrack(t)}
