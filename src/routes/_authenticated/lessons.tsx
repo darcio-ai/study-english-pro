@@ -103,11 +103,11 @@ function LessonsPage() {
 
         {/* Track switcher */}
         <div className="flex gap-2 mb-6">
-          {(["sales", "tech"] as Track[]).map((t) => (
+          {(["general", "sales", "tech"] as Track[]).map((t) => (
             <button
               key={t}
               onClick={() => changeTrack(t)}
-              className={`flex-1 py-2.5 px-3 rounded-xl text-sm font-semibold transition-all ${
+              className={`flex-1 py-2 px-2 rounded-xl text-xs font-semibold transition-all ${
                 track === t
                   ? "bg-indigo-600 text-white shadow-md"
                   : "bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700"
