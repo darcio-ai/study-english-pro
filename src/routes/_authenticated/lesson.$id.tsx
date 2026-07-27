@@ -221,7 +221,9 @@ function LessonRunner() {
           mode: isRead ? "read" : "free",
           level: exercise.level,
           promptEn: exercise.prompt_en,
+          language: lessonLanguage,
         },
+
       });
       setEvaluation(result);
       await persistAttempt(result.score, result, stt.text, exercise.mode);
