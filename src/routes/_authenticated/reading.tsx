@@ -6,7 +6,10 @@ import { toast } from "sonner";
 
 import { supabase } from "@/integrations/supabase/client";
 import { LevelPill, type Level } from "@/components/englishup";
+import { LanguageSwitch } from "@/components/language-switch";
+import { useLanguage } from "@/hooks/use-language";
 import { addXp, checkAndGrantAchievements, TRACK_EMOJI, TRACK_LABEL, type Track } from "@/lib/learning";
+
 
 export const Route = createFileRoute("/_authenticated/reading")({
   head: () => ({ meta: [{ title: "Leitura — EnglishUp" }] }),
