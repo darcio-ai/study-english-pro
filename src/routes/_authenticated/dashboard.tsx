@@ -96,7 +96,7 @@ function Dashboard() {
   });
 
   const nextLessonQuery = useQuery({
-    queryKey: ["next_lesson", user.id, progressQuery.data?.preferred_track, progressQuery.data?.level],
+    queryKey: ["next_lesson", user.id, progressQuery.data?.preferred_track, progressQuery.data?.level, language],
     queryFn: async () => {
       const track = progressQuery.data?.preferred_track ?? "sales";
       const level = progressQuery.data?.level ?? "beginner";
@@ -105,8 +105,10 @@ function Dashboard() {
         .select("id, title, emoji, unit_number, lesson_number")
         .eq("track", track)
         .eq("level", level)
+        .eq("language", language)
         .order("unit_number")
         .order("lesson_number");
+
       const { data: progress } = await supabase
         .from("user_lesson_progress")
         .select("lesson_id, completed_at")
