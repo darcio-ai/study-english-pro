@@ -1,14 +1,14 @@
 import { createServerFn } from "@tanstack/react-start";
-import { generateText, Output } from "ai";
+import { generateText, NoObjectGeneratedError, Output } from "ai";
 import { z } from "zod";
 
 import { requireSupabaseAuth } from "@/integrations/supabase/auth-middleware";
 import { createLovableAiGatewayProvider } from "./ai-gateway.server";
 
 const InputSchema = z.object({
-  userInput: z.string().min(1).max(2000),
-  exercisePromptEn: z.string().min(1).max(500),
-  exerciseContent: z.string().max(500).nullable().optional(),
+  userInput: z.string().min(1).max(4000),
+  exercisePromptEn: z.string().min(1).max(2000),
+  exerciseContent: z.string().max(2000).nullable().optional(),
   grammarFocus: z.string().min(1).max(200),
   level: z.enum(["beginner", "intermediate", "advanced"]),
   language: z.enum(["en", "es"]).optional().default("en"),
@@ -26,11 +26,70 @@ const CorrectionSchema = z.object({
     }),
   ),
   corrected_text: z.string(),
-  score: z.number().int().min(0).max(100),
+  score: z.number(),
   positive_pt: z.string(),
 });
 
-export type Correction = z.infer<typeof CorrectionSchema>;
+export type Correction = {
+  errors: {
+    segment: string;
+    corrected: string;
+    type: string;
+    explanation_pt: string;
+    rule: string;
+  }[];
+  corrected_text: string;
+  score: number;
+  positive_pt: string;
+};
+
+function clampScore(value: unknown): number {
+  const n = typeof value === "number" ? value : Number(value);
+  if (!Number.isFinite(n)) return 0;
+  return Math.max(0, Math.min(100, Math.round(n)));
+}
+
+function str(value: unknown): string {
+  return typeof value === "string" ? value : "";
+}
+
+function normalizeCorrection(raw: unknown, fallbackText: string): Correction {
+  const obj = (raw ?? {}) as Record<string, unknown>;
+  const rawErrors = Array.isArray(obj.errors) ? obj.errors : [];
+  const errors = rawErrors
+    .map((e) => {
+      const item = (e ?? {}) as Record<string, unknown>;
+      return {
+        segment: str(item.segment) || str(item.original),
+        corrected: str(item.corrected) || str(item.correction),
+        type: str(item.type) || "grammar",
+        explanation_pt: str(item.explanation_pt) || str(item.explanation),
+        rule: str(item.rule),
+      };
+    })
+    .filter((e) => e.segment || e.corrected || e.explanation_pt);
+
+  return {
+    errors,
+    corrected_text: str(obj.corrected_text).trim() || fallbackText,
+    score: clampScore(obj.score),
+    positive_pt: str(obj.positive_pt),
+  };
+}
+
+function parseLooseJson(text: string | undefined): unknown {
+  if (!text) return null;
+  const cleaned = text.replace(/```json/gi, "").replace(/```/g, "").trim();
+  const start = cleaned.indexOf("{");
+  const end = cleaned.lastIndexOf("}");
+  if (start === -1 || end <= start) return null;
+  try {
+    return JSON.parse(cleaned.slice(start, end + 1));
+  } catch {
+    return null;
+  }
+}
+
 
 export const correctGrammar = createServerFn({ method: "POST" })
   .middleware([requireSupabaseAuth])
@@ -60,9 +119,10 @@ Identify grammar errors in the student's answer. For each error provide:
 - rule: grammar rule written in ${targetLanguage}, max 1 sentence
 Also provide:
 - corrected_text: full corrected version of the student's answer, in ${targetLanguage}
-- score: 0-100 reflecting overall correctness
+- score: an integer from 0 to 100 reflecting overall correctness
 - positive_pt: one encouraging sentence in Portuguese if score >= 60, else empty string
-If the answer is fully correct, return empty errors array and score 100.${extra}`;
+If the answer is fully correct, return empty errors array and score 100.
+Always return every field, even when empty.${extra}`;
 
 
     const userMessage = `Exercise instruction: ${data.exercisePromptEn}
@@ -79,8 +139,13 @@ Student answer: "${data.userInput}"`;
         prompt: userMessage,
         experimental_output: Output.object({ schema: CorrectionSchema as never }),
       });
-      return experimental_output as Correction;
+      return normalizeCorrection(experimental_output, data.userInput);
     } catch (err: unknown) {
+      if (NoObjectGeneratedError.isInstance(err)) {
+        const parsed = parseLooseJson(err.text);
+        if (parsed) return normalizeCorrection(parsed, data.userInput);
+        throw new Error("Não consegui interpretar a correção. Tente novamente.");
+      }
       const msg = err instanceof Error ? err.message : String(err);
       if (msg.includes("429")) {
         throw new Error("Muitas requisições. Aguarde um momento e tente novamente.");

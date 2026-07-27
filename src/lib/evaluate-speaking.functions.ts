@@ -1,5 +1,5 @@
 import { createServerFn } from "@tanstack/react-start";
-import { generateText, Output } from "ai";
+import { generateText, NoObjectGeneratedError, Output } from "ai";
 import { z } from "zod";
 
 import { requireSupabaseAuth } from "@/integrations/supabase/auth-middleware";
@@ -16,14 +16,58 @@ const InputSchema = z.object({
 
 
 const EvaluationSchema = z.object({
-  score: z.number().int().min(0).max(100),
-  accuracy_pct: z.number().int().min(0).max(100),
+  score: z.number(),
+  accuracy_pct: z.number(),
   mispronounced_words: z.array(z.string()),
   corrected_text: z.string(),
   feedback_pt: z.string(),
 });
 
-export type SpeakingEvaluation = z.infer<typeof EvaluationSchema>;
+export type SpeakingEvaluation = {
+  score: number;
+  accuracy_pct: number;
+  mispronounced_words: string[];
+  corrected_text: string;
+  feedback_pt: string;
+};
+
+function clampScore(value: unknown): number {
+  const n = typeof value === "number" ? value : Number(value);
+  if (!Number.isFinite(n)) return 0;
+  return Math.max(0, Math.min(100, Math.round(n)));
+}
+
+function str(value: unknown): string {
+  return typeof value === "string" ? value : "";
+}
+
+function normalizeEvaluation(raw: unknown, fallbackText: string): SpeakingEvaluation {
+  const obj = (raw ?? {}) as Record<string, unknown>;
+  const words = Array.isArray(obj.mispronounced_words)
+    ? obj.mispronounced_words.map((w) => str(w)).filter(Boolean)
+    : [];
+  return {
+    score: clampScore(obj.score),
+    accuracy_pct: clampScore(obj.accuracy_pct),
+    mispronounced_words: words,
+    corrected_text: str(obj.corrected_text).trim() || fallbackText,
+    feedback_pt: str(obj.feedback_pt),
+  };
+}
+
+function parseLooseJson(text: string | undefined): unknown {
+  if (!text) return null;
+  const cleaned = text.replace(/```json/gi, "").replace(/```/g, "").trim();
+  const start = cleaned.indexOf("{");
+  const end = cleaned.lastIndexOf("}");
+  if (start === -1 || end <= start) return null;
+  try {
+    return JSON.parse(cleaned.slice(start, end + 1));
+  } catch {
+    return null;
+  }
+}
+
 
 export const evaluateSpeaking = createServerFn({ method: "POST" })
   .middleware([requireSupabaseAuth])
@@ -71,8 +115,13 @@ STUDENT TRANSCRIPT: "${data.transcript}"`;
         prompt: userMessage,
         experimental_output: Output.object({ schema: EvaluationSchema as never }),
       });
-      return experimental_output as SpeakingEvaluation;
+      return normalizeEvaluation(experimental_output, data.transcript);
     } catch (err: unknown) {
+      if (NoObjectGeneratedError.isInstance(err)) {
+        const parsed = parseLooseJson(err.text);
+        if (parsed) return normalizeEvaluation(parsed, data.transcript);
+        throw new Error("Não consegui interpretar a avaliação. Tente novamente.");
+      }
       const msg = err instanceof Error ? err.message : String(err);
       if (msg.includes("429")) throw new Error("Muitas requisições. Aguarde.");
       if (msg.includes("402")) throw new Error("Créditos de IA esgotados.");
