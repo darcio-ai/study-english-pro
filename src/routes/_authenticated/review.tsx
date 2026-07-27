@@ -39,6 +39,8 @@ function ReviewPage() {
   const navigate = useNavigate();
   const queryClient = useQueryClient();
   const correctFn = useServerFn(correctGrammar);
+  const { language } = useLanguage(user.id);
+
 
   const [idx, setIdx] = useState(0);
   const [userInput, setUserInput] = useState("");
