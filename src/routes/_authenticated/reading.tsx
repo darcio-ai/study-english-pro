@@ -6,8 +6,10 @@ import { toast } from "sonner";
 
 import { supabase } from "@/integrations/supabase/client";
 import { LevelPill, type Level } from "@/components/englishup";
+import { LevelSelect } from "@/components/level-select";
 import { LanguageSwitch } from "@/components/language-switch";
 import { useLanguage } from "@/hooks/use-language";
+import { useSkillLevel } from "@/hooks/use-skill-level";
 import { addXp, checkAndGrantAchievements, TRACK_EMOJI, TRACK_LABEL, type Track } from "@/lib/learning";
 
 
