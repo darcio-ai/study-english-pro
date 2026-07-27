@@ -191,7 +191,7 @@ function ExercisePage() {
 
     // Track recent
     recentIdsRef.current = [exercise.id, ...recentIdsRef.current].slice(0, 3);
-    loadNext(userLevel);
+    loadNext(userLevel, language);
   }
 
   return (
