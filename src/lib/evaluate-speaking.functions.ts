@@ -11,7 +11,9 @@ const InputSchema = z.object({
   mode: z.enum(["read", "free"]),
   level: z.enum(["beginner", "intermediate", "advanced"]),
   promptEn: z.string().max(500).optional(),
+  language: z.enum(["en", "es"]).optional().default("en"),
 });
+
 
 const EvaluationSchema = z.object({
   score: z.number().int().min(0).max(100),
@@ -30,32 +32,35 @@ export const evaluateSpeaking = createServerFn({ method: "POST" })
     const apiKey = process.env.LOVABLE_API_KEY;
     if (!apiKey) throw new Error("LOVABLE_API_KEY is not configured");
 
+    const targetLanguage = data.language === "es" ? "Spanish" : "English";
+
     const system =
       data.mode === "read"
-        ? `You are an English pronunciation coach for Brazilian Portuguese speakers.
+        ? `You are a ${targetLanguage} pronunciation coach for Brazilian Portuguese speakers.
 Compare the student's TRANSCRIBED speech to the ORIGINAL sentence they were supposed to read aloud.
 - score: 0-100 reflecting how closely the transcript matches the original (case/punctuation insensitive).
 - accuracy_pct: 0-100, percentage of words correctly spoken in order.
 - mispronounced_words: list of original words that appear missing, distorted, or replaced in the transcript.
 - corrected_text: the original sentence (verbatim).
 - feedback_pt: 1-2 short sentences in Brazilian Portuguese with concrete pronunciation tips. Praise if score >= 85.`
-        : `You are an English speaking tutor for Brazilian Portuguese speakers.
+        : `You are a ${targetLanguage} speaking tutor for Brazilian Portuguese speakers.
 The student answered a free conversation prompt aloud. The TRANSCRIPT is what they actually said.
 Student level: ${data.level}.
 Evaluate fluency, grammar, vocabulary, and relevance to the question.
 - score: 0-100 overall.
 - accuracy_pct: 0-100, grammar correctness percentage.
 - mispronounced_words: list of words that look like transcription errors hinting at pronunciation issues (max 5; empty if none clear).
-- corrected_text: improved/natural version of what the student said in English.
+- corrected_text: improved/natural version of what the student said, written in ${targetLanguage}.
 - feedback_pt: 2-3 short sentences in Brazilian Portuguese with constructive feedback. Praise effort.`;
 
     const userMessage =
       data.mode === "read"
         ? `ORIGINAL: "${data.original}"
 TRANSCRIPT: "${data.transcript}"`
-        : `QUESTION (English): "${data.promptEn ?? ""}"
+        : `QUESTION (${targetLanguage}): "${data.promptEn ?? ""}"
 SUGGESTED STRUCTURE: "${data.original}"
 STUDENT TRANSCRIPT: "${data.transcript}"`;
+
 
     const gateway = createLovableAiGatewayProvider(apiKey);
 

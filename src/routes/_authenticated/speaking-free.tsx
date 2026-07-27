@@ -9,6 +9,9 @@ import { transcribeAudio } from "@/lib/stt.functions";
 import { evaluateSpeaking, type SpeakingEvaluation } from "@/lib/evaluate-speaking.functions";
 import { AudioRecorder } from "@/components/audio-recorder";
 import { LevelPill, type Level } from "@/components/englishup";
+import { useLanguage } from "@/hooks/use-language";
+import type { Language } from "@/lib/learning";
+
 
 export const Route = createFileRoute("/_authenticated/speaking-free")({
   head: () => ({ meta: [{ title: "Conversação — EnglishUp" }] }),
@@ -29,20 +32,27 @@ function SpeakingFreePage() {
   const navigate = useNavigate();
   const sttFn = useServerFn(transcribeAudio);
   const evalFn = useServerFn(evaluateSpeaking);
+  const { language } = useLanguage(user.id);
 
   const [userLevel, setUserLevel] = useState<Level>("beginner");
+
   const [exercise, setExercise] = useState<Exercise | null>(null);
   const [loading, setLoading] = useState(true);
   const [transcript, setTranscript] = useState<string>("");
   const [evaluation, setEvaluation] = useState<SpeakingEvaluation | null>(null);
   const recentIds = useRef<string[]>([]);
 
-  const loadNext = useCallback(async (level: Level) => {
+  const loadNext = useCallback(async (level: Level, lang: Language) => {
     setLoading(true);
     setEvaluation(null);
     setTranscript("");
     try {
-      let q = supabase.from("exercises").select("*").eq("mode", "speaking_free").eq("level", level);
+      let q = supabase
+        .from("exercises")
+        .select("*")
+        .eq("mode", "speaking_free")
+        .eq("level", level)
+        .eq("language", lang);
       if (recentIds.current.length > 0) {
         q = q.not("id", "in", `(${recentIds.current.join(",")})`);
       }
@@ -55,9 +65,11 @@ function SpeakingFreePage() {
           .from("exercises")
           .select("*")
           .eq("mode", "speaking_free")
-          .eq("level", level);
+          .eq("level", level)
+          .eq("language", lang);
         const arr = (all ?? []) as Exercise[];
         if (arr.length === 0) {
+          setExercise(null);
           toast.error("Nenhum exercício de conversação disponível.");
           return;
         }
@@ -83,17 +95,19 @@ function SpeakingFreePage() {
       if (cancelled) return;
       const lvl = (data?.level as Level) ?? "beginner";
       setUserLevel(lvl);
-      loadNext(lvl);
+      loadNext(lvl, language);
     })();
     return () => {
       cancelled = true;
     };
-  }, [user.id, loadNext]);
+  }, [user.id, loadNext, language]);
 
   async function handleRecorded(audio: { base64: string; mimeType: string }) {
     if (!exercise) return;
     try {
-      const stt = await sttFn({ data: { audioBase64: audio.base64, mimeType: audio.mimeType } });
+      const stt = await sttFn({
+        data: { audioBase64: audio.base64, mimeType: audio.mimeType, language },
+      });
       if (!stt.text) {
         toast.error("Não entendi sua fala. Tente novamente.");
         return;
@@ -106,8 +120,10 @@ function SpeakingFreePage() {
           mode: "free",
           level: userLevel,
           promptEn: exercise.prompt_en,
+          language,
         },
       });
+
       setEvaluation(evalResult);
       await supabase.from("attempts").insert({
         user_id: user.id,
@@ -128,7 +144,7 @@ function SpeakingFreePage() {
   function next() {
     if (!exercise) return;
     recentIds.current = [exercise.id, ...recentIds.current].slice(0, 3);
-    loadNext(userLevel);
+    loadNext(userLevel, language);
   }
 
   return (

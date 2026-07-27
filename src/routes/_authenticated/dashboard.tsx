@@ -8,7 +8,10 @@ import { toast } from "sonner";
 
 import { supabase } from "@/integrations/supabase/client";
 import { LevelPill, type Level, LEVELS, LEVEL_LABEL } from "@/components/englishup";
+import { LanguageSwitch } from "@/components/language-switch";
+import { useLanguage } from "@/hooks/use-language";
 import { TRACK_EMOJI, TRACK_LABEL, type Track } from "@/lib/learning";
+
 
 export const Route = createFileRoute("/_authenticated/dashboard")({
   head: () => ({ meta: [{ title: "Dashboard — EnglishUp" }] }),
@@ -27,9 +30,11 @@ function Dashboard() {
   const { user } = Route.useRouteContext();
   const navigate = useNavigate();
   const queryClient = useQueryClient();
+  const { language, setLanguage } = useLanguage(user.id);
   const [levelMenuOpen, setLevelMenuOpen] = useState(false);
   const [editingName, setEditingName] = useState(false);
   const [nameDraft, setNameDraft] = useState("");
+
 
   const profileQuery = useQuery({
     queryKey: ["profile", user.id],
@@ -91,7 +96,7 @@ function Dashboard() {
   });
 
   const nextLessonQuery = useQuery({
-    queryKey: ["next_lesson", user.id, progressQuery.data?.preferred_track, progressQuery.data?.level],
+    queryKey: ["next_lesson", user.id, progressQuery.data?.preferred_track, progressQuery.data?.level, language],
     queryFn: async () => {
       const track = progressQuery.data?.preferred_track ?? "sales";
       const level = progressQuery.data?.level ?? "beginner";
@@ -100,8 +105,10 @@ function Dashboard() {
         .select("id, title, emoji, unit_number, lesson_number")
         .eq("track", track)
         .eq("level", level)
+        .eq("language", language)
         .order("unit_number")
         .order("lesson_number");
+
       const { data: progress } = await supabase
         .from("user_lesson_progress")
         .select("lesson_id, completed_at")
@@ -251,6 +258,10 @@ function Dashboard() {
               {TRACK_EMOJI[t]} {TRACK_LABEL[t]}
             </button>
           ))}
+
+          <LanguageSwitch value={language} onChange={setLanguage} size="sm" />
+
+
 
           <div className="ml-auto inline-flex items-center gap-1 text-xs font-semibold text-purple-600 dark:text-purple-400 bg-purple-50 dark:bg-purple-900/30 px-2 py-1 rounded-full">
             <Zap className="size-3 fill-current" />

@@ -6,6 +6,9 @@ import { toast } from "sonner";
 
 import { supabase } from "@/integrations/supabase/client";
 import { correctGrammar, type Correction } from "@/lib/correct-grammar.functions";
+import { useLanguage } from "@/hooks/use-language";
+import type { Language } from "@/lib/learning";
+
 import {
   GrammarFocusBadge,
   LevelPill,
@@ -31,6 +34,8 @@ function ExercisePage() {
   const { user } = Route.useRouteContext();
   const navigate = useNavigate();
   const correctFn = useServerFn(correctGrammar);
+  const { language } = useLanguage(user.id);
+
 
   const [userLevel, setUserLevel] = useState<Level>("beginner");
   const [exercise, setExercise] = useState<Exercise | null>(null);
@@ -41,12 +46,16 @@ function ExercisePage() {
   const recentIdsRef = useRef<string[]>([]);
 
   const loadNext = useCallback(
-    async (level: Level) => {
+    async (level: Level, lang: Language) => {
       setLoading(true);
       setCorrection(null);
       setUserInput("");
       try {
-        let query = supabase.from("exercises").select("*").eq("level", level);
+        let query = supabase
+          .from("exercises")
+          .select("*")
+          .eq("level", level)
+          .eq("language", lang);
         if (recentIdsRef.current.length > 0) {
           query = query.not("id", "in", `(${recentIdsRef.current.join(",")})`);
         }
@@ -56,9 +65,18 @@ function ExercisePage() {
         if (list.length === 0) {
           // exhausted, reset
           recentIdsRef.current = [];
-          const { data: all } = await supabase.from("exercises").select("*").eq("level", level);
-          const ex = (all ?? [])[Math.floor(Math.random() * (all?.length ?? 1))];
-          setExercise(ex as Exercise);
+          const { data: all } = await supabase
+            .from("exercises")
+            .select("*")
+            .eq("level", level)
+            .eq("language", lang);
+          const arr = (all ?? []) as Exercise[];
+          if (arr.length === 0) {
+            setExercise(null);
+            toast.error("Nenhum exercício disponível para este nível.");
+            return;
+          }
+          setExercise(arr[Math.floor(Math.random() * arr.length)]);
         } else {
           setExercise(list[Math.floor(Math.random() * list.length)]);
         }
@@ -83,12 +101,13 @@ function ExercisePage() {
       if (cancelled) return;
       const level = ((data?.level as Level) ?? "beginner");
       setUserLevel(level);
-      loadNext(level);
+      loadNext(level, language);
     })();
     return () => {
       cancelled = true;
     };
-  }, [user.id, loadNext]);
+  }, [user.id, loadNext, language]);
+
 
   async function onCheck() {
     if (!exercise || !userInput.trim()) return;
@@ -101,6 +120,8 @@ function ExercisePage() {
           exerciseContent: exercise.content,
           grammarFocus: exercise.grammar_focus,
           level: userLevel,
+          language,
+
         },
       });
       setCorrection(result);
@@ -170,7 +191,7 @@ function ExercisePage() {
 
     // Track recent
     recentIdsRef.current = [exercise.id, ...recentIdsRef.current].slice(0, 3);
-    loadNext(userLevel);
+    loadNext(userLevel, language);
   }
 
   return (

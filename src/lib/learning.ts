@@ -7,6 +7,26 @@ import { supabase } from "@/integrations/supabase/client";
 
 export type Track = "sales" | "tech" | "general";
 export type Mode = "writing" | "listening" | "speaking_read" | "speaking_free";
+export type Language = "en" | "es";
+
+export const LANGUAGES: Language[] = ["en", "es"];
+
+export const LANGUAGE_LABEL: Record<Language, string> = {
+  en: "Inglês",
+  es: "Espanhol",
+};
+
+export const LANGUAGE_FLAG: Record<Language, string> = {
+  en: "🇬🇧",
+  es: "🇪🇸",
+};
+
+/** Voices that sound natural for each target language. */
+export const LANGUAGE_VOICE: Record<Language, "alloy" | "sage"> = {
+  en: "alloy",
+  es: "sage",
+};
+
 
 const SRS_INTERVALS = [1, 3, 7, 14, 30, 60];
 

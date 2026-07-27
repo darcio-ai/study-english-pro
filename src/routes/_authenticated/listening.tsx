@@ -8,6 +8,9 @@ import { supabase } from "@/integrations/supabase/client";
 import { synthesizeSpeech } from "@/lib/tts.functions";
 import { correctGrammar, type Correction } from "@/lib/correct-grammar.functions";
 import { LevelPill, type Level } from "@/components/englishup";
+import { useLanguage } from "@/hooks/use-language";
+import { LANGUAGE_VOICE, type Language } from "@/lib/learning";
+
 
 export const Route = createFileRoute("/_authenticated/listening")({
   head: () => ({ meta: [{ title: "Listening — EnglishUp" }] }),
@@ -30,10 +33,12 @@ function ListeningPage() {
   const navigate = useNavigate();
   const ttsFn = useServerFn(synthesizeSpeech);
   const correctFn = useServerFn(correctGrammar);
+  const { language } = useLanguage(user.id);
 
   const [userLevel, setUserLevel] = useState<Level>("beginner");
   const [exercise, setExercise] = useState<Exercise | null>(null);
   const [loading, setLoading] = useState(true);
+
   const [plays, setPlays] = useState(0);
   const [generating, setGenerating] = useState(false);
   const [userInput, setUserInput] = useState("");
@@ -42,7 +47,7 @@ function ListeningPage() {
   const audioUrlRef = useRef<string | null>(null);
   const recentIds = useRef<string[]>([]);
 
-  const loadNext = useCallback(async (level: Level) => {
+  const loadNext = useCallback(async (level: Level, lang: Language) => {
     setLoading(true);
     setCorrection(null);
     setUserInput("");
@@ -52,7 +57,12 @@ function ListeningPage() {
       audioUrlRef.current = null;
     }
     try {
-      let q = supabase.from("exercises").select("*").eq("mode", "listening").eq("level", level);
+      let q = supabase
+        .from("exercises")
+        .select("*")
+        .eq("mode", "listening")
+        .eq("level", level)
+        .eq("language", lang);
       if (recentIds.current.length > 0) {
         q = q.not("id", "in", `(${recentIds.current.join(",")})`);
       }
@@ -65,9 +75,11 @@ function ListeningPage() {
           .from("exercises")
           .select("*")
           .eq("mode", "listening")
-          .eq("level", level);
+          .eq("level", level)
+          .eq("language", lang);
         const arr = (all ?? []) as Exercise[];
         if (arr.length === 0) {
+          setExercise(null);
           toast.error("Nenhum exercício de listening disponível para este nível.");
           return;
         }
@@ -93,19 +105,23 @@ function ListeningPage() {
       if (cancelled) return;
       const lvl = (data?.level as Level) ?? "beginner";
       setUserLevel(lvl);
-      loadNext(lvl);
+      loadNext(lvl, language);
     })();
     return () => {
       cancelled = true;
     };
-  }, [user.id, loadNext]);
+  }, [user.id, loadNext, language]);
+
 
   async function playAudio() {
     if (!exercise || plays >= MAX_PLAYS) return;
     setGenerating(true);
     try {
       if (!audioUrlRef.current) {
-        const result = await ttsFn({ data: { text: exercise.audio_script, voice: "alloy" } });
+        const result = await ttsFn({
+          data: { text: exercise.audio_script, voice: LANGUAGE_VOICE[language] },
+        });
+
         const bin = atob(result.audioBase64);
         const bytes = new Uint8Array(bin.length);
         for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
@@ -133,8 +149,10 @@ function ListeningPage() {
           exerciseContent: exercise.audio_script,
           grammarFocus: exercise.grammar_focus,
           level: userLevel,
+          language,
         },
       });
+
       setCorrection(result);
       await supabase.from("attempts").insert({
         user_id: user.id,
@@ -156,7 +174,7 @@ function ListeningPage() {
   async function next() {
     if (!exercise) return;
     recentIds.current = [exercise.id, ...recentIds.current].slice(0, 3);
-    loadNext(userLevel);
+    loadNext(userLevel, language);
   }
 
   return (

@@ -12,7 +12,15 @@ import { transcribeAudio } from "@/lib/stt.functions";
 import { evaluateSpeaking, type SpeakingEvaluation } from "@/lib/evaluate-speaking.functions";
 import { AudioRecorder } from "@/components/audio-recorder";
 import { LevelPill, type Level } from "@/components/englishup";
-import { upsertReviewQueue, addXp, xpForScore, checkAndGrantAchievements } from "@/lib/learning";
+import {
+  upsertReviewQueue,
+  addXp,
+  xpForScore,
+  checkAndGrantAchievements,
+  LANGUAGE_VOICE,
+  type Language,
+} from "@/lib/learning";
+
 
 export const Route = createFileRoute("/_authenticated/lesson/$id")({
   head: () => ({ meta: [{ title: "Lição — EnglishUp" }] }),
@@ -39,7 +47,9 @@ type Lesson = {
   grammar_focus: string;
   emoji: string;
   level: Level;
+  language: Language;
 };
+
 
 const MODE_EMOJI: Record<Exercise["mode"], string> = {
   writing: "📝",
@@ -80,7 +90,7 @@ function LessonRunner() {
     queryFn: async (): Promise<Lesson> => {
       const { data, error } = await supabase
         .from("lessons")
-        .select("id, title, description_pt, grammar_focus, emoji, level")
+        .select("id, title, description_pt, grammar_focus, emoji, level, language")
         .eq("id", lessonId)
         .single();
       if (error) throw error;
@@ -101,8 +111,10 @@ function LessonRunner() {
     },
   });
 
+  const lessonLanguage: Language = lessonQuery.data?.language === "es" ? "es" : "en";
   const exercises = exercisesQuery.data ?? [];
   const exercise = exercises[index];
+
   const total = exercises.length;
 
   // Reset transient state when exercise changes
@@ -154,6 +166,8 @@ function LessonRunner() {
           exerciseContent: exercise.audio_script ?? exercise.content,
           grammarFocus: exercise.grammar_focus,
           level: exercise.level,
+          language: lessonLanguage,
+
         },
       });
       setCorrection(result);
@@ -169,7 +183,7 @@ function LessonRunner() {
     setPlaying(true);
     try {
       if (!audioUrlRef.current) {
-        const result = await ttsFn({ data: { text, voice: "alloy" } });
+        const result = await ttsFn({ data: { text, voice: LANGUAGE_VOICE[lessonLanguage] } });
         const bin = atob(result.audioBase64);
         const bytes = new Uint8Array(bin.length);
         for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
@@ -189,7 +203,10 @@ function LessonRunner() {
     if (!exercise) return;
     setSubmitting(true);
     try {
-      const stt = await sttFn({ data: { audioBase64: audio.base64, mimeType: audio.mimeType } });
+      const stt = await sttFn({
+        data: { audioBase64: audio.base64, mimeType: audio.mimeType, language: lessonLanguage },
+      });
+
       if (!stt.text) {
         toast.error("Não entendi sua fala.");
         setSubmitting(false);
@@ -204,7 +221,9 @@ function LessonRunner() {
           mode: isRead ? "read" : "free",
           level: exercise.level,
           promptEn: exercise.prompt_en,
+          language: lessonLanguage,
         },
+
       });
       setEvaluation(result);
       await persistAttempt(result.score, result, stt.text, exercise.mode);

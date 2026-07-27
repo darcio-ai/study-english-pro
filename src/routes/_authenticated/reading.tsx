@@ -6,7 +6,10 @@ import { toast } from "sonner";
 
 import { supabase } from "@/integrations/supabase/client";
 import { LevelPill, type Level } from "@/components/englishup";
+import { LanguageSwitch } from "@/components/language-switch";
+import { useLanguage } from "@/hooks/use-language";
 import { addXp, checkAndGrantAchievements, TRACK_EMOJI, TRACK_LABEL, type Track } from "@/lib/learning";
+
 
 export const Route = createFileRoute("/_authenticated/reading")({
   head: () => ({ meta: [{ title: "Leitura — EnglishUp" }] }),
@@ -27,9 +30,11 @@ type ReadingText = {
 function ReadingPage() {
   const { user } = Route.useRouteContext();
   const navigate = useNavigate();
+  const { language, setLanguage } = useLanguage(user.id);
   const [track, setTrack] = useState<Track>("sales");
   const [userLevel, setUserLevel] = useState<Level>("beginner");
   const [selectedText, setSelectedText] = useState<ReadingText | null>(null);
+
 
   useEffect(() => {
     supabase
@@ -44,13 +49,15 @@ function ReadingPage() {
   }, [user.id]);
 
   const textsQuery = useQuery({
-    queryKey: ["reading_texts", track],
+    queryKey: ["reading_texts", track, language],
     queryFn: async (): Promise<ReadingText[]> => {
       const { data, error } = await supabase
         .from("reading_texts")
         .select("*")
         .eq("track", track)
+        .eq("language", language)
         .order("level");
+
       if (error) throw error;
       return (data ?? []) as unknown as ReadingText[];
     },
@@ -77,7 +84,12 @@ function ReadingPage() {
         </button>
 
         <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-1">Leitura 📖</h1>
-        <p className="text-sm text-gray-500 dark:text-gray-400 mb-5">Compreensão de textos profissionais</p>
+        <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">Compreensão de textos profissionais</p>
+
+        <div className="mb-4">
+          <LanguageSwitch value={language} onChange={setLanguage} size="sm" />
+        </div>
+
 
         <div className="flex gap-2 mb-6">
           {(["sales", "tech"] as Track[]).map((t) => (

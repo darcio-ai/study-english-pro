@@ -10,6 +10,9 @@ import { transcribeAudio } from "@/lib/stt.functions";
 import { evaluateSpeaking, type SpeakingEvaluation } from "@/lib/evaluate-speaking.functions";
 import { AudioRecorder } from "@/components/audio-recorder";
 import { LevelPill, type Level } from "@/components/englishup";
+import { useLanguage } from "@/hooks/use-language";
+import { LANGUAGE_VOICE, type Language } from "@/lib/learning";
+
 
 export const Route = createFileRoute("/_authenticated/speaking")({
   head: () => ({ meta: [{ title: "Speaking — EnglishUp" }] }),
@@ -31,8 +34,10 @@ function SpeakingPage() {
   const ttsFn = useServerFn(synthesizeSpeech);
   const sttFn = useServerFn(transcribeAudio);
   const evalFn = useServerFn(evaluateSpeaking);
+  const { language } = useLanguage(user.id);
 
   const [userLevel, setUserLevel] = useState<Level>("beginner");
+
   const [exercise, setExercise] = useState<Exercise | null>(null);
   const [loading, setLoading] = useState(true);
   const [evaluation, setEvaluation] = useState<SpeakingEvaluation | null>(null);
@@ -41,7 +46,7 @@ function SpeakingPage() {
   const audioUrlRef = useRef<string | null>(null);
   const recentIds = useRef<string[]>([]);
 
-  const loadNext = useCallback(async (level: Level) => {
+  const loadNext = useCallback(async (level: Level, lang: Language) => {
     setLoading(true);
     setEvaluation(null);
     setTranscript("");
@@ -50,7 +55,12 @@ function SpeakingPage() {
       audioUrlRef.current = null;
     }
     try {
-      let q = supabase.from("exercises").select("*").eq("mode", "speaking_read").eq("level", level);
+      let q = supabase
+        .from("exercises")
+        .select("*")
+        .eq("mode", "speaking_read")
+        .eq("level", level)
+        .eq("language", lang);
       if (recentIds.current.length > 0) {
         q = q.not("id", "in", `(${recentIds.current.join(",")})`);
       }
@@ -63,9 +73,11 @@ function SpeakingPage() {
           .from("exercises")
           .select("*")
           .eq("mode", "speaking_read")
-          .eq("level", level);
+          .eq("level", level)
+          .eq("language", lang);
         const arr = (all ?? []) as Exercise[];
         if (arr.length === 0) {
+          setExercise(null);
           toast.error("Nenhum exercício de speaking disponível.");
           return;
         }
@@ -91,19 +103,23 @@ function SpeakingPage() {
       if (cancelled) return;
       const lvl = (data?.level as Level) ?? "beginner";
       setUserLevel(lvl);
-      loadNext(lvl);
+      loadNext(lvl, language);
     })();
     return () => {
       cancelled = true;
     };
-  }, [user.id, loadNext]);
+  }, [user.id, loadNext, language]);
+
 
   async function playModel() {
     if (!exercise) return;
     setGeneratingTts(true);
     try {
       if (!audioUrlRef.current) {
-        const result = await ttsFn({ data: { text: exercise.content, voice: "alloy" } });
+        const result = await ttsFn({
+          data: { text: exercise.content, voice: LANGUAGE_VOICE[language] },
+        });
+
         const bin = atob(result.audioBase64);
         const bytes = new Uint8Array(bin.length);
         for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
@@ -122,7 +138,9 @@ function SpeakingPage() {
   async function handleRecorded(audio: { base64: string; mimeType: string }) {
     if (!exercise) return;
     try {
-      const stt = await sttFn({ data: { audioBase64: audio.base64, mimeType: audio.mimeType } });
+      const stt = await sttFn({
+        data: { audioBase64: audio.base64, mimeType: audio.mimeType, language },
+      });
       if (!stt.text) {
         toast.error("Não entendi sua fala. Tente novamente.");
         return;
@@ -134,8 +152,10 @@ function SpeakingPage() {
           original: exercise.content,
           mode: "read",
           level: userLevel,
+          language,
         },
       });
+
       setEvaluation(evalResult);
       await supabase.from("attempts").insert({
         user_id: user.id,
@@ -156,7 +176,7 @@ function SpeakingPage() {
   function next() {
     if (!exercise) return;
     recentIds.current = [exercise.id, ...recentIds.current].slice(0, 3);
-    loadNext(userLevel);
+    loadNext(userLevel, language);
   }
 
   function renderSentenceWithErrors(sentence: string, mispronounced: string[]) {
