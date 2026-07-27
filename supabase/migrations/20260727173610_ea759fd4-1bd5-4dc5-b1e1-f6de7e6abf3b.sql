@@ -1,0 +1,2 @@
+ALTER TABLE public.lessons DROP CONSTRAINT IF EXISTS lessons_level_track_unit_number_lesson_number_key;
+ALTER TABLE public.lessons ADD CONSTRAINT lessons_lang_level_track_unit_lesson_key UNIQUE (language, level, track, unit_number, lesson_number);
