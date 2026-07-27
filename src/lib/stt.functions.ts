@@ -37,7 +37,7 @@ export const transcribeAudio = createServerFn({ method: "POST" })
     const form = new FormData();
     form.append("file", blob, `recording.${ext}`);
     form.append("model", "openai/gpt-4o-mini-transcribe");
-    form.append("language", "en");
+    form.append("language", data.language ?? "en");
 
     const response = await fetch("https://ai.gateway.lovable.dev/v1/audio/transcriptions", {
       method: "POST",
