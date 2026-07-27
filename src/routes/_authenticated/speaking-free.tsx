@@ -32,8 +32,10 @@ function SpeakingFreePage() {
   const navigate = useNavigate();
   const sttFn = useServerFn(transcribeAudio);
   const evalFn = useServerFn(evaluateSpeaking);
+  const { language } = useLanguage(user.id);
 
   const [userLevel, setUserLevel] = useState<Level>("beginner");
+
   const [exercise, setExercise] = useState<Exercise | null>(null);
   const [loading, setLoading] = useState(true);
   const [transcript, setTranscript] = useState<string>("");
