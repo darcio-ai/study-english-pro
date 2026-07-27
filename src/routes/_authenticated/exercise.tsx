@@ -31,6 +31,8 @@ function ExercisePage() {
   const { user } = Route.useRouteContext();
   const navigate = useNavigate();
   const correctFn = useServerFn(correctGrammar);
+  const { language } = useLanguage(user.id);
+
 
   const [userLevel, setUserLevel] = useState<Level>("beginner");
   const [exercise, setExercise] = useState<Exercise | null>(null);
