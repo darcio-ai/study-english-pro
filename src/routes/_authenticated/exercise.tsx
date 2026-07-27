@@ -46,12 +46,16 @@ function ExercisePage() {
   const recentIdsRef = useRef<string[]>([]);
 
   const loadNext = useCallback(
-    async (level: Level) => {
+    async (level: Level, lang: Language) => {
       setLoading(true);
       setCorrection(null);
       setUserInput("");
       try {
-        let query = supabase.from("exercises").select("*").eq("level", level);
+        let query = supabase
+          .from("exercises")
+          .select("*")
+          .eq("level", level)
+          .eq("language", lang);
         if (recentIdsRef.current.length > 0) {
           query = query.not("id", "in", `(${recentIdsRef.current.join(",")})`);
         }
@@ -61,9 +65,18 @@ function ExercisePage() {
         if (list.length === 0) {
           // exhausted, reset
           recentIdsRef.current = [];
-          const { data: all } = await supabase.from("exercises").select("*").eq("level", level);
-          const ex = (all ?? [])[Math.floor(Math.random() * (all?.length ?? 1))];
-          setExercise(ex as Exercise);
+          const { data: all } = await supabase
+            .from("exercises")
+            .select("*")
+            .eq("level", level)
+            .eq("language", lang);
+          const arr = (all ?? []) as Exercise[];
+          if (arr.length === 0) {
+            setExercise(null);
+            toast.error("Nenhum exercício disponível para este nível.");
+            return;
+          }
+          setExercise(arr[Math.floor(Math.random() * arr.length)]);
         } else {
           setExercise(list[Math.floor(Math.random() * list.length)]);
         }
@@ -88,12 +101,13 @@ function ExercisePage() {
       if (cancelled) return;
       const level = ((data?.level as Level) ?? "beginner");
       setUserLevel(level);
-      loadNext(level);
+      loadNext(level, language);
     })();
     return () => {
       cancelled = true;
     };
-  }, [user.id, loadNext]);
+  }, [user.id, loadNext, language]);
+
 
   async function onCheck() {
     if (!exercise || !userInput.trim()) return;
