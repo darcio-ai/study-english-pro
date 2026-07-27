@@ -92,8 +92,9 @@ function ReadingPage() {
         <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-1">Leitura 📖</h1>
         <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">Compreensão de textos profissionais</p>
 
-        <div className="mb-4">
+        <div className="mb-4 flex flex-wrap items-center gap-2">
           <LanguageSwitch value={language} onChange={setLanguage} size="sm" />
+          <LevelSelect value={userLevel} onChange={changeLevel} disabled={!ready} />
         </div>
 
 
@@ -114,32 +115,31 @@ function ReadingPage() {
         </div>
 
         <div className="space-y-3">
-          {(textsQuery.data ?? []).map((t) => {
-            const tooHard =
-              (t.level === "advanced" && userLevel === "beginner") ||
-              (t.level === "intermediate" && userLevel === "beginner");
-            return (
-              <button
-                key={t.id}
-                onClick={() => setSelectedText(t)}
-                className="w-full text-left flex items-start gap-3 p-4 rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:border-indigo-400 hover:shadow-md transition-all"
-              >
-                <div className="flex-shrink-0 size-10 rounded-lg bg-indigo-50 dark:bg-indigo-900/30 flex items-center justify-center">
-                  <BookOpen className="size-5 text-indigo-600 dark:text-indigo-400" />
+          {(textsQuery.data ?? []).length === 0 && !textsQuery.isLoading && (
+            <p className="text-sm text-gray-500 dark:text-gray-400 text-center py-10">
+              Nenhum texto neste nível ainda. Tente outro nível ou trilha.
+            </p>
+          )}
+          {(textsQuery.data ?? []).map((t) => (
+            <button
+              key={t.id}
+              onClick={() => setSelectedText(t)}
+              className="w-full text-left flex items-start gap-3 p-4 rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:border-indigo-400 hover:shadow-md transition-all"
+            >
+              <div className="flex-shrink-0 size-10 rounded-lg bg-indigo-50 dark:bg-indigo-900/30 flex items-center justify-center">
+                <BookOpen className="size-5 text-indigo-600 dark:text-indigo-400" />
+              </div>
+              <div className="flex-1 min-w-0">
+                <div className="flex items-center gap-2 mb-1">
+                  <LevelPill level={t.level} size="sm" />
                 </div>
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-2 mb-1">
-                    <LevelPill level={t.level} size="sm" />
-                    {tooHard && <span className="text-[10px] text-amber-600">acima do seu nível</span>}
-                  </div>
-                  <h3 className="font-semibold text-gray-900 dark:text-white">{t.title}</h3>
-                  <p className="text-xs text-gray-500 dark:text-gray-400 line-clamp-2 mt-1">
-                    {t.body.slice(0, 100)}…
-                  </p>
-                </div>
-              </button>
-            );
-          })}
+                <h3 className="font-semibold text-gray-900 dark:text-white">{t.title}</h3>
+                <p className="text-xs text-gray-500 dark:text-gray-400 line-clamp-2 mt-1">
+                  {t.body.slice(0, 100)}…
+                </p>
+              </div>
+            </button>
+          ))}
         </div>
       </div>
     </main>
