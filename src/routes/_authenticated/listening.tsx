@@ -149,8 +149,10 @@ function ListeningPage() {
           exerciseContent: exercise.audio_script,
           grammarFocus: exercise.grammar_focus,
           level: userLevel,
+          language,
         },
       });
+
       setCorrection(result);
       await supabase.from("attempts").insert({
         user_id: user.id,
