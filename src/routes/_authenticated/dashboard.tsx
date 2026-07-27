@@ -8,7 +8,10 @@ import { toast } from "sonner";
 
 import { supabase } from "@/integrations/supabase/client";
 import { LevelPill, type Level, LEVELS, LEVEL_LABEL } from "@/components/englishup";
+import { LanguageSwitch } from "@/components/language-switch";
+import { useLanguage } from "@/hooks/use-language";
 import { TRACK_EMOJI, TRACK_LABEL, type Track } from "@/lib/learning";
+
 
 export const Route = createFileRoute("/_authenticated/dashboard")({
   head: () => ({ meta: [{ title: "Dashboard — EnglishUp" }] }),
