@@ -49,13 +49,15 @@ function ReadingPage() {
   }, [user.id]);
 
   const textsQuery = useQuery({
-    queryKey: ["reading_texts", track],
+    queryKey: ["reading_texts", track, language],
     queryFn: async (): Promise<ReadingText[]> => {
       const { data, error } = await supabase
         .from("reading_texts")
         .select("*")
         .eq("track", track)
+        .eq("language", language)
         .order("level");
+
       if (error) throw error;
       return (data ?? []) as unknown as ReadingText[];
     },
