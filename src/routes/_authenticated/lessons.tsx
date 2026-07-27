@@ -38,8 +38,10 @@ type LessonProgress = {
 function LessonsPage() {
   const { user } = Route.useRouteContext();
   const navigate = useNavigate();
+  const { language, setLanguage } = useLanguage(user.id);
   const [track, setTrack] = useState<Track>("sales");
   const [userLevel, setUserLevel] = useState<Level>("beginner");
+
 
   useEffect(() => {
     supabase
@@ -59,18 +61,20 @@ function LessonsPage() {
   }
 
   const lessonsQuery = useQuery({
-    queryKey: ["lessons", track],
+    queryKey: ["lessons", track, language],
     queryFn: async (): Promise<Lesson[]> => {
       const { data, error } = await supabase
         .from("lessons")
         .select("*")
         .eq("track", track)
+        .eq("language", language)
         .order("unit_number")
         .order("lesson_number");
       if (error) throw error;
       return (data ?? []) as Lesson[];
     },
   });
+
 
   const progressQuery = useQuery({
     queryKey: ["lesson_progress", user.id],
@@ -102,7 +106,12 @@ function LessonsPage() {
         </button>
 
         <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-1">Lições 📚</h1>
-        <p className="text-sm text-gray-500 dark:text-gray-400 mb-5">Caminho estruturado por tema</p>
+        <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">Caminho estruturado por tema</p>
+
+        <div className="mb-4">
+          <LanguageSwitch value={language} onChange={setLanguage} size="sm" />
+        </div>
+
 
         {/* Track switcher */}
         <div className="flex gap-2 mb-6">
