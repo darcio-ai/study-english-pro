@@ -7,11 +7,12 @@ import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { correctGrammar, type Correction } from "@/lib/correct-grammar.functions";
 import { useLanguage } from "@/hooks/use-language";
+import { useSkillLevel } from "@/hooks/use-skill-level";
+import { LevelSelect } from "@/components/level-select";
 import type { Language } from "@/lib/learning";
 
 import {
   GrammarFocusBadge,
-  LevelPill,
   ScoreBadge,
   type Level,
 } from "@/components/englishup";
@@ -37,7 +38,7 @@ function ExercisePage() {
   const { language } = useLanguage(user.id);
 
 
-  const [userLevel, setUserLevel] = useState<Level>("beginner");
+  const { level: userLevel, setLevel, ready } = useSkillLevel(user.id, language, "writing");
   const [exercise, setExercise] = useState<Exercise | null>(null);
   const [userInput, setUserInput] = useState("");
   const [loading, setLoading] = useState(false);
@@ -89,24 +90,15 @@ function ExercisePage() {
     [],
   );
 
-  // Initial load: fetch user level then exercise
+  // Load exercise once the skill level for this language is known
   useEffect(() => {
-    let cancelled = false;
-    (async () => {
-      const { data } = await supabase
-        .from("user_progress")
-        .select("level")
-        .eq("user_id", user.id)
-        .maybeSingle();
-      if (cancelled) return;
-      const level = ((data?.level as Level) ?? "beginner");
-      setUserLevel(level);
-      loadNext(level, language);
-    })();
-    return () => {
-      cancelled = true;
-    };
-  }, [user.id, loadNext, language]);
+    if (!ready) return;
+    loadNext(userLevel, language);
+  }, [ready, userLevel, language, loadNext]);
+
+  function changeLevel(next: Level) {
+    setLevel(next).catch(() => toast.error("Não foi possível salvar o nível"));
+  }
 
 
   async function onCheck() {
@@ -207,7 +199,7 @@ function ExercisePage() {
             <ArrowLeft className="size-5" />
           </button>
           <div className="flex items-center gap-2">
-            <LevelPill level={userLevel} size="sm" />
+            <LevelSelect value={userLevel} onChange={changeLevel} disabled={loading} />
             {exercise && <GrammarFocusBadge>{exercise.grammar_focus}</GrammarFocusBadge>}
           </div>
         </div>
