@@ -60,10 +60,10 @@ function normalizeCorrection(raw: unknown, fallbackText: string): Correction {
     .map((e) => {
       const item = (e ?? {}) as Record<string, unknown>;
       return {
-        segment: str(item.segment),
-        corrected: str(item.corrected),
+        segment: str(item.segment) || str(item.original),
+        corrected: str(item.corrected) || str(item.correction),
         type: str(item.type) || "grammar",
-        explanation_pt: str(item.explanation_pt),
+        explanation_pt: str(item.explanation_pt) || str(item.explanation),
         rule: str(item.rule),
       };
     })
