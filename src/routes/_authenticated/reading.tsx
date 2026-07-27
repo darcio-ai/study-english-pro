@@ -32,30 +32,34 @@ function ReadingPage() {
   const navigate = useNavigate();
   const { language, setLanguage } = useLanguage(user.id);
   const [track, setTrack] = useState<Track>("sales");
-  const [userLevel, setUserLevel] = useState<Level>("beginner");
+  const { level: userLevel, setLevel, ready } = useSkillLevel(user.id, language, "reading");
   const [selectedText, setSelectedText] = useState<ReadingText | null>(null);
-
 
   useEffect(() => {
     supabase
       .from("user_progress")
-      .select("level, preferred_track")
+      .select("preferred_track")
       .eq("user_id", user.id)
       .maybeSingle()
       .then(({ data }) => {
-        if (data?.level) setUserLevel(data.level as Level);
         if (data?.preferred_track) setTrack(data.preferred_track as Track);
       });
   }, [user.id]);
 
+  function changeLevel(next: Level) {
+    setLevel(next).catch(() => toast.error("Não foi possível salvar o nível"));
+  }
+
   const textsQuery = useQuery({
-    queryKey: ["reading_texts", track, language],
+    enabled: ready,
+    queryKey: ["reading_texts", track, language, userLevel],
     queryFn: async (): Promise<ReadingText[]> => {
       const { data, error } = await supabase
         .from("reading_texts")
         .select("*")
         .eq("track", track)
         .eq("language", language)
+        .eq("level", userLevel)
         .order("level");
 
       if (error) throw error;
