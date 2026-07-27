@@ -84,7 +84,12 @@ function ReadingPage() {
         </button>
 
         <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-1">Leitura 📖</h1>
-        <p className="text-sm text-gray-500 dark:text-gray-400 mb-5">Compreensão de textos profissionais</p>
+        <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">Compreensão de textos profissionais</p>
+
+        <div className="mb-4">
+          <LanguageSwitch value={language} onChange={setLanguage} size="sm" />
+        </div>
+
 
         <div className="flex gap-2 mb-6">
           {(["sales", "tech"] as Track[]).map((t) => (
