@@ -34,8 +34,10 @@ function SpeakingPage() {
   const ttsFn = useServerFn(synthesizeSpeech);
   const sttFn = useServerFn(transcribeAudio);
   const evalFn = useServerFn(evaluateSpeaking);
+  const { language } = useLanguage(user.id);
 
   const [userLevel, setUserLevel] = useState<Level>("beginner");
+
   const [exercise, setExercise] = useState<Exercise | null>(null);
   const [loading, setLoading] = useState(true);
   const [evaluation, setEvaluation] = useState<SpeakingEvaluation | null>(null);

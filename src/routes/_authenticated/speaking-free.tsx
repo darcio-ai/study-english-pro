@@ -9,6 +9,9 @@ import { transcribeAudio } from "@/lib/stt.functions";
 import { evaluateSpeaking, type SpeakingEvaluation } from "@/lib/evaluate-speaking.functions";
 import { AudioRecorder } from "@/components/audio-recorder";
 import { LevelPill, type Level } from "@/components/englishup";
+import { useLanguage } from "@/hooks/use-language";
+import type { Language } from "@/lib/learning";
+
 
 export const Route = createFileRoute("/_authenticated/speaking-free")({
   head: () => ({ meta: [{ title: "Conversação — EnglishUp" }] }),
