@@ -112,6 +112,7 @@ export type Database = {
           expected_response: string | null
           grammar_focus: string
           id: string
+          language: string
           lesson_id: string | null
           lesson_order: number | null
           level: string
@@ -129,6 +130,7 @@ export type Database = {
           expected_response?: string | null
           grammar_focus: string
           id?: string
+          language?: string
           lesson_id?: string | null
           lesson_order?: number | null
           level: string
@@ -146,6 +148,7 @@ export type Database = {
           expected_response?: string | null
           grammar_focus?: string
           id?: string
+          language?: string
           lesson_id?: string | null
           lesson_order?: number | null
           level?: string
@@ -173,6 +176,7 @@ export type Database = {
           emoji: string | null
           grammar_focus: string
           id: string
+          language: string
           lesson_number: number
           level: string
           title: string
@@ -185,6 +189,7 @@ export type Database = {
           emoji?: string | null
           grammar_focus: string
           id?: string
+          language?: string
           lesson_number: number
           level: string
           title: string
@@ -197,6 +202,7 @@ export type Database = {
           emoji?: string | null
           grammar_focus?: string
           id?: string
+          language?: string
           lesson_number?: number
           level?: string
           title?: string
@@ -235,6 +241,7 @@ export type Database = {
           created_at: string | null
           id: string
           key_vocabulary: Json | null
+          language: string
           level: string
           questions: Json
           title: string
@@ -245,6 +252,7 @@ export type Database = {
           created_at?: string | null
           id?: string
           key_vocabulary?: Json | null
+          language?: string
           level: string
           questions: Json
           title: string
@@ -255,6 +263,7 @@ export type Database = {
           created_at?: string | null
           id?: string
           key_vocabulary?: Json | null
+          language?: string
           level?: string
           questions?: Json
           title?: string
@@ -380,6 +389,7 @@ export type Database = {
           id: string
           last_activity_at: string | null
           level: string
+          preferred_language: string
           preferred_track: string | null
           streak_days: number | null
           user_id: string
@@ -391,6 +401,7 @@ export type Database = {
           id?: string
           last_activity_at?: string | null
           level?: string
+          preferred_language?: string
           preferred_track?: string | null
           streak_days?: number | null
           user_id: string
@@ -402,6 +413,7 @@ export type Database = {
           id?: string
           last_activity_at?: string | null
           level?: string
+          preferred_language?: string
           preferred_track?: string | null
           streak_days?: number | null
           user_id?: string
