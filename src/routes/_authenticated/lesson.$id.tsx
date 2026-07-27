@@ -111,8 +111,10 @@ function LessonRunner() {
     },
   });
 
+  const lessonLanguage: Language = lessonQuery.data?.language === "es" ? "es" : "en";
   const exercises = exercisesQuery.data ?? [];
   const exercise = exercises[index];
+
   const total = exercises.length;
 
   // Reset transient state when exercise changes
