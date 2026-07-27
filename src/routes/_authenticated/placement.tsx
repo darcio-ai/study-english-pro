@@ -34,6 +34,13 @@ function PlacementPage() {
     });
     const level = calculateLevel(correct);
 
+    const { data: prog } = await supabase
+      .from("user_progress")
+      .select("preferred_language")
+      .eq("user_id", user.id)
+      .maybeSingle();
+    const lang = prog?.preferred_language === "es" ? "es" : "en";
+
     const { error: pErr } = await supabase
       .from("user_progress")
       .update({ level })
@@ -42,6 +49,23 @@ function PlacementPage() {
       .from("profiles")
       .update({ placement_done: true })
       .eq("user_id", user.id);
+
+    // Seed every free-practice skill with the placement result; the user can
+    // refine each one later on its own practice screen.
+    await supabase.from("user_skill_levels").upsert(
+      (["writing", "listening", "speaking", "reading"] as const).map((skill) => ({
+        user_id: user.id,
+        language: lang,
+        skill,
+        level,
+      })),
+      { onConflict: "user_id,language,skill" },
+    );
+    if (typeof window !== "undefined") {
+      for (const skill of ["writing", "listening", "speaking", "reading"]) {
+        window.localStorage.setItem(`skill_level_${lang}_${skill}`, level);
+      }
+    }
 
     if (pErr || prErr) toast.error("Erro ao salvar resultado");
     setFinalLevel(level);
