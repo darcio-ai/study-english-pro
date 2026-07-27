@@ -166,6 +166,8 @@ function LessonRunner() {
           exerciseContent: exercise.audio_script ?? exercise.content,
           grammarFocus: exercise.grammar_focus,
           level: exercise.level,
+          language: lessonLanguage,
+
         },
       });
       setCorrection(result);
