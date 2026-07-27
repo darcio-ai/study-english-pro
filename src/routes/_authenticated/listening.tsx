@@ -33,10 +33,12 @@ function ListeningPage() {
   const navigate = useNavigate();
   const ttsFn = useServerFn(synthesizeSpeech);
   const correctFn = useServerFn(correctGrammar);
+  const { language } = useLanguage(user.id);
 
   const [userLevel, setUserLevel] = useState<Level>("beginner");
   const [exercise, setExercise] = useState<Exercise | null>(null);
   const [loading, setLoading] = useState(true);
+
   const [plays, setPlays] = useState(0);
   const [generating, setGenerating] = useState(false);
   const [userInput, setUserInput] = useState("");
@@ -45,7 +47,7 @@ function ListeningPage() {
   const audioUrlRef = useRef<string | null>(null);
   const recentIds = useRef<string[]>([]);
 
-  const loadNext = useCallback(async (level: Level) => {
+  const loadNext = useCallback(async (level: Level, lang: Language) => {
     setLoading(true);
     setCorrection(null);
     setUserInput("");
@@ -55,7 +57,12 @@ function ListeningPage() {
       audioUrlRef.current = null;
     }
     try {
-      let q = supabase.from("exercises").select("*").eq("mode", "listening").eq("level", level);
+      let q = supabase
+        .from("exercises")
+        .select("*")
+        .eq("mode", "listening")
+        .eq("level", level)
+        .eq("language", lang);
       if (recentIds.current.length > 0) {
         q = q.not("id", "in", `(${recentIds.current.join(",")})`);
       }
@@ -68,9 +75,11 @@ function ListeningPage() {
           .from("exercises")
           .select("*")
           .eq("mode", "listening")
-          .eq("level", level);
+          .eq("level", level)
+          .eq("language", lang);
         const arr = (all ?? []) as Exercise[];
         if (arr.length === 0) {
+          setExercise(null);
           toast.error("Nenhum exercício de listening disponível para este nível.");
           return;
         }
@@ -96,12 +105,13 @@ function ListeningPage() {
       if (cancelled) return;
       const lvl = (data?.level as Level) ?? "beginner";
       setUserLevel(lvl);
-      loadNext(lvl);
+      loadNext(lvl, language);
     })();
     return () => {
       cancelled = true;
     };
-  }, [user.id, loadNext]);
+  }, [user.id, loadNext, language]);
+
 
   async function playAudio() {
     if (!exercise || plays >= MAX_PLAYS) return;
