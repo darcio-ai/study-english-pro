@@ -47,7 +47,9 @@ type Lesson = {
   grammar_focus: string;
   emoji: string;
   level: Level;
+  language: Language;
 };
+
 
 const MODE_EMOJI: Record<Exercise["mode"], string> = {
   writing: "📝",
