@@ -119,9 +119,10 @@ Identify grammar errors in the student's answer. For each error provide:
 - rule: grammar rule written in ${targetLanguage}, max 1 sentence
 Also provide:
 - corrected_text: full corrected version of the student's answer, in ${targetLanguage}
-- score: 0-100 reflecting overall correctness
+- score: an integer from 0 to 100 reflecting overall correctness
 - positive_pt: one encouraging sentence in Portuguese if score >= 60, else empty string
-If the answer is fully correct, return empty errors array and score 100.${extra}`;
+If the answer is fully correct, return empty errors array and score 100.
+Always return every field, even when empty.${extra}`;
 
 
     const userMessage = `Exercise instruction: ${data.exercisePromptEn}
@@ -138,8 +139,13 @@ Student answer: "${data.userInput}"`;
         prompt: userMessage,
         experimental_output: Output.object({ schema: CorrectionSchema as never }),
       });
-      return experimental_output as Correction;
+      return normalizeCorrection(experimental_output, data.userInput);
     } catch (err: unknown) {
+      if (NoObjectGeneratedError.isInstance(err)) {
+        const parsed = parseLooseJson(err.text);
+        if (parsed) return normalizeCorrection(parsed, data.userInput);
+        throw new Error("Não consegui interpretar a correção. Tente novamente.");
+      }
       const msg = err instanceof Error ? err.message : String(err);
       if (msg.includes("429")) {
         throw new Error("Muitas requisições. Aguarde um momento e tente novamente.");
