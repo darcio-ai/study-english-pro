@@ -9,8 +9,10 @@ import { synthesizeSpeech } from "@/lib/tts.functions";
 import { transcribeAudio } from "@/lib/stt.functions";
 import { evaluateSpeaking, type SpeakingEvaluation } from "@/lib/evaluate-speaking.functions";
 import { AudioRecorder } from "@/components/audio-recorder";
-import { LevelPill, type Level } from "@/components/englishup";
+import { type Level } from "@/components/englishup";
+import { LevelSelect } from "@/components/level-select";
 import { useLanguage } from "@/hooks/use-language";
+import { useSkillLevel } from "@/hooks/use-skill-level";
 import { LANGUAGE_VOICE, type Language } from "@/lib/learning";
 
 
@@ -36,7 +38,7 @@ function SpeakingPage() {
   const evalFn = useServerFn(evaluateSpeaking);
   const { language } = useLanguage(user.id);
 
-  const [userLevel, setUserLevel] = useState<Level>("beginner");
+  const { level: userLevel, setLevel, ready } = useSkillLevel(user.id, language, "speaking");
 
   const [exercise, setExercise] = useState<Exercise | null>(null);
   const [loading, setLoading] = useState(true);
@@ -93,22 +95,13 @@ function SpeakingPage() {
   }, []);
 
   useEffect(() => {
-    let cancelled = false;
-    (async () => {
-      const { data } = await supabase
-        .from("user_progress")
-        .select("level")
-        .eq("user_id", user.id)
-        .maybeSingle();
-      if (cancelled) return;
-      const lvl = (data?.level as Level) ?? "beginner";
-      setUserLevel(lvl);
-      loadNext(lvl, language);
-    })();
-    return () => {
-      cancelled = true;
-    };
-  }, [user.id, loadNext, language]);
+    if (!ready) return;
+    loadNext(userLevel, language);
+  }, [ready, userLevel, language, loadNext]);
+
+  function changeLevel(next: Level) {
+    setLevel(next).catch(() => toast.error("Não foi possível salvar o nível"));
+  }
 
 
   async function playModel() {
@@ -207,7 +200,7 @@ function SpeakingPage() {
           </button>
           <div className="flex items-center gap-2">
             <span className="text-2xl">🎤</span>
-            <LevelPill level={userLevel} size="sm" />
+            <LevelSelect value={userLevel} onChange={changeLevel} disabled={loading} />
           </div>
         </div>
 

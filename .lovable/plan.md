@@ -1,32 +1,28 @@
-## Problema
+## Objetivo
 
-O erro "Falha ao corrigir: No object generated: response did not match schema" vem da correção por IA (`src/lib/correct-grammar.functions.ts`). O schema de saída usa limites rígidos (`score` inteiro entre 0 e 100, campos todos obrigatórios). Quando o modelo devolve algo fora desses limites (ex.: `95.0`, campo ausente, texto extra), a validação pós-resposta falha e o exercício quebra — mesmo com a chamada à IA tendo dado certo e sido cobrada.
+Hoje existe **um único nível** por usuário (`user_progress.level`), usado igualmente em escrita, listening, speaking, conversa livre e leitura — nos dois idiomas. A mudança: cada prática livre passa a ter o **seu próprio nível**, ajustável na hora, separado por idioma.
 
-O mesmo padrão existe na avaliação de fala (`src/lib/evaluate-speaking.functions.ts`), então listening/speaking têm o mesmo risco.
+## Como fica para o usuário
 
-## O que fazer
+Em cada tela de prática livre (Escrita, Listening, Speaking, Conversa livre, Leitura), no lugar da etiqueta fixa de nível aparece um **seletor**: Iniciante / Intermediário / Avançado. Trocar o nível recarrega imediatamente o próximo exercício naquele nível e a escolha fica salva para aquela habilidade + idioma.
 
-1. **Correção gramatical (`correct-grammar.functions.ts`)**
-   - Remover os limites do schema (`.int()`, `.min()`, `.max()`) e deixar os campos flexíveis; passar as regras ("nota de 0 a 100", "explicação em português") apenas no prompt.
-   - Normalizar em código: arredondar e limitar a nota a 0–100, garantir array de erros, preencher `corrected_text` com a resposta do aluno quando vier vazio.
-   - Adicionar fallback: se a IA devolver algo não conforme, tentar interpretar o texto bruto da resposta antes de mostrar erro; só falhar se realmente não houver conteúdo.
-   - Manter mensagens amigáveis para limite de requisições e créditos.
+Exemplo: 🇬🇧 Leitura = Avançado, Listening = Iniciante, Fala = Iniciante, Escrita = Intermediário — e um conjunto independente para 🇪🇸.
 
-2. **Avaliação de fala (`evaluate-speaking.functions.ts`)**
-   - Mesmo tratamento: schema sem limites, normalização de `score`/`accuracy_pct`, fallback de parsing e mensagens de erro claras.
-
-3. **Revisão de todos os modos de exercício**
-   Verificar que cada modo envia dados válidos para as funções de IA e trata erro sem travar a tela:
-   - Escrita (`/exercise`, runner de lição `/lesson/$id`)
-   - Listening (`/listening`) — inclusive quando o texto do áudio é longo
-   - Speaking guiado (`/speaking`) e conversação livre (`/speaking-free`)
-   - Leitura (`/reading`)
-   - Revisão SRS (`/review`) e vocabulário (`/vocabulary`, áudio TTS)
-   Ajustar apenas o que estiver faltando: entrada vazia, texto acima do limite enviado ao TTS/correção, e exibição do erro sem perder a resposta digitada.
-
-4. **Validação**
-   Rodar uma correção real por cada caminho (escrita, listening, speaking, leitura) e conferir a resposta antes de concluir.
+O teste de nivelamento continua definindo o nível inicial: ao concluir, ele preenche todas as habilidades com aquele nível, e o usuário refina depois. As **lições estruturadas** continuam usando o nível geral (não são prática livre).
 
 ## Detalhes técnicos
 
-Segue a recomendação oficial do AI SDK: schemas de saída estruturada devem ser livres de restrições (`min`/`max`/`format`), com os limites expressos no prompt e aplicados por código, e a chamada envolvida em tratamento de `NoObjectGeneratedError` usando `error.text` como fallback. Nenhuma mudança de banco de dados ou de conteúdo é necessária.
+1. **Banco** — nova tabela `user_skill_levels`:
+   - colunas: `user_id`, `language` (`en`/`es`), `skill` (`writing`, `listening`, `speaking`, `reading`), `level`, timestamps; único por (user_id, language, skill).
+   - GRANTs para `authenticated`/`service_role`, RLS habilitada, política única escopada a `auth.uid() = user_id`.
+   - Sem seed: quando não houver linha, a UI usa `user_progress.level` como padrão (fallback), e grava ao primeiro ajuste.
+
+2. **Hook `useSkillLevel(userId, language, skill)`** (novo, espelhando `use-language.ts`): lê o nível salvo, faz fallback para `user_progress.level`, expõe `setLevel` que faz upsert e cacheia em localStorage para evitar flash.
+
+3. **Componente `LevelSelect`** (novo): três botões/segmented control reutilizando o visual de `LevelPill`.
+
+4. **Rotas atualizadas** (`exercise.tsx`, `listening.tsx`, `speaking.tsx`, `speaking-free.tsx`, `reading.tsx`): trocam a leitura direta de `user_progress.level` pelo hook, renderizam o `LevelSelect` no cabeçalho e recarregam o exercício/lista ao mudar de nível. Em `reading.tsx`, o nível filtra a lista de textos em vez de apenas marcar como "difícil".
+
+5. **Placement** (`placement.tsx`): ao finalizar, além de gravar `user_progress.level`, grava as 4 habilidades do idioma atual com o mesmo nível.
+
+Sem mudanças nas funções de IA — elas já recebem `level` e `language` por parâmetro.

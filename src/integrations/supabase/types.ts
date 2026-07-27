@@ -421,6 +421,36 @@ export type Database = {
         }
         Relationships: []
       }
+      user_skill_levels: {
+        Row: {
+          created_at: string
+          id: string
+          language: string
+          level: string
+          skill: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          language?: string
+          level?: string
+          skill: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          language?: string
+          level?: string
+          skill?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       user_vocabulary: {
         Row: {
           context_sentence: string | null
