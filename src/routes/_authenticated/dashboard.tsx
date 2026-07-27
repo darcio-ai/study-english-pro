@@ -30,9 +30,11 @@ function Dashboard() {
   const { user } = Route.useRouteContext();
   const navigate = useNavigate();
   const queryClient = useQueryClient();
+  const { language, setLanguage } = useLanguage(user.id);
   const [levelMenuOpen, setLevelMenuOpen] = useState(false);
   const [editingName, setEditingName] = useState(false);
   const [nameDraft, setNameDraft] = useState("");
+
 
   const profileQuery = useQuery({
     queryKey: ["profile", user.id],
