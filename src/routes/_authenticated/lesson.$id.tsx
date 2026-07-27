@@ -90,7 +90,7 @@ function LessonRunner() {
     queryFn: async (): Promise<Lesson> => {
       const { data, error } = await supabase
         .from("lessons")
-        .select("id, title, description_pt, grammar_focus, emoji, level")
+        .select("id, title, description_pt, grammar_focus, emoji, level, language")
         .eq("id", lessonId)
         .single();
       if (error) throw error;
