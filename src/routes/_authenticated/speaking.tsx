@@ -176,7 +176,7 @@ function SpeakingPage() {
   function next() {
     if (!exercise) return;
     recentIds.current = [exercise.id, ...recentIds.current].slice(0, 3);
-    loadNext(userLevel);
+    loadNext(userLevel, language);
   }
 
   function renderSentenceWithErrors(sentence: string, mispronounced: string[]) {
