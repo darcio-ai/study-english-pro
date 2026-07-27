@@ -30,9 +30,11 @@ type ReadingText = {
 function ReadingPage() {
   const { user } = Route.useRouteContext();
   const navigate = useNavigate();
+  const { language, setLanguage } = useLanguage(user.id);
   const [track, setTrack] = useState<Track>("sales");
   const [userLevel, setUserLevel] = useState<Level>("beginner");
   const [selectedText, setSelectedText] = useState<ReadingText | null>(null);
+
 
   useEffect(() => {
     supabase
