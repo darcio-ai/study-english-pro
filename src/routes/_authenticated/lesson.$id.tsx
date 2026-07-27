@@ -12,7 +12,15 @@ import { transcribeAudio } from "@/lib/stt.functions";
 import { evaluateSpeaking, type SpeakingEvaluation } from "@/lib/evaluate-speaking.functions";
 import { AudioRecorder } from "@/components/audio-recorder";
 import { LevelPill, type Level } from "@/components/englishup";
-import { upsertReviewQueue, addXp, xpForScore, checkAndGrantAchievements } from "@/lib/learning";
+import {
+  upsertReviewQueue,
+  addXp,
+  xpForScore,
+  checkAndGrantAchievements,
+  LANGUAGE_VOICE,
+  type Language,
+} from "@/lib/learning";
+
 
 export const Route = createFileRoute("/_authenticated/lesson/$id")({
   head: () => ({ meta: [{ title: "Lição — EnglishUp" }] }),
