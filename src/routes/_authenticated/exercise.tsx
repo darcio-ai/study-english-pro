@@ -6,6 +6,9 @@ import { toast } from "sonner";
 
 import { supabase } from "@/integrations/supabase/client";
 import { correctGrammar, type Correction } from "@/lib/correct-grammar.functions";
+import { useLanguage } from "@/hooks/use-language";
+import type { Language } from "@/lib/learning";
+
 import {
   GrammarFocusBadge,
   LevelPill,

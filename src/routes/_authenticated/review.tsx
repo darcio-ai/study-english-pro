@@ -7,6 +7,8 @@ import { toast } from "sonner";
 
 import { supabase } from "@/integrations/supabase/client";
 import { correctGrammar, type Correction } from "@/lib/correct-grammar.functions";
+import { useLanguage } from "@/hooks/use-language";
+
 import { upsertReviewQueue, addXp, xpForScore, checkAndGrantAchievements } from "@/lib/learning";
 import { LevelPill, type Level } from "@/components/englishup";
 
