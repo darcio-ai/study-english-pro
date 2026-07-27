@@ -5,7 +5,10 @@ import { ArrowLeft, CheckCircle2, Lock, Play } from "lucide-react";
 
 import { supabase } from "@/integrations/supabase/client";
 import { LevelPill, type Level } from "@/components/englishup";
+import { LanguageSwitch } from "@/components/language-switch";
+import { useLanguage } from "@/hooks/use-language";
 import { TRACK_EMOJI, TRACK_LABEL, type Track } from "@/lib/learning";
+
 
 export const Route = createFileRoute("/_authenticated/lessons")({
   head: () => ({ meta: [{ title: "Lições — EnglishUp" }] }),
