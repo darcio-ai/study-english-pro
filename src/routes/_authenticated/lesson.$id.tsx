@@ -183,7 +183,7 @@ function LessonRunner() {
     setPlaying(true);
     try {
       if (!audioUrlRef.current) {
-        const result = await ttsFn({ data: { text, voice: "alloy" } });
+        const result = await ttsFn({ data: { text, voice: LANGUAGE_VOICE[lessonLanguage] } });
         const bin = atob(result.audioBase64);
         const bytes = new Uint8Array(bin.length);
         for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
