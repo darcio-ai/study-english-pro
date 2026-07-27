@@ -120,6 +120,8 @@ function ExercisePage() {
           exerciseContent: exercise.content,
           grammarFocus: exercise.grammar_focus,
           level: userLevel,
+          language,
+
         },
       });
       setCorrection(result);
