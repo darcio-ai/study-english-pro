@@ -26,11 +26,70 @@ const CorrectionSchema = z.object({
     }),
   ),
   corrected_text: z.string(),
-  score: z.number().int().min(0).max(100),
+  score: z.number(),
   positive_pt: z.string(),
 });
 
-export type Correction = z.infer<typeof CorrectionSchema>;
+export type Correction = {
+  errors: {
+    segment: string;
+    corrected: string;
+    type: string;
+    explanation_pt: string;
+    rule: string;
+  }[];
+  corrected_text: string;
+  score: number;
+  positive_pt: string;
+};
+
+function clampScore(value: unknown): number {
+  const n = typeof value === "number" ? value : Number(value);
+  if (!Number.isFinite(n)) return 0;
+  return Math.max(0, Math.min(100, Math.round(n)));
+}
+
+function str(value: unknown): string {
+  return typeof value === "string" ? value : "";
+}
+
+function normalizeCorrection(raw: unknown, fallbackText: string): Correction {
+  const obj = (raw ?? {}) as Record<string, unknown>;
+  const rawErrors = Array.isArray(obj.errors) ? obj.errors : [];
+  const errors = rawErrors
+    .map((e) => {
+      const item = (e ?? {}) as Record<string, unknown>;
+      return {
+        segment: str(item.segment),
+        corrected: str(item.corrected),
+        type: str(item.type) || "grammar",
+        explanation_pt: str(item.explanation_pt),
+        rule: str(item.rule),
+      };
+    })
+    .filter((e) => e.segment || e.corrected || e.explanation_pt);
+
+  return {
+    errors,
+    corrected_text: str(obj.corrected_text).trim() || fallbackText,
+    score: clampScore(obj.score),
+    positive_pt: str(obj.positive_pt),
+  };
+}
+
+function parseLooseJson(text: string | undefined): unknown {
+  if (!text) return null;
+  const cleaned = text.replace(/```json/gi, "").replace(/```/g, "").trim();
+  const start = cleaned.indexOf("{");
+  const end = cleaned.lastIndexOf("}");
+  if (start === -1 || end <= start) return null;
+  try {
+    return JSON.parse(cleaned.slice(start, end + 1));
+  } catch {
+    return null;
+  }
+}
+
 
 export const correctGrammar = createServerFn({ method: "POST" })
   .middleware([requireSupabaseAuth])
