@@ -11,7 +11,9 @@ const InputSchema = z.object({
   mode: z.enum(["read", "free"]),
   level: z.enum(["beginner", "intermediate", "advanced"]),
   promptEn: z.string().max(500).optional(),
+  language: z.enum(["en", "es"]).optional().default("en"),
 });
+
 
 const EvaluationSchema = z.object({
   score: z.number().int().min(0).max(100),

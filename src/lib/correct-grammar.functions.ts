@@ -39,19 +39,31 @@ export const correctGrammar = createServerFn({ method: "POST" })
     const apiKey = process.env.LOVABLE_API_KEY;
     if (!apiKey) throw new Error("LOVABLE_API_KEY is not configured");
 
-    const systemPrompt = `You are an English grammar teacher for Brazilian Portuguese speakers.
+    const isEs = data.language === "es";
+    const targetLanguage = isEs ? "Spanish" : "English";
+    const extra = isEs
+      ? `
+The student is a Brazilian Portuguese speaker, so pay special attention to:
+- "portunhol" (Portuguese words or spellings used as if they were Spanish)
+- false friends (embarazada, exquisito, largo, oficina, pelado, rato, salsa, vaso)
+- ser/estar, por/para, gender and number agreement, and use of the subjunctive
+- missing accents and ñ`
+      : "";
+
+    const systemPrompt = `You are a ${targetLanguage} grammar teacher for Brazilian Portuguese speakers.
 Student level: ${data.level}.
 Identify grammar errors in the student's answer. For each error provide:
 - segment: exact incorrect text from student's answer
 - corrected: corrected version of that segment
 - type: short grammar category
 - explanation_pt: explanation in Brazilian Portuguese, max 2 sentences
-- rule: grammar rule in English, max 1 sentence
+- rule: grammar rule written in ${targetLanguage}, max 1 sentence
 Also provide:
-- corrected_text: full corrected version of the student's answer
+- corrected_text: full corrected version of the student's answer, in ${targetLanguage}
 - score: 0-100 reflecting overall correctness
 - positive_pt: one encouraging sentence in Portuguese if score >= 60, else empty string
-If the answer is fully correct, return empty errors array and score 100.`;
+If the answer is fully correct, return empty errors array and score 100.${extra}`;
+
 
     const userMessage = `Exercise instruction: ${data.exercisePromptEn}
 ${data.exerciseContent ? `Sentence to work with: ${data.exerciseContent}` : ""}

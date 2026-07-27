@@ -6,7 +6,9 @@ import { requireSupabaseAuth } from "@/integrations/supabase/auth-middleware";
 const InputSchema = z.object({
   audioBase64: z.string().min(1),
   mimeType: z.string().min(1),
+  language: z.enum(["en", "es"]).optional().default("en"),
 });
+
 
 function extFromMime(mime: string): string {
   const m = mime.split(";")[0].trim().toLowerCase();
