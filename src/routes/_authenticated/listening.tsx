@@ -174,7 +174,7 @@ function ListeningPage() {
   async function next() {
     if (!exercise) return;
     recentIds.current = [exercise.id, ...recentIds.current].slice(0, 3);
-    loadNext(userLevel);
+    loadNext(userLevel, language);
   }
 
   return (
