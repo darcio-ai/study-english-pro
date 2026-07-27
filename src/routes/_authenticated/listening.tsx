@@ -8,6 +8,9 @@ import { supabase } from "@/integrations/supabase/client";
 import { synthesizeSpeech } from "@/lib/tts.functions";
 import { correctGrammar, type Correction } from "@/lib/correct-grammar.functions";
 import { LevelPill, type Level } from "@/components/englishup";
+import { useLanguage } from "@/hooks/use-language";
+import { LANGUAGE_VOICE, type Language } from "@/lib/learning";
+
 
 export const Route = createFileRoute("/_authenticated/listening")({
   head: () => ({ meta: [{ title: "Listening — EnglishUp" }] }),
