@@ -86,7 +86,9 @@ function ReviewPage() {
           exerciseContent: ex.audio_script ?? ex.content,
           grammarFocus: ex.grammar_focus,
           level: ex.level,
+          language,
         },
+
       });
       setCorrection(result);
       await supabase.from("attempts").insert({
