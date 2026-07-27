@@ -4,7 +4,7 @@ import { z } from "zod";
 import { requireSupabaseAuth } from "@/integrations/supabase/auth-middleware";
 
 const InputSchema = z.object({
-  text: z.string().min(1).max(500),
+  text: z.string().min(1).max(4000).transform((t) => t.slice(0, 1000)),
   voice: z.enum(["alloy", "echo", "shimmer", "coral", "sage"]).default("alloy"),
 });
 
