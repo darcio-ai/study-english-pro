@@ -138,7 +138,9 @@ function SpeakingPage() {
   async function handleRecorded(audio: { base64: string; mimeType: string }) {
     if (!exercise) return;
     try {
-      const stt = await sttFn({ data: { audioBase64: audio.base64, mimeType: audio.mimeType } });
+      const stt = await sttFn({
+        data: { audioBase64: audio.base64, mimeType: audio.mimeType, language },
+      });
       if (!stt.text) {
         toast.error("Não entendi sua fala. Tente novamente.");
         return;
@@ -150,8 +152,10 @@ function SpeakingPage() {
           original: exercise.content,
           mode: "read",
           level: userLevel,
+          language,
         },
       });
+
       setEvaluation(evalResult);
       await supabase.from("attempts").insert({
         user_id: user.id,
