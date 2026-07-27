@@ -11,7 +11,9 @@ const InputSchema = z.object({
   exerciseContent: z.string().max(500).nullable().optional(),
   grammarFocus: z.string().min(1).max(200),
   level: z.enum(["beginner", "intermediate", "advanced"]),
+  language: z.enum(["en", "es"]).optional().default("en"),
 });
+
 
 const CorrectionSchema = z.object({
   errors: z.array(
