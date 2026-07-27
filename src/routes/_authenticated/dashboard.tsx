@@ -259,6 +259,10 @@ function Dashboard() {
             </button>
           ))}
 
+          <LanguageSwitch value={language} onChange={setLanguage} size="sm" />
+
+
+
           <div className="ml-auto inline-flex items-center gap-1 text-xs font-semibold text-purple-600 dark:text-purple-400 bg-purple-50 dark:bg-purple-900/30 px-2 py-1 rounded-full">
             <Zap className="size-3 fill-current" />
             {p?.xp ?? 0} XP
