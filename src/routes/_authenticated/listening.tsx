@@ -118,7 +118,10 @@ function ListeningPage() {
     setGenerating(true);
     try {
       if (!audioUrlRef.current) {
-        const result = await ttsFn({ data: { text: exercise.audio_script, voice: "alloy" } });
+        const result = await ttsFn({
+          data: { text: exercise.audio_script, voice: LANGUAGE_VOICE[language] },
+        });
+
         const bin = atob(result.audioBase64);
         const bytes = new Uint8Array(bin.length);
         for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
