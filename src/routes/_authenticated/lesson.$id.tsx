@@ -203,7 +203,10 @@ function LessonRunner() {
     if (!exercise) return;
     setSubmitting(true);
     try {
-      const stt = await sttFn({ data: { audioBase64: audio.base64, mimeType: audio.mimeType } });
+      const stt = await sttFn({
+        data: { audioBase64: audio.base64, mimeType: audio.mimeType, language: lessonLanguage },
+      });
+
       if (!stt.text) {
         toast.error("Não entendi sua fala.");
         setSubmitting(false);
