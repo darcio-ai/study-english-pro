@@ -46,7 +46,7 @@ function SpeakingPage() {
   const audioUrlRef = useRef<string | null>(null);
   const recentIds = useRef<string[]>([]);
 
-  const loadNext = useCallback(async (level: Level) => {
+  const loadNext = useCallback(async (level: Level, lang: Language) => {
     setLoading(true);
     setEvaluation(null);
     setTranscript("");
@@ -55,7 +55,12 @@ function SpeakingPage() {
       audioUrlRef.current = null;
     }
     try {
-      let q = supabase.from("exercises").select("*").eq("mode", "speaking_read").eq("level", level);
+      let q = supabase
+        .from("exercises")
+        .select("*")
+        .eq("mode", "speaking_read")
+        .eq("level", level)
+        .eq("language", lang);
       if (recentIds.current.length > 0) {
         q = q.not("id", "in", `(${recentIds.current.join(",")})`);
       }
@@ -68,9 +73,11 @@ function SpeakingPage() {
           .from("exercises")
           .select("*")
           .eq("mode", "speaking_read")
-          .eq("level", level);
+          .eq("level", level)
+          .eq("language", lang);
         const arr = (all ?? []) as Exercise[];
         if (arr.length === 0) {
+          setExercise(null);
           toast.error("Nenhum exercício de speaking disponível.");
           return;
         }
@@ -96,12 +103,13 @@ function SpeakingPage() {
       if (cancelled) return;
       const lvl = (data?.level as Level) ?? "beginner";
       setUserLevel(lvl);
-      loadNext(lvl);
+      loadNext(lvl, language);
     })();
     return () => {
       cancelled = true;
     };
-  }, [user.id, loadNext]);
+  }, [user.id, loadNext, language]);
+
 
   async function playModel() {
     if (!exercise) return;
