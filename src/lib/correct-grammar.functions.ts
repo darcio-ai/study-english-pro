@@ -6,9 +6,9 @@ import { requireSupabaseAuth } from "@/integrations/supabase/auth-middleware";
 import { createLovableAiGatewayProvider } from "./ai-gateway.server";
 
 const InputSchema = z.object({
-  userInput: z.string().min(1).max(2000),
-  exercisePromptEn: z.string().min(1).max(500),
-  exerciseContent: z.string().max(500).nullable().optional(),
+  userInput: z.string().min(1).max(4000),
+  exercisePromptEn: z.string().min(1).max(2000),
+  exerciseContent: z.string().max(2000).nullable().optional(),
   grammarFocus: z.string().min(1).max(200),
   level: z.enum(["beginner", "intermediate", "advanced"]),
   language: z.enum(["en", "es"]).optional().default("en"),
