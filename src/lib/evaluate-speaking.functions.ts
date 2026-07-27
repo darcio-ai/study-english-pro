@@ -115,8 +115,13 @@ STUDENT TRANSCRIPT: "${data.transcript}"`;
         prompt: userMessage,
         experimental_output: Output.object({ schema: EvaluationSchema as never }),
       });
-      return experimental_output as SpeakingEvaluation;
+      return normalizeEvaluation(experimental_output, data.transcript);
     } catch (err: unknown) {
+      if (NoObjectGeneratedError.isInstance(err)) {
+        const parsed = parseLooseJson(err.text);
+        if (parsed) return normalizeEvaluation(parsed, data.transcript);
+        throw new Error("Não consegui interpretar a avaliação. Tente novamente.");
+      }
       const msg = err instanceof Error ? err.message : String(err);
       if (msg.includes("429")) throw new Error("Muitas requisições. Aguarde.");
       if (msg.includes("402")) throw new Error("Créditos de IA esgotados.");
