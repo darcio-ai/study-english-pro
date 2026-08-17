@@ -20,7 +20,7 @@ import { useLanguage } from "@/hooks/use-language";
 import { useStudyPlan } from "@/hooks/use-study-plan";
 import { maybeFireReminder } from "@/lib/reminders";
 import {
-  SKILL_META,
+  
   buildDailyPlan,
   buildWeeklySummary,
   diagnoseSkills,
