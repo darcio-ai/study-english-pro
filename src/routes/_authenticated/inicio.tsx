@@ -283,6 +283,7 @@ function StartPage() {
             title="Vocabulário"
             subtitle={vocabDue > 0 ? `${vocabDue} cartões` : "Em dia"}
           />
+          <ActionCard to="/plano" icon={<CalendarDays className="size-6" />} title="Plano" subtitle="Calendário e metas" />
           <ActionCard to="/dashboard" icon={<LayoutDashboard className="size-6" />} title="Dashboard" subtitle="Progresso" />
         </div>
 
