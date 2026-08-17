@@ -312,6 +312,84 @@ export type Database = {
           },
         ]
       }
+      study_plan: {
+        Row: {
+          created_at: string
+          daily_goal_exercises: number
+          minutes_per_day: number
+          reminder_time: string
+          reminders_enabled: boolean
+          timezone: string | null
+          updated_at: string
+          user_id: string
+          weekdays: number[]
+        }
+        Insert: {
+          created_at?: string
+          daily_goal_exercises?: number
+          minutes_per_day?: number
+          reminder_time?: string
+          reminders_enabled?: boolean
+          timezone?: string | null
+          updated_at?: string
+          user_id: string
+          weekdays?: number[]
+        }
+        Update: {
+          created_at?: string
+          daily_goal_exercises?: number
+          minutes_per_day?: number
+          reminder_time?: string
+          reminders_enabled?: boolean
+          timezone?: string | null
+          updated_at?: string
+          user_id?: string
+          weekdays?: number[]
+        }
+        Relationships: []
+      }
+      study_sessions: {
+        Row: {
+          completed_at: string | null
+          created_at: string
+          duration_minutes: number
+          id: string
+          note: string | null
+          scheduled_for: string
+          scheduled_time: string | null
+          skill: string
+          status: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          completed_at?: string | null
+          created_at?: string
+          duration_minutes?: number
+          id?: string
+          note?: string | null
+          scheduled_for: string
+          scheduled_time?: string | null
+          skill?: string
+          status?: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          completed_at?: string | null
+          created_at?: string
+          duration_minutes?: number
+          id?: string
+          note?: string | null
+          scheduled_for?: string
+          scheduled_time?: string | null
+          skill?: string
+          status?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       user_achievements: {
         Row: {
           achievement_code: string
