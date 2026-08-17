@@ -62,31 +62,12 @@ function WeaknessesPage() {
     .sort((a, b) => a.avg - b.avg)
     .slice(0, 8);
 
-  // Skill breakdown
-  const modeMap = new Map<string, { sum: number; count: number }>();
-  for (const a of attempts) {
-    if (a.score === null) continue;
-    const m = a.mode ?? "writing";
-    const entry = modeMap.get(m) ?? { sum: 0, count: 0 };
-    entry.sum += a.score;
-    entry.count += 1;
-    modeMap.set(m, entry);
-  }
-  const modeStats = Array.from(modeMap.entries()).map(([mode, { sum, count }]) => ({
-    mode,
-    avg: Math.round(sum / count),
-    count,
-  }));
+  // Skill diagnosis (ordered by how much practice each skill needs)
+  const diagnoses = diagnoseSkills(attempts);
 
   const scores = attempts.map((a) => a.score ?? 0);
   const suggestion = suggestLevelChange(scores, currentLevel);
 
-  const modeLabel: Record<string, string> = {
-    writing: "✏️ Escrita",
-    listening: "🎧 Listening",
-    speaking_read: "🎤 Pronúncia",
-    speaking_free: "💬 Conversação",
-  };
 
   return (
     <main className="min-h-screen bg-gray-50 dark:bg-gray-900 px-4 py-6">
