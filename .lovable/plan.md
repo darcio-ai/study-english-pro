@@ -21,7 +21,7 @@ O que será criado:
 - **Meta diária**: cada dia tem uma meta (por exercícios ou por minutos) gerada a partir do diagnóstico acima, com as habilidades fracas priorizadas.
 - **Tela de calendário**: visão mensal com dias concluídos, parciais e perdidos, sequência atual (streak) e resumo semanal (o que praticou por habilidade).
 - **Sessões agendadas**: dá para agendar uma sessão específica ("terça 19h — escuta, 15 min"), marcá-la como feita e reagendar.
-- **Lembrete**: notificação local no navegador/PWA no horário escolhido (opt-in). Sem e-mail nesta etapa.
+- **Lembretes com autorização**: um botão "Ativar lembretes" pede permissão de notificação ao navegador/PWA. Nada é enviado sem esse consentimento; o app explica antes o que será enviado e o usuário escolhe dias e horário. Dá para desativar a qualquer momento nas configurações do plano. Se a permissão for negada, o app mostra apenas um lembrete visual dentro do app, sem insistir. Notificação local (sem e-mail nesta etapa).
 - Atalho na tela inicial: "Plano de hoje" com barra de progresso da meta.
 
 ## 3. Resumo semanal de progresso
@@ -39,6 +39,6 @@ O que será criado:
 - Nova lib `src/lib/recommendations.ts`: agrega `attempts`, `review_queue`, `user_vocabulary` e `user_skill_levels` para produzir diagnóstico, prioridades e o plano diário. Lógica determinística (sem custo de IA).
 - Ajuste automático de nível reaproveita e amplia `suggestLevelChange` em `src/lib/learning.ts`, agora por habilidade.
 - Novas rotas: `/_authenticated/plano` (calendário + configuração) e cards de recomendação em `inicio.tsx`; `weaknesses.tsx` ganha o painel por habilidade.
-- Lembretes via Notification API + service worker já existente do PWA.
+- Lembretes via Notification API + service worker do PWA, disparados só após `Notification.requestPermission()` retornar `granted`; preferência (ativo, dias, horário) salva em `study_plan` e estado da permissão verificado a cada carregamento.
 - Textos em pt-BR, funcionando igual para inglês e espanhol (filtro por `preferred_language`).
 - Resumo semanal calculado sob demanda a partir de `attempts`, `user_vocabulary`, `user_achievements` e `study_sessions` (janelas de 7 dias), sem tabela extra; gráfico com a lib de charts já presente no projeto.
