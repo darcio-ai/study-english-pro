@@ -206,6 +206,65 @@ function StartPage() {
           </div>
         )}
 
+        {dailyPlan.length > 0 && (
+          <section className="mb-5 rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4">
+            <div className="flex items-center justify-between mb-1">
+              <h2 className="font-bold text-gray-900 dark:text-white">Seu plano de hoje</h2>
+              <Link to="/plano" className="text-xs font-semibold text-indigo-600 dark:text-indigo-400">
+                Calendário →
+              </Link>
+            </div>
+            <p className="text-xs text-gray-500 dark:text-gray-400 mb-3">
+              {todayCount}/{plan.daily_goal_exercises} exercícios · foco nas suas habilidades mais fracas
+            </p>
+            <div className="h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden mb-3">
+              <div
+                className="h-full bg-indigo-600"
+                style={{
+                  width: `${Math.min(100, Math.round((todayCount / Math.max(1, plan.daily_goal_exercises)) * 100))}%`,
+                }}
+              />
+            </div>
+            <div className="space-y-2">
+              {dailyPlan.map((b) => (
+                <Link
+                  key={b.id}
+                  to={b.to}
+                  className="flex items-center gap-3 p-2.5 rounded-xl bg-gray-50 dark:bg-gray-900 hover:bg-indigo-50 dark:hover:bg-indigo-900/30"
+                >
+                  <span className="text-lg">{b.emoji}</span>
+                  <span className="flex-1 min-w-0">
+                    <span className="block text-sm font-semibold text-gray-900 dark:text-white">
+                      {b.title} · {b.detail}
+                    </span>
+                    <span className="block text-xs text-gray-500 dark:text-gray-400 truncate">{b.reason}</span>
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {summary.attempts > 0 && (
+          <Link
+            to="/plano"
+            className="mb-5 block rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4"
+          >
+            <div className="flex items-center justify-between mb-1">
+              <h2 className="font-bold text-gray-900 dark:text-white">Sua semana</h2>
+              <span className="text-xs text-gray-500 dark:text-gray-400">
+                {summary.attempts}/{summary.goal} exercícios
+              </span>
+            </div>
+            <p className="text-xs text-gray-500 dark:text-gray-400 mb-2">
+              {summary.daysActive} {summary.daysActive === 1 ? "dia ativo" : "dias ativos"} · {summary.minutes} min
+            </p>
+            {summary.improve && (
+              <p className="text-xs text-gray-700 dark:text-gray-300">🎯 {summary.improve}</p>
+            )}
+          </Link>
+        )}
+
         <div className="grid grid-cols-2 gap-3">
           <ActionCard to="/lessons" icon={<GraduationCap className="size-6" />} title="Lições" subtitle="Trilha guiada" primary />
           <ActionCard to="/exercise" icon={<PenLine className="size-6" />} title="Escrita" subtitle="Prática livre" />
