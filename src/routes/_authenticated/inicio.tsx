@@ -1,8 +1,10 @@
+import { useEffect, useMemo } from "react";
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import {
   BookOpen,
   Brain,
+  CalendarDays,
   GraduationCap,
   Headphones,
   LayoutDashboard,
@@ -15,6 +17,15 @@ import {
 import { supabase } from "@/integrations/supabase/client";
 import { LanguageSwitch } from "@/components/language-switch";
 import { useLanguage } from "@/hooks/use-language";
+import { useStudyPlan } from "@/hooks/use-study-plan";
+import { maybeFireReminder } from "@/lib/reminders";
+import {
+  SKILL_META,
+  buildDailyPlan,
+  buildWeeklySummary,
+  diagnoseSkills,
+  fetchCoachAttempts,
+} from "@/lib/recommendations";
 
 export const Route = createFileRoute("/_authenticated/inicio")({
   head: () => ({
