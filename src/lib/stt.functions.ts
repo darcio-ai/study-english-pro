@@ -7,7 +7,9 @@ const InputSchema = z.object({
   audioBase64: z.string().min(1),
   mimeType: z.string().min(1),
   language: z.enum(["en", "es"]).optional().default("en"),
+  prompt: z.string().max(500).optional(),
 });
+
 
 
 function extFromMime(mime: string): string {
@@ -38,6 +40,8 @@ export const transcribeAudio = createServerFn({ method: "POST" })
     form.append("file", blob, `recording.${ext}`);
     form.append("model", "openai/gpt-4o-mini-transcribe");
     form.append("language", data.language ?? "en");
+    if (data.prompt) form.append("prompt", data.prompt);
+
 
     const response = await fetch("https://ai.gateway.lovable.dev/v1/audio/transcriptions", {
       method: "POST",

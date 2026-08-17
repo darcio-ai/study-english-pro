@@ -9,6 +9,11 @@ import { synthesizeSpeech } from "@/lib/tts.functions";
 import { transcribeAudio } from "@/lib/stt.functions";
 import { evaluateSpeaking, type SpeakingEvaluation } from "@/lib/evaluate-speaking.functions";
 import { AudioRecorder } from "@/components/audio-recorder";
+import {
+  isUnreliableTranscript,
+  MAX_STT_ATTEMPTS,
+  UNRELIABLE_MESSAGE,
+} from "@/lib/transcript-quality";
 import { type Level } from "@/components/englishup";
 import { LevelSelect } from "@/components/level-select";
 import { useLanguage } from "@/hooks/use-language";
@@ -44,6 +49,7 @@ function SpeakingPage() {
   const [loading, setLoading] = useState(true);
   const [evaluation, setEvaluation] = useState<SpeakingEvaluation | null>(null);
   const [transcript, setTranscript] = useState<string>("");
+  const [sttAttempts, setSttAttempts] = useState(0);
   const [generatingTts, setGeneratingTts] = useState(false);
   const audioUrlRef = useRef<string | null>(null);
   const recentIds = useRef<string[]>([]);
@@ -52,6 +58,7 @@ function SpeakingPage() {
     setLoading(true);
     setEvaluation(null);
     setTranscript("");
+    setSttAttempts(0);
     if (audioUrlRef.current) {
       URL.revokeObjectURL(audioUrlRef.current);
       audioUrlRef.current = null;
@@ -132,12 +139,19 @@ function SpeakingPage() {
     if (!exercise) return;
     try {
       const stt = await sttFn({
-        data: { audioBase64: audio.base64, mimeType: audio.mimeType, language },
+        data: {
+          audioBase64: audio.base64,
+          mimeType: audio.mimeType,
+          language,
+          prompt: exercise.content || undefined,
+        },
       });
-      if (!stt.text) {
-        toast.error("Não entendi sua fala. Tente novamente.");
+      if (isUnreliableTranscript(stt.text)) {
+        setSttAttempts((n) => n + 1);
+        toast.error(UNRELIABLE_MESSAGE);
         return;
       }
+      setSttAttempts(0);
       setTranscript(stt.text);
       const evalResult = await evalFn({
         data: {
@@ -235,7 +249,16 @@ function SpeakingPage() {
                 Ouvir modelo
               </button>
 
-              {!evaluation && <AudioRecorder onRecorded={handleRecorded} />}
+              {!evaluation && <div>
+                  <AudioRecorder onRecorded={handleRecorded} />
+                  {sttAttempts > 0 && (
+                    <p className="mt-3 text-center text-sm text-amber-700 dark:text-amber-400">
+                      {sttAttempts >= MAX_STT_ATTEMPTS
+                        ? "Ainda não consegui reconhecer sua fala. Fale mais alto e devagar, num lugar silencioso."
+                        : `${UNRELIABLE_MESSAGE} (tentativa ${sttAttempts + 1} de ${MAX_STT_ATTEMPTS})`}
+                    </p>
+                  )}
+                </div>}
             </article>
 
             {evaluation && (

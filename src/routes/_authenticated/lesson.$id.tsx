@@ -11,6 +11,12 @@ import { synthesizeSpeech } from "@/lib/tts.functions";
 import { transcribeAudio } from "@/lib/stt.functions";
 import { evaluateSpeaking, type SpeakingEvaluation } from "@/lib/evaluate-speaking.functions";
 import { AudioRecorder } from "@/components/audio-recorder";
+import {
+  isUnreliableTranscript,
+  MAX_STT_ATTEMPTS,
+  UNRELIABLE_MESSAGE,
+} from "@/lib/transcript-quality";
+
 import { LevelPill, type Level } from "@/components/englishup";
 import {
   upsertReviewQueue,
@@ -78,6 +84,8 @@ function LessonRunner() {
   const [correction, setCorrection] = useState<Correction | null>(null);
   const [evaluation, setEvaluation] = useState<SpeakingEvaluation | null>(null);
   const [transcript, setTranscript] = useState("");
+  const [sttAttempts, setSttAttempts] = useState(0);
+
   const [submitting, setSubmitting] = useState(false);
   const [playing, setPlaying] = useState(false);
   const [done, setDone] = useState(false);
@@ -123,6 +131,8 @@ function LessonRunner() {
     setCorrection(null);
     setEvaluation(null);
     setTranscript("");
+    setSttAttempts(0);
+
     setSavedWord(false);
     if (audioUrlRef.current) {
       URL.revokeObjectURL(audioUrlRef.current);
@@ -203,15 +213,23 @@ function LessonRunner() {
     if (!exercise) return;
     setSubmitting(true);
     try {
+      const target = exercise.content ?? exercise.expected_response ?? "";
       const stt = await sttFn({
-        data: { audioBase64: audio.base64, mimeType: audio.mimeType, language: lessonLanguage },
+        data: {
+          audioBase64: audio.base64,
+          mimeType: audio.mimeType,
+          language: lessonLanguage,
+          prompt: target || undefined,
+        },
       });
 
-      if (!stt.text) {
-        toast.error("Não entendi sua fala.");
+      if (isUnreliableTranscript(stt.text)) {
+        setSttAttempts((n) => n + 1);
         setSubmitting(false);
+        toast.error(UNRELIABLE_MESSAGE);
         return;
       }
+      setSttAttempts(0);
       setTranscript(stt.text);
       const isRead = exercise.mode === "speaking_read";
       const result = await evalFn({
@@ -233,6 +251,7 @@ function LessonRunner() {
       setSubmitting(false);
     }
   }
+
 
   async function nextExercise() {
     if (index + 1 >= total) {
@@ -484,7 +503,37 @@ function LessonRunner() {
                   <Loader2 className="size-5 animate-spin" /> Avaliando...
                 </div>
               ) : (
-                <AudioRecorder onRecorded={handleRecorded} />
+                <>
+                  <AudioRecorder onRecorded={handleRecorded} />
+                  {sttAttempts > 0 && sttAttempts < MAX_STT_ATTEMPTS && (
+                    <p className="mt-3 text-center text-sm text-amber-700 dark:text-amber-400">
+                      {UNRELIABLE_MESSAGE} (tentativa {sttAttempts + 1} de {MAX_STT_ATTEMPTS})
+                    </p>
+                  )}
+                  {sttAttempts >= MAX_STT_ATTEMPTS && (
+                    <div className="mt-4 space-y-2">
+                      <p className="text-center text-sm text-amber-700 dark:text-amber-400">
+                        Ainda não consegui reconhecer sua fala. Fale um pouco mais alto e devagar,
+                        num ambiente silencioso.
+                      </p>
+                      <div className="flex gap-2">
+                        <button
+                          onClick={() => setSttAttempts(0)}
+                          className="flex-1 py-2.5 rounded-lg border border-indigo-300 dark:border-indigo-700 text-indigo-600 dark:text-indigo-400 font-medium"
+                        >
+                          Tentar mais uma vez
+                        </button>
+                        <button
+                          onClick={() => void nextExercise()}
+                          className="flex-1 py-2.5 rounded-lg bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-100 font-medium"
+                        >
+                          Pular exercício
+                        </button>
+                      </div>
+                    </div>
+                  )}
+                </>
+
               )}
             </>
           )}
