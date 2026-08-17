@@ -41,3 +41,4 @@ O que será criado:
 - Novas rotas: `/_authenticated/plano` (calendário + configuração) e cards de recomendação em `inicio.tsx`; `weaknesses.tsx` ganha o painel por habilidade.
 - Lembretes via Notification API + service worker já existente do PWA.
 - Textos em pt-BR, funcionando igual para inglês e espanhol (filtro por `preferred_language`).
+- Resumo semanal calculado sob demanda a partir de `attempts`, `user_vocabulary`, `user_achievements` e `study_sessions` (janelas de 7 dias), sem tabela extra; gráfico com a lib de charts já presente no projeto.
