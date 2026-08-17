@@ -203,15 +203,23 @@ function LessonRunner() {
     if (!exercise) return;
     setSubmitting(true);
     try {
+      const target = exercise.content ?? exercise.expected_response ?? "";
       const stt = await sttFn({
-        data: { audioBase64: audio.base64, mimeType: audio.mimeType, language: lessonLanguage },
+        data: {
+          audioBase64: audio.base64,
+          mimeType: audio.mimeType,
+          language: lessonLanguage,
+          prompt: target || undefined,
+        },
       });
 
-      if (!stt.text) {
-        toast.error("Não entendi sua fala.");
+      if (isUnreliableTranscript(stt.text)) {
+        setSttAttempts((n) => n + 1);
         setSubmitting(false);
+        toast.error(UNRELIABLE_MESSAGE);
         return;
       }
+      setSttAttempts(0);
       setTranscript(stt.text);
       const isRead = exercise.mode === "speaking_read";
       const result = await evalFn({
@@ -233,6 +241,7 @@ function LessonRunner() {
       setSubmitting(false);
     }
   }
+
 
   async function nextExercise() {
     if (index + 1 >= total) {
