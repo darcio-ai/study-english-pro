@@ -11,6 +11,12 @@ import { synthesizeSpeech } from "@/lib/tts.functions";
 import { transcribeAudio } from "@/lib/stt.functions";
 import { evaluateSpeaking, type SpeakingEvaluation } from "@/lib/evaluate-speaking.functions";
 import { AudioRecorder } from "@/components/audio-recorder";
+import {
+  isUnreliableTranscript,
+  MAX_STT_ATTEMPTS,
+  UNRELIABLE_MESSAGE,
+} from "@/lib/transcript-quality";
+
 import { LevelPill, type Level } from "@/components/englishup";
 import {
   upsertReviewQueue,
