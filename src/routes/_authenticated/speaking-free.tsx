@@ -54,6 +54,7 @@ function SpeakingFreePage() {
     setLoading(true);
     setEvaluation(null);
     setTranscript("");
+    setSttAttempts(0);
     try {
       let q = supabase
         .from("exercises")
@@ -196,7 +197,16 @@ function SpeakingFreePage() {
 
               {!evaluation && (
                 <div className="py-4">
+                  <div>
                   <AudioRecorder onRecorded={handleRecorded} />
+                  {sttAttempts > 0 && (
+                    <p className="mt-3 text-center text-sm text-amber-700 dark:text-amber-400">
+                      {sttAttempts >= MAX_STT_ATTEMPTS
+                        ? "Ainda não consegui reconhecer sua fala. Fale mais alto e devagar, num lugar silencioso."
+                        : `${UNRELIABLE_MESSAGE} (tentativa ${sttAttempts + 1} de ${MAX_STT_ATTEMPTS})`}
+                    </p>
+                  )}
+                </div>
                   <p className="mt-3 text-center text-xs text-gray-500 dark:text-gray-400">
                     Responda à pergunta em inglês falando ao microfone
                   </p>
