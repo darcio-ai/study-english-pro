@@ -7,7 +7,9 @@ const InputSchema = z.object({
   audioBase64: z.string().min(1),
   mimeType: z.string().min(1),
   language: z.enum(["en", "es"]).optional().default("en"),
+  prompt: z.string().max(500).optional(),
 });
+
 
 
 function extFromMime(mime: string): string {
