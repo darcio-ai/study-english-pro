@@ -330,11 +330,18 @@ function LessonRunner() {
             Próxima lição →
           </button>
           <button
+            onClick={restartLesson}
+            className="mt-2 w-full py-3 rounded-xl border border-indigo-200 dark:border-indigo-800 text-indigo-700 dark:text-indigo-300 font-semibold hover:bg-indigo-50 dark:hover:bg-indigo-900/30 flex items-center justify-center gap-2"
+          >
+            <RotateCcw className="size-4" /> Refazer lição
+          </button>
+          <button
             onClick={() => navigate({ to: "/dashboard" })}
             className="mt-2 w-full py-2 text-sm text-gray-600 dark:text-gray-400 hover:underline"
           >
             Dashboard
           </button>
+
         </div>
       </main>
     );
