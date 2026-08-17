@@ -2,7 +2,7 @@ import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useServerFn } from "@tanstack/react-start";
 import { useQuery } from "@tanstack/react-query";
 import { useCallback, useEffect, useRef, useState } from "react";
-import { ArrowLeft, Loader2, Play, Trophy, Bookmark } from "lucide-react";
+import { ArrowLeft, Loader2, Play, Trophy, Bookmark, RotateCcw } from "lucide-react";
 import { toast } from "sonner";
 
 import { supabase } from "@/integrations/supabase/client";
@@ -261,7 +261,23 @@ function LessonRunner() {
     }
   }
 
+  function restartLesson() {
+    setDone(false);
+    setIndex(0);
+    setScores([]);
+    setUserInput("");
+    setCorrection(null);
+    setEvaluation(null);
+    setTranscript("");
+    setSavedWord(false);
+    if (audioUrlRef.current) {
+      URL.revokeObjectURL(audioUrlRef.current);
+      audioUrlRef.current = null;
+    }
+  }
+
   async function saveCurrentWord() {
+
     if (!exercise || savedWord) return;
     // Save first non-trivial word from the exercise text as the user's flashcard
     const source = exercise.content ?? exercise.audio_script ?? exercise.expected_response ?? exercise.prompt_en;
@@ -330,11 +346,18 @@ function LessonRunner() {
             Próxima lição →
           </button>
           <button
+            onClick={restartLesson}
+            className="mt-2 w-full py-3 rounded-xl border border-indigo-200 dark:border-indigo-800 text-indigo-700 dark:text-indigo-300 font-semibold hover:bg-indigo-50 dark:hover:bg-indigo-900/30 flex items-center justify-center gap-2"
+          >
+            <RotateCcw className="size-4" /> Refazer lição
+          </button>
+          <button
             onClick={() => navigate({ to: "/dashboard" })}
             className="mt-2 w-full py-2 text-sm text-gray-600 dark:text-gray-400 hover:underline"
           >
             Dashboard
           </button>
+
         </div>
       </main>
     );

@@ -1,7 +1,7 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
-import { ArrowLeft, CheckCircle2, Lock, Play } from "lucide-react";
+import { ArrowLeft, CheckCircle2, Lock, Play, RotateCcw } from "lucide-react";
 
 import { supabase } from "@/integrations/supabase/client";
 import { LevelPill, type Level } from "@/components/englishup";
@@ -168,9 +168,11 @@ function LessonsPage() {
                         <p className="text-xs text-gray-500 dark:text-gray-400">
                           Unidade {lesson.unit_number} · Lição {lesson.lesson_number}
                         </p>
-                        <h3 className="font-semibold text-gray-900 dark:text-white truncate">
-                          {lesson.title}
+                        <h3 className="font-semibold text-gray-900 dark:text-white truncate flex items-center gap-1.5">
+                          {done && <CheckCircle2 className="size-4 shrink-0 text-green-500" />}
+                          <span className="truncate">{lesson.title}</span>
                         </h3>
+
                         <p className="text-xs text-gray-500 dark:text-gray-400 truncate">
                           {lesson.grammar_focus}
                         </p>
@@ -182,11 +184,23 @@ function LessonsPage() {
                       </div>
                       <div className="flex-shrink-0">
                         {done ? (
-                          <CheckCircle2 className="size-6 text-green-500" />
+                          <span
+                            role="button"
+                            tabIndex={0}
+                            onClick={(e) => {
+                              e.preventDefault();
+                              e.stopPropagation();
+                              navigate({ to: "/lesson/$id", params: { id: lesson.id } });
+                            }}
+                            className="inline-flex items-center gap-1.5 rounded-lg border border-indigo-200 dark:border-indigo-800 px-2.5 py-1.5 text-xs font-semibold text-indigo-700 dark:text-indigo-300 hover:bg-indigo-50 dark:hover:bg-indigo-900/30"
+                          >
+                            <RotateCcw className="size-3.5" /> Refazer
+                          </span>
                         ) : (
                           <Play className="size-5 text-indigo-500 fill-current" />
                         )}
                       </div>
+
                     </Link>
                   );
                 })}
