@@ -1,7 +1,7 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
-import { ArrowLeft, CheckCircle2, Lock, Play } from "lucide-react";
+import { ArrowLeft, CheckCircle2, Lock, Play, RotateCcw } from "lucide-react";
 
 import { supabase } from "@/integrations/supabase/client";
 import { LevelPill, type Level } from "@/components/englishup";
