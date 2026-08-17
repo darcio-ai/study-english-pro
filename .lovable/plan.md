@@ -24,7 +24,15 @@ O que será criado:
 - **Lembrete**: notificação local no navegador/PWA no horário escolhido (opt-in). Sem e-mail nesta etapa.
 - Atalho na tela inicial: "Plano de hoje" com barra de progresso da meta.
 
+## 3. Resumo semanal de progresso
+
+- **Card "Sua semana"** na tela inicial e uma aba dedicada no calendário, fechando toda segunda-feira.
+- Conteúdo: exercícios feitos vs. meta, minutos estudados, XP ganho, dias cumpridos/streak, nota média por habilidade com comparação à semana anterior (subiu/caiu), habilidade mais praticada e a mais negligenciada, palavras novas no vocabulário, conquistas desbloqueadas.
+- **Destaques em texto**: 1 ponto forte e 1 ponto a melhorar, com um botão que já leva à prática recomendada da semana seguinte.
+- Histórico das últimas semanas em gráfico simples de barras.
+
 ## Detalhes técnicos
+
 
 - Novas tabelas no backend: `study_plan` (preferências: dias, minutos/dia, horário, meta), `study_sessions` (sessões agendadas/concluídas com habilidade, duração e status) e `skill_stats` derivada em tempo real (sem tabela — calculada por consulta sobre `attempts`).
 - Todas as tabelas com RLS por `auth.uid()` e GRANTs para `authenticated`/`service_role`.
@@ -33,3 +41,4 @@ O que será criado:
 - Novas rotas: `/_authenticated/plano` (calendário + configuração) e cards de recomendação em `inicio.tsx`; `weaknesses.tsx` ganha o painel por habilidade.
 - Lembretes via Notification API + service worker já existente do PWA.
 - Textos em pt-BR, funcionando igual para inglês e espanhol (filtro por `preferred_language`).
+- Resumo semanal calculado sob demanda a partir de `attempts`, `user_vocabulary`, `user_achievements` e `study_sessions` (janelas de 7 dias), sem tabela extra; gráfico com a lib de charts já presente no projeto.
