@@ -21,7 +21,7 @@ O que será criado:
 - **Meta diária**: cada dia tem uma meta (por exercícios ou por minutos) gerada a partir do diagnóstico acima, com as habilidades fracas priorizadas.
 - **Tela de calendário**: visão mensal com dias concluídos, parciais e perdidos, sequência atual (streak) e resumo semanal (o que praticou por habilidade).
 - **Sessões agendadas**: dá para agendar uma sessão específica ("terça 19h — escuta, 15 min"), marcá-la como feita e reagendar.
-- **Lembrete**: notificação local no navegador/PWA no horário escolhido (opt-in). Sem e-mail nesta etapa.
+- **Lembretes com autorização**: um botão "Ativar lembretes" pede permissão de notificação ao navegador/PWA. Nada é enviado sem esse consentimento; o app explica antes o que será enviado e o usuário escolhe dias e horário. Dá para desativar a qualquer momento nas configurações do plano. Se a permissão for negada, o app mostra apenas um lembrete visual dentro do app, sem insistir. Notificação local (sem e-mail nesta etapa).
 - Atalho na tela inicial: "Plano de hoje" com barra de progresso da meta.
 
 ## 3. Resumo semanal de progresso
