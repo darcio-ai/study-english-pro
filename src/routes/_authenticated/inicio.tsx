@@ -91,10 +91,75 @@ function StartPage() {
     },
   });
 
+  const { plan } = useStudyPlan(user.id);
+
+  const attemptsQuery = useQuery({
+    queryKey: ["coach_attempts", user.id],
+    queryFn: () => fetchCoachAttempts(user.id, 300),
+  });
+
+  const xpQuery = useQuery({
+    queryKey: ["plan_xp", user.id],
+    queryFn: async () => {
+      const { data } = await supabase
+        .from("user_progress")
+        .select("xp")
+        .eq("user_id", user.id)
+        .maybeSingle();
+      return data?.xp ?? 0;
+    },
+  });
+
   const displayName = profileQuery.data?.display_name ?? user.email?.split("@")[0] ?? "Você";
   const placementDone = profileQuery.data?.placement_done === true;
   const reviewsDue = reviewsDueQuery.data ?? 0;
   const vocabDue = vocabDueQuery.data ?? 0;
+
+  const attempts = useMemo(() => attemptsQuery.data ?? [], [attemptsQuery.data]);
+  const diagnoses = useMemo(() => diagnoseSkills(attempts), [attempts]);
+  const dailyPlan = useMemo(
+    () =>
+      buildDailyPlan({
+        diagnoses,
+        reviewsDue,
+        vocabDue,
+        goalExercises: plan.daily_goal_exercises,
+      }),
+    [diagnoses, reviewsDue, vocabDue, plan.daily_goal_exercises],
+  );
+
+  const todayCount = useMemo(() => {
+    const today = new Date().toDateString();
+    return attempts.filter((a) => new Date(a.created_at).toDateString() === today).length;
+  }, [attempts]);
+
+  const summary = useMemo(
+    () =>
+      buildWeeklySummary({
+        attempts,
+        goalPerWeek: plan.daily_goal_exercises * Math.max(1, plan.weekdays.length),
+        minutesPerAttempt: Math.max(
+          1,
+          Math.round(plan.minutes_per_day / Math.max(1, plan.daily_goal_exercises)),
+        ),
+        newWords: 0,
+        achievements: 0,
+        xp: xpQuery.data ?? 0,
+      }),
+    [attempts, plan, xpQuery.data],
+  );
+
+  const goalMet = todayCount >= plan.daily_goal_exercises;
+
+  useEffect(() => {
+    if (!attemptsQuery.isSuccess) return;
+    maybeFireReminder({
+      enabled: plan.reminders_enabled,
+      weekdays: plan.weekdays,
+      reminderTime: plan.reminder_time,
+      goalMet,
+    });
+  }, [attemptsQuery.isSuccess, plan, goalMet]);
 
   async function skipPlacement() {
     await supabase
