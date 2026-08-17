@@ -131,6 +131,8 @@ function LessonRunner() {
     setCorrection(null);
     setEvaluation(null);
     setTranscript("");
+    setSttAttempts(0);
+
     setSavedWord(false);
     if (audioUrlRef.current) {
       URL.revokeObjectURL(audioUrlRef.current);
