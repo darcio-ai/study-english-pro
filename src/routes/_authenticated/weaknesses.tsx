@@ -5,6 +5,7 @@ import { ArrowLeft, AlertTriangle, TrendingDown, TrendingUp } from "lucide-react
 import { supabase } from "@/integrations/supabase/client";
 import { suggestLevelChange } from "@/lib/learning";
 import { LevelPill, type Level } from "@/components/englishup";
+import { SKILL_META, diagnoseSkills, fetchCoachAttempts } from "@/lib/recommendations";
 
 export const Route = createFileRoute("/_authenticated/weaknesses")({
   head: () => ({ meta: [{ title: "Mural de Fraquezas — EnglishUp" }] }),
@@ -15,6 +16,7 @@ type AttemptRow = {
   score: number | null;
   grammar_focus: string | null;
   mode: string | null;
+  reading_text_id: string | null;
   created_at: string;
 };
 
@@ -25,14 +27,7 @@ function WeaknessesPage() {
   const attemptsQuery = useQuery({
     queryKey: ["weaknesses_attempts", user.id],
     queryFn: async (): Promise<AttemptRow[]> => {
-      const { data, error } = await supabase
-        .from("attempts")
-        .select("score, grammar_focus, mode, created_at")
-        .eq("user_id", user.id)
-        .order("created_at", { ascending: false })
-        .limit(100);
-      if (error) throw error;
-      return (data ?? []) as AttemptRow[];
+      return (await fetchCoachAttempts(user.id, 150)) as AttemptRow[];
     },
   });
 
