@@ -2,7 +2,7 @@ import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useServerFn } from "@tanstack/react-start";
 import { useQuery } from "@tanstack/react-query";
 import { useCallback, useEffect, useRef, useState } from "react";
-import { ArrowLeft, Loader2, Play, Trophy, Bookmark } from "lucide-react";
+import { ArrowLeft, Loader2, Play, Trophy, Bookmark, RotateCcw } from "lucide-react";
 import { toast } from "sonner";
 
 import { supabase } from "@/integrations/supabase/client";
