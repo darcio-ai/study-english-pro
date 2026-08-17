@@ -182,11 +182,23 @@ function LessonsPage() {
                       </div>
                       <div className="flex-shrink-0">
                         {done ? (
-                          <CheckCircle2 className="size-6 text-green-500" />
+                          <span
+                            role="button"
+                            tabIndex={0}
+                            onClick={(e) => {
+                              e.preventDefault();
+                              e.stopPropagation();
+                              navigate({ to: "/lesson/$id", params: { id: lesson.id } });
+                            }}
+                            className="inline-flex items-center gap-1.5 rounded-lg border border-indigo-200 dark:border-indigo-800 px-2.5 py-1.5 text-xs font-semibold text-indigo-700 dark:text-indigo-300 hover:bg-indigo-50 dark:hover:bg-indigo-900/30"
+                          >
+                            <RotateCcw className="size-3.5" /> Refazer
+                          </span>
                         ) : (
                           <Play className="size-5 text-indigo-500 fill-current" />
                         )}
                       </div>
+
                     </Link>
                   );
                 })}
