@@ -22,6 +22,7 @@ import { Route as AuthenticatedProgressRouteImport } from './routes/_authenticat
 import { Route as AuthenticatedPlacementRouteImport } from './routes/_authenticated/placement'
 import { Route as AuthenticatedListeningRouteImport } from './routes/_authenticated/listening'
 import { Route as AuthenticatedLessonsRouteImport } from './routes/_authenticated/lessons'
+import { Route as AuthenticatedInicioRouteImport } from './routes/_authenticated/inicio'
 import { Route as AuthenticatedExerciseRouteImport } from './routes/_authenticated/exercise'
 import { Route as AuthenticatedDashboardRouteImport } from './routes/_authenticated/dashboard'
 import { Route as AuthenticatedAchievementsRouteImport } from './routes/_authenticated/achievements'
@@ -92,6 +93,11 @@ const AuthenticatedLessonsRoute = AuthenticatedLessonsRouteImport.update({
   path: '/lessons',
   getParentRoute: () => AuthenticatedRouteRoute,
 } as any)
+const AuthenticatedInicioRoute = AuthenticatedInicioRouteImport.update({
+  id: '/inicio',
+  path: '/inicio',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
 const AuthenticatedExerciseRoute = AuthenticatedExerciseRouteImport.update({
   id: '/exercise',
   path: '/exercise',
@@ -120,6 +126,7 @@ export interface FileRoutesByFullPath {
   '/achievements': typeof AuthenticatedAchievementsRoute
   '/dashboard': typeof AuthenticatedDashboardRoute
   '/exercise': typeof AuthenticatedExerciseRoute
+  '/inicio': typeof AuthenticatedInicioRoute
   '/lessons': typeof AuthenticatedLessonsRoute
   '/listening': typeof AuthenticatedListeningRoute
   '/placement': typeof AuthenticatedPlacementRoute
@@ -138,6 +145,7 @@ export interface FileRoutesByTo {
   '/achievements': typeof AuthenticatedAchievementsRoute
   '/dashboard': typeof AuthenticatedDashboardRoute
   '/exercise': typeof AuthenticatedExerciseRoute
+  '/inicio': typeof AuthenticatedInicioRoute
   '/lessons': typeof AuthenticatedLessonsRoute
   '/listening': typeof AuthenticatedListeningRoute
   '/placement': typeof AuthenticatedPlacementRoute
@@ -158,6 +166,7 @@ export interface FileRoutesById {
   '/_authenticated/achievements': typeof AuthenticatedAchievementsRoute
   '/_authenticated/dashboard': typeof AuthenticatedDashboardRoute
   '/_authenticated/exercise': typeof AuthenticatedExerciseRoute
+  '/_authenticated/inicio': typeof AuthenticatedInicioRoute
   '/_authenticated/lessons': typeof AuthenticatedLessonsRoute
   '/_authenticated/listening': typeof AuthenticatedListeningRoute
   '/_authenticated/placement': typeof AuthenticatedPlacementRoute
@@ -178,6 +187,7 @@ export interface FileRouteTypes {
     | '/achievements'
     | '/dashboard'
     | '/exercise'
+    | '/inicio'
     | '/lessons'
     | '/listening'
     | '/placement'
@@ -196,6 +206,7 @@ export interface FileRouteTypes {
     | '/achievements'
     | '/dashboard'
     | '/exercise'
+    | '/inicio'
     | '/lessons'
     | '/listening'
     | '/placement'
@@ -215,6 +226,7 @@ export interface FileRouteTypes {
     | '/_authenticated/achievements'
     | '/_authenticated/dashboard'
     | '/_authenticated/exercise'
+    | '/_authenticated/inicio'
     | '/_authenticated/lessons'
     | '/_authenticated/listening'
     | '/_authenticated/placement'
@@ -327,6 +339,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedLessonsRouteImport
       parentRoute: typeof AuthenticatedRouteRoute
     }
+    '/_authenticated/inicio': {
+      id: '/_authenticated/inicio'
+      path: '/inicio'
+      fullPath: '/inicio'
+      preLoaderRoute: typeof AuthenticatedInicioRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
     '/_authenticated/exercise': {
       id: '/_authenticated/exercise'
       path: '/exercise'
@@ -362,6 +381,7 @@ interface AuthenticatedRouteRouteChildren {
   AuthenticatedAchievementsRoute: typeof AuthenticatedAchievementsRoute
   AuthenticatedDashboardRoute: typeof AuthenticatedDashboardRoute
   AuthenticatedExerciseRoute: typeof AuthenticatedExerciseRoute
+  AuthenticatedInicioRoute: typeof AuthenticatedInicioRoute
   AuthenticatedLessonsRoute: typeof AuthenticatedLessonsRoute
   AuthenticatedListeningRoute: typeof AuthenticatedListeningRoute
   AuthenticatedPlacementRoute: typeof AuthenticatedPlacementRoute
@@ -379,6 +399,7 @@ const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
   AuthenticatedAchievementsRoute: AuthenticatedAchievementsRoute,
   AuthenticatedDashboardRoute: AuthenticatedDashboardRoute,
   AuthenticatedExerciseRoute: AuthenticatedExerciseRoute,
+  AuthenticatedInicioRoute: AuthenticatedInicioRoute,
   AuthenticatedLessonsRoute: AuthenticatedLessonsRoute,
   AuthenticatedListeningRoute: AuthenticatedListeningRoute,
   AuthenticatedPlacementRoute: AuthenticatedPlacementRoute,

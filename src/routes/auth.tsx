@@ -9,7 +9,7 @@ export const Route = createFileRoute("/auth")({
   ssr: false,
   beforeLoad: async () => {
     const { data } = await supabase.auth.getUser();
-    if (data.user) throw redirect({ to: "/dashboard" });
+    if (data.user) throw redirect({ to: "/inicio" });
   },
   head: () => ({
     meta: [
@@ -36,7 +36,7 @@ function AuthPage() {
         const { error } = await supabase.auth.signInWithPassword({ email, password });
         if (error) throw error;
         toast.success("Bem-vindo de volta!");
-        navigate({ to: "/dashboard" });
+        navigate({ to: "/inicio" });
       } else {
         const { error } = await supabase.auth.signUp({
           email,
@@ -48,7 +48,7 @@ function AuthPage() {
         });
         if (error) throw error;
         toast.success("Conta criada!");
-        navigate({ to: "/dashboard" });
+        navigate({ to: "/inicio" });
       }
     } catch (err: unknown) {
       const msg = err instanceof Error ? err.message : "Erro inesperado";
@@ -71,7 +71,7 @@ function AuthPage() {
       }
       // Tokens were returned and session is already set
       toast.success("Bem-vindo!");
-      navigate({ to: "/dashboard" });
+      navigate({ to: "/inicio" });
     } catch (err: unknown) {
       const msg = err instanceof Error ? err.message : "Erro ao entrar com Google";
       toast.error(msg);

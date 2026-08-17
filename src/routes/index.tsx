@@ -1,6 +1,8 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useEffect } from "react";
 
+import { supabase } from "@/integrations/supabase/client";
+
 export const Route = createFileRoute("/")({
   component: IndexPage,
 });
@@ -8,7 +10,15 @@ export const Route = createFileRoute("/")({
 function IndexPage() {
   const navigate = useNavigate();
   useEffect(() => {
-    navigate({ to: "/auth" });
+    let cancelled = false;
+    (async () => {
+      const { data } = await supabase.auth.getUser();
+      if (cancelled) return;
+      navigate({ to: data.user ? "/inicio" : "/auth" });
+    })();
+    return () => {
+      cancelled = true;
+    };
   }, [navigate]);
   return (
     <div className="flex min-h-screen items-center justify-center bg-gray-50 dark:bg-gray-900">
