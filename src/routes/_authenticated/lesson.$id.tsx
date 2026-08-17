@@ -261,7 +261,23 @@ function LessonRunner() {
     }
   }
 
+  function restartLesson() {
+    setDone(false);
+    setIndex(0);
+    setScores([]);
+    setUserInput("");
+    setCorrection(null);
+    setEvaluation(null);
+    setTranscript("");
+    setSavedWord(false);
+    if (audioUrlRef.current) {
+      URL.revokeObjectURL(audioUrlRef.current);
+      audioUrlRef.current = null;
+    }
+  }
+
   async function saveCurrentWord() {
+
     if (!exercise || savedWord) return;
     // Save first non-trivial word from the exercise text as the user's flashcard
     const source = exercise.content ?? exercise.audio_script ?? exercise.expected_response ?? exercise.prompt_en;
