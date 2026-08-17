@@ -288,6 +288,7 @@ export function buildWeeklySummary(params: {
       ? `${SKILL_META[improveSkill].emoji} ${SKILL_META[improveSkill].label} é o que mais precisa de atenção.`
       : null,
     improveTo: improveSkill ? SKILL_META[improveSkill].to : null,
+    history,
   };
 }
 
