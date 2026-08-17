@@ -84,6 +84,8 @@ function LessonRunner() {
   const [correction, setCorrection] = useState<Correction | null>(null);
   const [evaluation, setEvaluation] = useState<SpeakingEvaluation | null>(null);
   const [transcript, setTranscript] = useState("");
+  const [sttAttempts, setSttAttempts] = useState(0);
+
   const [submitting, setSubmitting] = useState(false);
   const [playing, setPlaying] = useState(false);
   const [done, setDone] = useState(false);
