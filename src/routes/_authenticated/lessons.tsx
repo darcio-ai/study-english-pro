@@ -168,9 +168,11 @@ function LessonsPage() {
                         <p className="text-xs text-gray-500 dark:text-gray-400">
                           Unidade {lesson.unit_number} · Lição {lesson.lesson_number}
                         </p>
-                        <h3 className="font-semibold text-gray-900 dark:text-white truncate">
-                          {lesson.title}
+                        <h3 className="font-semibold text-gray-900 dark:text-white truncate flex items-center gap-1.5">
+                          {done && <CheckCircle2 className="size-4 shrink-0 text-green-500" />}
+                          <span className="truncate">{lesson.title}</span>
                         </h3>
+
                         <p className="text-xs text-gray-500 dark:text-gray-400 truncate">
                           {lesson.grammar_focus}
                         </p>
