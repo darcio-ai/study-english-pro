@@ -120,31 +120,70 @@ function WeaknessesPage() {
           </div>
         ) : (
           <>
-            {/* Skill breakdown */}
+            {/* Skill diagnosis */}
             <section className="mb-6">
-              <h2 className="text-sm font-semibold text-gray-900 dark:text-white mb-3">Performance por skill</h2>
+              <h2 className="text-sm font-semibold text-gray-900 dark:text-white mb-1">
+                Onde focar (por habilidade)
+              </h2>
+              <p className="text-xs text-gray-500 dark:text-gray-400 mb-3">
+                Ordenado pelo que mais precisa de prática agora.
+              </p>
               <div className="space-y-2">
-                {modeStats.map((s) => (
-                  <div
-                    key={s.mode}
-                    className="flex items-center gap-3 p-3 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700"
-                  >
-                    <span className="text-sm font-medium text-gray-900 dark:text-white flex-1">
-                      {modeLabel[s.mode] ?? s.mode}
-                    </span>
-                    <div className="w-24 h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
-                      <div
-                        className={`h-full ${s.avg >= 70 ? "bg-green-500" : s.avg >= 50 ? "bg-amber-500" : "bg-red-500"}`}
-                        style={{ width: `${s.avg}%` }}
-                      />
-                    </div>
-                    <span className="text-sm font-semibold text-gray-900 dark:text-white w-12 text-right">
-                      {s.avg}
-                    </span>
-                  </div>
-                ))}
+                {diagnoses.map((d, idx) => {
+                  const meta = SKILL_META[d.skill];
+                  const value = d.recentAvg ?? d.avg;
+                  return (
+                    <Link
+                      key={d.skill}
+                      to={meta.to}
+                      className={`flex items-center gap-3 p-3 rounded-xl border ${
+                        idx === 0
+                          ? "border-indigo-300 dark:border-indigo-700 bg-indigo-50 dark:bg-indigo-900/30"
+                          : "border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800"
+                      }`}
+                    >
+                      <span className="text-lg">{meta.emoji}</span>
+                      <span className="flex-1 min-w-0">
+                        <span className="block text-sm font-medium text-gray-900 dark:text-white">
+                          {meta.label}
+                          {idx === 0 && (
+                            <span className="ml-2 text-[10px] font-bold text-indigo-600 dark:text-indigo-400">
+                              FOCO
+                            </span>
+                          )}
+                        </span>
+                        <span className="block text-xs text-gray-500 dark:text-gray-400">
+                          {d.count === 0
+                            ? "sem prática ainda"
+                            : `${d.count} tentativas · ${
+                                d.daysSincePractice === 0
+                                  ? "praticado hoje"
+                                  : `há ${d.daysSincePractice} dia(s)`
+                              }`}
+                          {d.trend === "up" ? " · melhorando" : d.trend === "down" ? " · caindo" : ""}
+                        </span>
+                      </span>
+                      <div className="w-16 h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                        <div
+                          className={`h-full ${
+                            (value ?? 0) >= 70
+                              ? "bg-green-500"
+                              : (value ?? 0) >= 50
+                                ? "bg-amber-500"
+                                : "bg-red-500"
+                          }`}
+                          style={{ width: `${value ?? 0}%` }}
+                        />
+                      </div>
+                      <span className="text-sm font-semibold text-gray-900 dark:text-white w-9 text-right">
+                        {value ?? "—"}
+                      </span>
+                    </Link>
+                  );
+                })}
               </div>
             </section>
+
 
             {/* Top weaknesses */}
             <section>
