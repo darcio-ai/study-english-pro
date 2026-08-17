@@ -19,6 +19,7 @@ import { Route as AuthenticatedSpeakingRouteImport } from './routes/_authenticat
 import { Route as AuthenticatedReviewRouteImport } from './routes/_authenticated/review'
 import { Route as AuthenticatedReadingRouteImport } from './routes/_authenticated/reading'
 import { Route as AuthenticatedProgressRouteImport } from './routes/_authenticated/progress'
+import { Route as AuthenticatedPlanoRouteImport } from './routes/_authenticated/plano'
 import { Route as AuthenticatedPlacementRouteImport } from './routes/_authenticated/placement'
 import { Route as AuthenticatedListeningRouteImport } from './routes/_authenticated/listening'
 import { Route as AuthenticatedLessonsRouteImport } from './routes/_authenticated/lessons'
@@ -78,6 +79,11 @@ const AuthenticatedProgressRoute = AuthenticatedProgressRouteImport.update({
   path: '/progress',
   getParentRoute: () => AuthenticatedRouteRoute,
 } as any)
+const AuthenticatedPlanoRoute = AuthenticatedPlanoRouteImport.update({
+  id: '/plano',
+  path: '/plano',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
 const AuthenticatedPlacementRoute = AuthenticatedPlacementRouteImport.update({
   id: '/placement',
   path: '/placement',
@@ -130,6 +136,7 @@ export interface FileRoutesByFullPath {
   '/lessons': typeof AuthenticatedLessonsRoute
   '/listening': typeof AuthenticatedListeningRoute
   '/placement': typeof AuthenticatedPlacementRoute
+  '/plano': typeof AuthenticatedPlanoRoute
   '/progress': typeof AuthenticatedProgressRoute
   '/reading': typeof AuthenticatedReadingRoute
   '/review': typeof AuthenticatedReviewRoute
@@ -149,6 +156,7 @@ export interface FileRoutesByTo {
   '/lessons': typeof AuthenticatedLessonsRoute
   '/listening': typeof AuthenticatedListeningRoute
   '/placement': typeof AuthenticatedPlacementRoute
+  '/plano': typeof AuthenticatedPlanoRoute
   '/progress': typeof AuthenticatedProgressRoute
   '/reading': typeof AuthenticatedReadingRoute
   '/review': typeof AuthenticatedReviewRoute
@@ -170,6 +178,7 @@ export interface FileRoutesById {
   '/_authenticated/lessons': typeof AuthenticatedLessonsRoute
   '/_authenticated/listening': typeof AuthenticatedListeningRoute
   '/_authenticated/placement': typeof AuthenticatedPlacementRoute
+  '/_authenticated/plano': typeof AuthenticatedPlanoRoute
   '/_authenticated/progress': typeof AuthenticatedProgressRoute
   '/_authenticated/reading': typeof AuthenticatedReadingRoute
   '/_authenticated/review': typeof AuthenticatedReviewRoute
@@ -191,6 +200,7 @@ export interface FileRouteTypes {
     | '/lessons'
     | '/listening'
     | '/placement'
+    | '/plano'
     | '/progress'
     | '/reading'
     | '/review'
@@ -210,6 +220,7 @@ export interface FileRouteTypes {
     | '/lessons'
     | '/listening'
     | '/placement'
+    | '/plano'
     | '/progress'
     | '/reading'
     | '/review'
@@ -230,6 +241,7 @@ export interface FileRouteTypes {
     | '/_authenticated/lessons'
     | '/_authenticated/listening'
     | '/_authenticated/placement'
+    | '/_authenticated/plano'
     | '/_authenticated/progress'
     | '/_authenticated/reading'
     | '/_authenticated/review'
@@ -318,6 +330,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedProgressRouteImport
       parentRoute: typeof AuthenticatedRouteRoute
     }
+    '/_authenticated/plano': {
+      id: '/_authenticated/plano'
+      path: '/plano'
+      fullPath: '/plano'
+      preLoaderRoute: typeof AuthenticatedPlanoRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
     '/_authenticated/placement': {
       id: '/_authenticated/placement'
       path: '/placement'
@@ -385,6 +404,7 @@ interface AuthenticatedRouteRouteChildren {
   AuthenticatedLessonsRoute: typeof AuthenticatedLessonsRoute
   AuthenticatedListeningRoute: typeof AuthenticatedListeningRoute
   AuthenticatedPlacementRoute: typeof AuthenticatedPlacementRoute
+  AuthenticatedPlanoRoute: typeof AuthenticatedPlanoRoute
   AuthenticatedProgressRoute: typeof AuthenticatedProgressRoute
   AuthenticatedReadingRoute: typeof AuthenticatedReadingRoute
   AuthenticatedReviewRoute: typeof AuthenticatedReviewRoute
@@ -403,6 +423,7 @@ const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
   AuthenticatedLessonsRoute: AuthenticatedLessonsRoute,
   AuthenticatedListeningRoute: AuthenticatedListeningRoute,
   AuthenticatedPlacementRoute: AuthenticatedPlacementRoute,
+  AuthenticatedPlanoRoute: AuthenticatedPlanoRoute,
   AuthenticatedProgressRoute: AuthenticatedProgressRoute,
   AuthenticatedReadingRoute: AuthenticatedReadingRoute,
   AuthenticatedReviewRoute: AuthenticatedReviewRoute,

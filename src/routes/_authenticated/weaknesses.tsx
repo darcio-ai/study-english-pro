@@ -5,6 +5,7 @@ import { ArrowLeft, AlertTriangle, TrendingDown, TrendingUp } from "lucide-react
 import { supabase } from "@/integrations/supabase/client";
 import { suggestLevelChange } from "@/lib/learning";
 import { LevelPill, type Level } from "@/components/englishup";
+import { SKILL_META, diagnoseSkills, fetchCoachAttempts } from "@/lib/recommendations";
 
 export const Route = createFileRoute("/_authenticated/weaknesses")({
   head: () => ({ meta: [{ title: "Mural de Fraquezas — EnglishUp" }] }),
@@ -15,6 +16,7 @@ type AttemptRow = {
   score: number | null;
   grammar_focus: string | null;
   mode: string | null;
+  reading_text_id: string | null;
   created_at: string;
 };
 
@@ -25,14 +27,7 @@ function WeaknessesPage() {
   const attemptsQuery = useQuery({
     queryKey: ["weaknesses_attempts", user.id],
     queryFn: async (): Promise<AttemptRow[]> => {
-      const { data, error } = await supabase
-        .from("attempts")
-        .select("score, grammar_focus, mode, created_at")
-        .eq("user_id", user.id)
-        .order("created_at", { ascending: false })
-        .limit(100);
-      if (error) throw error;
-      return (data ?? []) as AttemptRow[];
+      return (await fetchCoachAttempts(user.id, 150)) as AttemptRow[];
     },
   });
 
@@ -67,31 +62,12 @@ function WeaknessesPage() {
     .sort((a, b) => a.avg - b.avg)
     .slice(0, 8);
 
-  // Skill breakdown
-  const modeMap = new Map<string, { sum: number; count: number }>();
-  for (const a of attempts) {
-    if (a.score === null) continue;
-    const m = a.mode ?? "writing";
-    const entry = modeMap.get(m) ?? { sum: 0, count: 0 };
-    entry.sum += a.score;
-    entry.count += 1;
-    modeMap.set(m, entry);
-  }
-  const modeStats = Array.from(modeMap.entries()).map(([mode, { sum, count }]) => ({
-    mode,
-    avg: Math.round(sum / count),
-    count,
-  }));
+  // Skill diagnosis (ordered by how much practice each skill needs)
+  const diagnoses = diagnoseSkills(attempts);
 
   const scores = attempts.map((a) => a.score ?? 0);
   const suggestion = suggestLevelChange(scores, currentLevel);
 
-  const modeLabel: Record<string, string> = {
-    writing: "✏️ Escrita",
-    listening: "🎧 Listening",
-    speaking_read: "🎤 Pronúncia",
-    speaking_free: "💬 Conversação",
-  };
 
   return (
     <main className="min-h-screen bg-gray-50 dark:bg-gray-900 px-4 py-6">
@@ -144,31 +120,70 @@ function WeaknessesPage() {
           </div>
         ) : (
           <>
-            {/* Skill breakdown */}
+            {/* Skill diagnosis */}
             <section className="mb-6">
-              <h2 className="text-sm font-semibold text-gray-900 dark:text-white mb-3">Performance por skill</h2>
+              <h2 className="text-sm font-semibold text-gray-900 dark:text-white mb-1">
+                Onde focar (por habilidade)
+              </h2>
+              <p className="text-xs text-gray-500 dark:text-gray-400 mb-3">
+                Ordenado pelo que mais precisa de prática agora.
+              </p>
               <div className="space-y-2">
-                {modeStats.map((s) => (
-                  <div
-                    key={s.mode}
-                    className="flex items-center gap-3 p-3 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700"
-                  >
-                    <span className="text-sm font-medium text-gray-900 dark:text-white flex-1">
-                      {modeLabel[s.mode] ?? s.mode}
-                    </span>
-                    <div className="w-24 h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
-                      <div
-                        className={`h-full ${s.avg >= 70 ? "bg-green-500" : s.avg >= 50 ? "bg-amber-500" : "bg-red-500"}`}
-                        style={{ width: `${s.avg}%` }}
-                      />
-                    </div>
-                    <span className="text-sm font-semibold text-gray-900 dark:text-white w-12 text-right">
-                      {s.avg}
-                    </span>
-                  </div>
-                ))}
+                {diagnoses.map((d, idx) => {
+                  const meta = SKILL_META[d.skill];
+                  const value = d.recentAvg ?? d.avg;
+                  return (
+                    <Link
+                      key={d.skill}
+                      to={meta.to}
+                      className={`flex items-center gap-3 p-3 rounded-xl border ${
+                        idx === 0
+                          ? "border-indigo-300 dark:border-indigo-700 bg-indigo-50 dark:bg-indigo-900/30"
+                          : "border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800"
+                      }`}
+                    >
+                      <span className="text-lg">{meta.emoji}</span>
+                      <span className="flex-1 min-w-0">
+                        <span className="block text-sm font-medium text-gray-900 dark:text-white">
+                          {meta.label}
+                          {idx === 0 && (
+                            <span className="ml-2 text-[10px] font-bold text-indigo-600 dark:text-indigo-400">
+                              FOCO
+                            </span>
+                          )}
+                        </span>
+                        <span className="block text-xs text-gray-500 dark:text-gray-400">
+                          {d.count === 0
+                            ? "sem prática ainda"
+                            : `${d.count} tentativas · ${
+                                d.daysSincePractice === 0
+                                  ? "praticado hoje"
+                                  : `há ${d.daysSincePractice} dia(s)`
+                              }`}
+                          {d.trend === "up" ? " · melhorando" : d.trend === "down" ? " · caindo" : ""}
+                        </span>
+                      </span>
+                      <div className="w-16 h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                        <div
+                          className={`h-full ${
+                            (value ?? 0) >= 70
+                              ? "bg-green-500"
+                              : (value ?? 0) >= 50
+                                ? "bg-amber-500"
+                                : "bg-red-500"
+                          }`}
+                          style={{ width: `${value ?? 0}%` }}
+                        />
+                      </div>
+                      <span className="text-sm font-semibold text-gray-900 dark:text-white w-9 text-right">
+                        {value ?? "—"}
+                      </span>
+                    </Link>
+                  );
+                })}
               </div>
             </section>
+
 
             {/* Top weaknesses */}
             <section>

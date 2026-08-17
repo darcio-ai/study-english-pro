@@ -1,8 +1,10 @@
+import { useEffect, useMemo } from "react";
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import {
   BookOpen,
   Brain,
+  CalendarDays,
   GraduationCap,
   Headphones,
   LayoutDashboard,
@@ -15,6 +17,15 @@ import {
 import { supabase } from "@/integrations/supabase/client";
 import { LanguageSwitch } from "@/components/language-switch";
 import { useLanguage } from "@/hooks/use-language";
+import { useStudyPlan } from "@/hooks/use-study-plan";
+import { maybeFireReminder } from "@/lib/reminders";
+import {
+  
+  buildDailyPlan,
+  buildWeeklySummary,
+  diagnoseSkills,
+  fetchCoachAttempts,
+} from "@/lib/recommendations";
 
 export const Route = createFileRoute("/_authenticated/inicio")({
   head: () => ({
@@ -80,10 +91,75 @@ function StartPage() {
     },
   });
 
+  const { plan } = useStudyPlan(user.id);
+
+  const attemptsQuery = useQuery({
+    queryKey: ["coach_attempts", user.id],
+    queryFn: () => fetchCoachAttempts(user.id, 300),
+  });
+
+  const xpQuery = useQuery({
+    queryKey: ["plan_xp", user.id],
+    queryFn: async () => {
+      const { data } = await supabase
+        .from("user_progress")
+        .select("xp")
+        .eq("user_id", user.id)
+        .maybeSingle();
+      return data?.xp ?? 0;
+    },
+  });
+
   const displayName = profileQuery.data?.display_name ?? user.email?.split("@")[0] ?? "Você";
   const placementDone = profileQuery.data?.placement_done === true;
   const reviewsDue = reviewsDueQuery.data ?? 0;
   const vocabDue = vocabDueQuery.data ?? 0;
+
+  const attempts = useMemo(() => attemptsQuery.data ?? [], [attemptsQuery.data]);
+  const diagnoses = useMemo(() => diagnoseSkills(attempts), [attempts]);
+  const dailyPlan = useMemo(
+    () =>
+      buildDailyPlan({
+        diagnoses,
+        reviewsDue,
+        vocabDue,
+        goalExercises: plan.daily_goal_exercises,
+      }),
+    [diagnoses, reviewsDue, vocabDue, plan.daily_goal_exercises],
+  );
+
+  const todayCount = useMemo(() => {
+    const today = new Date().toDateString();
+    return attempts.filter((a) => new Date(a.created_at).toDateString() === today).length;
+  }, [attempts]);
+
+  const summary = useMemo(
+    () =>
+      buildWeeklySummary({
+        attempts,
+        goalPerWeek: plan.daily_goal_exercises * Math.max(1, plan.weekdays.length),
+        minutesPerAttempt: Math.max(
+          1,
+          Math.round(plan.minutes_per_day / Math.max(1, plan.daily_goal_exercises)),
+        ),
+        newWords: 0,
+        achievements: 0,
+        xp: xpQuery.data ?? 0,
+      }),
+    [attempts, plan, xpQuery.data],
+  );
+
+  const goalMet = todayCount >= plan.daily_goal_exercises;
+
+  useEffect(() => {
+    if (!attemptsQuery.isSuccess) return;
+    maybeFireReminder({
+      enabled: plan.reminders_enabled,
+      weekdays: plan.weekdays,
+      reminderTime: plan.reminder_time,
+      goalMet,
+    });
+  }, [attemptsQuery.isSuccess, plan, goalMet]);
 
   async function skipPlacement() {
     await supabase
@@ -130,6 +206,65 @@ function StartPage() {
           </div>
         )}
 
+        {dailyPlan.length > 0 && (
+          <section className="mb-5 rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4">
+            <div className="flex items-center justify-between mb-1">
+              <h2 className="font-bold text-gray-900 dark:text-white">Seu plano de hoje</h2>
+              <Link to="/plano" className="text-xs font-semibold text-indigo-600 dark:text-indigo-400">
+                Calendário →
+              </Link>
+            </div>
+            <p className="text-xs text-gray-500 dark:text-gray-400 mb-3">
+              {todayCount}/{plan.daily_goal_exercises} exercícios · foco nas suas habilidades mais fracas
+            </p>
+            <div className="h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden mb-3">
+              <div
+                className="h-full bg-indigo-600"
+                style={{
+                  width: `${Math.min(100, Math.round((todayCount / Math.max(1, plan.daily_goal_exercises)) * 100))}%`,
+                }}
+              />
+            </div>
+            <div className="space-y-2">
+              {dailyPlan.map((b) => (
+                <Link
+                  key={b.id}
+                  to={b.to}
+                  className="flex items-center gap-3 p-2.5 rounded-xl bg-gray-50 dark:bg-gray-900 hover:bg-indigo-50 dark:hover:bg-indigo-900/30"
+                >
+                  <span className="text-lg">{b.emoji}</span>
+                  <span className="flex-1 min-w-0">
+                    <span className="block text-sm font-semibold text-gray-900 dark:text-white">
+                      {b.title} · {b.detail}
+                    </span>
+                    <span className="block text-xs text-gray-500 dark:text-gray-400 truncate">{b.reason}</span>
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {summary.attempts > 0 && (
+          <Link
+            to="/plano"
+            className="mb-5 block rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4"
+          >
+            <div className="flex items-center justify-between mb-1">
+              <h2 className="font-bold text-gray-900 dark:text-white">Sua semana</h2>
+              <span className="text-xs text-gray-500 dark:text-gray-400">
+                {summary.attempts}/{summary.goal} exercícios
+              </span>
+            </div>
+            <p className="text-xs text-gray-500 dark:text-gray-400 mb-2">
+              {summary.daysActive} {summary.daysActive === 1 ? "dia ativo" : "dias ativos"} · {summary.minutes} min
+            </p>
+            {summary.improve && (
+              <p className="text-xs text-gray-700 dark:text-gray-300">🎯 {summary.improve}</p>
+            )}
+          </Link>
+        )}
+
         <div className="grid grid-cols-2 gap-3">
           <ActionCard to="/lessons" icon={<GraduationCap className="size-6" />} title="Lições" subtitle="Trilha guiada" primary />
           <ActionCard to="/exercise" icon={<PenLine className="size-6" />} title="Escrita" subtitle="Prática livre" />
@@ -148,6 +283,7 @@ function StartPage() {
             title="Vocabulário"
             subtitle={vocabDue > 0 ? `${vocabDue} cartões` : "Em dia"}
           />
+          <ActionCard to="/plano" icon={<CalendarDays className="size-6" />} title="Plano" subtitle="Calendário e metas" />
           <ActionCard to="/dashboard" icon={<LayoutDashboard className="size-6" />} title="Dashboard" subtitle="Progresso" />
         </div>
 
