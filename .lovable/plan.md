@@ -39,6 +39,6 @@ O que será criado:
 - Nova lib `src/lib/recommendations.ts`: agrega `attempts`, `review_queue`, `user_vocabulary` e `user_skill_levels` para produzir diagnóstico, prioridades e o plano diário. Lógica determinística (sem custo de IA).
 - Ajuste automático de nível reaproveita e amplia `suggestLevelChange` em `src/lib/learning.ts`, agora por habilidade.
 - Novas rotas: `/_authenticated/plano` (calendário + configuração) e cards de recomendação em `inicio.tsx`; `weaknesses.tsx` ganha o painel por habilidade.
-- Lembretes via Notification API + service worker já existente do PWA.
+- Lembretes via Notification API + service worker do PWA, disparados só após `Notification.requestPermission()` retornar `granted`; preferência (ativo, dias, horário) salva em `study_plan` e estado da permissão verificado a cada carregamento.
 - Textos em pt-BR, funcionando igual para inglês e espanhol (filtro por `preferred_language`).
 - Resumo semanal calculado sob demanda a partir de `attempts`, `user_vocabulary`, `user_achievements` e `study_sessions` (janelas de 7 dias), sem tabela extra; gráfico com a lib de charts já presente no projeto.
