@@ -276,16 +276,74 @@ function ReviewPage() {
             </div>
           )}
 
-          <textarea
-            value={userInput}
-            onChange={(e) => setUserInput(e.target.value)}
-            disabled={!!correction}
-            rows={3}
-            placeholder="Sua resposta..."
-            className="w-full px-3 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 text-base disabled:opacity-70"
-          />
+          {isSpeaking ? (
+            !evaluation && (
+              <div className="space-y-3">
+                <AudioRecorder onRecorded={handleRecorded} disabled={submitting} />
+                {submitting && (
+                  <p className="text-sm text-center text-gray-500 inline-flex items-center gap-2 w-full justify-center">
+                    <Loader2 className="size-4 animate-spin" /> Analisando sua fala...
+                  </p>
+                )}
+                {sttAttempts > 0 && sttAttempts < MAX_STT_ATTEMPTS && (
+                  <p className="text-sm text-amber-600 dark:text-amber-400">
+                    {UNRELIABLE_MESSAGE} (tentativa {sttAttempts + 1} de {MAX_STT_ATTEMPTS})
+                  </p>
+                )}
+                {sttAttempts >= MAX_STT_ATTEMPTS && (
+                  <div className="space-y-2">
+                    <p className="text-sm text-red-600 dark:text-red-400">
+                      Não consegui entender após {MAX_STT_ATTEMPTS} tentativas.
+                    </p>
+                    <button
+                      onClick={next}
+                      className="w-full py-2.5 rounded-lg border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-medium"
+                    >
+                      Pular esta revisão →
+                    </button>
+                  </div>
+                )}
+              </div>
+            )
+          ) : (
+            <textarea
+              value={userInput}
+              onChange={(e) => setUserInput(e.target.value)}
+              disabled={!!correction}
+              rows={3}
+              placeholder="Sua resposta..."
+              className="w-full px-3 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 text-base disabled:opacity-70"
+            />
+          )}
 
-          {!correction ? (
+          {isSpeaking ? (
+            evaluation && (
+              <div className="mt-4 space-y-3">
+                <div className={`rounded-xl px-4 py-3 font-semibold ${
+                  evaluation.score >= 80
+                    ? "bg-green-100 text-green-900 dark:bg-green-900/40 dark:text-green-100"
+                    : evaluation.score >= 50
+                    ? "bg-amber-100 text-amber-900 dark:bg-amber-900/40 dark:text-amber-100"
+                    : "bg-red-100 text-red-900 dark:bg-red-900/40 dark:text-red-100"
+                }`}>
+                  {evaluation.score}/100
+                  <p className="mt-1 italic font-normal text-sm opacity-90">{evaluation.feedback_pt}</p>
+                </div>
+                {transcript && (
+                  <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4">
+                    <div className="text-[11px] font-semibold uppercase text-gray-500 mb-1">Você disse</div>
+                    <p className="text-sm text-gray-800 dark:text-gray-200">{transcript}</p>
+                  </div>
+                )}
+                <button
+                  onClick={next}
+                  className="w-full py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold"
+                >
+                  {idx + 1 >= items.length ? "Finalizar revisão" : "Próxima revisão →"}
+                </button>
+              </div>
+            )
+          ) : !correction ? (
             <button
               onClick={onCheck}
               disabled={!userInput.trim() || submitting}
