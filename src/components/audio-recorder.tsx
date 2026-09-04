@@ -3,8 +3,68 @@ import { Mic, Square, Loader2 } from "lucide-react";
 import { toast } from "sonner";
 
 const MAX_SECONDS = 30;
+const TARGET_RATE = 16000;
 
 type Status = "idle" | "recording" | "processing";
+
+/** Decode any recorded container and re-encode as 16 kHz mono 16-bit WAV. */
+async function toWav(input: ArrayBuffer): Promise<ArrayBuffer> {
+  const AC: typeof AudioContext =
+    window.AudioContext ?? (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext;
+  const ctx = new AC();
+  let decoded: AudioBuffer;
+  try {
+    decoded = await ctx.decodeAudioData(input.slice(0));
+  } finally {
+    void ctx.close();
+  }
+
+  // Downmix to mono
+  const chans = decoded.numberOfChannels;
+  const mono = new Float32Array(decoded.length);
+  for (let c = 0; c < chans; c++) {
+    const d = decoded.getChannelData(c);
+    for (let i = 0; i < d.length; i++) mono[i] += d[i] / chans;
+  }
+
+  // Resample (linear) to TARGET_RATE
+  const ratio = decoded.sampleRate / TARGET_RATE;
+  const outLen = Math.max(1, Math.floor(mono.length / ratio));
+  const samples = new Float32Array(outLen);
+  for (let i = 0; i < outLen; i++) {
+    const pos = i * ratio;
+    const i0 = Math.floor(pos);
+    const i1 = Math.min(i0 + 1, mono.length - 1);
+    const frac = pos - i0;
+    samples[i] = mono[i0] * (1 - frac) + mono[i1] * frac;
+  }
+
+  const buffer = new ArrayBuffer(44 + samples.length * 2);
+  const view = new DataView(buffer);
+  const writeStr = (off: number, s: string) => {
+    for (let i = 0; i < s.length; i++) view.setUint8(off + i, s.charCodeAt(i));
+  };
+  writeStr(0, "RIFF");
+  view.setUint32(4, 36 + samples.length * 2, true);
+  writeStr(8, "WAVE");
+  writeStr(12, "fmt ");
+  view.setUint32(16, 16, true);
+  view.setUint16(20, 1, true);
+  view.setUint16(22, 1, true);
+  view.setUint32(24, TARGET_RATE, true);
+  view.setUint32(28, TARGET_RATE * 2, true);
+  view.setUint16(32, 2, true);
+  view.setUint16(34, 16, true);
+  writeStr(36, "data");
+  view.setUint32(40, samples.length * 2, true);
+  let off = 44;
+  for (let i = 0; i < samples.length; i++, off += 2) {
+    const s = Math.max(-1, Math.min(1, samples[i]));
+    view.setInt16(off, s < 0 ? s * 0x8000 : s * 0x7fff, true);
+  }
+  return buffer;
+}
+
 
 export function AudioRecorder({
   onRecorded,
@@ -56,17 +116,22 @@ export function AudioRecorder({
         setStatus("processing");
         try {
           const buf = await blob.arrayBuffer();
-          const bytes = new Uint8Array(buf);
+          const wav = await toWav(buf);
+          const bytes = new Uint8Array(wav);
           let bin = "";
-          for (let i = 0; i < bytes.length; i++) bin += String.fromCharCode(bytes[i]);
+          const CHUNK = 0x8000;
+          for (let i = 0; i < bytes.length; i += CHUNK) {
+            bin += String.fromCharCode(...bytes.subarray(i, i + CHUNK));
+          }
           const base64 = btoa(bin);
-          await onRecorded({ base64, mimeType: recorder.mimeType });
+          await onRecorded({ base64, mimeType: "audio/wav" });
         } catch (err) {
           toast.error(err instanceof Error ? err.message : "Erro ao processar áudio");
         } finally {
           setStatus("idle");
         }
       };
+
       recorder.start();
       recorderRef.current = recorder;
       setStatus("recording");
