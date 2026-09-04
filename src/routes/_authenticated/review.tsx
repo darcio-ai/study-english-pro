@@ -7,6 +7,14 @@ import { toast } from "sonner";
 
 import { supabase } from "@/integrations/supabase/client";
 import { correctGrammar, type Correction } from "@/lib/correct-grammar.functions";
+import { transcribeAudio } from "@/lib/stt.functions";
+import { evaluateSpeaking, type SpeakingEvaluation } from "@/lib/evaluate-speaking.functions";
+import { AudioRecorder } from "@/components/audio-recorder";
+import {
+  MAX_STT_ATTEMPTS,
+  UNRELIABLE_MESSAGE,
+  isUnreliableTranscript,
+} from "@/lib/transcript-quality";
 import { useLanguage } from "@/hooks/use-language";
 
 import { upsertReviewQueue, addXp, xpForScore, checkAndGrantAchievements } from "@/lib/learning";
@@ -39,12 +47,17 @@ function ReviewPage() {
   const navigate = useNavigate();
   const queryClient = useQueryClient();
   const correctFn = useServerFn(correctGrammar);
+  const sttFn = useServerFn(transcribeAudio);
+  const evalFn = useServerFn(evaluateSpeaking);
   const { language } = useLanguage(user.id);
 
 
   const [idx, setIdx] = useState(0);
   const [userInput, setUserInput] = useState("");
   const [correction, setCorrection] = useState<Correction | null>(null);
+  const [evaluation, setEvaluation] = useState<SpeakingEvaluation | null>(null);
+  const [transcript, setTranscript] = useState("");
+  const [sttAttempts, setSttAttempts] = useState(0);
   const [submitting, setSubmitting] = useState(false);
 
   const reviewQuery = useQuery({
@@ -68,7 +81,67 @@ function ReviewPage() {
   useEffect(() => {
     setUserInput("");
     setCorrection(null);
+    setEvaluation(null);
+    setTranscript("");
+    setSttAttempts(0);
   }, [idx]);
+
+  async function handleRecorded(audio: { base64: string; mimeType: string }) {
+    if (!item) return;
+    const ex = item.exercises;
+    setSubmitting(true);
+    try {
+      const target = ex.content ?? ex.audio_script ?? ex.prompt_en;
+      const stt = await sttFn({
+        data: {
+          audioBase64: audio.base64,
+          mimeType: audio.mimeType,
+          language,
+          prompt: target || undefined,
+        },
+      });
+      if (isUnreliableTranscript(stt.text)) {
+        setSttAttempts((n) => n + 1);
+        toast.error(UNRELIABLE_MESSAGE);
+        return;
+      }
+      setSttAttempts(0);
+      setTranscript(stt.text);
+      const result = await evalFn({
+        data: {
+          transcript: stt.text,
+          original: target,
+          mode: "read",
+          level: ex.level,
+          promptEn: ex.prompt_en,
+          language,
+        },
+      });
+      setEvaluation(result);
+      await supabase.from("attempts").insert({
+        user_id: user.id,
+        exercise_id: ex.id,
+        user_input: stt.text,
+        correction: result as never,
+        score: result.score,
+        grammar_focus: ex.grammar_focus,
+        level: ex.level,
+        mode: ex.mode,
+      });
+      await upsertReviewQueue({
+        userId: user.id,
+        exerciseId: ex.id,
+        score: result.score,
+        asReview: true,
+      });
+      await addXp(user.id, xpForScore(result.score) + 5);
+      await checkAndGrantAchievements(user.id);
+    } catch (err) {
+      toast.error(err instanceof Error ? err.message : "Erro");
+    } finally {
+      setSubmitting(false);
+    }
+  }
 
   async function onCheck() {
     if (!item || !userInput.trim()) return;
@@ -158,6 +231,7 @@ function ReviewPage() {
 
   const ex = item.exercises;
   const isListening = ex.mode === "listening";
+  const isSpeaking = ex.mode === "speaking_read" || ex.mode === "speaking_free";
 
   return (
     <main className="min-h-screen bg-gray-50 dark:bg-gray-900 pb-20">
@@ -202,16 +276,74 @@ function ReviewPage() {
             </div>
           )}
 
-          <textarea
-            value={userInput}
-            onChange={(e) => setUserInput(e.target.value)}
-            disabled={!!correction}
-            rows={3}
-            placeholder="Sua resposta..."
-            className="w-full px-3 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 text-base disabled:opacity-70"
-          />
+          {isSpeaking ? (
+            !evaluation && (
+              <div className="space-y-3">
+                <AudioRecorder onRecorded={handleRecorded} disabled={submitting} />
+                {submitting && (
+                  <p className="text-sm text-center text-gray-500 inline-flex items-center gap-2 w-full justify-center">
+                    <Loader2 className="size-4 animate-spin" /> Analisando sua fala...
+                  </p>
+                )}
+                {sttAttempts > 0 && sttAttempts < MAX_STT_ATTEMPTS && (
+                  <p className="text-sm text-amber-600 dark:text-amber-400">
+                    {UNRELIABLE_MESSAGE} (tentativa {sttAttempts + 1} de {MAX_STT_ATTEMPTS})
+                  </p>
+                )}
+                {sttAttempts >= MAX_STT_ATTEMPTS && (
+                  <div className="space-y-2">
+                    <p className="text-sm text-red-600 dark:text-red-400">
+                      Não consegui entender após {MAX_STT_ATTEMPTS} tentativas.
+                    </p>
+                    <button
+                      onClick={next}
+                      className="w-full py-2.5 rounded-lg border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-medium"
+                    >
+                      Pular esta revisão →
+                    </button>
+                  </div>
+                )}
+              </div>
+            )
+          ) : (
+            <textarea
+              value={userInput}
+              onChange={(e) => setUserInput(e.target.value)}
+              disabled={!!correction}
+              rows={3}
+              placeholder="Sua resposta..."
+              className="w-full px-3 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 text-base disabled:opacity-70"
+            />
+          )}
 
-          {!correction ? (
+          {isSpeaking ? (
+            evaluation && (
+              <div className="mt-4 space-y-3">
+                <div className={`rounded-xl px-4 py-3 font-semibold ${
+                  evaluation.score >= 80
+                    ? "bg-green-100 text-green-900 dark:bg-green-900/40 dark:text-green-100"
+                    : evaluation.score >= 50
+                    ? "bg-amber-100 text-amber-900 dark:bg-amber-900/40 dark:text-amber-100"
+                    : "bg-red-100 text-red-900 dark:bg-red-900/40 dark:text-red-100"
+                }`}>
+                  {evaluation.score}/100
+                  <p className="mt-1 italic font-normal text-sm opacity-90">{evaluation.feedback_pt}</p>
+                </div>
+                {transcript && (
+                  <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-4">
+                    <div className="text-[11px] font-semibold uppercase text-gray-500 mb-1">Você disse</div>
+                    <p className="text-sm text-gray-800 dark:text-gray-200">{transcript}</p>
+                  </div>
+                )}
+                <button
+                  onClick={next}
+                  className="w-full py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold"
+                >
+                  {idx + 1 >= items.length ? "Finalizar revisão" : "Próxima revisão →"}
+                </button>
+              </div>
+            )
+          ) : !correction ? (
             <button
               onClick={onCheck}
               disabled={!userInput.trim() || submitting}
