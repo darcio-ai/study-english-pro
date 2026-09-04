@@ -7,6 +7,14 @@ import { toast } from "sonner";
 
 import { supabase } from "@/integrations/supabase/client";
 import { correctGrammar, type Correction } from "@/lib/correct-grammar.functions";
+import { transcribeAudio } from "@/lib/stt.functions";
+import { evaluateSpeaking, type SpeakingEvaluation } from "@/lib/evaluate-speaking.functions";
+import { AudioRecorder } from "@/components/audio-recorder";
+import {
+  MAX_STT_ATTEMPTS,
+  UNRELIABLE_MESSAGE,
+  isUnreliableTranscript,
+} from "@/lib/transcript-quality";
 import { useLanguage } from "@/hooks/use-language";
 
 import { upsertReviewQueue, addXp, xpForScore, checkAndGrantAchievements } from "@/lib/learning";
