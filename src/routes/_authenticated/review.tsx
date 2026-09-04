@@ -81,7 +81,67 @@ function ReviewPage() {
   useEffect(() => {
     setUserInput("");
     setCorrection(null);
+    setEvaluation(null);
+    setTranscript("");
+    setSttAttempts(0);
   }, [idx]);
+
+  async function handleRecorded(audio: { base64: string; mimeType: string }) {
+    if (!item) return;
+    const ex = item.exercises;
+    setSubmitting(true);
+    try {
+      const target = ex.content ?? ex.audio_script ?? ex.prompt_en;
+      const stt = await sttFn({
+        data: {
+          audioBase64: audio.base64,
+          mimeType: audio.mimeType,
+          language,
+          prompt: target || undefined,
+        },
+      });
+      if (isUnreliableTranscript(stt.text)) {
+        setSttAttempts((n) => n + 1);
+        toast.error(UNRELIABLE_MESSAGE);
+        return;
+      }
+      setSttAttempts(0);
+      setTranscript(stt.text);
+      const result = await evalFn({
+        data: {
+          transcript: stt.text,
+          original: target,
+          mode: "read",
+          level: ex.level,
+          promptEn: ex.prompt_en,
+          language,
+        },
+      });
+      setEvaluation(result);
+      await supabase.from("attempts").insert({
+        user_id: user.id,
+        exercise_id: ex.id,
+        user_input: stt.text,
+        correction: result as never,
+        score: result.score,
+        grammar_focus: ex.grammar_focus,
+        level: ex.level,
+        mode: ex.mode,
+      });
+      await upsertReviewQueue({
+        userId: user.id,
+        exerciseId: ex.id,
+        score: result.score,
+        asReview: true,
+      });
+      await addXp(user.id, xpForScore(result.score) + 5);
+      await checkAndGrantAchievements(user.id);
+    } catch (err) {
+      toast.error(err instanceof Error ? err.message : "Erro");
+    } finally {
+      setSubmitting(false);
+    }
+  }
 
   async function onCheck() {
     if (!item || !userInput.trim()) return;
