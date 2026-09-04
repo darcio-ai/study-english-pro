@@ -231,6 +231,7 @@ function ReviewPage() {
 
   const ex = item.exercises;
   const isListening = ex.mode === "listening";
+  const isSpeaking = ex.mode === "speaking_read" || ex.mode === "speaking_free";
 
   return (
     <main className="min-h-screen bg-gray-50 dark:bg-gray-900 pb-20">
