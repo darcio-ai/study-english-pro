@@ -56,17 +56,22 @@ export function AudioRecorder({
         setStatus("processing");
         try {
           const buf = await blob.arrayBuffer();
-          const bytes = new Uint8Array(buf);
+          const wav = await toWav(buf);
+          const bytes = new Uint8Array(wav);
           let bin = "";
-          for (let i = 0; i < bytes.length; i++) bin += String.fromCharCode(bytes[i]);
+          const CHUNK = 0x8000;
+          for (let i = 0; i < bytes.length; i += CHUNK) {
+            bin += String.fromCharCode(...bytes.subarray(i, i + CHUNK));
+          }
           const base64 = btoa(bin);
-          await onRecorded({ base64, mimeType: recorder.mimeType });
+          await onRecorded({ base64, mimeType: "audio/wav" });
         } catch (err) {
           toast.error(err instanceof Error ? err.message : "Erro ao processar áudio");
         } finally {
           setStatus("idle");
         }
       };
+
       recorder.start();
       recorderRef.current = recorder;
       setStatus("recording");
