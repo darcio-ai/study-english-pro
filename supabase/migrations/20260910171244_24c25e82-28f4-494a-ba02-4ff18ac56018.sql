@@ -1,0 +1,30 @@
+REVOKE INSERT, UPDATE, DELETE ON public.lessons FROM anon;
+REVOKE INSERT, UPDATE, DELETE ON public.exercises FROM anon;
+REVOKE INSERT, UPDATE, DELETE ON public.reading_texts FROM anon;
+REVOKE INSERT, UPDATE, DELETE ON public.achievements FROM anon;
+
+REVOKE ALL ON public.profiles FROM anon;
+REVOKE ALL ON public.attempts FROM anon;
+REVOKE ALL ON public.user_progress FROM anon;
+REVOKE ALL ON public.user_lesson_progress FROM anon;
+REVOKE ALL ON public.user_vocabulary FROM anon;
+REVOKE ALL ON public.user_skill_levels FROM anon;
+REVOKE ALL ON public.user_achievements FROM anon;
+REVOKE ALL ON public.review_queue FROM anon;
+REVOKE ALL ON public.study_plan FROM anon;
+REVOKE ALL ON public.study_sessions FROM anon;
+
+GRANT SELECT, INSERT, UPDATE, DELETE ON public.profiles TO authenticated;
+GRANT SELECT, INSERT, UPDATE, DELETE ON public.attempts TO authenticated;
+GRANT SELECT, INSERT, UPDATE, DELETE ON public.user_progress TO authenticated;
+GRANT SELECT, INSERT, UPDATE, DELETE ON public.user_lesson_progress TO authenticated;
+GRANT SELECT, INSERT, UPDATE, DELETE ON public.user_vocabulary TO authenticated;
+GRANT SELECT, INSERT, UPDATE, DELETE ON public.user_skill_levels TO authenticated;
+GRANT SELECT, INSERT, UPDATE, DELETE ON public.user_achievements TO authenticated;
+GRANT SELECT, INSERT, UPDATE, DELETE ON public.review_queue TO authenticated;
+GRANT SELECT, INSERT, UPDATE, DELETE ON public.study_plan TO authenticated;
+GRANT SELECT, INSERT, UPDATE, DELETE ON public.study_sessions TO authenticated;
+GRANT SELECT ON public.lessons TO authenticated;
+GRANT SELECT ON public.exercises TO authenticated;
+GRANT SELECT ON public.reading_texts TO authenticated;
+GRANT SELECT ON public.achievements TO authenticated;
