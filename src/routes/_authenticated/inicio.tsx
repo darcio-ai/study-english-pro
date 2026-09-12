@@ -10,6 +10,7 @@ import {
   LayoutDashboard,
   Mic,
   PenLine,
+  Rocket,
   RotateCcw,
   Sparkles,
 } from "lucide-react";
@@ -267,6 +268,7 @@ function StartPage() {
 
         <div className="grid grid-cols-2 gap-3">
           <ActionCard to="/lessons" icon={<GraduationCap className="size-6" />} title="Lições" subtitle="Trilha guiada" primary />
+          <ActionCard to="/desafio" icon={<Rocket className="size-6" />} title="Desafio 15 dias" subtitle="Programa guiado" />
           <ActionCard to="/exercise" icon={<PenLine className="size-6" />} title="Escrita" subtitle="Prática livre" />
           <ActionCard to="/listening" icon={<Headphones className="size-6" />} title="Escuta" subtitle="Prática livre" />
           <ActionCard to="/speaking" icon={<Mic className="size-6" />} title="Fala" subtitle="Prática livre" />

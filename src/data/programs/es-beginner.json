@@ -1,0 +1,2774 @@
+{
+ "days": [
+  {
+   "day": 1,
+   "theme": "Saludos y presentaciones",
+   "objective_pt": "Aprender a cumprimentar pessoas e dizer seu nome.",
+   "kind": "lesson",
+   "content": {
+    "vocabulary": [
+     {
+      "term": "Hola",
+      "translation_pt": "Olá",
+      "example": "Hola, ¿cómo estás?"
+     },
+     {
+      "term": "Buenos días",
+      "translation_pt": "Bom dia",
+      "example": "Buenos días, profesor."
+     },
+     {
+      "term": "Buenas tardes",
+      "translation_pt": "Boa tarde",
+      "example": "Buenas tardes, amigos."
+     },
+     {
+      "term": "Buenas noches",
+      "translation_pt": "Boa noite",
+      "example": "Buenas noches, familia."
+     },
+     {
+      "term": "Me llamo",
+      "translation_pt": "Eu me chamo",
+      "example": "Me llamo Juan."
+     },
+     {
+      "term": "Mucho gusto",
+      "translation_pt": "Muito prazer",
+      "example": "Encantado, mucho gusto."
+     },
+     {
+      "term": "Adiós",
+      "translation_pt": "Tchau/Adeus",
+      "example": "Adiós, hasta luego."
+     },
+     {
+      "term": "Hasta mañana",
+      "translation_pt": "Até amanhã",
+      "example": "Hasta mañana, clase."
+     },
+     {
+      "term": "Por favor",
+      "translation_pt": "Por favor",
+      "example": "Un café, por favor."
+     },
+     {
+      "term": "Gracias",
+      "translation_pt": "Obrigado",
+      "example": "Muchas gracias."
+     },
+     {
+      "term": "De nada",
+      "translation_pt": "De nada",
+      "example": "No hay de qué, de nada."
+     },
+     {
+      "term": "Bien",
+      "translation_pt": "Bem",
+      "example": "Estoy muy bien."
+     },
+     {
+      "term": "Mal",
+      "translation_pt": "Mal",
+      "example": "Hoy me siento mal."
+     },
+     {
+      "term": "Más o menos",
+      "translation_pt": "Mais ou menos",
+      "example": "Estoy más o menos."
+     },
+     {
+      "term": "Perdón",
+      "translation_pt": "Desculpe",
+      "example": "Perdón, no entiendo."
+     }
+    ],
+    "phrases": [
+     {
+      "text": "¿Cómo te llamas?",
+      "translation_pt": "Como você se chama?"
+     },
+     {
+      "text": "¿Cómo estás?",
+      "translation_pt": "Como você está?"
+     },
+     {
+      "text": "Soy de Brasil.",
+      "translation_pt": "Sou do Brasil."
+     },
+     {
+      "text": "Mucho gusto en conocerte.",
+      "translation_pt": "Muito prazer em te conhecer."
+     },
+     {
+      "text": "Nos vemos luego.",
+      "translation_pt": "Nos vemos mais tarde."
+     }
+    ],
+    "dialogue": [
+     {
+      "speaker": "A",
+      "line": "Hola, buenos días."
+     },
+     {
+      "speaker": "B",
+      "line": "Hola, buenos días. ¿Cómo te llamas?"
+     },
+     {
+      "speaker": "A",
+      "line": "Me llamo Ana. ¿Y tú?"
+     },
+     {
+      "speaker": "B",
+      "line": "Yo soy Carlos. Mucho gusto."
+     },
+     {
+      "speaker": "A",
+      "line": "Mucho gusto, Carlos. ¿Cómo estás?"
+     },
+     {
+      "speaker": "B",
+      "line": "Estoy bien, gracias. ¿Y tú?"
+     },
+     {
+      "speaker": "A",
+      "line": "Muy bien. Hasta luego."
+     },
+     {
+      "speaker": "B",
+      "line": "Adiós, hasta pronto."
+     }
+    ],
+    "quiz": [
+     {
+      "question": "Qual é a tradução de 'Hola'?",
+      "options": [
+       "Olá",
+       "Tchau",
+       "Bom dia",
+       "Por favor"
+      ],
+      "answer": "Olá"
+     },
+     {
+      "question": "Como se diz 'Muito prazer'?",
+      "options": [
+       "Gracias",
+       "Mucho gusto",
+       "De nada",
+       "Adiós"
+      ],
+      "answer": "Mucho gusto"
+     },
+     {
+      "question": "Qual é a pergunta para saber o nome de alguém?",
+      "options": [
+       "¿Cómo estás?",
+       "¿Cómo te llamas?",
+       "¿Eres de aquí?",
+       "¿Qué hora es?"
+      ],
+      "answer": "¿Cómo te llamas?"
+     },
+     {
+      "question": "Como se diz 'Estou bem'?",
+      "options": [
+       "Estoy mal",
+       "Estoy bien",
+       "Soy bien",
+       "Tengo bien"
+      ],
+      "answer": "Estoy bien"
+     },
+     {
+      "question": "Qual a despedida para amanhã?",
+      "options": [
+       "Adiós",
+       "Hasta luego",
+       "Hasta mañana",
+       "Buenas noches"
+      ],
+      "answer": "Hasta mañana"
+     }
+    ]
+   }
+  },
+  {
+   "day": 2,
+   "theme": "Números",
+   "objective_pt": "Aprender os números de 0 a 20 e contar objetos.",
+   "kind": "lesson",
+   "content": {
+    "vocabulary": [
+     {
+      "term": "Cero",
+      "translation_pt": "Zero",
+      "example": "El número es cero."
+     },
+     {
+      "term": "Uno",
+      "translation_pt": "Um",
+      "example": "Tengo uno."
+     },
+     {
+      "term": "Dos",
+      "translation_pt": "Dois",
+      "example": "Son dos libros."
+     },
+     {
+      "term": "Tres",
+      "translation_pt": "Três",
+      "example": "Tres manzanas."
+     },
+     {
+      "term": "Cuatro",
+      "translation_pt": "Quatro",
+      "example": "Cuatro sillas."
+     },
+     {
+      "term": "Cinco",
+      "translation_pt": "Cinco",
+      "example": "Cinco dedos."
+     },
+     {
+      "term": "Seis",
+      "translation_pt": "Seis",
+      "example": "Tengo seis años."
+     },
+     {
+      "term": "Siete",
+      "translation_pt": "Sete",
+      "example": "Siete días."
+     },
+     {
+      "term": "Ocho",
+      "translation_pt": "Oito",
+      "example": "Ocho gatos."
+     },
+     {
+      "term": "Nueve",
+      "translation_pt": "Nove",
+      "example": "Nueve coches."
+     },
+     {
+      "term": "Diez",
+      "translation_pt": "Dez",
+      "example": "Diez dedos."
+     },
+     {
+      "term": "Once",
+      "translation_pt": "Onze",
+      "example": "Once jugadores."
+     },
+     {
+      "term": "Doce",
+      "translation_pt": "Doze",
+      "example": "Doce meses."
+     },
+     {
+      "term": "Trece",
+      "translation_pt": "Treze",
+      "example": "Trece plumas."
+     },
+     {
+      "term": "Catorce",
+      "translation_pt": "Quatorze",
+      "example": "Catorce alumnos."
+     }
+    ],
+    "phrases": [
+     {
+      "text": "¿Cuántos años tienes?",
+      "translation_pt": "Quantos anos você tem?"
+     },
+     {
+      "text": "Tengo diez años.",
+      "translation_pt": "Tenho dez anos."
+     },
+     {
+      "text": "Hay tres libros.",
+      "translation_pt": "Há três livros."
+     },
+     {
+      "text": "Uno, dos, tres.",
+      "translation_pt": "Um, dois, três."
+     },
+     {
+      "text": "Son las cinco.",
+      "translation_pt": "São cinco horas."
+     }
+    ],
+    "dialogue": [
+     {
+      "speaker": "A",
+      "line": "¿Cuántas manzanas tienes?"
+     },
+     {
+      "speaker": "B",
+      "line": "Tengo seis manzanas."
+     },
+     {
+      "speaker": "A",
+      "line": "¿Y cuántos plátanos?"
+     },
+     {
+      "speaker": "B",
+      "line": "Tengo dos plátanos."
+     },
+     {
+      "speaker": "A",
+      "line": "Entonces, tienes ocho frutas."
+     },
+     {
+      "speaker": "B",
+      "line": "Sí, ocho frutas en total."
+     },
+     {
+      "speaker": "A",
+      "line": "Muy bien, gracias."
+     },
+     {
+      "speaker": "B",
+      "line": "De nada."
+     }
+    ],
+    "quiz": [
+     {
+      "question": "Qual o número 'cinco' em espanhol?",
+      "options": [
+       "Seis",
+       "Cinco",
+       "Diez",
+       "Doce"
+      ],
+      "answer": "Cinco"
+     },
+     {
+      "question": "O que significa 'Tengo dos'?",
+      "options": [
+       "Tenho dois",
+       "Tenho dez",
+       "Tenho cinco",
+       "Tenho doze"
+      ],
+      "answer": "Tenho dois"
+     },
+     {
+      "question": "Como se diz 11 em espanhol?",
+      "options": [
+       "Diez",
+       "Once",
+       "Doce",
+       "Catorce"
+      ],
+      "answer": "Once"
+     },
+     {
+      "question": "Como perguntar a idade?",
+      "options": [
+       "¿Cómo estás?",
+       "¿Cuántos años tienes?",
+       "¿Qué número es?",
+       "¿Cómo te llamas?"
+      ],
+      "answer": "¿Cuántos años tienes?"
+     },
+     {
+      "question": "Quanto é 3 + 4?",
+      "options": [
+       "Cinco",
+       "Seis",
+       "Siete",
+       "Ocho"
+      ],
+      "answer": "Siete"
+     }
+    ]
+   }
+  },
+  {
+   "day": 3,
+   "theme": "La familia",
+   "objective_pt": "Aprender os membros da família em espanhol.",
+   "kind": "lesson",
+   "content": {
+    "vocabulary": [
+     {
+      "term": "Padre",
+      "translation_pt": "Pai",
+      "example": "Mi padre es alto."
+     },
+     {
+      "term": "Madre",
+      "translation_pt": "Mãe",
+      "example": "Mi madre es amable."
+     },
+     {
+      "term": "Hijo",
+      "translation_pt": "Filho",
+      "example": "Mi hijo estudia."
+     },
+     {
+      "term": "Hija",
+      "translation_pt": "Filha",
+      "example": "Mi hija es pequeña."
+     },
+     {
+      "term": "Hermano",
+      "translation_pt": "Irmão",
+      "example": "Mi hermano juega."
+     },
+     {
+      "term": "Hermana",
+      "translation_pt": "Irmã",
+      "example": "Mi hermana trabaja."
+     },
+     {
+      "term": "Abuelo",
+      "translation_pt": "Avô",
+      "example": "Mi abuelo vive aquí."
+     },
+     {
+      "term": "Abuela",
+      "translation_pt": "Avó",
+      "example": "Mi abuela cocina bien."
+     },
+     {
+      "term": "Tío",
+      "translation_pt": "Tio",
+      "example": "Mi tío es médico."
+     },
+     {
+      "term": "Tía",
+      "translation_pt": "Tia",
+      "example": "Mi tía es profesora."
+     },
+     {
+      "term": "Primo",
+      "translation_pt": "Primo",
+      "example": "Mi primo es joven."
+     },
+     {
+      "term": "Prima",
+      "translation_pt": "Prima",
+      "example": "Mi prima es simpática."
+     },
+     {
+      "term": "Esposo",
+      "translation_pt": "Esposo",
+      "example": "Él es mi esposo."
+     },
+     {
+      "term": "Esposa",
+      "translation_pt": "Esposa",
+      "example": "Ella es mi esposa."
+     },
+     {
+      "term": "Familia",
+      "translation_pt": "Família",
+      "example": "Mi familia es grande."
+     }
+    ],
+    "phrases": [
+     {
+      "text": "¿Tienes hermanos?",
+      "translation_pt": "Você tem irmãos?"
+     },
+     {
+      "text": "Esta es mi madre.",
+      "translation_pt": "Esta é minha mãe."
+     },
+     {
+      "text": "Él es mi padre.",
+      "translation_pt": "Ele é meu pai."
+     },
+     {
+      "text": "Mi familia es pequeña.",
+      "translation_pt": "Minha família é pequena."
+     },
+     {
+      "text": "Somos cinco en casa.",
+      "translation_pt": "Somos cinco em casa."
+     }
+    ],
+    "dialogue": [
+     {
+      "speaker": "A",
+      "line": "¿Quién es ella?"
+     },
+     {
+      "speaker": "B",
+      "line": "Ella es mi madre."
+     },
+     {
+      "speaker": "A",
+      "line": "¿Y él quién es?"
+     },
+     {
+      "speaker": "B",
+      "line": "Él es mi hermano Juan."
+     },
+     {
+      "speaker": "A",
+      "line": "¿Tienes hermanos?"
+     },
+     {
+      "speaker": "B",
+      "line": "Sí, tengo dos hermanos."
+     },
+     {
+      "speaker": "A",
+      "line": "Qué bien, tu familia es linda."
+     },
+     {
+      "speaker": "B",
+      "line": "Muchas gracias."
+     }
+    ],
+    "quiz": [
+     {
+      "question": "Como se diz 'pai' em espanhol?",
+      "options": [
+       "Madre",
+       "Padre",
+       "Hijo",
+       "Tío"
+      ],
+      "answer": "Padre"
+     },
+     {
+      "question": "Como se diz 'irmã' em espanhol?",
+      "options": [
+       "Hermano",
+       "Hermana",
+       "Abuela",
+       "Tía"
+      ],
+      "answer": "Hermana"
+     },
+     {
+      "question": "O que significa 'familia'?",
+      "options": [
+       "Casa",
+       "Família",
+       "Amigos",
+       "Pai"
+      ],
+      "answer": "Família"
+     },
+     {
+      "question": "Como se diz 'avó'?",
+      "options": [
+       "Abuelo",
+       "Abuela",
+       "Tía",
+       "Madre"
+      ],
+      "answer": "Abuela"
+     },
+     {
+      "question": "Como perguntar se alguém tem irmãos?",
+      "options": [
+       "¿Tienes padres?",
+       "¿Tienes hermanos?",
+       "¿Cómo es tu familia?",
+       "¿Es tu hijo?"
+      ],
+      "answer": "¿Tienes hermanos?"
+     }
+    ]
+   }
+  },
+  {
+   "day": 4,
+   "theme": "Rutina diaria",
+   "objective_pt": "Aprender verbos básicos sobre rotina.",
+   "kind": "lesson",
+   "content": {
+    "vocabulary": [
+     {
+      "term": "Despertar",
+      "translation_pt": "Acordar",
+      "example": "Me gusta despertar temprano."
+     },
+     {
+      "term": "Comer",
+      "translation_pt": "Comer",
+      "example": "Necesito comer ahora."
+     },
+     {
+      "term": "Beber",
+      "translation_pt": "Beber",
+      "example": "Voy a beber agua."
+     },
+     {
+      "term": "Dormir",
+      "translation_pt": "Dormir",
+      "example": "Quiero dormir ocho horas."
+     },
+     {
+      "term": "Trabajar",
+      "translation_pt": "Trabalhar",
+      "example": "Debo trabajar mucho."
+     },
+     {
+      "term": "Estudiar",
+      "translation_pt": "Estudar",
+      "example": "Voy a estudiar español."
+     },
+     {
+      "term": "Correr",
+      "translation_pt": "Correr",
+      "example": "Me gusta correr."
+     },
+     {
+      "term": "Leer",
+      "translation_pt": "Ler",
+      "example": "Quiero leer un libro."
+     },
+     {
+      "term": "Escribir",
+      "translation_pt": "Escrever",
+      "example": "Necesito escribir esto."
+     },
+     {
+      "term": "Hablar",
+      "translation_pt": "Falar",
+      "example": "Puedo hablar español."
+     },
+     {
+      "term": "Caminar",
+      "translation_pt": "Caminhar",
+      "example": "Voy a caminar al parque."
+     },
+     {
+      "term": "Limpiar",
+      "translation_pt": "Limpar",
+      "example": "Debo limpiar la casa."
+     },
+     {
+      "term": "Cocinar",
+      "translation_pt": "Cozinhar",
+      "example": "Voy a cocinar hoy."
+     },
+     {
+      "term": "Ver",
+      "translation_pt": "Ver",
+      "example": "Quiero ver televisión."
+     },
+     {
+      "term": "Descansar",
+      "translation_pt": "Descansar",
+      "example": "Es hora de descansar."
+     }
+    ],
+    "phrases": [
+     {
+      "text": "Yo trabajo mucho.",
+      "translation_pt": "Eu trabalho muito."
+     },
+     {
+      "text": "Tengo que estudiar.",
+      "translation_pt": "Tenho que estudar."
+     },
+     {
+      "text": "Voy a comer ahora.",
+      "translation_pt": "Vou comer agora."
+     },
+     {
+      "text": "Me gusta leer.",
+      "translation_pt": "Gosto de ler."
+     },
+     {
+      "text": "Es hora de dormir.",
+      "translation_pt": "É hora de dormir."
+     }
+    ],
+    "dialogue": [
+     {
+      "speaker": "A",
+      "line": "¿Qué haces hoy?"
+     },
+     {
+      "speaker": "B",
+      "line": "Voy a trabajar y a estudiar."
+     },
+     {
+      "speaker": "A",
+      "line": "¿A qué hora?"
+     },
+     {
+      "speaker": "B",
+      "line": "Por la mañana trabajo."
+     },
+     {
+      "speaker": "A",
+      "line": "¿Y por la tarde?"
+     },
+     {
+      "speaker": "B",
+      "line": "Por la tarde voy a estudiar."
+     },
+     {
+      "speaker": "A",
+      "line": "Muy bien, ánimo."
+     },
+     {
+      "speaker": "B",
+      "line": "Gracias, hasta luego."
+     }
+    ],
+    "quiz": [
+     {
+      "question": "O que significa 'estudiar'?",
+      "options": [
+       "Trabalhar",
+       "Estudar",
+       "Comer",
+       "Dormir"
+      ],
+      "answer": "Estudar"
+     },
+     {
+      "question": "Como se diz 'comer' em espanhol?",
+      "options": [
+       "Beber",
+       "Comer",
+       "Cocinar",
+       "Limpiar"
+      ],
+      "answer": "Comer"
+     },
+     {
+      "question": "Qual verbo significa 'acordar'?",
+      "options": [
+       "Dormir",
+       "Despertar",
+       "Descansar",
+       "Ver"
+      ],
+      "answer": "Despertar"
+     },
+     {
+      "question": "Como traduzir 'Eu trabalho muito'?",
+      "options": [
+       "Yo trabajo mucho",
+       "Yo estudio mucho",
+       "Yo descanso mucho",
+       "Yo hablo mucho"
+      ],
+      "answer": "Yo trabajo mucho"
+     },
+     {
+      "question": "O que significa 'leer'?",
+      "options": [
+       "Escrever",
+       "Correr",
+       "Ler",
+       "Ver"
+      ],
+      "answer": "Ler"
+     }
+    ]
+   }
+  },
+  {
+   "day": 5,
+   "theme": "Objetos de la casa",
+   "objective_pt": "Aprender o nome de objetos comuns em uma casa.",
+   "kind": "lesson",
+   "content": {
+    "vocabulary": [
+     {
+      "term": "Mesa",
+      "translation_pt": "Mesa",
+      "example": "La mesa es grande."
+     },
+     {
+      "term": "Silla",
+      "translation_pt": "Cadeira",
+      "example": "Esta silla es cómoda."
+     },
+     {
+      "term": "Cama",
+      "translation_pt": "Cama",
+      "example": "Mi cama es nueva."
+     },
+     {
+      "term": "Puerta",
+      "translation_pt": "Porta",
+      "example": "Abre la puerta."
+     },
+     {
+      "term": "Ventana",
+      "translation_pt": "Janela",
+      "example": "La ventana está abierta."
+     },
+     {
+      "term": "Lámpara",
+      "translation_pt": "Lâmpada/Luminária",
+      "example": "Enciende la lámpara."
+     },
+     {
+      "term": "Libro",
+      "translation_pt": "Livro",
+      "example": "Este libro es interesante."
+     },
+     {
+      "term": "Teléfono",
+      "translation_pt": "Telefone",
+      "example": "El teléfono suena."
+     },
+     {
+      "term": "Televisión",
+      "translation_pt": "Televisão",
+      "example": "La televisión es vieja."
+     },
+     {
+      "term": "Espejo",
+      "translation_pt": "Espelho",
+      "example": "Miro el espejo."
+     },
+     {
+      "term": "Plato",
+      "translation_pt": "Prato",
+      "example": "Limpia el plato."
+     },
+     {
+      "term": "Cuchara",
+      "translation_pt": "Colher",
+      "example": "Necesito una cuchara."
+     },
+     {
+      "term": "Nevera",
+      "translation_pt": "Geladeira",
+      "example": "La nevera está llena."
+     },
+     {
+      "term": "Sofá",
+      "translation_pt": "Sofá",
+      "example": "El sofá es gris."
+     },
+     {
+      "term": "Reloj",
+      "translation_pt": "Relógio",
+      "example": "Mi reloj no funciona."
+     }
+    ],
+    "phrases": [
+     {
+      "text": "¿Dónde está la mesa?",
+      "translation_pt": "Onde está a mesa?"
+     },
+     {
+      "text": "La silla está aquí.",
+      "translation_pt": "A cadeira está aqui."
+     },
+     {
+      "text": "Necesito el teléfono.",
+      "translation_pt": "Preciso do telefone."
+     },
+     {
+      "text": "Cierra la puerta.",
+      "translation_pt": "Feche a porta."
+     },
+     {
+      "text": "La cama es muy suave.",
+      "translation_pt": "A cama é muito macia."
+     }
+    ],
+    "dialogue": [
+     {
+      "speaker": "A",
+      "line": "¿Dónde está el libro?"
+     },
+     {
+      "speaker": "B",
+      "line": "El libro está en la mesa."
+     },
+     {
+      "speaker": "A",
+      "line": "¿Y la cuchara?"
+     },
+     {
+      "speaker": "B",
+      "line": "La cuchara está en el plato."
+     },
+     {
+      "speaker": "A",
+      "line": "¿Tienes un teléfono?"
+     },
+     {
+      "speaker": "B",
+      "line": "Sí, aquí está mi teléfono."
+     },
+     {
+      "speaker": "A",
+      "line": "Gracias por tu ayuda."
+     },
+     {
+      "speaker": "B",
+      "line": "De nada."
+     }
+    ],
+    "quiz": [
+     {
+      "question": "Como se diz 'cadeira'?",
+      "options": [
+       "Mesa",
+       "Silla",
+       "Cama",
+       "Sofá"
+      ],
+      "answer": "Silla"
+     },
+     {
+      "question": "O que significa 'puerta'?",
+      "options": [
+       "Janela",
+       "Porta",
+       "Lâmpada",
+       "Espelho"
+      ],
+      "answer": "Porta"
+     },
+     {
+      "question": "Como se diz 'geladeira'?",
+      "options": [
+       "Plato",
+       "Nevera",
+       "Televisión",
+       "Reloj"
+      ],
+      "answer": "Nevera"
+     },
+     {
+      "question": "Onde está o livro no diálogo?",
+      "options": [
+       "En la cama",
+       "En la silla",
+       "En la mesa",
+       "En el sofá"
+      ],
+      "answer": "En la mesa"
+     },
+     {
+      "question": "Qual objeto é usado para ver as horas?",
+      "options": [
+       "Lámpara",
+       "Reloj",
+       "Teléfono",
+       "Espejo"
+      ],
+      "answer": "Reloj"
+     }
+    ]
+   }
+  },
+  {
+   "day": 6,
+   "theme": "Comida y Restaurante",
+   "objective_pt": "Aprender nomes de comida e como pedir em um restaurante.",
+   "kind": "lesson",
+   "content": {
+    "vocabulary": [
+     {
+      "term": "Agua",
+      "translation_pt": "Água",
+      "example": "Quiero agua fría."
+     },
+     {
+      "term": "Café",
+      "translation_pt": "Café",
+      "example": "Un café, por favor."
+     },
+     {
+      "term": "Pan",
+      "translation_pt": "Pão",
+      "example": "El pan está caliente."
+     },
+     {
+      "term": "Carne",
+      "translation_pt": "Carne",
+      "example": "La carne es buena."
+     },
+     {
+      "term": "Pollo",
+      "translation_pt": "Frango",
+      "example": "El pollo es rico."
+     },
+     {
+      "term": "Ensalada",
+      "translation_pt": "Salada",
+      "example": "Quiero una ensalada."
+     },
+     {
+      "term": "Fruta",
+      "translation_pt": "Fruta",
+      "example": "La fruta es fresca."
+     },
+     {
+      "term": "Arroz",
+      "translation_pt": "Arroz",
+      "example": "Me gusta el arroz."
+     },
+     {
+      "term": "Sopa",
+      "translation_pt": "Sopa",
+      "example": "La sopa está caliente."
+     },
+     {
+      "term": "Postre",
+      "translation_pt": "Sobremesa",
+      "example": "El postre es dulce."
+     },
+     {
+      "term": "Cuenta",
+      "translation_pt": "Conta",
+      "example": "La cuenta, por favor."
+     },
+     {
+      "term": "Menu",
+      "translation_pt": "Cardápio",
+      "example": "Quiero ver el menú."
+     },
+     {
+      "term": "Camarero",
+      "translation_pt": "Garçom",
+      "example": "El camarero es amable."
+     },
+     {
+      "term": "Desayuno",
+      "translation_pt": "Café da manhã",
+      "example": "El desayuno es temprano."
+     },
+     {
+      "term": "Cena",
+      "translation_pt": "Jantar",
+      "example": "La cena es a las ocho."
+     }
+    ],
+    "phrases": [
+     {
+      "text": "¿Me trae el menú?",
+      "translation_pt": "Pode me trazer o cardápio?"
+     },
+     {
+      "text": "Quiero un café.",
+      "translation_pt": "Quero um café."
+     },
+     {
+      "text": "La cuenta, por favor.",
+      "translation_pt": "A conta, por favor."
+     },
+     {
+      "text": "Está muy rico.",
+      "translation_pt": "Está muito gostoso."
+     },
+     {
+      "text": "Uno de pollo, por favor.",
+      "translation_pt": "Um de frango, por favor."
+     }
+    ],
+    "dialogue": [
+     {
+      "speaker": "A",
+      "line": "Hola, ¿el menú por favor?"
+     },
+     {
+      "speaker": "B",
+      "line": "Aquí tiene."
+     },
+     {
+      "speaker": "A",
+      "line": "Quiero una sopa de pollo."
+     },
+     {
+      "speaker": "B",
+      "line": "¿Algo más?"
+     },
+     {
+      "speaker": "A",
+      "line": "Sí, un agua y un café."
+     },
+     {
+      "speaker": "B",
+      "line": "Perfecto."
+     },
+     {
+      "speaker": "A",
+      "line": "La cuenta, por favor."
+     },
+     {
+      "speaker": "B",
+      "line": "Aquí tiene."
+     }
+    ],
+    "quiz": [
+     {
+      "question": "Como se diz 'café da manhã'?",
+      "options": [
+       "Cena",
+       "Desayuno",
+       "Postre",
+       "Comida"
+      ],
+      "answer": "Desayuno"
+     },
+     {
+      "question": "Como pedir a conta?",
+      "options": [
+       "La mesa, por favor",
+       "El agua, por favor",
+       "La cuenta, por favor",
+       "El menú, por favor"
+      ],
+      "answer": "La cuenta, por favor"
+     },
+     {
+      "question": "O que significa 'camarero'?",
+      "options": [
+       "Cozinheiro",
+       "Garçom",
+       "Dono",
+       "Cliente"
+      ],
+      "answer": "Garçom"
+     },
+     {
+      "question": "Como se diz 'frango'?",
+      "options": [
+       "Carne",
+       "Arroz",
+       "Pollo",
+       "Sopa"
+      ],
+      "answer": "Pollo"
+     },
+     {
+      "question": "O que o cliente pede no diálogo?",
+      "options": [
+       "Sopa, água e café",
+       "Arroz, pão e café",
+       "Salada, carne e água",
+       "Café, pão e sopa"
+      ],
+      "answer": "Sopa, água e café"
+     }
+    ]
+   }
+  },
+  {
+   "day": 7,
+   "theme": "Revisión Semanal 1",
+   "objective_pt": "Revisar o conteúdo aprendido nos dias 1 a 6.",
+   "kind": "review",
+   "content": {
+    "vocabulary": [],
+    "phrases": [],
+    "dialogue": [],
+    "quiz": [
+     {
+      "question": "Como se diz 'olá'?",
+      "options": [
+       "Adiós",
+       "Hola",
+       "Hasta luego",
+       "Buenas tardes"
+      ],
+      "answer": "Hola"
+     },
+     {
+      "question": "Como dizer 'meu nome é Ana'?",
+      "options": [
+       "Me llamo Ana",
+       "Yo Ana",
+       "Soy Ana soy",
+       "Mi nombre Ana"
+      ],
+      "answer": "Me llamo Ana"
+     },
+     {
+      "question": "Como se escreve o número 8?",
+      "options": [
+       "Ocho",
+       "Ochoa",
+       "Ochi",
+       "Oche"
+      ],
+      "answer": "Ocho"
+     },
+     {
+      "question": "Como se diz 'mãe'?",
+      "options": [
+       "Padre",
+       "Madre",
+       "Abuelo",
+       "Hija"
+      ],
+      "answer": "Madre"
+     },
+     {
+      "question": "O que significa 'hermano'?",
+      "options": [
+       "Irmã",
+       "Irmão",
+       "Pai",
+       "Primo"
+      ],
+      "answer": "Irmão"
+     },
+     {
+      "question": "Como se diz 'trabalhar'?",
+      "options": [
+       "Dormir",
+       "Comer",
+       "Trabajar",
+       "Estudiar"
+      ],
+      "answer": "Trabajar"
+     },
+     {
+      "question": "Como se diz 'janela'?",
+      "options": [
+       "Puerta",
+       "Mesa",
+       "Ventana",
+       "Silla"
+      ],
+      "answer": "Ventana"
+     },
+     {
+      "question": "Como se diz 'geladeira'?",
+      "options": [
+       "Nevera",
+       "Televisión",
+       "Espejo",
+       "Reloj"
+      ],
+      "answer": "Nevera"
+     },
+     {
+      "question": "Como se diz 'água'?",
+      "options": [
+       "Arroz",
+       "Café",
+       "Agua",
+       "Sopa"
+      ],
+      "answer": "Agua"
+     },
+     {
+      "question": "Como se diz 'garçom'?",
+      "options": [
+       "Camarero",
+       "Cocina",
+       "Cena",
+       "Cuenta"
+      ],
+      "answer": "Camarero"
+     },
+     {
+      "question": "Como dizer 'obrigado'?",
+      "options": [
+       "De nada",
+       "Perdón",
+       "Gracias",
+       "Hola"
+      ],
+      "answer": "Gracias"
+     },
+     {
+      "question": "O que significa 'cama'?",
+      "options": [
+       "Mesa",
+       "Cadeira",
+       "Cama",
+       "Sofá"
+      ],
+      "answer": "Cama"
+     }
+    ]
+   }
+  },
+  {
+   "day": 8,
+   "theme": "Compras y Ropa",
+   "objective_pt": "Aprender vocabulário básico sobre roupas e compras.",
+   "kind": "lesson",
+   "content": {
+    "vocabulary": [
+     {
+      "term": "Tienda",
+      "translation_pt": "Loja",
+      "example": "La tienda es grande."
+     },
+     {
+      "term": "Ropa",
+      "translation_pt": "Roupa",
+      "example": "Tengo mucha ropa."
+     },
+     {
+      "term": "Camisa",
+      "translation_pt": "Camisa",
+      "example": "La camisa es azul."
+     },
+     {
+      "term": "Pantalones",
+      "translation_pt": "Calças",
+      "example": "Los pantalones son negros."
+     },
+     {
+      "term": "Zapato",
+      "translation_pt": "Sapato",
+      "example": "El zapato es cómodo."
+     },
+     {
+      "term": "Vestido",
+      "translation_pt": "Vestido",
+      "example": "El vestido es rojo."
+     },
+     {
+      "term": "Precio",
+      "translation_pt": "Preço",
+      "example": "¿Cuál es el precio?"
+     },
+     {
+      "term": "Caro",
+      "translation_pt": "Caro",
+      "example": "Eso es muy caro."
+     },
+     {
+      "term": "Barato",
+      "translation_pt": "Barato",
+      "example": "Es muy barato."
+     },
+     {
+      "term": "Dinero",
+      "translation_pt": "Dinheiro",
+      "example": "No tengo dinero."
+     },
+     {
+      "term": "Comprar",
+      "translation_pt": "Comprar",
+      "example": "Quiero comprar esto."
+     },
+     {
+      "term": "Talla",
+      "translation_pt": "Tamanho",
+      "example": "¿Qué talla es?"
+     },
+     {
+      "term": "Color",
+      "translation_pt": "Cor",
+      "example": "¿Qué color prefieres?"
+     },
+     {
+      "term": "Bolsa",
+      "translation_pt": "Sacola/Bolsa",
+      "example": "Necesito una bolsa."
+     },
+     {
+      "term": "Regalo",
+      "translation_pt": "Presente",
+      "example": "Es un regalo."
+     }
+    ],
+    "phrases": [
+     {
+      "text": "¿Cuánto cuesta?",
+      "translation_pt": "Quanto custa?"
+     },
+     {
+      "text": "Es muy caro.",
+      "translation_pt": "É muito caro."
+     },
+     {
+      "text": "Quiero comprar esto.",
+      "translation_pt": "Quero comprar isto."
+     },
+     {
+      "text": "¿Tienes mi talla?",
+      "translation_pt": "Você tem o meu tamanho?"
+     },
+     {
+      "text": "Busco una camisa azul.",
+      "translation_pt": "Procuro uma camisa azul."
+     }
+    ],
+    "dialogue": [
+     {
+      "speaker": "A",
+      "line": "Hola, busco una camisa."
+     },
+     {
+      "speaker": "B",
+      "line": "¿De qué color?"
+     },
+     {
+      "speaker": "A",
+      "line": "Una azul, por favor."
+     },
+     {
+      "speaker": "B",
+      "line": "Aquí tiene, ¿es su talla?"
+     },
+     {
+      "speaker": "A",
+      "line": "Sí, ¿cuánto cuesta?"
+     },
+     {
+      "speaker": "B",
+      "line": "Cuesta diez euros."
+     },
+     {
+      "speaker": "A",
+      "line": "Muy bien, compro la camisa."
+     },
+     {
+      "speaker": "B",
+      "line": "Gracias, aquí está."
+     }
+    ],
+    "quiz": [
+     {
+      "question": "Como se diz 'loja'?",
+      "options": [
+       "Tienda",
+       "Ropa",
+       "Vestido",
+       "Bolsa"
+      ],
+      "answer": "Tienda"
+     },
+     {
+      "question": "O que significa '¿Cuánto cuesta?'?",
+      "options": [
+       "Qual a cor?",
+       "Quanto custa?",
+       "Qual o tamanho?",
+       "É barato?"
+      ],
+      "answer": "Quanto custa?"
+     },
+     {
+      "question": "Como se diz 'calça'?",
+      "options": [
+       "Camisa",
+       "Zapato",
+       "Pantalones",
+       "Vestido"
+      ],
+      "answer": "Pantalones"
+     },
+     {
+      "question": "Qual o oposto de 'caro'?",
+      "options": [
+       "Barato",
+       "Grande",
+       "Azul",
+       "Nuevo"
+      ],
+      "answer": "Barato"
+     },
+     {
+      "question": "O que significa 'dinero'?",
+      "options": [
+       "Presente",
+       "Dinheiro",
+       "Preço",
+       "Tamanho"
+      ],
+      "answer": "Dinheiro"
+     }
+    ]
+   }
+  },
+  {
+   "day": 9,
+   "theme": "El Tiempo",
+   "objective_pt": "Aprender a falar sobre clima e temperatura.",
+   "kind": "lesson",
+   "content": {
+    "vocabulary": [
+     {
+      "term": "Sol",
+      "translation_pt": "Sol",
+      "example": "Hace sol hoy."
+     },
+     {
+      "term": "Lluvia",
+      "translation_pt": "Chuva",
+      "example": "No me gusta la lluvia."
+     },
+     {
+      "term": "Calor",
+      "translation_pt": "Calor",
+      "example": "Hace mucho calor."
+     },
+     {
+      "term": "Frío",
+      "translation_pt": "Frio",
+      "example": "Hace frío en invierno."
+     },
+     {
+      "term": "Nieve",
+      "translation_pt": "Neve",
+      "example": "Cae nieve ahora."
+     },
+     {
+      "term": "Viento",
+      "translation_pt": "Vento",
+      "example": "Hay mucho viento."
+     },
+     {
+      "term": "Nublado",
+      "translation_pt": "Nublado",
+      "example": "El día está nublado."
+     },
+     {
+      "term": "Primavera",
+      "translation_pt": "Primavera",
+      "example": "Llega la primavera."
+     },
+     {
+      "term": "Verano",
+      "translation_pt": "Verão",
+      "example": "Prefiero el verano."
+     },
+     {
+      "term": "Otoño",
+      "translation_pt": "Outono",
+      "example": "Es otoño ahora."
+     },
+     {
+      "term": "Invierno",
+      "translation_pt": "Inverno",
+      "example": "El invierno es frío."
+     },
+     {
+      "term": "Hoy",
+      "translation_pt": "Hoje",
+      "example": "Hoy hace buen tiempo."
+     },
+     {
+      "term": "Mañana",
+      "translation_pt": "Amanhã/Manhã",
+      "example": "Mañana hace frío."
+     },
+     {
+      "term": "Ayer",
+      "translation_pt": "Ontem",
+      "example": "Ayer hizo sol."
+     },
+     {
+      "term": "Tiempo",
+      "translation_pt": "Tempo/Clima",
+      "example": "El tiempo está bien."
+     }
+    ],
+    "phrases": [
+     {
+      "text": "¿Qué tiempo hace?",
+      "translation_pt": "Como está o tempo?"
+     },
+     {
+      "text": "Hace mucho sol.",
+      "translation_pt": "Faz muito sol."
+     },
+     {
+      "text": "Hace frío hoy.",
+      "translation_pt": "Faz frio hoje."
+     },
+     {
+      "text": "Está nublado.",
+      "translation_pt": "Está nublado."
+     },
+     {
+      "text": "Va a llover.",
+      "translation_pt": "Vai chover."
+     }
+    ],
+    "dialogue": [
+     {
+      "speaker": "A",
+      "line": "¿Qué tiempo hace?"
+     },
+     {
+      "speaker": "B",
+      "line": "Hace mucho sol."
+     },
+     {
+      "speaker": "A",
+      "line": "¿Te gusta el calor?"
+     },
+     {
+      "speaker": "B",
+      "line": "Sí, me gusta mucho."
+     },
+     {
+      "speaker": "A",
+      "line": "¿Y ayer?"
+     },
+     {
+      "speaker": "B",
+      "line": "Ayer hizo frío y llovió."
+     },
+     {
+      "speaker": "A",
+      "line": "Qué cambio, ¿verdad?"
+     },
+     {
+      "speaker": "B",
+      "line": "Sí, mucho."
+     }
+    ],
+    "quiz": [
+     {
+      "question": "Como se diz 'sol'?",
+      "options": [
+       "Lluvia",
+       "Sol",
+       "Viento",
+       "Frío"
+      ],
+      "answer": "Sol"
+     },
+     {
+      "question": "Como perguntar 'Como está o tempo?'",
+      "options": [
+       "¿Hace sol?",
+       "¿Qué tiempo hace?",
+       "¿Qué día es?",
+       "¿Qué hora es?"
+      ],
+      "answer": "¿Qué tiempo hace?"
+     },
+     {
+      "question": "O que significa 'invierno'?",
+      "options": [
+       "Verão",
+       "Outono",
+       "Primavera",
+       "Inverno"
+      ],
+      "answer": "Inverno"
+     },
+     {
+      "question": "Como se diz 'ontem'?",
+      "options": [
+       "Hoy",
+       "Mañana",
+       "Ayer",
+       "Tiempo"
+      ],
+      "answer": "Ayer"
+     },
+     {
+      "question": "O que significa 'nublado'?",
+      "options": [
+       "Sol",
+       "Chuvoso",
+       "Nublado",
+       "Frio"
+      ],
+      "answer": "Nublado"
+     }
+    ]
+   }
+  },
+  {
+   "day": 10,
+   "theme": "Medios de Transporte",
+   "objective_pt": "Aprender meios de transporte e direções básicas.",
+   "kind": "lesson",
+   "content": {
+    "vocabulary": [
+     {
+      "term": "Coche",
+      "translation_pt": "Carro",
+      "example": "Mi coche es rojo."
+     },
+     {
+      "term": "Autobús",
+      "translation_pt": "Ônibus",
+      "example": "El autobús llega tarde."
+     },
+     {
+      "term": "Tren",
+      "translation_pt": "Trem",
+      "example": "El tren es rápido."
+     },
+     {
+      "term": "Avión",
+      "translation_pt": "Avião",
+      "example": "El avión vuela alto."
+     },
+     {
+      "term": "Bicicleta",
+      "translation_pt": "Bicicleta",
+      "example": "Voy en bicicleta."
+     },
+     {
+      "term": "Taxi",
+      "translation_pt": "Táxi",
+      "example": "Toma un taxi."
+     },
+     {
+      "term": "Calle",
+      "translation_pt": "Rua",
+      "example": "Esta calle es larga."
+     },
+     {
+      "term": "Derecha",
+      "translation_pt": "Direita",
+      "example": "Gira a la derecha."
+     },
+     {
+      "term": "Izquierda",
+      "translation_pt": "Esquerda",
+      "example": "Gira a la izquierda."
+     },
+     {
+      "term": "Cerca",
+      "translation_pt": "Perto",
+      "example": "Vivo cerca de aquí."
+     },
+     {
+      "term": "Lejos",
+      "translation_pt": "Longe",
+      "example": "Está muy lejos."
+     },
+     {
+      "term": "Estación",
+      "translation_pt": "Estação",
+      "example": "Busco la estación."
+     },
+     {
+      "term": "Mapa",
+      "translation_pt": "Mapa",
+      "example": "Usa el mapa."
+     },
+     {
+      "term": "Parada",
+      "translation_pt": "Ponto/Parada",
+      "example": "Es la próxima parada."
+     },
+     {
+      "term": "Billete",
+      "translation_pt": "Bilhete/Passagem",
+      "example": "Compro el billete."
+     }
+    ],
+    "phrases": [
+     {
+      "text": "¿Dónde está la estación?",
+      "translation_pt": "Onde fica a estação?"
+     },
+     {
+      "text": "Gira a la derecha.",
+      "translation_pt": "Vire à direita."
+     },
+     {
+      "text": "Está muy cerca.",
+      "translation_pt": "É muito perto."
+     },
+     {
+      "text": "Voy en autobús.",
+      "translation_pt": "Vou de ônibus."
+     },
+     {
+      "text": "Necesito un billete.",
+      "translation_pt": "Preciso de um bilhete."
+     }
+    ],
+    "dialogue": [
+     {
+      "speaker": "A",
+      "line": "Disculpe, ¿dónde está el tren?"
+     },
+     {
+      "speaker": "B",
+      "line": "La estación está a la derecha."
+     },
+     {
+      "speaker": "A",
+      "line": "¿Está muy lejos?"
+     },
+     {
+      "speaker": "B",
+      "line": "No, está muy cerca."
+     },
+     {
+      "speaker": "A",
+      "line": "Gracias. ¿Tomo el autobús?"
+     },
+     {
+      "speaker": "B",
+      "line": "No, mejor a pie."
+     },
+     {
+      "speaker": "A",
+      "line": "Muchas gracias, adiós."
+     },
+     {
+      "speaker": "B",
+      "line": "De nada, adiós."
+     }
+    ],
+    "quiz": [
+     {
+      "question": "Como se diz 'carro'?",
+      "options": [
+       "Coche",
+       "Autobús",
+       "Tren",
+       "Taxi"
+      ],
+      "answer": "Coche"
+     },
+     {
+      "question": "Como se diz 'direita'?",
+      "options": [
+       "Izquierda",
+       "Cerca",
+       "Lejos",
+       "Derecha"
+      ],
+      "answer": "Derecha"
+     },
+     {
+      "question": "O que significa 'estación'?",
+      "options": [
+       "Rua",
+       "Estação",
+       "Ponto",
+       "Mapa"
+      ],
+      "answer": "Estação"
+     },
+     {
+      "question": "Como se diz 'perto'?",
+      "options": [
+       "Lejos",
+       "Cerca",
+       "Izquierda",
+       "Derecha"
+      ],
+      "answer": "Cerca"
+     },
+     {
+      "question": "Como se diz 'ônibus'?",
+      "options": [
+       "Taxi",
+       "Autobús",
+       "Coche",
+       "Tren"
+      ],
+      "answer": "Autobús"
+     }
+    ]
+   }
+  },
+  {
+   "day": 11,
+   "theme": "Salud y Cuerpo",
+   "objective_pt": "Aprender partes do corpo e falar sobre saúde básica.",
+   "kind": "lesson",
+   "content": {
+    "vocabulary": [
+     {
+      "term": "Cabeza",
+      "translation_pt": "Cabeça",
+      "example": "Me duele la cabeza."
+     },
+     {
+      "term": "Ojo",
+      "translation_pt": "Olho",
+      "example": "Tengo un ojo rojo."
+     },
+     {
+      "term": "Mano",
+      "translation_pt": "Mão",
+      "example": "Tengo la mano fría."
+     },
+     {
+      "term": "Pie",
+      "translation_pt": "Pé",
+      "example": "Me duele el pie."
+     },
+     {
+      "term": "Salud",
+      "translation_pt": "Saúde",
+      "example": "La salud es importante."
+     },
+     {
+      "term": "Dolor",
+      "translation_pt": "Dor",
+      "example": "Tengo dolor aquí."
+     },
+     {
+      "term": "Médico",
+      "translation_pt": "Médico",
+      "example": "Necesito un médico."
+     },
+     {
+      "term": "Hospital",
+      "translation_pt": "Hospital",
+      "example": "El hospital está cerca."
+     },
+     {
+      "term": "Fiebre",
+      "translation_pt": "Febre",
+      "example": "Tengo un poco de fiebre."
+     },
+     {
+      "term": "Cansado",
+      "translation_pt": "Cansado",
+      "example": "Estoy muy cansado."
+     },
+     {
+      "term": "Enfermo",
+      "translation_pt": "Doente",
+      "example": "Hoy estoy enfermo."
+     },
+     {
+      "term": "Medicina",
+      "translation_pt": "Remédio",
+      "example": "Necesito medicina."
+     },
+     {
+      "term": "Diente",
+      "translation_pt": "Dente",
+      "example": "Me duele el diente."
+     },
+     {
+      "term": "Cuerpo",
+      "translation_pt": "Corpo",
+      "example": "Todo el cuerpo me duele."
+     },
+     {
+      "term": "Sentirse",
+      "translation_pt": "Sentir-se",
+      "example": "No me siento bien."
+     }
+    ],
+    "phrases": [
+     {
+      "text": "No me siento bien.",
+      "translation_pt": "Não me sinto bem."
+     },
+     {
+      "text": "Me duele la cabeza.",
+      "translation_pt": "Minha cabeça dói."
+     },
+     {
+      "text": "Estoy enfermo.",
+      "translation_pt": "Estou doente."
+     },
+     {
+      "text": "Necesito ir al médico.",
+      "translation_pt": "Preciso ir ao médico."
+     },
+     {
+      "text": "Tengo fiebre.",
+      "translation_pt": "Estou com febre."
+     }
+    ],
+    "dialogue": [
+     {
+      "speaker": "A",
+      "line": "Hola, ¿cómo estás?"
+     },
+     {
+      "speaker": "B",
+      "line": "No muy bien, estoy enfermo."
+     },
+     {
+      "speaker": "A",
+      "line": "¿Qué te pasa?"
+     },
+     {
+      "speaker": "B",
+      "line": "Me duele la cabeza y tengo fiebre."
+     },
+     {
+      "speaker": "A",
+      "line": "¿Necesitas un médico?"
+     },
+     {
+      "speaker": "B",
+      "line": "Sí, necesito ir al hospital."
+     },
+     {
+      "speaker": "A",
+      "line": "Ánimo, vas a estar mejor."
+     },
+     {
+      "speaker": "B",
+      "line": "Gracias, amigo."
+     }
+    ],
+    "quiz": [
+     {
+      "question": "Como se diz 'cabeça'?",
+      "options": [
+       "Mano",
+       "Cabeza",
+       "Pie",
+       "Ojo"
+      ],
+      "answer": "Cabeza"
+     },
+     {
+      "question": "O que significa 'duele'?",
+      "options": [
+       "Dor",
+       "Doente",
+       "Febre",
+       "Remédio"
+      ],
+      "answer": "Dor"
+     },
+     {
+      "question": "Como se diz 'doente'?",
+      "options": [
+       "Cansado",
+       "Enfermo",
+       "Médico",
+       "Salud"
+      ],
+      "answer": "Enfermo"
+     },
+     {
+      "question": "Como se diz 'remédio'?",
+      "options": [
+       "Hospital",
+       "Medicina",
+       "Dolor",
+       "Cuerpo"
+      ],
+      "answer": "Medicina"
+     },
+     {
+      "question": "Qual frase significa 'estou com febre'?",
+      "options": [
+       "Tengo fiebre",
+       "Tengo frío",
+       "Tengo dolor",
+       "Estoy cansado"
+      ],
+      "answer": "Tengo fiebre"
+     }
+    ]
+   }
+  },
+  {
+   "day": 12,
+   "theme": "Hobbies y Tiempo Libre",
+   "objective_pt": "Aprender vocabulário de lazer e hobbies.",
+   "kind": "lesson",
+   "content": {
+    "vocabulary": [
+     {
+      "term": "Deporte",
+      "translation_pt": "Esporte",
+      "example": "Practico mucho deporte."
+     },
+     {
+      "term": "Fútbol",
+      "translation_pt": "Futebol",
+      "example": "Me gusta el fútbol."
+     },
+     {
+      "term": "Música",
+      "translation_pt": "Música",
+      "example": "Escucho música siempre."
+     },
+     {
+      "term": "Cine",
+      "translation_pt": "Cinema",
+      "example": "Voy al cine hoy."
+     },
+     {
+      "term": "Jugar",
+      "translation_pt": "Jogar/Brincar",
+      "example": "Vamos a jugar."
+     },
+     {
+      "term": "Viajar",
+      "translation_pt": "Viajar",
+      "example": "Quiero viajar mucho."
+     },
+     {
+      "term": "Cantar",
+      "translation_pt": "Cantar",
+      "example": "Me gusta cantar."
+     },
+     {
+      "term": "Bailar",
+      "translation_pt": "Dançar",
+      "example": "Vamos a bailar."
+     },
+     {
+      "term": "Amigos",
+      "translation_pt": "Amigos",
+      "example": "Estoy con mis amigos."
+     },
+     {
+      "term": "Parque",
+      "translation_pt": "Parque",
+      "example": "Camino en el parque."
+     },
+     {
+      "term": "Playa",
+      "translation_pt": "Praia",
+      "example": "La playa es linda."
+     },
+     {
+      "term": "Fin de semana",
+      "translation_pt": "Fim de semana",
+      "example": "El fin de semana es libre."
+     },
+     {
+      "term": "Divertido",
+      "translation_pt": "Divertido",
+      "example": "Es muy divertido."
+     },
+     {
+      "term": "Interesante",
+      "translation_pt": "Interessante",
+      "example": "Es muy interesante."
+     },
+     {
+      "term": "Tiempo libre",
+      "translation_pt": "Tempo livre",
+      "example": "En mi tiempo libre leo."
+     }
+    ],
+    "phrases": [
+     {
+      "text": "¿Qué haces en tu tiempo libre?",
+      "translation_pt": "O que você faz no seu tempo livre?"
+     },
+     {
+      "text": "Me gusta bailar.",
+      "translation_pt": "Gosto de dançar."
+     },
+     {
+      "text": "Voy al cine.",
+      "translation_pt": "Vou ao cinema."
+     },
+     {
+      "text": "Es muy divertido.",
+      "translation_pt": "É muito divertido."
+     },
+     {
+      "text": "Juego al fútbol.",
+      "translation_pt": "Jogo futebol."
+     }
+    ],
+    "dialogue": [
+     {
+      "speaker": "A",
+      "line": "¿Qué haces el fin de semana?"
+     },
+     {
+      "speaker": "B",
+      "line": "Voy a jugar al fútbol."
+     },
+     {
+      "speaker": "A",
+      "line": "¿Y después?"
+     },
+     {
+      "speaker": "B",
+      "line": "Voy al cine con mis amigos."
+     },
+     {
+      "speaker": "A",
+      "line": "¿Te gusta bailar?"
+     },
+     {
+      "speaker": "B",
+      "line": "Sí, es muy divertido."
+     },
+     {
+      "speaker": "A",
+      "line": "Qué bien, nos vemos."
+     },
+     {
+      "speaker": "B",
+      "line": "Adiós."
+     }
+    ],
+    "quiz": [
+     {
+      "question": "Como se diz 'esporte'?",
+      "options": [
+       "Fútbol",
+       "Deporte",
+       "Cine",
+       "Parque"
+      ],
+      "answer": "Deporte"
+     },
+     {
+      "question": "O que significa 'bailar'?",
+      "options": [
+       "Cantar",
+       "Viajar",
+       "Dançar",
+       "Jogar"
+      ],
+      "answer": "Dançar"
+     },
+     {
+      "question": "Como se diz 'fim de semana'?",
+      "options": [
+       "Día libre",
+       "Tiempo libre",
+       "Fin de semana",
+       "Divertido"
+      ],
+      "answer": "Fin de semana"
+     },
+     {
+      "question": "Como se diz 'cinema'?",
+      "options": [
+       "Cine",
+       "Música",
+       "Parque",
+       "Playa"
+      ],
+      "answer": "Cine"
+     },
+     {
+      "question": "O que o personagem faz no fim de semana?",
+      "options": [
+       "Canta e dança",
+       "Viaja e joga",
+       "Joga futebol e vai ao cinema",
+       "Lê e caminha"
+      ],
+      "answer": "Joga futebol e vai ao cinema"
+     }
+    ]
+   }
+  },
+  {
+   "day": 13,
+   "theme": "El Trabajo y la Profesión",
+   "objective_pt": "Aprender profissões e o ambiente de trabalho.",
+   "kind": "lesson",
+   "content": {
+    "vocabulary": [
+     {
+      "term": "Trabajo",
+      "translation_pt": "Trabalho",
+      "example": "Mi trabajo es interesante."
+     },
+     {
+      "term": "Oficina",
+      "translation_pt": "Escritório",
+      "example": "Voy a la oficina."
+     },
+     {
+      "term": "Profesor",
+      "translation_pt": "Professor",
+      "example": "El profesor enseña bien."
+     },
+     {
+      "term": "Doctor",
+      "translation_pt": "Doutor/Médico",
+      "example": "El doctor es bueno."
+     },
+     {
+      "term": "Estudiante",
+      "translation_pt": "Estudante",
+      "example": "Soy estudiante de español."
+     },
+     {
+      "term": "Jefe",
+      "translation_pt": "Chefe",
+      "example": "Mi jefe es serio."
+     },
+     {
+      "term": "Reunión",
+      "translation_pt": "Reunião",
+      "example": "Tengo una reunión."
+     },
+     {
+      "term": "Computadora",
+      "translation_pt": "Computador",
+      "example": "Uso la computadora."
+     },
+     {
+      "term": "Escritorio",
+      "translation_pt": "Mesa de trabalho",
+      "example": "Mi escritorio está limpio."
+     },
+     {
+      "term": "Empresa",
+      "translation_pt": "Empresa",
+      "example": "La empresa es grande."
+     },
+     {
+      "term": "Dinero",
+      "translation_pt": "Dinheiro",
+      "example": "Gano dinero trabajando."
+     },
+     {
+      "term": "Tarea",
+      "translation_pt": "Tarefa",
+      "example": "Tengo mucha tarea."
+     },
+     {
+      "term": "Proyecto",
+      "translation_pt": "Projeto",
+      "example": "Este proyecto es nuevo."
+     },
+     {
+      "term": "Equipo",
+      "translation_pt": "Equipe",
+      "example": "Somos un buen equipo."
+     },
+     {
+      "term": "Correo",
+      "translation_pt": "E-mail",
+      "example": "Envío un correo."
+     }
+    ],
+    "phrases": [
+     {
+      "text": "¿Cuál es tu profesión?",
+      "translation_pt": "Qual é a sua profissão?"
+     },
+     {
+      "text": "Soy estudiante.",
+      "translation_pt": "Sou estudante."
+     },
+     {
+      "text": "Estoy en una reunión.",
+      "translation_pt": "Estou em uma reunião."
+     },
+     {
+      "text": "Mi jefe es muy amable.",
+      "translation_pt": "Meu chefe é muito gentil."
+     },
+     {
+      "text": "Trabajo en una empresa.",
+      "translation_pt": "Trabalho em uma empresa."
+     }
+    ],
+    "dialogue": [
+     {
+      "speaker": "A",
+      "line": "¿Dónde trabajas?"
+     },
+     {
+      "speaker": "B",
+      "line": "Trabajo en una oficina."
+     },
+     {
+      "speaker": "A",
+      "line": "¿Cuál es tu profesión?"
+     },
+     {
+      "speaker": "B",
+      "line": "Soy profesor."
+     },
+     {
+      "speaker": "A",
+      "line": "¿Te gusta el trabajo?"
+     },
+     {
+      "speaker": "B",
+      "line": "Sí, el equipo es muy bueno."
+     },
+     {
+      "speaker": "A",
+      "line": "Qué bien."
+     },
+     {
+      "speaker": "B",
+      "line": "Sí, hasta luego."
+     }
+    ],
+    "quiz": [
+     {
+      "question": "O que significa 'profesor'?",
+      "options": [
+       "Chefe",
+       "Estudante",
+       "Professor",
+       "Doutor"
+      ],
+      "answer": "Professor"
+     },
+     {
+      "question": "Como se diz 'escritório'?",
+      "options": [
+       "Empresa",
+       "Tarea",
+       "Oficina",
+       "Proyecto"
+      ],
+      "answer": "Oficina"
+     },
+     {
+      "question": "O que significa 'reunión'?",
+      "options": [
+       "Equipe",
+       "Tarefa",
+       "Projeto",
+       "Reunião"
+      ],
+      "answer": "Reunião"
+     },
+     {
+      "question": "Como se diz 'computador'?",
+      "options": [
+       "Computadora",
+       "Correo",
+       "Escritorio",
+       "Jefe"
+      ],
+      "answer": "Computadora"
+     },
+     {
+      "question": "Qual profissão é mencionada no diálogo?",
+      "options": [
+       "Doctor",
+       "Estudiante",
+       "Profesor",
+       "Jefe"
+      ],
+      "answer": "Profesor"
+     }
+    ]
+   }
+  },
+  {
+   "day": 14,
+   "theme": "Revisión Semanal 2",
+   "objective_pt": "Revisar o conteúdo aprendido nos dias 8 a 13.",
+   "kind": "review",
+   "content": {
+    "vocabulary": [],
+    "phrases": [],
+    "dialogue": [],
+    "quiz": [
+     {
+      "question": "Como se diz 'loja'?",
+      "options": [
+       "Tienda",
+       "Ropa",
+       "Precio",
+       "Dinero"
+      ],
+      "answer": "Tienda"
+     },
+     {
+      "question": "O que significa '¿Cuánto cuesta?'?",
+      "options": [
+       "Quanto custa?",
+       "Qual a cor?",
+       "Onde fica?",
+       "É longe?"
+      ],
+      "answer": "Quanto custa?"
+     },
+     {
+      "question": "Como se diz 'frio'?",
+      "options": [
+       "Calor",
+       "Frío",
+       "Sol",
+       "Viento"
+      ],
+      "answer": "Frío"
+     },
+     {
+      "question": "Como se diz 'ontem'?",
+      "options": [
+       "Hoy",
+       "Mañana",
+       "Ayer",
+       "Tiempo"
+      ],
+      "answer": "Ayer"
+     },
+     {
+      "question": "Como se diz 'carro'?",
+      "options": [
+       "Coche",
+       "Taxi",
+       "Autobús",
+       "Tren"
+      ],
+      "answer": "Coche"
+     },
+     {
+      "question": "Como se diz 'direita'?",
+      "options": [
+       "Izquierda",
+       "Cerca",
+       "Derecha",
+       "Lejos"
+      ],
+      "answer": "Derecha"
+     },
+     {
+      "question": "Como se diz 'cabeça'?",
+      "options": [
+       "Mano",
+       "Ojo",
+       "Pie",
+       "Cabeza"
+      ],
+      "answer": "Cabeza"
+     },
+     {
+      "question": "Como se diz 'doente'?",
+      "options": [
+       "Enfermo",
+       "Cansado",
+       "Salud",
+       "Médico"
+      ],
+      "answer": "Enfermo"
+     },
+     {
+      "question": "Como se diz 'futebol'?",
+      "options": [
+       "Deporte",
+       "Cine",
+       "Fútbol",
+       "Música"
+      ],
+      "answer": "Fútbol"
+     },
+     {
+      "question": "Como se diz 'dançar'?",
+      "options": [
+       "Cantar",
+       "Bailar",
+       "Jugar",
+       "Viajar"
+      ],
+      "answer": "Bailar"
+     },
+     {
+      "question": "Como se diz 'professor'?",
+      "options": [
+       "Estudiante",
+       "Profesor",
+       "Jefe",
+       "Doctor"
+      ],
+      "answer": "Profesor"
+     },
+     {
+      "question": "Como se diz 'escritório'?",
+      "options": [
+       "Empresa",
+       "Oficina",
+       "Proyecto",
+       "Equipo"
+      ],
+      "answer": "Oficina"
+     }
+    ]
+   }
+  },
+  {
+   "day": 15,
+   "theme": "Examen Final",
+   "objective_pt": "Testar o conhecimento acumulado em todo o programa.",
+   "kind": "final",
+   "content": {
+    "vocabulary": [],
+    "phrases": [],
+    "dialogue": [
+     {
+      "speaker": "A",
+      "line": "Hola, ¿cómo estás hoy?"
+     },
+     {
+      "speaker": "B",
+      "line": "Muy bien, ¿y tú?"
+     },
+     {
+      "speaker": "A",
+      "line": "¿Qué tal el tiempo?"
+     },
+     {
+      "speaker": "B",
+      "line": "Hace mucho sol, ¡perfecto para jugar al fútbol!"
+     },
+     {
+      "speaker": "A",
+      "line": "¡Qué bien! Adiós."
+     },
+     {
+      "speaker": "B",
+      "line": "Hasta mañana."
+     }
+    ],
+    "quiz": [
+     {
+      "question": "Qual a tradução de 'Hola'?",
+      "options": [
+       "Tchau",
+       "Olá",
+       "Bom dia",
+       "Por favor"
+      ],
+      "answer": "Olá"
+     },
+     {
+      "question": "O que significa 'Mucho gusto'?",
+      "options": [
+       "Muito prazer",
+       "De nada",
+       "Obrigado",
+       "Tudo bem"
+      ],
+      "answer": "Muito prazer"
+     },
+     {
+      "question": "Quantos são 'oito' em espanhol?",
+      "options": [
+       "Ocho",
+       "Siete",
+       "Nueve",
+       "Diez"
+      ],
+      "answer": "Ocho"
+     },
+     {
+      "question": "Como se diz 'mãe'?",
+      "options": [
+       "Padre",
+       "Madre",
+       "Abuela",
+       "Hija"
+      ],
+      "answer": "Madre"
+     },
+     {
+      "question": "Qual verbo significa 'comer'?",
+      "options": [
+       "Beber",
+       "Dormir",
+       "Comer",
+       "Trabajar"
+      ],
+      "answer": "Comer"
+     },
+     {
+      "question": "Como se diz 'cadeira'?",
+      "options": [
+       "Mesa",
+       "Silla",
+       "Cama",
+       "Sofá"
+      ],
+      "answer": "Silla"
+     },
+     {
+      "question": "Como pedir a conta?",
+      "options": [
+       "El menú, por favor",
+       "El café, por favor",
+       "La cuenta, por favor",
+       "La sopa, por favor"
+      ],
+      "answer": "La cuenta, por favor"
+     },
+     {
+      "question": "Como se diz 'caro' em espanhol?",
+      "options": [
+       "Barato",
+       "Caro",
+       "Precio",
+       "Dinero"
+      ],
+      "answer": "Caro"
+     },
+     {
+      "question": "O que significa 'verano'?",
+      "options": [
+       "Inverno",
+       "Outono",
+       "Verão",
+       "Primavera"
+      ],
+      "answer": "Verão"
+     },
+     {
+      "question": "Como se diz 'trem'?",
+      "options": [
+       "Coche",
+       "Autobús",
+       "Tren",
+       "Taxi"
+      ],
+      "answer": "Tren"
+     },
+     {
+      "question": "Como se diz 'perto'?",
+      "options": [
+       "Lejos",
+       "Cerca",
+       "Derecha",
+       "Izquierda"
+      ],
+      "answer": "Cerca"
+     },
+     {
+      "question": "Como se diz 'cabeça'?",
+      "options": [
+       "Ojo",
+       "Mano",
+       "Pie",
+       "Cabeza"
+      ],
+      "answer": "Cabeza"
+     },
+     {
+      "question": "Como se diz 'doente'?",
+      "options": [
+       "Cansado",
+       "Salud",
+       "Enfermo",
+       "Médico"
+      ],
+      "answer": "Enfermo"
+     },
+     {
+      "question": "Como se diz 'dançar'?",
+      "options": [
+       "Cantar",
+       "Bailar",
+       "Jugar",
+       "Viajar"
+      ],
+      "answer": "Bailar"
+     },
+     {
+      "question": "Como se diz 'professor'?",
+      "options": [
+       "Estudiante",
+       "Profesor",
+       "Chefe",
+       "Doctor"
+      ],
+      "answer": "Profesor"
+     }
+    ]
+   }
+  }
+ ]
+}

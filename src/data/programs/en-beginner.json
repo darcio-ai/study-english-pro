@@ -1,0 +1,2778 @@
+{
+  "days": [
+    {
+      "day": 1,
+      "theme": "Greetings and Introductions",
+      "objective_pt": "Aprenda a cumprimentar pessoas e dizer seu nome.",
+      "kind": "lesson",
+      "content": {
+        "vocabulary": [
+          {
+            "term": "Hello",
+            "translation_pt": "Olá",
+            "example": "Hello, I am John."
+          },
+          {
+            "term": "Hi",
+            "translation_pt": "Oi",
+            "example": "Hi, how are you?"
+          },
+          {
+            "term": "Name",
+            "translation_pt": "Nome",
+            "example": "What is your name?"
+          },
+          {
+            "term": "Good morning",
+            "translation_pt": "Bom dia",
+            "example": "Good morning, teacher."
+          },
+          {
+            "term": "Good afternoon",
+            "translation_pt": "Boa tarde",
+            "example": "Good afternoon, class."
+          },
+          {
+            "term": "Good night",
+            "translation_pt": "Boa noite",
+            "example": "Good night, see you tomorrow."
+          },
+          {
+            "term": "I am",
+            "translation_pt": "Eu sou/estou",
+            "example": "I am happy."
+          },
+          {
+            "term": "You are",
+            "translation_pt": "Você é/está",
+            "example": "You are my friend."
+          },
+          {
+            "term": "Nice",
+            "translation_pt": "Legal",
+            "example": "Nice to meet you."
+          },
+          {
+            "term": "Meet",
+            "translation_pt": "Conhecer",
+            "example": "I meet my friend."
+          },
+          {
+            "term": "To",
+            "translation_pt": "Para",
+            "example": "Nice to meet you."
+          },
+          {
+            "term": "Friend",
+            "translation_pt": "Amigo",
+            "example": "He is my friend."
+          },
+          {
+            "term": "Thanks",
+            "translation_pt": "Obrigado",
+            "example": "Thanks for your help."
+          },
+          {
+            "term": "See you",
+            "translation_pt": "Até logo",
+            "example": "See you later."
+          },
+          {
+            "term": "Bye",
+            "translation_pt": "Tchau",
+            "example": "Bye, see you."
+          }
+        ],
+        "phrases": [
+          {
+            "text": "What is your name?",
+            "translation_pt": "Qual é o seu nome?"
+          },
+          {
+            "text": "My name is Ana.",
+            "translation_pt": "Meu nome é Ana."
+          },
+          {
+            "text": "Nice to meet you.",
+            "translation_pt": "Prazer em te conhecer."
+          },
+          {
+            "text": "How are you?",
+            "translation_pt": "Como vai você?"
+          },
+          {
+            "text": "I am fine, thanks.",
+            "translation_pt": "Estou bem, obrigado."
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "A",
+            "line": "Hello! My name is Ana."
+          },
+          {
+            "speaker": "B",
+            "line": "Hi Ana! I am Tom."
+          },
+          {
+            "speaker": "A",
+            "line": "Nice to meet you, Tom."
+          },
+          {
+            "speaker": "B",
+            "line": "Nice to meet you too."
+          },
+          {
+            "speaker": "A",
+            "line": "How are you?"
+          },
+          {
+            "speaker": "B",
+            "line": "I am fine, thanks. And you?"
+          },
+          {
+            "speaker": "A",
+            "line": "I am fine too."
+          },
+          {
+            "speaker": "B",
+            "line": "See you later!"
+          }
+        ],
+        "quiz": [
+          {
+            "question": "Como se diz 'Olá' em inglês?",
+            "options": [
+              "Hello",
+              "Bye",
+              "Name",
+              "Fine"
+            ],
+            "answer": "Hello"
+          },
+          {
+            "question": "Como você completa: 'My _____ is Ana'?",
+            "options": [
+              "meet",
+              "name",
+              "nice",
+              "hi"
+            ],
+            "answer": "name"
+          },
+          {
+            "question": "Como responder 'How are you?'",
+            "options": [
+              "Nice to meet you",
+              "I am fine",
+              "Good night",
+              "Bye"
+            ],
+            "answer": "I am fine"
+          },
+          {
+            "question": "Como se diz 'Prazer em te conhecer'?",
+            "options": [
+              "Good morning",
+              "See you",
+              "Nice to meet you",
+              "I am Ana"
+            ],
+            "answer": "Nice to meet you"
+          },
+          {
+            "question": "Qual é a tradução de 'See you later'?",
+            "options": [
+              "Olá",
+              "Tchau",
+              "Até logo",
+              "Bom dia"
+            ],
+            "answer": "Até logo"
+          }
+        ]
+      }
+    },
+    {
+      "day": 2,
+      "theme": "Numbers 0-20",
+      "objective_pt": "Aprenda a contar de zero a vinte.",
+      "kind": "lesson",
+      "content": {
+        "vocabulary": [
+          {
+            "term": "Zero",
+            "translation_pt": "Zero",
+            "example": "Zero is a number."
+          },
+          {
+            "term": "One",
+            "translation_pt": "Um",
+            "example": "I have one book."
+          },
+          {
+            "term": "Two",
+            "translation_pt": "Dois",
+            "example": "Two pens."
+          },
+          {
+            "term": "Three",
+            "translation_pt": "Três",
+            "example": "Three cats."
+          },
+          {
+            "term": "Four",
+            "translation_pt": "Quatro",
+            "example": "Four dogs."
+          },
+          {
+            "term": "Five",
+            "translation_pt": "Cinco",
+            "example": "Five dollars."
+          },
+          {
+            "term": "Six",
+            "translation_pt": "Seis",
+            "example": "Six chairs."
+          },
+          {
+            "term": "Seven",
+            "translation_pt": "Sete",
+            "example": "Seven days."
+          },
+          {
+            "term": "Eight",
+            "translation_pt": "Oito",
+            "example": "Eight items."
+          },
+          {
+            "term": "Nine",
+            "translation_pt": "Nove",
+            "example": "Nine cars."
+          },
+          {
+            "term": "Ten",
+            "translation_pt": "Dez",
+            "example": "Ten fingers."
+          },
+          {
+            "term": "Eleven",
+            "translation_pt": "Onze",
+            "example": "Eleven players."
+          },
+          {
+            "term": "Twelve",
+            "translation_pt": "Doze",
+            "example": "Twelve months."
+          },
+          {
+            "term": "Twenty",
+            "translation_pt": "Vinte",
+            "example": "Twenty students."
+          },
+          {
+            "term": "Number",
+            "translation_pt": "Número",
+            "example": "What is your number?"
+          }
+        ],
+        "phrases": [
+          {
+            "text": "What number is this?",
+            "translation_pt": "Que número é este?"
+          },
+          {
+            "text": "This is number five.",
+            "translation_pt": "Este é o número cinco."
+          },
+          {
+            "text": "I have two brothers.",
+            "translation_pt": "Eu tenho dois irmãos."
+          },
+          {
+            "text": "One, two, three.",
+            "translation_pt": "Um, dois, três."
+          },
+          {
+            "text": "How many cats?",
+            "translation_pt": "Quantos gatos?"
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "A",
+            "line": "How many pens do you have?"
+          },
+          {
+            "speaker": "B",
+            "line": "I have three pens."
+          },
+          {
+            "speaker": "A",
+            "line": "I have five pens."
+          },
+          {
+            "speaker": "B",
+            "line": "So, we have eight pens total."
+          },
+          {
+            "speaker": "A",
+            "line": "Yes, that is correct."
+          },
+          {
+            "speaker": "B",
+            "line": "Can you count to ten?"
+          },
+          {
+            "speaker": "A",
+            "line": "Yes, one, two, three, four, five, six, seven, eight, nine, ten."
+          },
+          {
+            "speaker": "B",
+            "line": "Great!"
+          }
+        ],
+        "quiz": [
+          {
+            "question": "Como se diz '3' em inglês?",
+            "options": [
+              "Two",
+              "Three",
+              "Four",
+              "Five"
+            ],
+            "answer": "Three"
+          },
+          {
+            "question": "Qual número é 'Ten'?",
+            "options": [
+              "8",
+              "9",
+              "10",
+              "11"
+            ],
+            "answer": "10"
+          },
+          {
+            "question": "Como se pergunta 'Quantos...?'",
+            "options": [
+              "How many",
+              "How are",
+              "What is",
+              "See you"
+            ],
+            "answer": "How many"
+          },
+          {
+            "question": "Como se diz '12' em inglês?",
+            "options": [
+              "Eleven",
+              "Twelve",
+              "Twenty",
+              "Two"
+            ],
+            "answer": "Twelve"
+          },
+          {
+            "question": "Complete: 'I have _____ cats' (4)?",
+            "options": [
+              "one",
+              "two",
+              "three",
+              "four"
+            ],
+            "answer": "four"
+          }
+        ]
+      }
+    },
+    {
+      "day": 3,
+      "theme": "Family Members",
+      "objective_pt": "Aprenda o nome dos membros da família.",
+      "kind": "lesson",
+      "content": {
+        "vocabulary": [
+          {
+            "term": "Mother",
+            "translation_pt": "Mãe",
+            "example": "My mother is kind."
+          },
+          {
+            "term": "Father",
+            "translation_pt": "Pai",
+            "example": "My father is tall."
+          },
+          {
+            "term": "Brother",
+            "translation_pt": "Irmão",
+            "example": "I have a brother."
+          },
+          {
+            "term": "Sister",
+            "translation_pt": "Irmã",
+            "example": "My sister is young."
+          },
+          {
+            "term": "Son",
+            "translation_pt": "Filho",
+            "example": "He is my son."
+          },
+          {
+            "term": "Daughter",
+            "translation_pt": "Filha",
+            "example": "She is my daughter."
+          },
+          {
+            "term": "Grandmother",
+            "translation_pt": "Avó",
+            "example": "My grandmother is old."
+          },
+          {
+            "term": "Grandfather",
+            "translation_pt": "Avô",
+            "example": "My grandfather is nice."
+          },
+          {
+            "term": "Family",
+            "translation_pt": "Família",
+            "example": "I love my family."
+          },
+          {
+            "term": "Parents",
+            "translation_pt": "Pais",
+            "example": "My parents are here."
+          },
+          {
+            "term": "Baby",
+            "translation_pt": "Bebê",
+            "example": "The baby is cute."
+          },
+          {
+            "term": "Uncle",
+            "translation_pt": "Tio",
+            "example": "My uncle is funny."
+          },
+          {
+            "term": "Aunt",
+            "translation_pt": "Tia",
+            "example": "My aunt is smart."
+          },
+          {
+            "term": "Cousin",
+            "translation_pt": "Primo(a)",
+            "example": "I have a cousin."
+          },
+          {
+            "term": "Love",
+            "translation_pt": "Amar",
+            "example": "I love my sister."
+          }
+        ],
+        "phrases": [
+          {
+            "text": "This is my mother.",
+            "translation_pt": "Esta é minha mãe."
+          },
+          {
+            "text": "Who is he?",
+            "translation_pt": "Quem é ele?"
+          },
+          {
+            "text": "She is my sister.",
+            "translation_pt": "Ela é minha irmã."
+          },
+          {
+            "text": "I love my family.",
+            "translation_pt": "Eu amo minha família."
+          },
+          {
+            "text": "They are my parents.",
+            "translation_pt": "Eles são meus pais."
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "A",
+            "line": "Who is this?"
+          },
+          {
+            "speaker": "B",
+            "line": "This is my father."
+          },
+          {
+            "speaker": "A",
+            "line": "And who is she?"
+          },
+          {
+            "speaker": "B",
+            "line": "She is my mother."
+          },
+          {
+            "speaker": "A",
+            "line": "Do you have a brother?"
+          },
+          {
+            "speaker": "B",
+            "line": "Yes, I have one brother and one sister."
+          },
+          {
+            "speaker": "A",
+            "line": "I love my family too!"
+          },
+          {
+            "speaker": "B",
+            "line": "Families are important."
+          }
+        ],
+        "quiz": [
+          {
+            "question": "Quem é 'Mother'?",
+            "options": [
+              "Pai",
+              "Irmão",
+              "Mãe",
+              "Avó"
+            ],
+            "answer": "Mãe"
+          },
+          {
+            "question": "Quem é 'Father'?",
+            "options": [
+              "Pai",
+              "Filho",
+              "Tio",
+              "Primo"
+            ],
+            "answer": "Pai"
+          },
+          {
+            "question": "Como se diz 'irmã' em inglês?",
+            "options": [
+              "Brother",
+              "Sister",
+              "Mother",
+              "Aunt"
+            ],
+            "answer": "Sister"
+          },
+          {
+            "question": "Como se pergunta 'Quem é ele?'",
+            "options": [
+              "Who is she?",
+              "Who is he?",
+              "What is he?",
+              "Where is he?"
+            ],
+            "answer": "Who is he?"
+          },
+          {
+            "question": "Quem são os 'Parents'?",
+            "options": [
+              "Avós",
+              "Tios",
+              "Pais",
+              "Filhos"
+            ],
+            "answer": "Pais"
+          }
+        ]
+      }
+    },
+    {
+      "day": 4,
+      "theme": "Daily Routine",
+      "objective_pt": "Aprenda a falar sobre ações do dia a dia.",
+      "kind": "lesson",
+      "content": {
+        "vocabulary": [
+          {
+            "term": "Wake up",
+            "translation_pt": "Acordar",
+            "example": "I wake up early."
+          },
+          {
+            "term": "Eat",
+            "translation_pt": "Comer",
+            "example": "I eat bread."
+          },
+          {
+            "term": "Drink",
+            "translation_pt": "Beber",
+            "example": "I drink water."
+          },
+          {
+            "term": "Work",
+            "translation_pt": "Trabalhar",
+            "example": "I work today."
+          },
+          {
+            "term": "Study",
+            "translation_pt": "Estudar",
+            "example": "I study English."
+          },
+          {
+            "term": "Sleep",
+            "translation_pt": "Dormir",
+            "example": "I sleep at night."
+          },
+          {
+            "term": "Go",
+            "translation_pt": "Ir",
+            "example": "I go to school."
+          },
+          {
+            "term": "Read",
+            "translation_pt": "Ler",
+            "example": "I read a book."
+          },
+          {
+            "term": "Write",
+            "translation_pt": "Escrever",
+            "example": "I write my name."
+          },
+          {
+            "term": "Run",
+            "translation_pt": "Correr",
+            "example": "I run in the park."
+          },
+          {
+            "term": "Play",
+            "translation_pt": "Brincar/Jogar",
+            "example": "I play soccer."
+          },
+          {
+            "term": "Time",
+            "translation_pt": "Tempo",
+            "example": "It is time."
+          },
+          {
+            "term": "Day",
+            "translation_pt": "Dia",
+            "example": "Have a good day."
+          },
+          {
+            "term": "Morning",
+            "translation_pt": "Manhã",
+            "example": "I like the morning."
+          },
+          {
+            "term": "Night",
+            "translation_pt": "Noite",
+            "example": "Good night!"
+          }
+        ],
+        "phrases": [
+          {
+            "text": "I wake up at seven.",
+            "translation_pt": "Eu acordo às sete."
+          },
+          {
+            "text": "I study English.",
+            "translation_pt": "Eu estudo inglês."
+          },
+          {
+            "text": "I drink water.",
+            "translation_pt": "Eu bebo água."
+          },
+          {
+            "text": "I sleep at night.",
+            "translation_pt": "Eu durmo à noite."
+          },
+          {
+            "text": "I work every day.",
+            "translation_pt": "Eu trabalho todo dia."
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "A",
+            "line": "What do you do in the morning?"
+          },
+          {
+            "speaker": "B",
+            "line": "I wake up and drink coffee."
+          },
+          {
+            "speaker": "A",
+            "line": "Do you work?"
+          },
+          {
+            "speaker": "B",
+            "line": "Yes, I work and I study English."
+          },
+          {
+            "speaker": "A",
+            "line": "What do you do at night?"
+          },
+          {
+            "speaker": "B",
+            "line": "I read a book and I sleep."
+          },
+          {
+            "speaker": "A",
+            "line": "Good routine!"
+          },
+          {
+            "speaker": "B",
+            "line": "Thanks!"
+          }
+        ],
+        "quiz": [
+          {
+            "question": "O que significa 'Wake up'?",
+            "options": [
+              "Dormir",
+              "Comer",
+              "Acordar",
+              "Trabalhar"
+            ],
+            "answer": "Acordar"
+          },
+          {
+            "question": "Como se diz 'Beber água'?",
+            "options": [
+              "Eat water",
+              "Drink water",
+              "Read water",
+              "Run water"
+            ],
+            "answer": "Drink water"
+          },
+          {
+            "question": "Traduza 'I study English'.",
+            "options": [
+              "Eu trabalho inglês",
+              "Eu leio inglês",
+              "Eu estudo inglês",
+              "Eu escrevo inglês"
+            ],
+            "answer": "Eu estudo inglês"
+          },
+          {
+            "question": "Qual é a tradução de 'Sleep'?",
+            "options": [
+              "Correr",
+              "Jogar",
+              "Dormir",
+              "Ler"
+            ],
+            "answer": "Dormir"
+          },
+          {
+            "question": "Como você diz que trabalha todo dia?",
+            "options": [
+              "I work every day",
+              "I sleep every day",
+              "I eat every day",
+              "I run every day"
+            ],
+            "answer": "I work every day"
+          }
+        ]
+      }
+    },
+    {
+      "day": 5,
+      "theme": "Home Objects",
+      "objective_pt": "Aprenda os nomes de objetos comuns em uma casa.",
+      "kind": "lesson",
+      "content": {
+        "vocabulary": [
+          {
+            "term": "Table",
+            "translation_pt": "Mesa",
+            "example": "The book is on the table."
+          },
+          {
+            "term": "Chair",
+            "translation_pt": "Cadeira",
+            "example": "Sit on the chair."
+          },
+          {
+            "term": "Bed",
+            "translation_pt": "Cama",
+            "example": "The bed is soft."
+          },
+          {
+            "term": "Door",
+            "translation_pt": "Porta",
+            "example": "Open the door."
+          },
+          {
+            "term": "Window",
+            "translation_pt": "Janela",
+            "example": "Close the window."
+          },
+          {
+            "term": "Lamp",
+            "translation_pt": "Luminária",
+            "example": "Turn on the lamp."
+          },
+          {
+            "term": "Book",
+            "translation_pt": "Livro",
+            "example": "Read this book."
+          },
+          {
+            "term": "Pen",
+            "translation_pt": "Caneta",
+            "example": "I need a pen."
+          },
+          {
+            "term": "Key",
+            "translation_pt": "Chave",
+            "example": "Where is the key?"
+          },
+          {
+            "term": "Phone",
+            "translation_pt": "Telefone",
+            "example": "My phone is new."
+          },
+          {
+            "term": "House",
+            "translation_pt": "Casa",
+            "example": "My house is big."
+          },
+          {
+            "term": "Room",
+            "translation_pt": "Quarto/Cômodo",
+            "example": "This is my room."
+          },
+          {
+            "term": "Floor",
+            "translation_pt": "Chão",
+            "example": "Clean the floor."
+          },
+          {
+            "term": "Wall",
+            "translation_pt": "Parede",
+            "example": "The wall is white."
+          },
+          {
+            "term": "Clock",
+            "translation_pt": "Relógio",
+            "example": "The clock is on the wall."
+          }
+        ],
+        "phrases": [
+          {
+            "text": "Where is the key?",
+            "translation_pt": "Onde está a chave?"
+          },
+          {
+            "text": "The phone is on the table.",
+            "translation_pt": "O telefone está na mesa."
+          },
+          {
+            "text": "Open the door, please.",
+            "translation_pt": "Abra a porta, por favor."
+          },
+          {
+            "text": "My room is small.",
+            "translation_pt": "Meu quarto é pequeno."
+          },
+          {
+            "text": "I have a blue pen.",
+            "translation_pt": "Eu tenho uma caneta azul."
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "A",
+            "line": "Where is my phone?"
+          },
+          {
+            "speaker": "B",
+            "line": "It is on the table."
+          },
+          {
+            "speaker": "A",
+            "line": "And my key?"
+          },
+          {
+            "speaker": "B",
+            "line": "It is on the chair."
+          },
+          {
+            "speaker": "A",
+            "line": "Thank you!"
+          },
+          {
+            "speaker": "B",
+            "line": "You are welcome. Is your house big?"
+          },
+          {
+            "speaker": "A",
+            "line": "No, it is small but nice."
+          },
+          {
+            "speaker": "B",
+            "line": "Great."
+          }
+        ],
+        "quiz": [
+          {
+            "question": "Como se diz 'mesa'?",
+            "options": [
+              "Chair",
+              "Table",
+              "Bed",
+              "Door"
+            ],
+            "answer": "Table"
+          },
+          {
+            "question": "Como se diz 'chave'?",
+            "options": [
+              "Pen",
+              "Phone",
+              "Key",
+              "Lamp"
+            ],
+            "answer": "Key"
+          },
+          {
+            "question": "Traduza 'Open the door'.",
+            "options": [
+              "Feche a porta",
+              "Abra a porta",
+              "A porta está aberta",
+              "Chave na porta"
+            ],
+            "answer": "Abra a porta"
+          },
+          {
+            "question": "Onde está o 'phone' na frase 'The phone is on the table'?",
+            "options": [
+              "Em cima da cadeira",
+              "Em cima da mesa",
+              "Na parede",
+              "No chão"
+            ],
+            "answer": "Em cima da mesa"
+          },
+          {
+            "question": "Qual é a tradução de 'Chair'?",
+            "options": [
+              "Cama",
+              "Mesa",
+              "Cadeira",
+              "Porta"
+            ],
+            "answer": "Cadeira"
+          }
+        ]
+      }
+    },
+    {
+      "day": 6,
+      "theme": "Food and Drinks",
+      "objective_pt": "Aprenda vocabulário de comidas e bebidas.",
+      "kind": "lesson",
+      "content": {
+        "vocabulary": [
+          {
+            "term": "Bread",
+            "translation_pt": "Pão",
+            "example": "I eat bread."
+          },
+          {
+            "term": "Water",
+            "translation_pt": "Água",
+            "example": "I drink water."
+          },
+          {
+            "term": "Milk",
+            "translation_pt": "Leite",
+            "example": "I like milk."
+          },
+          {
+            "term": "Coffee",
+            "translation_pt": "Café",
+            "example": "Coffee is hot."
+          },
+          {
+            "term": "Apple",
+            "translation_pt": "Maçã",
+            "example": "The apple is red."
+          },
+          {
+            "term": "Egg",
+            "translation_pt": "Ovo",
+            "example": "I eat one egg."
+          },
+          {
+            "term": "Meat",
+            "translation_pt": "Carne",
+            "example": "I like meat."
+          },
+          {
+            "term": "Rice",
+            "translation_pt": "Arroz",
+            "example": "Rice is good."
+          },
+          {
+            "term": "Fruit",
+            "translation_pt": "Fruta",
+            "example": "Eat more fruit."
+          },
+          {
+            "term": "Sugar",
+            "translation_pt": "Açúcar",
+            "example": "I need sugar."
+          },
+          {
+            "term": "Tea",
+            "translation_pt": "Chá",
+            "example": "Do you want tea?"
+          },
+          {
+            "term": "Fish",
+            "translation_pt": "Peixe",
+            "example": "I eat fish."
+          },
+          {
+            "term": "Banana",
+            "translation_pt": "Banana",
+            "example": "I like banana."
+          },
+          {
+            "term": "Lunch",
+            "translation_pt": "Almoço",
+            "example": "Lunch is ready."
+          },
+          {
+            "term": "Food",
+            "translation_pt": "Comida",
+            "example": "The food is hot."
+          }
+        ],
+        "phrases": [
+          {
+            "text": "I like coffee.",
+            "translation_pt": "Eu gosto de café."
+          },
+          {
+            "text": "Do you want water?",
+            "translation_pt": "Você quer água?"
+          },
+          {
+            "text": "The apple is good.",
+            "translation_pt": "A maçã é boa."
+          },
+          {
+            "text": "I eat rice and meat.",
+            "translation_pt": "Eu como arroz e carne."
+          },
+          {
+            "text": "Lunch is at noon.",
+            "translation_pt": "O almoço é ao meio-dia."
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "A",
+            "line": "Do you want coffee or tea?"
+          },
+          {
+            "speaker": "B",
+            "line": "I want coffee, please."
+          },
+          {
+            "speaker": "A",
+            "line": "Do you want sugar?"
+          },
+          {
+            "speaker": "B",
+            "line": "No, thanks."
+          },
+          {
+            "speaker": "A",
+            "line": "Are you hungry?"
+          },
+          {
+            "speaker": "B",
+            "line": "Yes, I want some rice and meat."
+          },
+          {
+            "speaker": "A",
+            "line": "Okay, the food is here."
+          },
+          {
+            "speaker": "B",
+            "line": "Delicious!"
+          }
+        ],
+        "quiz": [
+          {
+            "question": "Como se diz 'Pão'?",
+            "options": [
+              "Bread",
+              "Meat",
+              "Rice",
+              "Fish"
+            ],
+            "answer": "Bread"
+          },
+          {
+            "question": "Traduza 'I like coffee'.",
+            "options": [
+              "Eu bebo café",
+              "Eu gosto de café",
+              "Eu quero café",
+              "Eu faço café"
+            ],
+            "answer": "Eu gosto de café"
+          },
+          {
+            "question": "Como se diz 'Água'?",
+            "options": [
+              "Milk",
+              "Tea",
+              "Water",
+              "Coffee"
+            ],
+            "answer": "Water"
+          },
+          {
+            "question": "O que é 'Apple'?",
+            "options": [
+              "Banana",
+              "Maçã",
+              "Arroz",
+              "Carne"
+            ],
+            "answer": "Maçã"
+          },
+          {
+            "question": "Como se pergunta 'Você quer café?'",
+            "options": [
+              "Do you like coffee?",
+              "Do you want coffee?",
+              "Is coffee good?",
+              "You want coffee?"
+            ],
+            "answer": "Do you want coffee?"
+          }
+        ]
+      }
+    },
+    {
+      "day": 7,
+      "theme": "Review Week 1",
+      "objective_pt": "Revise todo o conteúdo aprendido na primeira semana.",
+      "kind": "review",
+      "content": {
+        "vocabulary": [],
+        "phrases": [],
+        "dialogue": [],
+        "quiz": [
+          {
+            "question": "Qual é a tradução de 'Hello'?",
+            "options": [
+              "Oi/Olá",
+              "Tchau",
+              "Bom dia",
+              "Obrigado"
+            ],
+            "answer": "Oi/Olá"
+          },
+          {
+            "question": "Complete: 'My name ____ Ana.'",
+            "options": [
+              "are",
+              "am",
+              "is",
+              "be"
+            ],
+            "answer": "is"
+          },
+          {
+            "question": "Como se escreve '5'?",
+            "options": [
+              "four",
+              "five",
+              "six",
+              "fifteen"
+            ],
+            "answer": "five"
+          },
+          {
+            "question": "Quem é 'Brother'?",
+            "options": [
+              "Pai",
+              "Irmão",
+              "Avô",
+              "Primo"
+            ],
+            "answer": "Irmão"
+          },
+          {
+            "question": "Como se diz 'acordar'?",
+            "options": [
+              "Wake up",
+              "Eat",
+              "Sleep",
+              "Work"
+            ],
+            "answer": "Wake up"
+          },
+          {
+            "question": "Qual destas é uma 'Home object'?",
+            "options": [
+              "Bread",
+              "Mother",
+              "Table",
+              "Run"
+            ],
+            "answer": "Table"
+          },
+          {
+            "question": "Traduza 'Where is my phone?'",
+            "options": [
+              "Onde é meu telefone?",
+              "Onde está meu telefone?",
+              "Quem é meu telefone?",
+              "Como é meu telefone?"
+            ],
+            "answer": "Onde está meu telefone?"
+          },
+          {
+            "question": "O que você 'drinks'?",
+            "options": [
+              "Bread",
+              "Water",
+              "Rice",
+              "Meat"
+            ],
+            "answer": "Water"
+          },
+          {
+            "question": "Qual é a tradução de 'Nice to meet you'?",
+            "options": [
+              "Como vai?",
+              "Prazer em conhecer",
+              "Tchau",
+              "Bom dia"
+            ],
+            "answer": "Prazer em conhecer"
+          },
+          {
+            "question": "Complete: 'One, two, _____'",
+            "options": [
+              "ten",
+              "three",
+              "four",
+              "five"
+            ],
+            "answer": "three"
+          },
+          {
+            "question": "Quem são 'Parents'?",
+            "options": [
+              "Avós",
+              "Pais",
+              "Tios",
+              "Filhos"
+            ],
+            "answer": "Pais"
+          },
+          {
+            "question": "Como se diz 'Eu gosto de...'?",
+            "options": [
+              "I am...",
+              "I like...",
+              "I want...",
+              "I eat..."
+            ],
+            "answer": "I like..."
+          }
+        ]
+      }
+    },
+    {
+      "day": 8,
+      "theme": "Ordering in a Restaurant",
+      "objective_pt": "Aprenda a pedir comida e bebida em um restaurante.",
+      "kind": "lesson",
+      "content": {
+        "vocabulary": [
+          {
+            "term": "Menu",
+            "translation_pt": "Cardápio",
+            "example": "Can I see the menu?"
+          },
+          {
+            "term": "Order",
+            "translation_pt": "Pedido",
+            "example": "I want to order."
+          },
+          {
+            "term": "Water",
+            "translation_pt": "Água",
+            "example": "A glass of water."
+          },
+          {
+            "term": "Please",
+            "translation_pt": "Por favor",
+            "example": "Coffee, please."
+          },
+          {
+            "term": "Thanks",
+            "translation_pt": "Obrigado",
+            "example": "Thanks for the food."
+          },
+          {
+            "term": "Bill",
+            "translation_pt": "Conta",
+            "example": "Can I have the bill?"
+          },
+          {
+            "term": "Check",
+            "translation_pt": "Conta",
+            "example": "The check, please."
+          },
+          {
+            "term": "Restaurant",
+            "translation_pt": "Restaurante",
+            "example": "This restaurant is good."
+          },
+          {
+            "term": "Table",
+            "translation_pt": "Mesa",
+            "example": "A table for two."
+          },
+          {
+            "term": "Delicious",
+            "translation_pt": "Delicioso",
+            "example": "The food is delicious."
+          },
+          {
+            "term": "Hungry",
+            "translation_pt": "Faminto",
+            "example": "I am hungry."
+          },
+          {
+            "term": "Eat",
+            "translation_pt": "Comer",
+            "example": "I want to eat."
+          },
+          {
+            "term": "Drink",
+            "translation_pt": "Beber",
+            "example": "I want to drink."
+          },
+          {
+            "term": "Today",
+            "translation_pt": "Hoje",
+            "example": "I eat out today."
+          },
+          {
+            "term": "Everything",
+            "translation_pt": "Tudo",
+            "example": "Everything is good."
+          }
+        ],
+        "phrases": [
+          {
+            "text": "I want the menu, please.",
+            "translation_pt": "Eu quero o cardápio, por favor."
+          },
+          {
+            "text": "A table for two.",
+            "translation_pt": "Uma mesa para dois."
+          },
+          {
+            "text": "I want some rice.",
+            "translation_pt": "Eu quero um pouco de arroz."
+          },
+          {
+            "text": "Can I have the bill?",
+            "translation_pt": "Pode me trazer a conta?"
+          },
+          {
+            "text": "It is delicious.",
+            "translation_pt": "Está delicioso."
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "A",
+            "line": "Hello, a table for two, please."
+          },
+          {
+            "speaker": "B",
+            "line": "Right this way. Here is the menu."
+          },
+          {
+            "speaker": "A",
+            "line": "Thanks. I am hungry."
+          },
+          {
+            "speaker": "B",
+            "line": "What do you want to eat?"
+          },
+          {
+            "speaker": "A",
+            "line": "I want the fish and rice."
+          },
+          {
+            "speaker": "B",
+            "line": "And to drink?"
+          },
+          {
+            "speaker": "A",
+            "line": "Water, please."
+          },
+          {
+            "speaker": "B",
+            "line": "Great. The bill, please?"
+          },
+          {
+            "speaker": "A",
+            "line": "Yes, thank you."
+          }
+        ],
+        "quiz": [
+          {
+            "question": "Como se pede a conta?",
+            "options": [
+              "I want the menu",
+              "Can I have the bill?",
+              "I am hungry",
+              "Table for two"
+            ],
+            "answer": "Can I have the bill?"
+          },
+          {
+            "question": "O que é 'Menu'?",
+            "options": [
+              "Mesa",
+              "Conta",
+              "Cardápio",
+              "Comida"
+            ],
+            "answer": "Cardápio"
+          },
+          {
+            "question": "Como pedir uma mesa para dois?",
+            "options": [
+              "Table for one",
+              "Table for two",
+              "Table for three",
+              "Table for four"
+            ],
+            "answer": "Table for two"
+          },
+          {
+            "question": "Como dizer que a comida está gostosa?",
+            "options": [
+              "It is hungry",
+              "It is delicious",
+              "It is menu",
+              "It is bill"
+            ],
+            "answer": "It is delicious"
+          },
+          {
+            "question": "Traduza 'I am hungry'.",
+            "options": [
+              "Estou com sede",
+              "Estou com fome",
+              "Estou cansado",
+              "Estou feliz"
+            ],
+            "answer": "Estou com fome"
+          }
+        ]
+      }
+    },
+    {
+      "day": 9,
+      "theme": "Shopping and Prices",
+      "objective_pt": "Aprenda a falar sobre compras e preços básicos.",
+      "kind": "lesson",
+      "content": {
+        "vocabulary": [
+          {
+            "term": "Shop",
+            "translation_pt": "Loja/Comprar",
+            "example": "I go to the shop."
+          },
+          {
+            "term": "Price",
+            "translation_pt": "Preço",
+            "example": "What is the price?"
+          },
+          {
+            "term": "Money",
+            "translation_pt": "Dinheiro",
+            "example": "I have money."
+          },
+          {
+            "term": "Cheap",
+            "translation_pt": "Barato",
+            "example": "It is cheap."
+          },
+          {
+            "term": "Expensive",
+            "translation_pt": "Caro",
+            "example": "It is expensive."
+          },
+          {
+            "term": "Buy",
+            "translation_pt": "Comprar",
+            "example": "I want to buy this."
+          },
+          {
+            "term": "Dollar",
+            "translation_pt": "Dólar",
+            "example": "It is five dollars."
+          },
+          {
+            "term": "Shirt",
+            "translation_pt": "Camisa",
+            "example": "The shirt is blue."
+          },
+          {
+            "term": "Hat",
+            "translation_pt": "Chapéu",
+            "example": "I like this hat."
+          },
+          {
+            "term": "Big",
+            "translation_pt": "Grande",
+            "example": "It is too big."
+          },
+          {
+            "term": "Small",
+            "translation_pt": "Pequeno",
+            "example": "It is too small."
+          },
+          {
+            "term": "Color",
+            "translation_pt": "Cor",
+            "example": "What color is it?"
+          },
+          {
+            "term": "Nice",
+            "translation_pt": "Legal/Bonito",
+            "example": "That is a nice shirt."
+          },
+          {
+            "term": "Pay",
+            "translation_pt": "Pagar",
+            "example": "I pay now."
+          },
+          {
+            "term": "Card",
+            "translation_pt": "Cartão",
+            "example": "Do you accept card?"
+          }
+        ],
+        "phrases": [
+          {
+            "text": "How much is this?",
+            "translation_pt": "Quanto custa isto?"
+          },
+          {
+            "text": "It is too expensive.",
+            "translation_pt": "É muito caro."
+          },
+          {
+            "text": "I want to buy this.",
+            "translation_pt": "Eu quero comprar isto."
+          },
+          {
+            "text": "Is it cheap?",
+            "translation_pt": "É barato?"
+          },
+          {
+            "text": "I pay with card.",
+            "translation_pt": "Eu pago com cartão."
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "A",
+            "line": "Hello. How much is this hat?"
+          },
+          {
+            "speaker": "B",
+            "line": "It is ten dollars."
+          },
+          {
+            "speaker": "A",
+            "line": "Ten dollars? It is cheap."
+          },
+          {
+            "speaker": "B",
+            "line": "Yes, it is a good price."
+          },
+          {
+            "speaker": "A",
+            "line": "I want to buy it. Can I pay with card?"
+          },
+          {
+            "speaker": "B",
+            "line": "Yes, of course."
+          },
+          {
+            "speaker": "A",
+            "line": "Thank you!"
+          },
+          {
+            "speaker": "B",
+            "line": "You are welcome."
+          }
+        ],
+        "quiz": [
+          {
+            "question": "Como se pergunta o preço?",
+            "options": [
+              "What is the shop?",
+              "How much is this?",
+              "Is it money?",
+              "Can I pay?"
+            ],
+            "answer": "How much is this?"
+          },
+          {
+            "question": "O que significa 'Expensive'?",
+            "options": [
+              "Barato",
+              "Caro",
+              "Grande",
+              "Pequeno"
+            ],
+            "answer": "Caro"
+          },
+          {
+            "question": "Como se diz 'Dinheiro'?",
+            "options": [
+              "Card",
+              "Price",
+              "Money",
+              "Cheap"
+            ],
+            "answer": "Money"
+          },
+          {
+            "question": "Como se diz 'Comprar'?",
+            "options": [
+              "Pay",
+              "Buy",
+              "Shop",
+              "Price"
+            ],
+            "answer": "Buy"
+          },
+          {
+            "question": "O que significa 'Cheap'?",
+            "options": [
+              "Barato",
+              "Caro",
+              "Bom",
+              "Bonito"
+            ],
+            "answer": "Barato"
+          }
+        ]
+      }
+    },
+    {
+      "day": 10,
+      "theme": "Colors and Clothing",
+      "objective_pt": "Aprenda nomes de cores e peças de roupa.",
+      "kind": "lesson",
+      "content": {
+        "vocabulary": [
+          {
+            "term": "Red",
+            "translation_pt": "Vermelho",
+            "example": "The shirt is red."
+          },
+          {
+            "term": "Blue",
+            "translation_pt": "Azul",
+            "example": "The sky is blue."
+          },
+          {
+            "term": "White",
+            "translation_pt": "Branco",
+            "example": "The wall is white."
+          },
+          {
+            "term": "Black",
+            "translation_pt": "Preto",
+            "example": "My shoes are black."
+          },
+          {
+            "term": "Yellow",
+            "translation_pt": "Amarelo",
+            "example": "The sun is yellow."
+          },
+          {
+            "term": "Green",
+            "translation_pt": "Verde",
+            "example": "The grass is green."
+          },
+          {
+            "term": "Clothes",
+            "translation_pt": "Roupas",
+            "example": "I need new clothes."
+          },
+          {
+            "term": "Pants",
+            "translation_pt": "Calça",
+            "example": "My pants are blue."
+          },
+          {
+            "term": "Shoe",
+            "translation_pt": "Sapato",
+            "example": "My shoe is new."
+          },
+          {
+            "term": "Dress",
+            "translation_pt": "Vestido",
+            "example": "The dress is red."
+          },
+          {
+            "term": "Coat",
+            "translation_pt": "Casaco",
+            "example": "It is cold, wear a coat."
+          },
+          {
+            "term": "Socks",
+            "translation_pt": "Meias",
+            "example": "Where are my socks?"
+          },
+          {
+            "term": "Dark",
+            "translation_pt": "Escuro",
+            "example": "It is dark blue."
+          },
+          {
+            "term": "Light",
+            "translation_pt": "Claro",
+            "example": "It is light green."
+          },
+          {
+            "term": "Style",
+            "translation_pt": "Estilo",
+            "example": "I like your style."
+          }
+        ],
+        "phrases": [
+          {
+            "text": "I like this blue shirt.",
+            "translation_pt": "Eu gosto desta camisa azul."
+          },
+          {
+            "text": "My pants are black.",
+            "translation_pt": "Minhas calças são pretas."
+          },
+          {
+            "text": "Is this dress red?",
+            "translation_pt": "Este vestido é vermelho?"
+          },
+          {
+            "text": "Where are my shoes?",
+            "translation_pt": "Onde estão meus sapatos?"
+          },
+          {
+            "text": "That is a nice coat.",
+            "translation_pt": "Aquele é um casaco legal."
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "A",
+            "line": "Look at my new shirt!"
+          },
+          {
+            "speaker": "B",
+            "line": "It is very nice. Is it blue?"
+          },
+          {
+            "speaker": "A",
+            "line": "No, it is green."
+          },
+          {
+            "speaker": "B",
+            "line": "And your pants?"
+          },
+          {
+            "speaker": "A",
+            "line": "My pants are black."
+          },
+          {
+            "speaker": "B",
+            "line": "I like your style."
+          },
+          {
+            "speaker": "A",
+            "line": "Thank you!"
+          },
+          {
+            "speaker": "B",
+            "line": "You are welcome."
+          }
+        ],
+        "quiz": [
+          {
+            "question": "Qual é a cor 'Red'?",
+            "options": [
+              "Azul",
+              "Preto",
+              "Vermelho",
+              "Verde"
+            ],
+            "answer": "Vermelho"
+          },
+          {
+            "question": "O que é 'Shoes'?",
+            "options": [
+              "Meias",
+              "Sapatos",
+              "Casaco",
+              "Calça"
+            ],
+            "answer": "Sapatos"
+          },
+          {
+            "question": "Traduza 'The shirt is blue'.",
+            "options": [
+              "A calça é azul",
+              "A camisa é azul",
+              "O sapato é azul",
+              "O casaco é azul"
+            ],
+            "answer": "A camisa é azul"
+          },
+          {
+            "question": "Como se diz 'Preto'?",
+            "options": [
+              "White",
+              "Green",
+              "Black",
+              "Yellow"
+            ],
+            "answer": "Black"
+          },
+          {
+            "question": "O que significa 'Pants'?",
+            "options": [
+              "Camisa",
+              "Vestido",
+              "Calça",
+              "Meias"
+            ],
+            "answer": "Calça"
+          }
+        ]
+      }
+    },
+    {
+      "day": 11,
+      "theme": "Time and Days of the Week",
+      "objective_pt": "Aprenda a falar sobre tempo e dias da semana.",
+      "kind": "lesson",
+      "content": {
+        "vocabulary": [
+          {
+            "term": "Monday",
+            "translation_pt": "Segunda-feira",
+            "example": "Monday is a busy day."
+          },
+          {
+            "term": "Tuesday",
+            "translation_pt": "Terça-feira",
+            "example": "See you on Tuesday."
+          },
+          {
+            "term": "Wednesday",
+            "translation_pt": "Quarta-feira",
+            "example": "It is Wednesday."
+          },
+          {
+            "term": "Thursday",
+            "translation_pt": "Quinta-feira",
+            "example": "Today is Thursday."
+          },
+          {
+            "term": "Friday",
+            "translation_pt": "Sexta-feira",
+            "example": "I love Friday."
+          },
+          {
+            "term": "Saturday",
+            "translation_pt": "Sábado",
+            "example": "Saturday is for family."
+          },
+          {
+            "term": "Sunday",
+            "translation_pt": "Domingo",
+            "example": "Sunday is a calm day."
+          },
+          {
+            "term": "Week",
+            "translation_pt": "Semana",
+            "example": "The week is long."
+          },
+          {
+            "term": "Time",
+            "translation_pt": "Tempo/Hora",
+            "example": "What time is it?"
+          },
+          {
+            "term": "Today",
+            "translation_pt": "Hoje",
+            "example": "Today is Monday."
+          },
+          {
+            "term": "Tomorrow",
+            "translation_pt": "Amanhã",
+            "example": "See you tomorrow."
+          },
+          {
+            "term": "Yesterday",
+            "translation_pt": "Ontem",
+            "example": "Yesterday was Sunday."
+          },
+          {
+            "term": "Now",
+            "translation_pt": "Agora",
+            "example": "I study now."
+          },
+          {
+            "term": "Later",
+            "translation_pt": "Mais tarde",
+            "example": "See you later."
+          },
+          {
+            "term": "Hour",
+            "translation_pt": "Hora",
+            "example": "One hour."
+          }
+        ],
+        "phrases": [
+          {
+            "text": "What day is it today?",
+            "translation_pt": "Que dia é hoje?"
+          },
+          {
+            "text": "Today is Monday.",
+            "translation_pt": "Hoje é segunda-feira."
+          },
+          {
+            "text": "What time is it?",
+            "translation_pt": "Que horas são?"
+          },
+          {
+            "text": "See you on Friday.",
+            "translation_pt": "Te vejo na sexta-feira."
+          },
+          {
+            "text": "I work on Saturdays.",
+            "translation_pt": "Eu trabalho aos sábados."
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "A",
+            "line": "What day is it today?"
+          },
+          {
+            "speaker": "B",
+            "line": "Today is Friday!"
+          },
+          {
+            "speaker": "A",
+            "line": "Yes! I like Friday."
+          },
+          {
+            "speaker": "B",
+            "line": "Do you work on Saturday?"
+          },
+          {
+            "speaker": "A",
+            "line": "No, I rest on Saturday and Sunday."
+          },
+          {
+            "speaker": "B",
+            "line": "Me too. See you on Monday?"
+          },
+          {
+            "speaker": "A",
+            "line": "Yes, see you on Monday!"
+          },
+          {
+            "speaker": "B",
+            "line": "Bye!"
+          }
+        ],
+        "quiz": [
+          {
+            "question": "Como se diz 'Sexta-feira'?",
+            "options": [
+              "Monday",
+              "Wednesday",
+              "Friday",
+              "Sunday"
+            ],
+            "answer": "Friday"
+          },
+          {
+            "question": "Traduza 'Today is Monday'.",
+            "options": [
+              "Ontem foi segunda",
+              "Hoje é segunda",
+              "Amanhã é segunda",
+              "A semana é segunda"
+            ],
+            "answer": "Hoje é segunda"
+          },
+          {
+            "question": "O que significa 'Tomorrow'?",
+            "options": [
+              "Ontem",
+              "Hoje",
+              "Amanhã",
+              "Agora"
+            ],
+            "answer": "Amanhã"
+          },
+          {
+            "question": "Qual é o dia 'Saturday'?",
+            "options": [
+              "Segunda",
+              "Sexta",
+              "Sábado",
+              "Domingo"
+            ],
+            "answer": "Sábado"
+          },
+          {
+            "question": "Como se pergunta a hora?",
+            "options": [
+              "What day is it?",
+              "What time is it?",
+              "How is time?",
+              "Where is time?"
+            ],
+            "answer": "What time is it?"
+          }
+        ]
+      }
+    },
+    {
+      "day": 12,
+      "theme": "Feelings and Health",
+      "objective_pt": "Aprenda a expressar como você se sente.",
+      "kind": "lesson",
+      "content": {
+        "vocabulary": [
+          {
+            "term": "Happy",
+            "translation_pt": "Feliz",
+            "example": "I am happy today."
+          },
+          {
+            "term": "Sad",
+            "translation_pt": "Triste",
+            "example": "Why are you sad?"
+          },
+          {
+            "term": "Tired",
+            "translation_pt": "Cansado",
+            "example": "I am very tired."
+          },
+          {
+            "term": "Hungry",
+            "translation_pt": "Faminto",
+            "example": "I am hungry."
+          },
+          {
+            "term": "Thirsty",
+            "translation_pt": "Com sede",
+            "example": "I am thirsty."
+          },
+          {
+            "term": "Sick",
+            "translation_pt": "Doente",
+            "example": "I am sick today."
+          },
+          {
+            "term": "Well",
+            "translation_pt": "Bem",
+            "example": "I am not well."
+          },
+          {
+            "term": "Fine",
+            "translation_pt": "Bem",
+            "example": "I am fine."
+          },
+          {
+            "term": "Angry",
+            "translation_pt": "Bravo",
+            "example": "Do not be angry."
+          },
+          {
+            "term": "Good",
+            "translation_pt": "Bom/Bem",
+            "example": "I feel good."
+          },
+          {
+            "term": "Bad",
+            "translation_pt": "Mal",
+            "example": "I feel bad."
+          },
+          {
+            "term": "Strong",
+            "translation_pt": "Forte",
+            "example": "I feel strong."
+          },
+          {
+            "term": "Cold",
+            "translation_pt": "Frio",
+            "example": "I am cold."
+          },
+          {
+            "term": "Hot",
+            "translation_pt": "Calor",
+            "example": "I am hot."
+          },
+          {
+            "term": "Rest",
+            "translation_pt": "Descansar",
+            "example": "I need to rest."
+          }
+        ],
+        "phrases": [
+          {
+            "text": "I am happy.",
+            "translation_pt": "Eu estou feliz."
+          },
+          {
+            "text": "Are you tired?",
+            "translation_pt": "Você está cansado?"
+          },
+          {
+            "text": "I feel sick.",
+            "translation_pt": "Eu me sinto doente."
+          },
+          {
+            "text": "I am thirsty for water.",
+            "translation_pt": "Estou com sede de água."
+          },
+          {
+            "text": "Take a rest.",
+            "translation_pt": "Descanse um pouco."
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "A",
+            "line": "How are you today?"
+          },
+          {
+            "speaker": "B",
+            "line": "I am a bit tired."
+          },
+          {
+            "speaker": "A",
+            "line": "Why? Did you work?"
+          },
+          {
+            "speaker": "B",
+            "line": "Yes, I worked a lot."
+          },
+          {
+            "speaker": "A",
+            "line": "You should rest."
+          },
+          {
+            "speaker": "B",
+            "line": "Yes, I want to sleep."
+          },
+          {
+            "speaker": "A",
+            "line": "Okay, see you later!"
+          },
+          {
+            "speaker": "B",
+            "line": "Thanks, see you!"
+          }
+        ],
+        "quiz": [
+          {
+            "question": "O que significa 'Happy'?",
+            "options": [
+              "Triste",
+              "Cansado",
+              "Feliz",
+              "Doente"
+            ],
+            "answer": "Feliz"
+          },
+          {
+            "question": "Como se diz 'Estou com sede'?",
+            "options": [
+              "I am hungry",
+              "I am thirsty",
+              "I am tired",
+              "I am sad"
+            ],
+            "answer": "I am thirsty"
+          },
+          {
+            "question": "Qual é a tradução de 'Sick'?",
+            "options": [
+              "Bem",
+              "Doente",
+              "Feliz",
+              "Forte"
+            ],
+            "answer": "Doente"
+          },
+          {
+            "question": "Como se pergunta 'Você está cansado?'",
+            "options": [
+              "Are you happy?",
+              "Are you hungry?",
+              "Are you tired?",
+              "Are you sick?"
+            ],
+            "answer": "Are you tired?"
+          },
+          {
+            "question": "O que significa 'Tired'?",
+            "options": [
+              "Cansado",
+              "Com fome",
+              "Bravo",
+              "Bem"
+            ],
+            "answer": "Cansado"
+          }
+        ]
+      }
+    },
+    {
+      "day": 13,
+      "theme": "Hobbies and Leisure",
+      "objective_pt": "Aprenda vocabulário sobre atividades de lazer.",
+      "kind": "lesson",
+      "content": {
+        "vocabulary": [
+          {
+            "term": "Play",
+            "translation_pt": "Jogar/Tocar",
+            "example": "I play soccer."
+          },
+          {
+            "term": "Listen",
+            "translation_pt": "Ouvir",
+            "example": "I listen to music."
+          },
+          {
+            "term": "Music",
+            "translation_pt": "Música",
+            "example": "I like pop music."
+          },
+          {
+            "term": "Watch",
+            "translation_pt": "Assistir",
+            "example": "I watch TV."
+          },
+          {
+            "term": "Movie",
+            "translation_pt": "Filme",
+            "example": "The movie is long."
+          },
+          {
+            "term": "Read",
+            "translation_pt": "Ler",
+            "example": "I read books."
+          },
+          {
+            "term": "Dance",
+            "translation_pt": "Dançar",
+            "example": "I like to dance."
+          },
+          {
+            "term": "Sport",
+            "translation_pt": "Esporte",
+            "example": "Soccer is my sport."
+          },
+          {
+            "term": "Game",
+            "translation_pt": "Jogo",
+            "example": "The game is fun."
+          },
+          {
+            "term": "Park",
+            "translation_pt": "Parque",
+            "example": "I go to the park."
+          },
+          {
+            "term": "Walk",
+            "translation_pt": "Caminhar",
+            "example": "I walk in the park."
+          },
+          {
+            "term": "Friends",
+            "translation_pt": "Amigos",
+            "example": "I see my friends."
+          },
+          {
+            "term": "Fun",
+            "translation_pt": "Diversão",
+            "example": "It is very fun."
+          },
+          {
+            "term": "Hobby",
+            "translation_pt": "Passatempo",
+            "example": "What is your hobby?"
+          },
+          {
+            "term": "Visit",
+            "translation_pt": "Visitar",
+            "example": "I visit my family."
+          }
+        ],
+        "phrases": [
+          {
+            "text": "I like to watch movies.",
+            "translation_pt": "Eu gosto de assistir filmes."
+          },
+          {
+            "text": "Do you play soccer?",
+            "translation_pt": "Você joga futebol?"
+          },
+          {
+            "text": "I listen to music every day.",
+            "translation_pt": "Eu escuto música todo dia."
+          },
+          {
+            "text": "I walk in the park.",
+            "translation_pt": "Eu caminho no parque."
+          },
+          {
+            "text": "Visiting friends is fun.",
+            "translation_pt": "Visitar amigos é divertido."
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "A",
+            "line": "What do you like to do?"
+          },
+          {
+            "speaker": "B",
+            "line": "I like to play soccer and watch movies."
+          },
+          {
+            "speaker": "A",
+            "line": "That is cool! I like to dance."
+          },
+          {
+            "speaker": "B",
+            "line": "Do you like music?"
+          },
+          {
+            "speaker": "A",
+            "line": "Yes, I listen to music every day."
+          },
+          {
+            "speaker": "B",
+            "line": "We should go to the park."
+          },
+          {
+            "speaker": "A",
+            "line": "Yes, that is a good plan."
+          },
+          {
+            "speaker": "B",
+            "line": "Great!"
+          }
+        ],
+        "quiz": [
+          {
+            "question": "Como se diz 'Assistir'?",
+            "options": [
+              "Watch",
+              "Listen",
+              "Play",
+              "Read"
+            ],
+            "answer": "Watch"
+          },
+          {
+            "question": "Qual é a tradução de 'Music'?",
+            "options": [
+              "Jogo",
+              "Filme",
+              "Música",
+              "Esporte"
+            ],
+            "answer": "Música"
+          },
+          {
+            "question": "Traduza 'I like to play soccer'.",
+            "options": [
+              "Eu gosto de ler",
+              "Eu gosto de jogar futebol",
+              "Eu gosto de ouvir música",
+              "Eu gosto de dançar"
+            ],
+            "answer": "Eu gosto de jogar futebol"
+          },
+          {
+            "question": "O que significa 'Walk'?",
+            "options": [
+              "Correr",
+              "Dançar",
+              "Caminhar",
+              "Assistir"
+            ],
+            "answer": "Caminhar"
+          },
+          {
+            "question": "Como se diz 'Filme'?",
+            "options": [
+              "Book",
+              "Music",
+              "Game",
+              "Movie"
+            ],
+            "answer": "Movie"
+          }
+        ]
+      }
+    },
+    {
+      "day": 14,
+      "theme": "Review Week 2",
+      "objective_pt": "Revise o conteúdo da segunda semana.",
+      "kind": "review",
+      "content": {
+        "vocabulary": [],
+        "phrases": [],
+        "dialogue": [],
+        "quiz": [
+          {
+            "question": "Como se diz 'Conta' em um restaurante?",
+            "options": [
+              "Menu",
+              "Bill",
+              "Price",
+              "Eat"
+            ],
+            "answer": "Bill"
+          },
+          {
+            "question": "Traduza 'It is too expensive'.",
+            "options": [
+              "É muito barato",
+              "É muito caro",
+              "É muito bom",
+              "É muito pequeno"
+            ],
+            "answer": "É muito caro"
+          },
+          {
+            "question": "Qual é a cor 'White'?",
+            "options": [
+              "Branco",
+              "Azul",
+              "Preto",
+              "Verde"
+            ],
+            "answer": "Branco"
+          },
+          {
+            "question": "Como se diz 'Terça-feira'?",
+            "options": [
+              "Monday",
+              "Tuesday",
+              "Thursday",
+              "Saturday"
+            ],
+            "answer": "Tuesday"
+          },
+          {
+            "question": "Traduza 'I am tired'.",
+            "options": [
+              "Estou feliz",
+              "Estou com fome",
+              "Estou cansado",
+              "Estou doente"
+            ],
+            "answer": "Estou cansado"
+          },
+          {
+            "question": "O que significa 'Movie'?",
+            "options": [
+              "Música",
+              "Jogo",
+              "Filme",
+              "Esporte"
+            ],
+            "answer": "Filme"
+          },
+          {
+            "question": "Como se pergunta 'Quanto custa?'",
+            "options": [
+              "How much is this?",
+              "What is this?",
+              "Where is this?",
+              "Is this expensive?"
+            ],
+            "answer": "How much is this?"
+          },
+          {
+            "question": "O que é 'Socks'?",
+            "options": [
+              "Calça",
+              "Sapatos",
+              "Meias",
+              "Casaco"
+            ],
+            "answer": "Meias"
+          },
+          {
+            "question": "Qual o oposto de 'Cheap'?",
+            "options": [
+              "Good",
+              "Small",
+              "Expensive",
+              "Big"
+            ],
+            "answer": "Expensive"
+          },
+          {
+            "question": "O que significa 'Thirsty'?",
+            "options": [
+              "Com fome",
+              "Com sede",
+              "Cansado",
+              "Feliz"
+            ],
+            "answer": "Com sede"
+          },
+          {
+            "question": "Como se diz 'Amanhã'?",
+            "options": [
+              "Yesterday",
+              "Now",
+              "Today",
+              "Tomorrow"
+            ],
+            "answer": "Tomorrow"
+          },
+          {
+            "question": "Traduza 'I listen to music'.",
+            "options": [
+              "Eu ouço música",
+              "Eu gosto de música",
+              "Eu toco música",
+              "Eu danço música"
+            ],
+            "answer": "Eu ouço música"
+          }
+        ]
+      }
+    },
+    {
+      "day": 15,
+      "theme": "Final Test",
+      "objective_pt": "Teste final para consolidar todo o aprendizado.",
+      "kind": "final",
+      "content": {
+        "vocabulary": [],
+        "phrases": [],
+        "dialogue": [
+          {
+            "speaker": "A",
+            "line": "Hello! How are you?"
+          },
+          {
+            "speaker": "B",
+            "line": "I am fine, thanks. And you?"
+          },
+          {
+            "speaker": "A",
+            "line": "I am happy. What day is it?"
+          },
+          {
+            "speaker": "B",
+            "line": "Today is Friday."
+          },
+          {
+            "speaker": "A",
+            "line": "Let's go eat?"
+          },
+          {
+            "speaker": "B",
+            "line": "Yes, I am hungry!"
+          }
+        ],
+        "quiz": [
+          {
+            "question": "Como se diz 'Olá'?",
+            "options": [
+              "Hi",
+              "Bye",
+              "Thanks",
+              "Fine"
+            ],
+            "answer": "Hi"
+          },
+          {
+            "question": "Traduza 'My father'.",
+            "options": [
+              "Meu irmão",
+              "Meu pai",
+              "Minha mãe",
+              "Meu avô"
+            ],
+            "answer": "Meu pai"
+          },
+          {
+            "question": "Quanto é '10 + 2' em inglês?",
+            "options": [
+              "Eleven",
+              "Twelve",
+              "Thirteen",
+              "Twenty"
+            ],
+            "answer": "Twelve"
+          },
+          {
+            "question": "Onde você dorme?",
+            "options": [
+              "In the kitchen",
+              "In the bed",
+              "In the chair",
+              "In the table"
+            ],
+            "answer": "In the bed"
+          },
+          {
+            "question": "O que você bebe?",
+            "options": [
+              "Bread",
+              "Water",
+              "Meat",
+              "Rice"
+            ],
+            "answer": "Water"
+          },
+          {
+            "question": "Como se pede a conta?",
+            "options": [
+              "The bill, please",
+              "The menu, please",
+              "The water, please",
+              "The rice, please"
+            ],
+            "answer": "The bill, please"
+          },
+          {
+            "question": "Quanto é 'How much is it'?",
+            "options": [
+              "Quanto custa?",
+              "Como é?",
+              "Onde está?",
+              "Quem é?"
+            ],
+            "answer": "Quanto custa?"
+          },
+          {
+            "question": "Qual é a cor 'Yellow'?",
+            "options": [
+              "Verde",
+              "Azul",
+              "Amarelo",
+              "Vermelho"
+            ],
+            "answer": "Amarelo"
+          },
+          {
+            "question": "Como se diz 'Segunda-feira'?",
+            "options": [
+              "Monday",
+              "Friday",
+              "Sunday",
+              "Thursday"
+            ],
+            "answer": "Monday"
+          },
+          {
+            "question": "O que significa 'Tired'?",
+            "options": [
+              "Feliz",
+              "Cansado",
+              "Bravo",
+              "Bem"
+            ],
+            "answer": "Cansado"
+          },
+          {
+            "question": "Traduza 'I like to dance'.",
+            "options": [
+              "Eu gosto de dançar",
+              "Eu gosto de ler",
+              "Eu gosto de ouvir",
+              "Eu gosto de correr"
+            ],
+            "answer": "Eu gosto de dançar"
+          },
+          {
+            "question": "Qual é o oposto de 'Big'?",
+            "options": [
+              "Small",
+              "Cheap",
+              "Good",
+              "Expensive"
+            ],
+            "answer": "Small"
+          },
+          {
+            "question": "Como se diz 'Eu tenho'?",
+            "options": [
+              "I am",
+              "I have",
+              "I like",
+              "I go"
+            ],
+            "answer": "I have"
+          },
+          {
+            "question": "O que são 'Shoes'?",
+            "options": [
+              "Calças",
+              "Casacos",
+              "Sapatos",
+              "Meias"
+            ],
+            "answer": "Sapatos"
+          },
+          {
+            "question": "Como se diz 'Tchau'?",
+            "options": [
+              "Hello",
+              "Goodbye",
+              "Thanks",
+              "Sorry"
+            ],
+            "answer": "Goodbye"
+          }
+        ]
+      }
+    }
+  ]
+}

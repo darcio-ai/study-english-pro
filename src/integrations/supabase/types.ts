@@ -235,47 +235,6 @@ export type Database = {
         }
         Relationships: []
       }
-      program_days: {
-        Row: {
-          content: Json
-          created_at: string | null
-          day: number
-          id: string
-          kind: string
-          objective_pt: string
-          program_id: string
-          theme: string
-        }
-        Insert: {
-          content?: Json
-          created_at?: string | null
-          day: number
-          id?: string
-          kind?: string
-          objective_pt: string
-          program_id: string
-          theme: string
-        }
-        Update: {
-          content?: Json
-          created_at?: string | null
-          day?: number
-          id?: string
-          kind?: string
-          objective_pt?: string
-          program_id?: string
-          theme?: string
-        }
-        Relationships: [
-          {
-            foreignKeyName: "program_days_program_id_fkey"
-            columns: ["program_id"]
-            isOneToOne: false
-            referencedRelation: "programs"
-            referencedColumns: ["id"]
-          },
-        ]
-      }
       programs: {
         Row: {
           created_at: string | null

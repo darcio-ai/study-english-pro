@@ -1,0 +1,2498 @@
+{
+  "days": [
+    {
+      "day": 1,
+      "theme": "En el aeropuerto y transporte",
+      "objective_pt": "Aprender vocabulário e expressões essenciais para navegar pelo aeroporto e imigração sem cair em falsos amigos.",
+      "kind": "lesson",
+      "content": {
+        "vocabulary": [
+          {
+            "term": "el vuelo",
+            "translation_pt": "o voo",
+            "example": "Mi vuelo sale a las diez de la mañana."
+          },
+          {
+            "term": "el equipaje de mano",
+            "translation_pt": "a bagagem de mão",
+            "example": "Solo llevo una mochila como equipaje de mano."
+          },
+          {
+            "term": "facturar",
+            "translation_pt": "despachar (bagagem)",
+            "example": "Tengo que facturar dos maletas grandes."
+          },
+          {
+            "term": "la tarjeta de embarque",
+            "translation_pt": "o cartão de embarque",
+            "example": "Descargué la tarjeta de embarque en el móvil."
+          },
+          {
+            "term": "la escala",
+            "translation_pt": "a conexão / escala",
+            "example": "Haremos una escala de dos horas en Madrid."
+          },
+          {
+            "term": "la aduana",
+            "translation_pt": "a alfândega",
+            "example": "Pasamos el control de aduana sin problemas."
+          },
+          {
+            "term": "el mostrador",
+            "translation_pt": "o balcão",
+            "example": "Acércate al mostrador de la aerolínea."
+          },
+          {
+            "term": "retrasado",
+            "translation_pt": "atrasado",
+            "example": "El vuelo viene con una hora de retraso."
+          },
+          {
+            "term": "la ventanilla",
+            "translation_pt": "a janela (de avião/ônibus)",
+            "example": "Prefiero asiento de ventanilla que de pasillo."
+          },
+          {
+            "term": "el pasillo",
+            "translation_pt": "o corredor",
+            "example": "Mi asiento da al pasillo, así me levanto fácil."
+          },
+          {
+            "term": "despegar",
+            "translation_pt": "decolar",
+            "example": "El avión va a despegar pronto."
+          },
+          {
+            "term": "aterrizar",
+            "translation_pt": "pousar / aterrissar",
+            "example": "Aterrizamos con media hora de anticipación."
+          }
+        ],
+        "phrases": [
+          {
+            "text": "¿Dónde puedo recoger mi equipaje?",
+            "translation_pt": "Onde posso pegar minha bagagem?"
+          },
+          {
+            "text": "¿A qué puerta de embarque debemos ir?",
+            "translation_pt": "Para qual portão de embarque devemos ir?"
+          },
+          {
+            "text": "Tengo un billete de ida y vuelta.",
+            "translation_pt": "Tenho uma passagem de ida e volta."
+          },
+          {
+            "text": "¿Me permite ver su pasaporte?",
+            "translation_pt": "Pode me mostrar o seu passaporte?"
+          },
+          {
+            "text": "Perdí la conexión por culpa del retraso.",
+            "translation_pt": "Perdi a conexão por causa do atraso."
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "Pasajero",
+            "line": "Buenos días, vengo a facturar mi maleta para el vuelo a Bogotá."
+          },
+          {
+            "speaker": "Agente",
+            "line": "Buenos días. ¿Me permite su pasaporte y reserva, por favor?"
+          },
+          {
+            "speaker": "Pasajero",
+            "line": "Aquí tiene todo. ¿El vuelo sale en hora o tiene retraso?"
+          },
+          {
+            "speaker": "Agente",
+            "line": "Sale puntual a las catorce horas desde la puerta B12."
+          },
+          {
+            "speaker": "Pasajero",
+            "line": "¿La maleta va directo al destino o debo recogerla en la escala?"
+          },
+          {
+            "speaker": "Agente",
+            "line": "Va directo a Bogotá. Aquí tiene su tarjeta de embarque. ¡Buen viaje!"
+          }
+        ],
+        "quiz": [
+          {
+            "question": "Como se diz 'despachar a mala' em espanhol?",
+            "options": [
+              "despachar la maleta",
+              "facturar la maleta",
+              "embarcar la maleta",
+              "firmar la maleta"
+            ],
+            "answer": "facturar la maleta"
+          },
+          {
+            "question": "Qual é a tradução de 'el pasillo' em um avião?",
+            "options": [
+              "A janela",
+              "A poltrona",
+              "O corredor",
+              "A saída de emergência"
+            ],
+            "answer": "O corredor"
+          },
+          {
+            "question": "Se o seu voo está demorando para sair, dizemos que está:",
+            "options": [
+              "adelantado",
+              "cancelado",
+              "retrasado",
+              "aterrizado"
+            ],
+            "answer": "retrasado"
+          },
+          {
+            "question": "Complete: 'El avión está listo para ________ rumbo a Lima'.",
+            "options": [
+              "despegar",
+              "aterrizar",
+              "parar",
+              "subir"
+            ],
+            "answer": "despegar"
+          },
+          {
+            "question": "'Tarjeta de embarque' equivale em português a:",
+            "options": [
+              "Bilhete de metrô",
+              "Cartão de embarque",
+              "Passaporte oficial",
+              "Comprovante de alfândega"
+            ],
+            "answer": "Cartão de embarque"
+          }
+        ]
+      }
+    },
+    {
+      "day": 2,
+      "theme": "De compras y tiendas de ropa",
+      "objective_pt": "Aprender a pedir tamanhos, negociar e entender etiquetas e cortes de roupas em lojas.",
+      "kind": "lesson",
+      "content": {
+        "vocabulary": [
+          {
+            "term": "la talla",
+            "translation_pt": "o tamanho (de roupa)",
+            "example": "¿Tiene esta camisa en una talla más grande?"
+          },
+          {
+            "term": "el número",
+            "translation_pt": "o número (de sapato)",
+            "example": "Calzo el número cuarenta."
+          },
+          {
+            "term": "el probador",
+            "translation_pt": "o provador",
+            "example": "Los probadores están al fondo a la derecha."
+          },
+          {
+            "term": "las rebajas",
+            "translation_pt": "as liquidações / promoções",
+            "example": "Aproveché las rebajas de verano para comprar ropa."
+          },
+          {
+            "term": "el saco",
+            "translation_pt": "o paletó / blazer",
+            "example": "Este saco me queda un poco holgado."
+          },
+          {
+            "term": "quedar bien",
+            "translation_pt": "cair bem / vestir bem",
+            "example": "Ese pantalón te queda muy bien."
+          },
+          {
+            "term": "estrecho",
+            "translation_pt": "apertado / justo",
+            "example": "Los zapatos me quedan muy estrechos."
+          },
+          {
+            "term": "ancho",
+            "translation_pt": "largo / folgado",
+            "example": "La falda me queda demasiado ancha."
+          },
+          {
+            "term": "el descuento",
+            "translation_pt": "o desconto",
+            "example": "¿Este producto tiene algún descuento?"
+          },
+          {
+            "term": "el escaparate",
+            "translation_pt": "a vitrine",
+            "example": "Vi una chaqueta hermosa en el escaparate."
+          },
+          {
+            "term": "el abrigo",
+            "translation_pt": "o casaco pesado / sobretudo",
+            "example": "Hace frío, ponte un abrigo."
+          },
+          {
+            "term": "la caja",
+            "translation_pt": "o caixa (lugar de pagamento)",
+            "example": "Puede pagar directamente en la caja."
+          }
+        ],
+        "phrases": [
+          {
+            "text": "¿Me puedo probar esto?",
+            "translation_pt": "Posso experimentar isto?"
+          },
+          {
+            "text": "¿Tiene esta prenda en otro color?",
+            "translation_pt": "Você tem esta peça em outra cor?"
+          },
+          {
+            "text": "Solo estoy mirando, muchas gracias.",
+            "translation_pt": "Estou só olhando, muito obrigado(a)."
+          },
+          {
+            "text": "¿Aceptan devoluciones si no me queda bien?",
+            "translation_pt": "Aceitam trocas/devoluções se não servir?"
+          },
+          {
+            "text": "Me llevo esta camisa y los pantalones.",
+            "translation_pt": "Vou levar esta camisa e as calças."
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "Cliente",
+            "line": "Hola, disculpe. ¿Tiene esta chaqueta en una talla mediana?"
+          },
+          {
+            "speaker": "Dependiente",
+            "line": "Voy a mirar en el almacén... Sí, aquí tiene una M."
+          },
+          {
+            "speaker": "Cliente",
+            "line": "Gracias. ¿Dónde quedan los probadores?"
+          },
+          {
+            "speaker": "Dependiente",
+            "line": "Están al final del pasillo. Si necesita otra talla me avisa."
+          },
+          {
+            "speaker": "Cliente",
+            "line": "Me queda perfecta. ¿Tiene algún descuento adicional?"
+          },
+          {
+            "speaker": "Dependiente",
+            "line": "Sí, hoy todas las chaquetas tienen un veinte por ciento de rebaja en caja."
+          }
+        ],
+        "quiz": [
+          {
+            "question": "Para perguntar pelo tamanho de um sapato, você pergunta pelo:",
+            "options": [
+              "talla",
+              "número",
+              "largo",
+              "formato"
+            ],
+            "answer": "número"
+          },
+          {
+            "question": "O que significa a palavra 'probador'?",
+            "options": [
+              "Vendedor",
+              "Provador",
+              "Balcão",
+              "Mostruário"
+            ],
+            "answer": "Provador"
+          },
+          {
+            "question": "Se uma calça está muito solta/folgada no corpo, ela está:",
+            "options": [
+              "estrecha",
+              "apretada",
+              "ancha",
+              "corta"
+            ],
+            "answer": "ancha"
+          },
+          {
+            "question": "A expressão 'las rebajas' significa:",
+            "options": [
+              "Os defeitos",
+              "As devoluções",
+              "As liquidações",
+              "As etiquetas"
+            ],
+            "answer": "As liquidações"
+          },
+          {
+            "question": "Como se diz 'Essa jaqueta cai muito bem em você'?",
+            "options": [
+              "Esa chaqueta te cae bien",
+              "Esa chaqueta te queda muy bien",
+              "Esa chaqueta te sirve bien",
+              "Esa chaqueta te pasa bien"
+            ],
+            "answer": "Esa chaqueta te queda muy bien"
+          }
+        ]
+      }
+    },
+    {
+      "day": 3,
+      "theme": "Hacer planes y ocio",
+      "objective_pt": "Aprender a propor programas sociais, aceitar, recusar e marcar horários usando o verbo 'quedar'.",
+      "kind": "lesson",
+      "content": {
+        "vocabulary": [
+          {
+            "term": "quedar",
+            "translation_pt": "marcar de se encontrar",
+            "example": "¿A qué hora quedamos esta tarde?"
+          },
+          {
+            "term": "hacer planes",
+            "translation_pt": "fazer planos",
+            "example": "No me gusta hacer planes a última hora."
+          },
+          {
+            "term": "la merienda",
+            "translation_pt": "o lanche da tarde",
+            "example": "Vamos a tomar una merienda en el centro."
+          },
+          {
+            "term": "apetecer",
+            "translation_pt": "dar vontade / apetecer",
+            "example": "¿Te apetece ir al cine esta noche?"
+          },
+          {
+            "term": "apuntarse",
+            "translation_pt": "topar / confirmar presença",
+            "example": "Vamos al parque, ¿te apuntas?"
+          },
+          {
+            "term": "el rato",
+            "translation_pt": "o momento / tempinho",
+            "example": "Pasamos un rato muy divertido juntos."
+          },
+          {
+            "term": "estar libre",
+            "translation_pt": "estar livre / desocupado",
+            "example": "¿Estás libre este sábado por la tarde?"
+          },
+          {
+            "term": "el concierto",
+            "translation_pt": "o show musical",
+            "example": "Compré entradas para el concierto de rock."
+          },
+          {
+            "term": "quedar con",
+            "translation_pt": "encontrar-se com alguém",
+            "example": "Hoy he quedado con Juan para almorzar."
+          },
+          {
+            "term": "la entrada",
+            "translation_pt": "o ingresso",
+            "example": "Ya tengo las entradas del teatro."
+          },
+          {
+            "term": "surgir",
+            "translation_pt": "surgir / aparecer",
+            "example": "Me surgió un imprevisto y no podré ir."
+          },
+          {
+            "term": "posponer",
+            "translation_pt": "adiar",
+            "example": "¿Podemos posponer la salida para mañana?"
+          }
+        ],
+        "phrases": [
+          {
+            "text": "¿Qué te parece si vamos a tomar algo?",
+            "translation_pt": "O que você acha de irmos tomar algo?"
+          },
+          {
+            "text": "Me encantaría, pero hoy no puedo.",
+            "translation_pt": "Adoraria, mas hoje não posso."
+          },
+          {
+            "text": "¿Dónde y a qué hora nos encontramos?",
+            "translation_pt": "Onde e a que horas nos encontramos?"
+          },
+          {
+            "text": "Cuenta conmigo para el plan.",
+            "translation_pt": "Conta comigo para o rolê/programa."
+          },
+          {
+            "text": "Se me complicó el día, lo dejamos para el finde.",
+            "translation_pt": "Meu dia complicou, deixamos para o fim de semana."
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "Mateo",
+            "line": "Hola Sofía, ¿tienes planes para este viernes por la noche?"
+          },
+          {
+            "speaker": "Sofía",
+            "line": "De momento nada fijo. ¿Se te ocurre algo?"
+          },
+          {
+            "speaker": "Mateo",
+            "line": "¿Te apetece ir a ver una película y luego picar unas tapas?"
+          },
+          {
+            "speaker": "Sofía",
+            "line": "¡Qué buen plan! Me apunto sin falta."
+          },
+          {
+            "speaker": "Mateo",
+            "line": "¿Quedamos a las siete en la plaza central?"
+          },
+          {
+            "speaker": "Sofía",
+            "line": "Perfecto, nos vemos allí a las siete en punto."
+          }
+        ],
+        "quiz": [
+          {
+            "question": "Qual verbo é mais usado na Espanha para combinar de se encontrar com alguém?",
+            "options": [
+              "Marcar",
+              "Quedar",
+              "Topar",
+              "Combinar"
+            ],
+            "answer": "Quedar"
+          },
+          {
+            "question": "A expressão '¿Te apetece?' tem o sentido de:",
+            "options": [
+              "Você tem fome?",
+              "Você tem pressa?",
+              "Você está com vontade?",
+              "Você vai pagar?"
+            ],
+            "answer": "Você está com vontade?"
+          },
+          {
+            "question": "Se você quer dizer 'eu topo!', qual é a melhor opção?",
+            "options": [
+              "¡Me subo!",
+              "¡Me apunto!",
+              "¡Me anoto!",
+              "¡Me pongo!"
+            ],
+            "answer": "¡Me apunto!"
+          },
+          {
+            "question": "O que significa 'la entrada' em um contexto cultural?",
+            "options": [
+              "A porta de fora",
+              "O ingresso",
+              "O couvert",
+              "A antevisão"
+            ],
+            "answer": "O ingresso"
+          },
+          {
+            "question": "Complete: 'No puedo ir hoy, ¿podemos ________ la cita para el lunes?'.",
+            "options": [
+              "posponer",
+              "deshacer",
+              "adelantar",
+              "olvidar"
+            ],
+            "answer": "posponer"
+          }
+        ]
+      }
+    },
+    {
+      "day": 4,
+      "theme": "Experiencias pasadas y anécdotas",
+      "objective_pt": "Praticar o contraste entre o Pretérito Indefinido e o Pretérito Perfecto para relatar viagens e vivências.",
+      "kind": "lesson",
+      "content": {
+        "vocabulary": [
+          {
+            "term": "alguna vez",
+            "translation_pt": "alguma vez / já",
+            "example": "¿Alguna vez has viajado a México?"
+          },
+          {
+            "term": "hace poco",
+            "translation_pt": "pouco tempo atrás",
+            "example": "Hace poco me mudé a este barrio."
+          },
+          {
+            "term": "el recuerdo",
+            "translation_pt": "a lembrança / memória",
+            "example": "Guardo un hermoso recuerdo de ese viaje."
+          },
+          {
+            "term": "inolvidable",
+            "translation_pt": "inesquecível",
+            "example": "La visita a las ruinas fue inolvidable."
+          },
+          {
+            "term": "perderse",
+            "translation_pt": "perder-se",
+            "example": "Nos perdimos en las calles viejas de Sevilla."
+          },
+          {
+            "term": "la anécdota",
+            "translation_pt": "a história curiosa / causo",
+            "example": "Nos contó una anécdota muy graciosa."
+          },
+          {
+            "term": "el hospedaje",
+            "translation_pt": "a hospedagem",
+            "example": "El hospedaje en el albergue fue muy cómodo."
+          },
+          {
+            "term": "probar",
+            "translation_pt": "experimentar / provar",
+            "example": "Ayer probé un plato típico riquísimo."
+          },
+          {
+            "term": "conocer",
+            "translation_pt": "conhecer (lugar ou pessoa)",
+            "example": "El año pasado conocí la Patagonia."
+          },
+          {
+            "term": "el paisaje",
+            "translation_pt": "a paisagem",
+            "example": "El paisaje de montaña era espectacular."
+          },
+          {
+            "term": "averiarse",
+            "translation_pt": "estragar / quebrar (máquina/carro)",
+            "example": "El coche de alquiler se averió de repente."
+          },
+          {
+            "term": "el acontecimiento",
+            "translation_pt": "o acontecimento",
+            "example": "Fue un acontecimiento que cambió mi vida."
+          }
+        ],
+        "phrases": [
+          {
+            "text": "Nunca he estado en esa ciudad.",
+            "translation_pt": "Nunca estive nessa cidade."
+          },
+          {
+            "text": "El año pasado fui a Buenos Aires por trabajo.",
+            "translation_pt": "No ano passado fui a Buenos Aires a trabalho."
+          },
+          {
+            "text": "Fue una experiencia totalmente inolvidable.",
+            "translation_pt": "Foi uma experiência totalmente inesquecível."
+          },
+          {
+            "text": "¿Has probado alguna vez el ceviche?",
+            "translation_pt": "Você já experimentou ceviche alguma vez?"
+          },
+          {
+            "text": "Al principio nos asustamos, pero luego nos reímos.",
+            "translation_pt": "No início nos assustamos, mas depois rimos."
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "Carla",
+            "line": "¿Alguna vez has viajado solo al extranjero?"
+          },
+          {
+            "speaker": "Lucas",
+            "line": "Sí, el verano pasado fui mochilero por el norte de España."
+          },
+          {
+            "speaker": "Carla",
+            "line": "¿Y qué tal fue la experiencia? ¿No tuviste problemas?"
+          },
+          {
+            "speaker": "Lucas",
+            "line": "Al principio me perdí en Bilbao, pero la gente fue muy amable."
+          },
+          {
+            "speaker": "Carla",
+            "line": "¡Qué alivio! Esas anécdotas siempre son las mejores."
+          },
+          {
+            "speaker": "Lucas",
+            "line": "Sin duda, aprendí muchísimo y conocí paisajes increíbles."
+          }
+        ],
+        "quiz": [
+          {
+            "question": "Para uma ação em período de tempo não terminado (ex: hoy, esta semana, nunca), usa-se geralmente:",
+            "options": [
+              "Pretérito Indefinido (fui)",
+              "Pretérito Perfecto (he ido)",
+              "Presente de Subjuntivo",
+              "Pretérito Imperfeito"
+            ],
+            "answer": "Pretérito Perfecto (he ido)"
+          },
+          {
+            "question": "Complete com o tempo correto: 'El año pasado mi familia y yo ________ a Chile'.",
+            "options": [
+              "hemos viajado",
+              "viajamos",
+              "viajábamos",
+              "viajemos"
+            ],
+            "answer": "viajamos"
+          },
+          {
+            "question": "Qual frase traduz corretamente: 'Você já viajou de trem alguma vez?'",
+            "options": [
+              "¿Ya viajó de tren vez?",
+              "¿Alguna vez has viajado en tren?",
+              "¿Has ido de tren ya alguna vez?",
+              "¿Cuándo viajó en tren alguna vez?"
+            ],
+            "answer": "¿Alguna vez has viajado en tren?"
+          },
+          {
+            "question": "O que significa 'El coche se averió'?",
+            "options": [
+              "O carro foi lavado",
+              "O carro quebrou/estragou",
+              "O carro acelerou",
+              "O carro foi vendido"
+            ],
+            "answer": "O carro quebrou/estragou"
+          },
+          {
+            "question": "Em 'Guardo un lindo recuerdo', 'recuerdo' significa:",
+            "options": [
+              "Registro",
+              "Recado",
+              "Lembrança",
+              "Esquecimento"
+            ],
+            "answer": "Lembrança"
+          }
+        ]
+      }
+    },
+    {
+      "day": 5,
+      "theme": "Expresar opiniones y debatir",
+      "objective_pt": "Aprender a formular opiniões, concordar, discordar e usar o modo subjuntivo após 'no creo que...'.",
+      "kind": "lesson",
+      "content": {
+        "vocabulary": [
+          {
+            "term": "en mi opinión",
+            "translation_pt": "na minha opinião",
+            "example": "En mi opinión, deberíamos invertir más en educación."
+          },
+          {
+            "term": "desde mi punto de vista",
+            "translation_pt": "do meu ponto de vista",
+            "example": "Desde mi punto de vista, la propuesta es inviable."
+          },
+          {
+            "term": "opinar",
+            "translation_pt": "opinar / achar",
+            "example": "¿Qué opinas sobre este tema polémico?"
+          },
+          {
+            "term": "de acuerdo",
+            "translation_pt": "de acordo",
+            "example": "Estoy de acuerdo con lo que acabas de decir."
+          },
+          {
+            "term": "la ventaja",
+            "translation_pt": "a vantagem",
+            "example": "El teletrabajo tiene muchas ventajas."
+          },
+          {
+            "term": "la desventaja",
+            "translation_pt": "a desvantagem",
+            "example": "Una clara desventaja es el aislamiento social."
+          },
+          {
+            "term": "discrepar",
+            "translation_pt": "discordar / divergir",
+            "example": "Discrepo respetuosamente de tu postura."
+          },
+          {
+            "term": "tener razón",
+            "translation_pt": "ter razão",
+            "example": "Creo que tú tienes toda la razón."
+          },
+          {
+            "term": "equivocarse",
+            "translation_pt": "enganar-se / errar",
+            "example": "Cualquiera puede equivocarse al opinar."
+          },
+          {
+            "term": "convencer",
+            "translation_pt": "convencer",
+            "example": "Sus argumentos no me terminan de convencer."
+          },
+          {
+            "term": "por un lado",
+            "translation_pt": "por um lado",
+            "example": "Por un lado me atrae la idea, por otro me da dudas."
+          },
+          {
+            "term": "el argumento",
+            "translation_pt": "o argumento",
+            "example": "Presentó un argumento bastante sólido."
+          }
+        ],
+        "phrases": [
+          {
+            "text": "Creo que es una buena oportunidad.",
+            "translation_pt": "Acho que é uma boa oportunidade."
+          },
+          {
+            "text": "No creo que sea la mejor solución.",
+            "translation_pt": "Não acho que seja a melhor solução."
+          },
+          {
+            "text": "Tienes toda la razón en lo que dices.",
+            "translation_pt": "Você tem toda a razão no que diz."
+          },
+          {
+            "text": "Lo veo de una forma completamente distinta.",
+            "translation_pt": "Vejo isso de uma forma completamente diferente."
+          },
+          {
+            "text": "Hasta cierto punto comparto tu criterio.",
+            "translation_pt": "Até certo ponto compartilho do seu critério."
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "Andrés",
+            "line": "¿Qué opinas del trabajo remoto a tiempo completo?"
+          },
+          {
+            "speaker": "Valeria",
+            "line": "En mi opinión, mejora bastante la calidad de vida y el descanso."
+          },
+          {
+            "speaker": "Andrés",
+            "line": "Estoy de acuerdo en parte, pero no creo que funcione para todos los sectores."
+          },
+          {
+            "speaker": "Valeria",
+            "line": "Tienes razón, algunos puestos requieren obligatoriamente la presencia física."
+          },
+          {
+            "speaker": "Andrés",
+            "line": "Exacto, por eso un modelo híbrido me parece más equilibrado."
+          },
+          {
+            "speaker": "Valeria",
+            "line": "Totalmente de acuerdo contigo, ofrece flexibilidad sin perder el contacto."
+          }
+        ],
+        "quiz": [
+          {
+            "question": "Após a expressão negativa 'No creo que...', qual modo verbal deve ser usado?",
+            "options": [
+              "Indicativo",
+              "Subjuntivo",
+              "Imperativo",
+              "Infinitivo"
+            ],
+            "answer": "Subjuntivo"
+          },
+          {
+            "question": "Complete corretamente: 'No creo que esta medida ________ la mejor opción'.",
+            "options": [
+              "es",
+              "sea",
+              "fue",
+              "será"
+            ],
+            "answer": "sea"
+          },
+          {
+            "question": "Como se diz 'Você tem razão' em espanhol?",
+            "options": [
+              "Tienes la razón",
+              "Tienes razón",
+              "Estás correcto",
+              "Eres con razón"
+            ],
+            "answer": "Tienes razón"
+          },
+          {
+            "question": "A expressão 'discrepar' significa:",
+            "options": [
+              "Concordar",
+              "Criticar asperamente",
+              "Discordar",
+              "Ignorar"
+            ],
+            "answer": "Discordar"
+          },
+          {
+            "question": "Qual frase indica concordância parcial?",
+            "options": [
+              "No estoy de acuerdo para nada.",
+              "Discrepo por completo.",
+              "Hasta cierto punto comparto tu opinión.",
+              "Te equivocas rotundamente."
+            ],
+            "answer": "Hasta cierto punto comparto tu opinión."
+          }
+        ]
+      }
+    },
+    {
+      "day": 6,
+      "theme": "Conversación informal en el trabajo",
+      "objective_pt": "Dominar o 'small talk' no ambiente corporativo, falando sobre rotina, café, prazos e colegas.",
+      "kind": "lesson",
+      "content": {
+        "vocabulary": [
+          {
+            "term": "el compañero de trabajo",
+            "translation_pt": "o colega de trabalho",
+            "example": "Mis compañeros de trabajo son muy colaborativos."
+          },
+          {
+            "term": "el descanso",
+            "translation_pt": "a pausa / intervalo",
+            "example": "Suelo tomar un descanso de diez minutos a las once."
+          },
+          {
+            "term": "la reunión",
+            "translation_pt": "a reunião",
+            "example": "Tenemos una reunión con los clientes a las tres."
+          },
+          {
+            "term": "el plazo",
+            "translation_pt": "o prazo",
+            "example": "El plazo de entrega vence este viernes."
+          },
+          {
+            "term": "estar hasta arriba",
+            "translation_pt": "estar atolado de tarefas",
+            "example": "Esta semana estoy hasta arriba de trabajo."
+          },
+          {
+            "term": "la jornada laboral",
+            "translation_pt": "a jornada de trabalho",
+            "example": "Cumplo una jornada laboral de ocho horas."
+          },
+          {
+            "term": "el informe",
+            "translation_pt": "o relatório",
+            "example": "Tengo que redactar el informe financiero."
+          },
+          {
+            "term": "el puesto",
+            "translation_pt": "o cargo / função",
+            "example": "Entró a la empresa para un nuevo puesto."
+          },
+          {
+            "term": "desconectar",
+            "translation_pt": "desconectar / desligar a mente",
+            "example": "Los fines de semana intento desconectar del móvil."
+          },
+          {
+            "term": "el jefe",
+            "translation_pt": "o chefe",
+            "example": "El jefe nos felicitó por los resultados del mes."
+          },
+          {
+            "term": "el sueldo",
+            "translation_pt": "o salário",
+            "example": "Pagan el sueldo el último día laborable."
+          },
+          {
+            "term": "la baja laboral",
+            "translation_pt": "a licença médica / afastamento",
+            "example": "Marta está de baja laboral por maternidad."
+          }
+        ],
+        "phrases": [
+          {
+            "text": "¿Qué tal va tu semana por aquí?",
+            "translation_pt": "Como está indo a sua semana por aqui?"
+          },
+          {
+            "text": "¿Vamos a tomar un café rápido?",
+            "translation_pt": "Vamos tomar um cafezinho rápido?"
+          },
+          {
+            "text": "Estoy bastante agobiado con las entregas de hoy.",
+            "translation_pt": "Estou bem sobrecarregado com as entregas de hoje."
+          },
+          {
+            "text": "¿Pudiste revisar el correo que te mandé?",
+            "translation_pt": "Conseguiu dar uma olhada no e-mail que te mandei?"
+          },
+          {
+            "text": "Por fin es viernes, qué ganas de descansar.",
+            "translation_pt": "Finalmente é sexta-feira, que vontade de descansar."
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "Diego",
+            "line": "Hola Marina, ¿tienes cinco minutos para un café?"
+          },
+          {
+            "speaker": "Marina",
+            "line": "Me encantaría, necesito despejarme. Hoy estoy hasta arriba."
+          },
+          {
+            "speaker": "Diego",
+            "line": "¿Muchos informes pendientes por entregar?"
+          },
+          {
+            "speaker": "Marina",
+            "line": "Sí, y además la reunión de las diez se alargó más de la cuenta."
+          },
+          {
+            "speaker": "Diego",
+            "line": "Te entiendo, los viernes siempre se complican con los plazos."
+          },
+          {
+            "speaker": "Marina",
+            "line": "Totalmente, pero bueno, ya queda poco para el fin de semana."
+          }
+        ],
+        "quiz": [
+          {
+            "question": "A expressão idiomática 'estar hasta arriba' no ambiente de trabalho significa:",
+            "options": [
+              "Estar promovido",
+              "Estar no topo do prédio",
+              "Estar atolado de trabalho",
+              "Estar desempregado"
+            ],
+            "answer": "Estar atolado de trabalho"
+          },
+          {
+            "question": "Como se diz 'relatório' em espanhol?",
+            "options": [
+              "Reportaje",
+              "Informe",
+              "Relatorio",
+              "Minuta"
+            ],
+            "answer": "Informe"
+          },
+          {
+            "question": "O termo 'el plazo' se refere a quê?",
+            "options": [
+              "Ao local de trabalho",
+              "Ao prazo ou data limite",
+              "Ao pagamento mensal",
+              "Ao intervalo de almoço"
+            ],
+            "answer": "Ao prazo ou data limite"
+          },
+          {
+            "question": "Qual palavra corresponde a 'afastamento por saúde / licença'?",
+            "options": [
+              "La vacación",
+              "La baja laboral",
+              "El despido",
+              "El aumento"
+            ],
+            "answer": "La baja laboral"
+          },
+          {
+            "question": "Como você convida educadamente um colega para um café na pausa?",
+            "options": [
+              "¿Tomas café o no?",
+              "¿Vamos a por un café?",
+              "¿Vamos a tomar un café?",
+              "¿Comamos café juntos?"
+            ],
+            "answer": "¿Vamos a tomar un café?"
+          }
+        ]
+      }
+    },
+    {
+      "day": 7,
+      "theme": "Repaso semanal: Transporte, compras, planes y trabajo",
+      "objective_pt": "Consolidar o vocabulário, estruturas gramaticais e contrastes linguísticos vistos nos primeiros 6 dias.",
+      "kind": "review",
+      "content": {
+        "vocabulary": [],
+        "phrases": [],
+        "dialogue": [],
+        "quiz": [
+          {
+            "question": "Ao chegar ao aeroporto para entregar a bagagem, você deve procurar o balcão para:",
+            "options": [
+              "aterrizar",
+              "despegar",
+              "facturar",
+              "posponer"
+            ],
+            "answer": "facturar"
+          },
+          {
+            "question": "Se você precisa de uma calça maior em uma loja de roupas, você pede uma:",
+            "options": [
+              "talla más grande",
+              "número más alto",
+              "medida ancha",
+              "caja superior"
+            ],
+            "answer": "talla más grande"
+          },
+          {
+            "question": "Qual das frases usa o pretérito correto para um tempo já encerrado no passado?",
+            "options": [
+              "Esta semana fui al cine.",
+              "El año pasado he conocido Roma.",
+              "Ayer me encontré con Juan.",
+              "Hoy conocí a tu hermano."
+            ],
+            "answer": "Ayer me encontré con Juan."
+          },
+          {
+            "question": "Complete: 'No creo que nosotros ________ tiempo de terminar el informe hoy'.",
+            "options": [
+              "tenemos",
+              "tengamos",
+              "tuvimos",
+              "tendremos"
+            ],
+            "answer": "tengamos"
+          },
+          {
+            "question": "A expressão espanhola 'estar de baja' significa:",
+            "options": [
+              "Estar desanimado",
+              "Estar demitido",
+              "Estar de licença médica",
+              "Estar no andar inferior"
+            ],
+            "answer": "Estar de licença médica"
+          },
+          {
+            "question": "Se um amigo diz '¿Te apetece ir al cine?', ele quer saber se você:",
+            "options": [
+              "Sabe o caminho do cinema",
+              "Quer ou tem vontade de ir ao cinema",
+              "Já comprou os ingressos",
+              "Tem dinheiro para o lanche"
+            ],
+            "answer": "Quer ou tem vontade de ir ao cinema"
+          },
+          {
+            "question": "Para dizer que duas pessoas marcaram um encontro às 19h:",
+            "options": [
+              "Quedamos a las siete",
+              "Marcamos a las siete",
+              "Combinamos a las siete",
+              "Pusimos a las siete"
+            ],
+            "answer": "Quedamos a las siete"
+          },
+          {
+            "question": "Qual é a tradução mais adequada de 'equipaje de mano'?",
+            "options": [
+              "Bagagem pesada",
+              "Bagagem despachada",
+              "Bagagem de mão",
+              "Mochila extraviada"
+            ],
+            "answer": "Bagagem de mão"
+          },
+          {
+            "question": "Um sinônimo para 'las rebajas' em português é:",
+            "options": [
+              "As quedas",
+              "As liquidações/promoções",
+              "As cobranças",
+              "As trocas"
+            ],
+            "answer": "As liquidações/promoções"
+          },
+          {
+            "question": "Na frase 'El coche se averió en la carretera', o verbo significa que o carro:",
+            "options": [
+              "Quebrou/avariou",
+              "Acelerou rápido",
+              "Bateu levemente",
+              "Ficou sem gasolina"
+            ],
+            "answer": "Quebrou/avariou"
+          },
+          {
+            "question": "Como se expressa discordância respeitosa em espanhol?",
+            "options": [
+              "Estás diciendo tonterías.",
+              "Discrepo respetuosamente de tu idea.",
+              "No sabes nada de eso.",
+              "No tienes derecho a opinar."
+            ],
+            "answer": "Discrepo respetuosamente de tu idea."
+          },
+          {
+            "question": "'Estoy hasta arriba en la oficina' significa que a pessoa:",
+            "options": [
+              "Está no último andar",
+              "Está muito atarefada",
+              "Foi promovida",
+              "Está irritada com o chefe"
+            ],
+            "answer": "Está muito atarefada"
+          }
+        ]
+      }
+    },
+    {
+      "day": 8,
+      "theme": "Llamadas telefónicas y citas",
+      "objective_pt": "Aprender a atender ao telefone, marcar compromissos formais e deixar recados com clareza.",
+      "kind": "lesson",
+      "content": {
+        "vocabulary": [
+          {
+            "term": "la cita",
+            "translation_pt": "o compromisso / consulta agendada",
+            "example": "Tengo una cita médica a las cuatro."
+          },
+          {
+            "term": "atender",
+            "translation_pt": "atender (uma ligação/cliente)",
+            "example": "No puedo atender el teléfono ahora."
+          },
+          {
+            "term": "dejar un recado",
+            "translation_pt": "deixar um recado",
+            "example": "¿Desea dejar un recado para el doctor?"
+          },
+          {
+            "term": "cortarse la llamada",
+            "translation_pt": "cair a ligação",
+            "example": "Lo siento, se me cortó la llamada por el túnel."
+          },
+          {
+            "term": "comunicar",
+            "translation_pt": "dar ocupado (telefone)",
+            "example": "Llamé varias veces pero la línea comunica."
+          },
+          {
+            "term": "la cobertura",
+            "translation_pt": "o sinal de celular / cobertura",
+            "example": "Aquí en el sótano casi no hay cobertura."
+          },
+          {
+            "term": "llamar de vuelta",
+            "translation_pt": "retornar a ligação",
+            "example": "Te llamo de vuelta en cuanto pueda."
+          },
+          {
+            "term": "el prefijo",
+            "translation_pt": "o código de área / DDI",
+            "example": "No olvides marcar el prefijo del país."
+          },
+          {
+            "term": "equivocarse de número",
+            "translation_pt": "ligar para o número errado",
+            "example": "Perdón, me he equivocado de número."
+          },
+          {
+            "term": "aplazar",
+            "translation_pt": "adiar (uma data/consulta)",
+            "example": "Necesito aplazar mi cita con el dentista."
+          },
+          {
+            "term": "confirmar",
+            "translation_pt": "confirmar",
+            "example": "Le llamo para confirmar su asistencia."
+          },
+          {
+            "term": "el buzón de voz",
+            "translation_pt": "a caixa postal",
+            "example": "Saltó el buzón de voz tras cuatro tonos."
+          }
+        ],
+        "phrases": [
+          {
+            "text": "¿De parte de quién, por favor?",
+            "translation_pt": "Quem gostaria / Quem está falando?"
+          },
+          {
+            "text": "Un momento, por favor, ahora le paso.",
+            "translation_pt": "Um momento, por favor, já vou transferir."
+          },
+          {
+            "text": "Se oye un poco entrecortado, ¿puede repetir?",
+            "translation_pt": "Está falhando um pouco, pode repetir?"
+          },
+          {
+            "text": "¿Podría concertar una cita para el martes?",
+            "translation_pt": "Poderia marcar um horário para terça-feira?"
+          },
+          {
+            "text": "Disculpe, creo que me he equivocado de número.",
+            "translation_pt": "Desculpe, acho que errei de número."
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "Recepcionista",
+            "line": "Clínica San Carlos, buenos días. ¿En qué puedo ayudarle?"
+          },
+          {
+            "speaker": "Paciente",
+            "line": "Buenos días. Quisiera concertar una cita con el traumatólogo, por favor."
+          },
+          {
+            "speaker": "Recepcionista",
+            "line": "Con mucho gusto. Tenemos hueco disponible el próximo jueves a las once."
+          },
+          {
+            "speaker": "Paciente",
+            "line": "Ese horario me viene muy bien. ¿Qué documentos debo llevar?"
+          },
+          {
+            "speaker": "Recepcionista",
+            "line": "Solo su documento de identidad y la tarjeta de su seguro médico."
+          },
+          {
+            "speaker": "Paciente",
+            "line": "Entendido. Muchas gracias por su atención, hasta el jueves."
+          }
+        ],
+        "quiz": [
+          {
+            "question": "Quando você atende ao telefone e deseja perguntar quem fala, você diz:",
+            "options": [
+              "¿Quién eres tú?",
+              "¿De parte de quién?",
+              "¿Cuál es tu nombre?",
+              "¿Por qué llamas?"
+            ],
+            "answer": "¿De parte de quién?"
+          },
+          {
+            "question": "O que significa 'la línea comunica' quando você tenta ligar?",
+            "options": [
+              "A linha funciona bem",
+              "O telefone está ocupado",
+              "A chamada foi gravada",
+              "A pessoa desligou na cara"
+            ],
+            "answer": "O telefone está ocupado"
+          },
+          {
+            "question": "Como se diz 'marcar uma consulta/horário' formalmente em espanhol?",
+            "options": [
+              "Fazer uma data",
+              "Concertar una cita",
+              "Anotar uma hora",
+              "Tomar um compromisso"
+            ],
+            "answer": "Concertar una cita"
+          },
+          {
+            "question": "Se o telefone não tem sinal ou conexão, dizemos que falta:",
+            "options": [
+              "cobertura",
+              "alfombra",
+              "conexión de enchufe",
+              "saldo de voz"
+            ],
+            "answer": "cobertura"
+          },
+          {
+            "question": "A expressão 'se cortó la llamada' significa em português:",
+            "options": [
+              "A ligação caiu",
+              "O telefone tocou alto",
+              "A mensagem foi apagada",
+              "A linha está grampeada"
+            ],
+            "answer": "A ligação caiu"
+          }
+        ]
+      }
+    },
+    {
+      "day": 9,
+      "theme": "Pedir y dar direcciones en la ciudad",
+      "objective_pt": "Aprender a orientar-se no espaço urbano, dar e compreender instruções de direção e referências.",
+      "kind": "lesson",
+      "content": {
+        "vocabulary": [
+          {
+            "term": "todo recto",
+            "translation_pt": "reto / em frente",
+            "example": "Sigue todo recto por esta avenida dos calles."
+          },
+          {
+            "term": "girar",
+            "translation_pt": "virar / dobrar",
+            "example": "Tienes que girar a la derecha en el semáforo."
+          },
+          {
+            "term": "la esquina",
+            "translation_pt": "a esquina",
+            "example": "La farmacia está justo en la esquina."
+          },
+          {
+            "term": "la manzana",
+            "translation_pt": "o quarteirão / quadra",
+            "example": "Camina dos manzanas y cruza la avenida."
+          },
+          {
+            "term": "el cruce",
+            "translation_pt": "o cruzamento",
+            "example": "Ten cuidado al pasar por el cruce peatonal."
+          },
+          {
+            "term": "la rotonda",
+            "translation_pt": "a rotatória",
+            "example": "Toma la tercera salida de la rotonda."
+          },
+          {
+            "term": "cruzar",
+            "translation_pt": "atravessar",
+            "example": "Cruza la calle por el paso de cebra."
+          },
+          {
+            "term": "la acera",
+            "translation_pt": "a calçada",
+            "example": "Camine siempre por la acera."
+          },
+          {
+            "term": "el semáforo",
+            "translation_pt": "o semáforo",
+            "example": "El semáforo se puso en rojo."
+          },
+          {
+            "term": "lejos",
+            "translation_pt": "longe",
+            "example": "El museo queda bastante lejos de aquí."
+          },
+          {
+            "term": "cerca",
+            "translation_pt": "perto",
+            "example": "La estación de tren está muy cerca."
+          },
+          {
+            "term": "enfrente de",
+            "translation_pt": "em frente a",
+            "example": "El banco está justo enfrente de la plaza."
+          }
+        ],
+        "phrases": [
+          {
+            "text": "¿Disculpe, para ir a la catedral por dónde es?",
+            "translation_pt": "Com licença, por onde vou para a catedral?"
+          },
+          {
+            "text": "Siga recto hasta llegar a la plaza central.",
+            "translation_pt": "Siga reto até chegar à praça central."
+          },
+          {
+            "text": "Tuerce a la izquierda en la próxima bocacalle.",
+            "translation_pt": "Vire à esquerda na próxima ruazinha transversal."
+          },
+          {
+            "text": "¿Está a una distancia caminable?",
+            "translation_pt": "Dá para ir a pé / É uma distância caminhável?"
+          },
+          {
+            "text": "No tiene pérdida, lo verá enseguida.",
+            "translation_pt": "Não tem erro/como errar, verá logo em seguida."
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "Turista",
+            "line": "Perdone, ¿sabe si hay una farmacia cerca de aquí?"
+          },
+          {
+            "speaker": "Vecino",
+            "line": "Sí, hay una de guardia a unas tres manzanas."
+          },
+          {
+            "speaker": "Turista",
+            "line": "¿Me podría explicar cómo llegar, por favor?"
+          },
+          {
+            "speaker": "Vecino",
+            "line": "Claro. Vaya todo recto por esta calle hasta el semáforo grande."
+          },
+          {
+            "speaker": "Vecino",
+            "line": "Allí gire a la izquierda y camine unos cincuenta metros. Está al lado del banco."
+          },
+          {
+            "speaker": "Turista",
+            "line": "Estupendo, muchas gracias por su ayuda. ¡Que tenga buen día!"
+          }
+        ],
+        "quiz": [
+          {
+            "question": "Como se diz 'ir em frente / reto' em espanhol?",
+            "options": [
+              "Ir derecho todo",
+              "Seguir todo recto",
+              "Caminar recto arriba",
+              "Pasar en frente"
+            ],
+            "answer": "Seguir todo recto"
+          },
+          {
+            "question": "O que significa 'una manzana' no vocabulário urbano?",
+            "options": [
+              "Uma barraca de frutas",
+              "Um quarteirão / quadra",
+              "Uma praça com árvores",
+              "Um cruzamento perigoso"
+            ],
+            "answer": "Um quarteirão / quadra"
+          },
+          {
+            "question": "O que é 'la acera' onde os pedestres caminham?",
+            "options": [
+              "A calçada",
+              "A pista expressa",
+              "A faixa de pedestres",
+              "O canteiro central"
+            ],
+            "answer": "A calçada"
+          },
+          {
+            "question": "A expressão 'No tiene pérdida' significa:",
+            "options": [
+              "Não custa dinheiro",
+              "Não tem como se perder / Não tem erro",
+              "Não tem saída",
+              "Não tem perigo nenhum"
+            ],
+            "answer": "Não tem como se perder / Não tem erro"
+          },
+          {
+            "question": "Como se diz 'virar à esquerda'?",
+            "options": [
+              "Girar a la izquierda",
+              "Trocar a la izquierda",
+              "Doblar a la siniestra",
+              "Girar en izquierda"
+            ],
+            "answer": "Girar a la izquierda"
+          }
+        ]
+      }
+    },
+    {
+      "day": 10,
+      "theme": "En el restaurante: comer y pagar",
+      "objective_pt": "Saber pedir pratos, esclarecer ingredientes, reclamar educadamente e pedir a conta sem erros.",
+      "kind": "lesson",
+      "content": {
+        "vocabulary": [
+          {
+            "term": "la cuenta",
+            "translation_pt": "a conta",
+            "example": "Camarero, ¿nos trae la cuenta, por favor?"
+          },
+          {
+            "term": "el camarero",
+            "translation_pt": "o garçom",
+            "example": "El camarero fue muy atento durante la cena."
+          },
+          {
+            "term": "el entrante",
+            "translation_pt": "a entrada / aperitivo",
+            "example": "De entrante pedimos unas croquetas."
+          },
+          {
+            "term": "el plato principal",
+            "translation_pt": "o prato principal",
+            "example": "De plato principal elegí salmón a la plancha."
+          },
+          {
+            "term": "el postre",
+            "translation_pt": "a sobremesa",
+            "example": "¿Qué opciones tienen de postre casero?"
+          },
+          {
+            "term": "la propina",
+            "translation_pt": "a gorjeta",
+            "example": "Dejamos una buena propina por el excelente servicio."
+          },
+          {
+            "term": "a la plancha",
+            "translation_pt": "grelhado",
+            "example": "Prefiero las verduras a la plancha."
+          },
+          {
+            "term": "el punto de la carne",
+            "translation_pt": "o ponto da carne",
+            "example": "¿Cómo le gusta el punto de la carne?"
+          },
+          {
+            "term": "poco hecho",
+            "translation_pt": "malpassado",
+            "example": "A mí me gusta el bife poco hecho."
+          },
+          {
+            "term": "al punto",
+            "translation_pt": "ao ponto",
+            "example": "Para mí la carne al punto, por favor."
+          },
+          {
+            "term": "muy hecho",
+            "translation_pt": "bem-passado",
+            "example": "No me gusta ver sangre, la prefiero muy hecha."
+          },
+          {
+            "term": "los cubiertos",
+            "translation_pt": "os talheres",
+            "example": "Falta un juego de cubiertos en la mesa."
+          }
+        ],
+        "phrases": [
+          {
+            "text": "¿Tienen mesa para dos personas?",
+            "translation_pt": "Vocês têm mesa para duas pessoas?"
+          },
+          {
+            "text": "¿Nos podría traer la carta, por favor?",
+            "translation_pt": "Poderia nos trazer o cardápio, por favor?"
+          },
+          {
+            "text": "Soy alérgico a los frutos secos.",
+            "translation_pt": "Sou alérgico a nozes/castanhas."
+          },
+          {
+            "text": "¿Nos cobra juntos o por separado?",
+            "translation_pt": "Pode cobrar tudo junto ou separado?"
+          },
+          {
+            "text": "Estaba todo delicioso, felicitaciones al cocinero.",
+            "translation_pt": "Estava tudo delicioso, parabéns ao cozinheiro."
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "Camarero",
+            "line": "Buenas noches. ¿Tienen reserva o desean una mesa libre?"
+          },
+          {
+            "speaker": "Cliente",
+            "line": "Buenas noches, no tenemos reserva, pero somos solo dos personas."
+          },
+          {
+            "speaker": "Camarero",
+            "line": "Acompáñenme, por aquí. Aquí tienen la carta de comida y vinos."
+          },
+          {
+            "speaker": "Cliente",
+            "line": "Gracias. ¿Qué nos recomienda de plato principal?"
+          },
+          {
+            "speaker": "Camarero",
+            "line": "El solomillo ibérico está excelente hoy. ¿En qué punto le gusta la carne?"
+          },
+          {
+            "speaker": "Cliente",
+            "line": "Al punto, por favor. Y para beber, una botella de agua sin gas."
+          }
+        ],
+        "quiz": [
+          {
+            "question": "Como se diz carne 'malpassada' em espanhol?",
+            "options": [
+              "Medio cruda",
+              "Poco hecha",
+              "Mal cocida",
+              "Tierna baja"
+            ],
+            "answer": "Poco hecha"
+          },
+          {
+            "question": "Como se pede educadamente a conta ao garçom?",
+            "options": [
+              "¡Cobre aquí!",
+              "¿Nos trae la cuenta, por favor?",
+              "¿Cuánto cuesta esto?",
+              "Quiero pagar ahora."
+            ],
+            "answer": "¿Nos trae la cuenta, por favor?"
+          },
+          {
+            "question": "A palavra 'el postre' significa:",
+            "options": [
+              "O aperitivo",
+              "O prato principal",
+              "A sobremesa",
+              "A bebida quente"
+            ],
+            "answer": "A sobremesa"
+          },
+          {
+            "question": "Se você precisa de garfo e faca adicionais, você pede:",
+            "options": [
+              "las vajillas",
+              "las herramientas",
+              "los cubiertos",
+              "los platos hondos"
+            ],
+            "answer": "los cubiertos"
+          },
+          {
+            "question": "Em muitos países hispanofalantes, o cardápio do restaurante chama-se:",
+            "options": [
+              "el menú / la carta",
+              "la factura",
+              "la cartulina",
+              "la receta"
+            ],
+            "answer": "el menú / la carta"
+          }
+        ]
+      }
+    },
+    {
+      "day": 11,
+      "theme": "Salud, farmacia y urgencias",
+      "objective_pt": "Aprender a descrever sintomas físicos, dores e comprar medicamentos na farmácia em espanhol.",
+      "kind": "lesson",
+      "content": {
+        "vocabulary": [
+          {
+            "term": "el dolor de cabeza",
+            "translation_pt": "a dor de cabeça",
+            "example": "Tengo un dolor de cabeza muy fuerte desde ayer."
+          },
+          {
+            "term": "doler",
+            "translation_pt": "doer (funciona como 'gustar')",
+            "example": "Me duele mucho la garganta al tragar."
+          },
+          {
+            "term": "el mareo",
+            "translation_pt": "a tontura / enjoo",
+            "example": "Siento un mareo constante cuando me levanto."
+          },
+          {
+            "term": "la fiebre",
+            "translation_pt": "a febre",
+            "example": "El niño tiene fiebre alta, casi treinta y nueve."
+          },
+          {
+            "term": "el jarabe",
+            "translation_pt": "o xarope",
+            "example": "Toma una cucharada de jarabe para la tos."
+          },
+          {
+            "term": "la pastilla",
+            "translation_pt": "o comprimido / pílula",
+            "example": "Debes tomar una pastilla cada ocho horas."
+          },
+          {
+            "term": "el resfriado",
+            "translation_pt": "o resfriado",
+            "example": "Tengo un resfriado común con congestión nasal."
+          },
+          {
+            "term": "la tirita",
+            "translation_pt": "o curativo adesivo / band-aid",
+            "example": "Me corté el dedo, ¿tienes una tirita?"
+          },
+          {
+            "term": "la receta médica",
+            "translation_pt": "a receita médica",
+            "example": "Este antibiótico solo se vende con receta médica."
+          },
+          {
+            "term": "el esguince",
+            "translation_pt": "a entorse / torção",
+            "example": "Me hice un esguince en el tobillo jugando al fútbol."
+          },
+          {
+            "term": "hincharse",
+            "translation_pt": "inchar",
+            "example": "Se me hinchó el pie después de la caída."
+          },
+          {
+            "term": "las urgencias",
+            "translation_pt": "o pronto-socorro / emergência",
+            "example": "Tuvimos que ir a urgencias por la noche."
+          }
+        ],
+        "phrases": [
+          {
+            "text": "Me duele la espalda desde hace tres días.",
+            "translation_pt": "Minhas costas doem há três dias."
+          },
+          {
+            "text": "¿Tiene algo para la acidez de estómago?",
+            "translation_pt": "Você tem algo para azia/acidez estomacal?"
+          },
+          {
+            "text": "¿Cada cuántas horas debo tomar este medicamento?",
+            "translation_pt": "De quantas em quantas horas devo tomar este remédio?"
+          },
+          {
+            "text": "Siento náuseas y escalofríos.",
+            "translation_pt": "Sinto náuseas e calafrios."
+          },
+          {
+            "text": "¿Necesito receta médica para comprar esto?",
+            "translation_pt": "Preciso de receita médica para comprar isto?"
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "Farmacéutico",
+            "line": "Hola, buenas tardes. ¿En qué le puedo ayudar?"
+          },
+          {
+            "speaker": "Cliente",
+            "line": "Buenas tardes. Tengo un resfriado terrible y me duele mucho la garganta."
+          },
+          {
+            "speaker": "Farmacéutico",
+            "line": "¿Tiene fiebre o solo congestión y dolor?"
+          },
+          {
+            "speaker": "Cliente",
+            "line": "No tengo fiebre, pero al tragar siento mucho ardor."
+          },
+          {
+            "speaker": "Farmacéutico",
+            "line": "Le recomiendo estas pastillas para chupar y este analgésico cada ocho horas."
+          },
+          {
+            "speaker": "Cliente",
+            "line": "Perfecto, me llevo las dos cosas. ¿Cuánto cuesta?"
+          }
+        ],
+        "quiz": [
+          {
+            "question": "O verbo 'doler' constrói-se gramaticalmente da mesma forma que o verbo:",
+            "options": [
+              "hacer",
+              "tener",
+              "gustar",
+              "poner"
+            ],
+            "answer": "gustar"
+          },
+          {
+            "question": "Complete a frase: 'Ayer corrí una maratón y hoy me ________ las piernas'.",
+            "options": [
+              "duele",
+              "duelen",
+              "duelo",
+              "dolían"
+            ],
+            "answer": "duelen"
+          },
+          {
+            "question": "Como se chama um curativo adesivo (tipo 'band-aid') na Espanha?",
+            "options": [
+              "El curativo",
+              "La tirita",
+              "El esparadrapo",
+              "La venda"
+            ],
+            "answer": "La tirita"
+          },
+          {
+            "question": "Se você torceu o tornozelo sem quebrar o osso, você teve um:",
+            "options": [
+              "fractura",
+              "esguince",
+              "corte",
+              "catarro"
+            ],
+            "answer": "esguince"
+          },
+          {
+            "question": "O termo 'urgencias' em um hospital se traduz por:",
+            "options": [
+              "Ambulatório de rotina",
+              "Pronto-socorro / Emergência",
+              "Sala de espera",
+              "Quarto de internação"
+            ],
+            "answer": "Pronto-socorro / Emergência"
+          }
+        ]
+      }
+    },
+    {
+      "day": 12,
+      "theme": "Finanzas, dinero y transacciones",
+      "objective_pt": "Aprender termos bancários, lidar com caixas eletrônicos, taxas de câmbio e formas de pagamento.",
+      "kind": "lesson",
+      "content": {
+        "vocabulary": [
+          {
+            "term": "el cajero automático",
+            "translation_pt": "o caixa eletrônico",
+            "example": "Necesito sacar dinero en el cajero automático."
+          },
+          {
+            "term": "sacar dinero",
+            "translation_pt": "sacar dinheiro",
+            "example": "Saqué cien euros para los gastos del mercado."
+          },
+          {
+            "term": "en efectivo",
+            "translation_pt": "em dinheiro vivo / espécie",
+            "example": "¿Puedo pagar en efectivo o solo con tarjeta?"
+          },
+          {
+            "term": "la cuenta bancaria",
+            "translation_pt": "a conta bancária",
+            "example": "Abrí una cuenta bancaria en el banco local."
+          },
+          {
+            "term": "la comisión",
+            "translation_pt": "a taxa bancária / comissão",
+            "example": "Ese banco cobra mucha comisión por retirar."
+          },
+          {
+            "term": "el tipo de cambio",
+            "translation_pt": "a taxa de câmbio",
+            "example": "El tipo de cambio hoy está muy favorable."
+          },
+          {
+            "term": "la transferencia",
+            "translation_pt": "a transferência",
+            "example": "Te hice una transferencia a tu cuenta corriente."
+          },
+          {
+            "term": "el recibo",
+            "translation_pt": "o comprovante / recibo",
+            "example": "¿Desea que el cajero imprima el recibo?"
+          },
+          {
+            "term": "el saldo",
+            "translation_pt": "o saldo",
+            "example": "Consulté mi saldo y me queda poco dinero."
+          },
+          {
+            "term": "el préstamo",
+            "translation_pt": "o empréstimo",
+            "example": "Solicitó un préstamo para comprar el coche."
+          },
+          {
+            "term": "monedas",
+            "translation_pt": "moedas",
+            "example": "¿Tiene monedas para darme cambio?"
+          },
+          {
+            "term": "los billetes",
+            "translation_pt": "as cédulas / notas de dinheiro",
+            "example": "Llevaba varios billetes de cincuenta euros."
+          }
+        ],
+        "phrases": [
+          {
+            "text": "¿Aceptan tarjeta de crédito o solo efectivo?",
+            "translation_pt": "Aceitam cartão de crédito ou só dinheiro vivo?"
+          },
+          {
+            "text": "El cajero se tragó mi tarjeta de débito.",
+            "translation_pt": "O caixa eletrônico engoliu meu cartão de débito."
+          },
+          {
+            "text": "¿Cuál es la comisión por sacar dinero aquí?",
+            "translation_pt": "Qual é a taxa para sacar dinheiro aqui?"
+          },
+          {
+            "text": "¿Dónde puedo cambiar dólares por euros?",
+            "translation_pt": "Onde posso trocar dólares por euros?"
+          },
+          {
+            "text": "¿Me da el justificante de la operación, por favor?",
+            "translation_pt": "Pode me dar o comprovante da operação, por favor?"
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "Cliente",
+            "line": "Hola, buenos días. Quisiera cambiar reales brasileños a euros."
+          },
+          {
+            "speaker": "Cajero",
+            "line": "Buenos días. Sí claro, aquí tenemos el servicio de cambio de divisas."
+          },
+          {
+            "speaker": "Cliente",
+            "line": "¿Cuál es el tipo de cambio del día y cuánto cobran de comisión?"
+          },
+          {
+            "speaker": "Cajero",
+            "line": "Está a 0,16 euros por real y cobramos un dos por ciento de comisión fija."
+          },
+          {
+            "speaker": "Cliente",
+            "line": "De acuerdo, deseo cambiar quinientos reales en billetes pequeños."
+          },
+          {
+            "speaker": "Cajero",
+            "line": "Perfecto. Firme aquí y le entrego su dinero junto con el recibo."
+          }
+        ],
+        "quiz": [
+          {
+            "question": "Como se diz 'sacar dinheiro' no caixa eletrônico em espanhol?",
+            "options": [
+              "Tirar dinero",
+              "Sacar dinero",
+              "Bajar dinero",
+              "Pegar dinero"
+            ],
+            "answer": "Sacar dinero"
+          },
+          {
+            "question": "O termo 'en efectivo' significa pagar:",
+            "options": [
+              "Com cheque",
+              "Em dinheiro vivo",
+              "Por transferência",
+              "A prazo"
+            ],
+            "answer": "Em dinheiro vivo"
+          },
+          {
+            "question": "Se o caixa eletrônico fica com o seu cartão por falha mecânica, você diz:",
+            "options": [
+              "El cajero comió mi tarjeta",
+              "El cajero se tragó mi tarjeta",
+              "El cajero mordió la tarjeta",
+              "El cajero rompió mi tarjeta"
+            ],
+            "answer": "El cajero se tragó mi tarjeta"
+          },
+          {
+            "question": "As notas em papel-moeda chamam-se em espanhol:",
+            "options": [
+              "Billetes",
+              "Papeles",
+              "Cédulas de pago",
+              "Tiques"
+            ],
+            "answer": "Billetes"
+          },
+          {
+            "question": "A taxa que o banco cobra pela operação financeira é chamada de:",
+            "options": [
+              "La comisión",
+              "El sueldo",
+              "La cuenta",
+              "El gasto extra"
+            ],
+            "answer": "La comisión"
+          }
+        ]
+      }
+    },
+    {
+      "day": 13,
+      "theme": "Resolución de imprevistos y reclamaciones",
+      "objective_pt": "Aprender a formalizar reclamações em hotéis ou serviços e resolver contratempos com firmeza e cortesia.",
+      "kind": "lesson",
+      "content": {
+        "vocabulary": [
+          {
+            "term": "la queja",
+            "translation_pt": "a queixa / reclamação",
+            "example": "Quiero poner una queja por la falta de agua caliente."
+          },
+          {
+            "term": "la hoja de reclamaciones",
+            "translation_pt": "o livro / formulário oficial de reclamações",
+            "example": "Por ley, exijo la hoja de reclamaciones."
+          },
+          {
+            "term": "la avería",
+            "translation_pt": "a avaria / defeito mecânico",
+            "example": "El aire acondicionado tiene una avería grave."
+          },
+          {
+            "term": "el reembolso",
+            "translation_pt": "o reembolso",
+            "example": "Solicito el reembolso íntegro de mi dinero."
+          },
+          {
+            "term": "inaceptable",
+            "translation_pt": "inaceitável",
+            "example": "El ruido a medianoche me parece inaceptable."
+          },
+          {
+            "term": "la solución",
+            "translation_pt": "a solução",
+            "example": "Necesitamos encontrar una solución urgente."
+          },
+          {
+            "term": "sucio",
+            "translation_pt": "sujo",
+            "example": "El cuarto de baño estaba bastante sucio al llegar."
+          },
+          {
+            "term": "el ruido",
+            "translation_pt": "o barulho / ruído",
+            "example": "Hay demasiado ruido proveniente de la calle."
+          },
+          {
+            "term": "compensar",
+            "translation_pt": "compensar / indenizar",
+            "example": "El hotel nos compensó con un desayuno gratuito."
+          },
+          {
+            "term": "funcionar",
+            "translation_pt": "funcionar",
+            "example": "La tarjeta magnética de la puerta no funciona."
+          },
+          {
+            "term": "atender",
+            "translation_pt": "dar atenção / resolver",
+            "example": "El gerente atendió nuestro reclamo enseguida."
+          },
+          {
+            "term": "la molestia",
+            "translation_pt": "o incômodo / transtorno",
+            "example": "Disculpe las molestias causadas por las obras."
+          }
+        ],
+        "phrases": [
+          {
+            "text": "Quisiera hablar con el responsable del establecimiento.",
+            "translation_pt": "Gostaria de falar com o gerente/responsável pelo estabelecimento."
+          },
+          {
+            "text": "La habitación no cumple con lo contratado.",
+            "translation_pt": "O quarto não condiz com o contratado."
+          },
+          {
+            "text": "El aire acondicionado no enfría absolutamente nada.",
+            "translation_pt": "O ar-condicionado não esfria absolutamente nada."
+          },
+          {
+            "text": "Espero que me ofrezcan una solución inmediata.",
+            "translation_pt": "Espero que me ofereçam uma solução imediata."
+          },
+          {
+            "text": "Lamentamos las molestias, le cambiaremos de habitación.",
+            "translation_pt": "Lamentamos os transtornos, vamos trocar o seu quarto."
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "Huésped",
+            "line": "Buenas noches. Llamo desde la habitación 402 porque el agua caliente no funciona."
+          },
+          {
+            "speaker": "Recepcionista",
+            "line": "Buenas noches. Qué extraño, permítame verificar el sistema de calderas."
+          },
+          {
+            "speaker": "Huésped",
+            "line": "Ya esperé veinte minutos y sigue saliendo helada. Estoy muy disgustado."
+          },
+          {
+            "speaker": "Recepcionista",
+            "line": "Tiene toda la razón, le pido mil disculpas por este inconveniente."
+          },
+          {
+            "speaker": "Huésped",
+            "line": "Necesito ducharme ya, vengo de un viaje de doce horas."
+          },
+          {
+            "speaker": "Recepcionista",
+            "line": "Ahora mismo le envío las llaves de la suite del quinto piso para que se traslade."
+          }
+        ],
+        "quiz": [
+          {
+            "question": "Documento oficial fornecido na Espanha para formalizar um descontentamento de consumo:",
+            "options": [
+              "El papel de disgusto",
+              "La hoja de reclamaciones",
+              "El acta de policía",
+              "La carta de queja"
+            ],
+            "answer": "La hoja de reclamaciones"
+          },
+          {
+            "question": "Como se diz que algo 'não funciona' ou 'está enguiçado'?",
+            "options": [
+              "No sirve ni anda",
+              "No funciona / Tiene una avería",
+              "Está parado de vez",
+              "No corre"
+            ],
+            "answer": "No funciona / Tiene una avería"
+          },
+          {
+            "question": "A devolução do valor pago por um serviço ruim chama-se:",
+            "options": [
+              "El reintegro / reembolso",
+              "La vuelta",
+              "La propina inversa",
+              "El rescate"
+            ],
+            "answer": "El reintegro / reembolso"
+          },
+          {
+            "question": "A expressão 'disculpe las molestias' significa:",
+            "options": [
+              "Desculpe as mentiras",
+              "Desculpe os transtornos/incômodos",
+              "Perdoe a preguiça",
+              "Ignore as reclamações"
+            ],
+            "answer": "Desculpe os transtornos/incômodos"
+          },
+          {
+            "question": "Se o quarto do hotel estiver com poeira e toalhas usadas, ele está:",
+            "options": [
+              "limpio",
+              "estrecho",
+              "sucio",
+              "ancho"
+            ],
+            "answer": "sucio"
+          }
+        ]
+      }
+    },
+    {
+      "day": 14,
+      "theme": "Repaso semanal: Teléfono, ciudad, salud y finanzas",
+      "objective_pt": "Revisar as estruturas práticas e léxico dos dias 8 a 13 para preparar a avaliação final.",
+      "kind": "review",
+      "content": {
+        "vocabulary": [],
+        "phrases": [],
+        "dialogue": [],
+        "quiz": [
+          {
+            "question": "Ao telefone comercial, para transferir uma ligação você diz:",
+            "options": [
+              "Ahora te paso con él",
+              "Ahora te tiro la llamada",
+              "Ahora te cruzo la voz",
+              "Ahora te dejo el cable"
+            ],
+            "answer": "Ahora te paso con él"
+          },
+          {
+            "question": "Qual indicação significa 'caminhar reto por esta rua'?",
+            "options": [
+              "Gire a la manzana",
+              "Siga todo recto por esta calle",
+              "Tuerza por la acera",
+              "Cruce la rotonda a pie"
+            ],
+            "answer": "Siga todo recto por esta calle"
+          },
+          {
+            "question": "Se a carne no restaurante deve vir bem assada, você pede:",
+            "options": [
+              "Poco hecha",
+              "Al punto",
+              "Muy hecha",
+              "Cruda"
+            ],
+            "answer": "Muy hecha"
+          },
+          {
+            "question": "Na farmácia, o que é um 'jarabe para la tos'?",
+            "options": [
+              "Uma pomada para coceira",
+              "Um xarope para tosse",
+              "Um colírio para os olhos",
+              "Um antibiótico forte"
+            ],
+            "answer": "Um xarope para tosse"
+          },
+          {
+            "question": "Para retirar cédulas de dinheiro na Espanha, você procura:",
+            "options": [
+              "Un escaparate de pago",
+              "Un cajero automático",
+              "Una caja fuerte abierta",
+              "Un mostrador de giro"
+            ],
+            "answer": "Un cajero automático"
+          },
+          {
+            "question": "Se você tem uma consulta marcada com o médico, você diz:",
+            "options": [
+              "Tengo una cita médica",
+              "Tengo un compromiso clínico",
+              "Tengo una data médica",
+              "Tengo un apunte con el doctor"
+            ],
+            "answer": "Tengo una cita médica"
+          },
+          {
+            "question": "A frase 'Me duelen los ojos' está no plural porque:",
+            "options": [
+              "O sujeito 'los ojos' é plural",
+              "O pronome 'me' exige plural",
+              "O verbo sempre vai no plural",
+              "É uma forma irregular do subjuntivo"
+            ],
+            "answer": "O sujeito 'los ojos' é plural"
+          },
+          {
+            "question": "Como se diz 'A ligação caiu' em espanhol?",
+            "options": [
+              "Se cayó el hilo",
+              "Se cortó la llamada",
+              "Murió la antena",
+              "Desapareció el tono"
+            ],
+            "answer": "Se cortó la llamada"
+          },
+          {
+            "question": "O que significa 'una tirita' na farmácia?",
+            "options": [
+              "Um curativo adesivo pequeno",
+              "Um termômetro digital",
+              "Uma seringa descartável",
+              "Um pacote de algodão"
+            ],
+            "answer": "Um curativo adesivo pequeno"
+          },
+          {
+            "question": "A expressão 'tipo de cambio' refere-se a:",
+            "options": [
+              "Cotação de moedas",
+              "Troca de mercadorias defeituosas",
+              "Mudança de marcha no carro",
+              "Alteração de voo"
+            ],
+            "answer": "Cotação de moedas"
+          },
+          {
+            "question": "Como se diz 'A comida estava fria e o quarto muito sujo'?",
+            "options": [
+              "La comida estaba fría y la habitación muy sucia",
+              "La comida era helada y el cuarto bien manchado",
+              "El plato estaba frío y el dormitorio lleno",
+              "La comida quedaba fría y el baño roto"
+            ],
+            "answer": "La comida estaba fría y la habitación muy sucia"
+          },
+          {
+            "question": "Pedir a 'hoja de reclamaciones' é um direito do consumidor para:",
+            "options": [
+              "Pedir desconto em compras futuras",
+              "Registrar formalmente uma reclamação contra o estabelecimento",
+              "Solicitar notas fiscais duplicadas",
+              "Trocar o produto na hora sem pagar"
+            ],
+            "answer": "Registrar formalmente uma reclamação contra o estabelecimento"
+          }
+        ]
+      }
+    },
+    {
+      "day": 15,
+      "theme": "Evaluación final y despedida",
+      "objective_pt": "Avaliar integralmente a competência comunicativa em nível B1 nos contextos de viagens, serviços e convivência.",
+      "kind": "final",
+      "content": {
+        "vocabulary": [],
+        "phrases": [],
+        "dialogue": [
+          {
+            "speaker": "Profesor",
+            "line": "¡Enhorabuena por completar este curso intensivo de quince días!"
+          },
+          {
+            "speaker": "Alumno",
+            "line": "Muchas gracias, profesor. Siento que ahora me comunico con mucha más seguridad."
+          },
+          {
+            "speaker": "Profesor",
+            "line": "¿Qué situaciones del día a día te resultaban más difíciles antes?"
+          },
+          {
+            "speaker": "Alumno",
+            "line": "Hacer reclamaciones por teléfono y pedir comida o ropa sin confundir falsos amigos."
+          },
+          {
+            "speaker": "Profesor",
+            "line": "Has progresado notablemente en tu fluidez y precisión gramatical."
+          },
+          {
+            "speaker": "Alumno",
+            "line": "Ha sido un viaje de aprendizaje increíble. ¡Ahora a seguir practicando!"
+          }
+        ],
+        "quiz": [
+          {
+            "question": "1. No aeroporto, antes de entrar na sala de embarque, você deve mostrar a:",
+            "options": [
+              "tarjeta de crédito",
+              "tarjeta de embarque",
+              "hoja de quejas",
+              "factura de equipaje"
+            ],
+            "answer": "tarjeta de embarque"
+          },
+          {
+            "question": "2. Se você calça 41 e precisa de um calçado correspondente, pede:",
+            "options": [
+              "la talla cuarenta y uno",
+              "el número cuarenta y uno",
+              "el corte cuarenta y uno",
+              "el largo cuarenta y uno"
+            ],
+            "answer": "el número cuarenta y uno"
+          },
+          {
+            "question": "3. '¿Quedamos a las ocho delante del cine?' tem o sentido de:",
+            "options": [
+              "Nos atrasamos às oito",
+              "Marcamos de nos ver às oito",
+              "Saímos do cinema às oito",
+              "Compramos ingressos às oito"
+            ],
+            "answer": "Marcamos de nos ver às oito"
+          },
+          {
+            "question": "4. Complete a frase de experiência passada: 'Nunca en mi vida ________ una comida tan picante'.",
+            "options": [
+              "probé",
+              "he probado",
+              "probaré",
+              "pruebo"
+            ],
+            "answer": "he probado"
+          },
+          {
+            "question": "5. Identifique a frase gramaticalmente correta com opinião negativa:",
+            "options": [
+              "No creo que el precio es justo.",
+              "No creo que el precio sea justo.",
+              "No pienso que el precio será justo.",
+              "No opino que el precio fue justo."
+            ],
+            "answer": "No creo que el precio sea justo."
+          },
+          {
+            "question": "6. No trabalho, se um colega diz 'estoy hasta arriba de trabajo', significa que:",
+            "options": [
+              "Quer demitir-se",
+              "Está muito atarefado/sobrecarregado",
+              "Terminou tudo antes da hora",
+              "Ganhou um aumento salarial"
+            ],
+            "answer": "Está muito atarefado/sobrecarregado"
+          },
+          {
+            "question": "7. Ao ligar para um escritório e pedir transferência de ramal, a secretária responde:",
+            "options": [
+              "Ahora te paso",
+              "Ahora te llamo",
+              "Ahora te cuelgo",
+              "Ahora te dejo"
+            ],
+            "answer": "Ahora te paso"
+          },
+          {
+            "question": "8. Para orientar alguém a virar à direita na rotatória, você diz:",
+            "options": [
+              "Gire a la derecha en la rotonda",
+              "Camine recto sobre la rotonda",
+              "Tuerza por la acera",
+              "Suba la manzana derecha"
+            ],
+            "answer": "Gire a la derecha en la rotonda"
+          },
+          {
+            "question": "9. No restaurante, se você quer a carne grelhada e no ponto ideal entre mal e bem-passada:",
+            "options": [
+              "A la plancha y al punto",
+              "Frita y poco hecha",
+              "Hervida y muy hecha",
+              "Asada y cruda"
+            ],
+            "answer": "A la plancha y al punto"
+          },
+          {
+            "question": "10. Se você bateu o joelho e a região aumentou de volume, você diz:",
+            "options": [
+              "La rodilla se me rompió",
+              "La rodilla se me hinchó",
+              "La rodilla se me dobló",
+              "La rodilla se me quemó"
+            ],
+            "answer": "La rodilla se me hinchó"
+          },
+          {
+            "question": "11. Em uma casa de câmbio ou banco, notas de papel e moedas metálicas são:",
+            "options": [
+              "Billetes y monedas",
+              "Papeletas y cobres",
+              "Tiques y fichas",
+              "Cheques y centavos"
+            ],
+            "answer": "Billetes y monedas"
+          },
+          {
+            "question": "12. Ao constatar que o ar-condicionado do hotel quebrou, você avisa à recepção sobre:",
+            "options": [
+              "un retraso",
+              "un esguince",
+              "una avería",
+              "una molestia leve"
+            ],
+            "answer": "una avería"
+          },
+          {
+            "question": "13. A expressão 'hace poco' indica um evento que aconteceu:",
+            "options": [
+              "Há muito tempo",
+              "Recentemente / pouco tempo atrás",
+              "No futuro próximo",
+              "Nunca"
+            ],
+            "answer": "Recentemente / pouco tempo atrás"
+          },
+          {
+            "question": "14. A forma correta para concordar enfaticamente com um argumento é:",
+            "options": [
+              "Tienes toda la razón",
+              "Eres muy razonable",
+              "Estás con toda certeza",
+              "Posees la razón total"
+            ],
+            "answer": "Tienes toda la razón"
+          },
+          {
+            "question": "15. Para solicitar o comprovante de pagamento ao garçom ou recepcionista, você pede:",
+            "options": [
+              "La carta",
+              "El justificante / recibo",
+              "La receta médica",
+              "El billete"
+            ],
+            "answer": "El justificante / recibo"
+          }
+        ]
+      }
+    }
+  ]
+}

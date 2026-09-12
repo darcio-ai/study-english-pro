@@ -1,0 +1,2498 @@
+{
+  "days": [
+    {
+      "day": 1,
+      "theme": "Negociaciones corporativas y concesiones tácticas",
+      "objective_pt": "Dominar o vocabulário de acordos multilaterais, concessões mútuas e linguagem diplomática em negociações.",
+      "kind": "lesson",
+      "content": {
+        "vocabulary": [
+          {
+            "term": "ceder terreno",
+            "translation_pt": "ceder espaço / abrir concessões",
+            "example": "No podemos ceder terreno en las cláusulas de rescisión."
+          },
+          {
+            "term": "contrapartida",
+            "translation_pt": "contrapartida",
+            "example": "Aceptamos la rebaja siempre que haya una contrapartida clara."
+          },
+          {
+            "term": "inamovible",
+            "translation_pt": "inegociável / irremovível",
+            "example": "Nuestra postura sobre los plazos de entrega es inamovible."
+          },
+          {
+            "term": "encallar",
+            "translation_pt": "empacar / estagnar",
+            "example": "Las conversaciones encallaron por discrepancias fiscales."
+          },
+          {
+            "term": "acuerdo vinculante",
+            "translation_pt": "acordo vinculativo",
+            "example": "Redactaremos un preacuerdo vinculante antes de fin de mes."
+          },
+          {
+            "term": "margen de maniobra",
+            "translation_pt": "margem de manobra",
+            "example": "Tenemos cierto margen de maniobra respecto al presupuesto."
+          },
+          {
+            "term": "llegar a un punto medio",
+            "translation_pt": "chegar a um meio-termo",
+            "example": "Ambas partes deben flexibilizar sus demandas para llegar a un punto medio."
+          },
+          {
+            "term": "condición sine qua non",
+            "translation_pt": "condição indispensável",
+            "example": "La exclusividade territorial es una condición sine qua non."
+          },
+          {
+            "term": "cláusula de salvaguarda",
+            "translation_pt": "cláusula de salvaguarda",
+            "example": "Incluimos una cláusula de salvaguarda ante imprevistos macroeconómicos."
+          },
+          {
+            "term": "presionar",
+            "translation_pt": "pressionar",
+            "example": "Intentan presionar recortando los plazos de entrega."
+          },
+          {
+            "term": "arbitraje",
+            "translation_pt": "arbitragem jurídica",
+            "example": "En caso de litigio, nos someteremos a un arbitraje comercial."
+          },
+          {
+            "term": "desencallar",
+            "translation_pt": "desempacar / destravar",
+            "example": "La reunión de ayer sirvió para desencallar el diálogo."
+          }
+        ],
+        "phrases": [
+          {
+            "text": "A tenor de lo acordado, procederemos a la firma.",
+            "translation_pt": "De acordo com o combinado, procederemos à assinatura."
+          },
+          {
+            "text": "Estaríamos dispuestos a ceder, siempre y cuando aumenten el volumen.",
+            "translation_pt": "Estaríamos dispostos a ceder, contanto que aumentem o volume."
+          },
+          {
+            "text": "No es una postura intransigente, sino realista.",
+            "translation_pt": "Não é uma postura intransigente, mas sim realista."
+          },
+          {
+            "text": "Ponemos sobre la mesa una propuesta integradora.",
+            "translation_pt": "Colocamos na mesa uma proposta integradora."
+          },
+          {
+            "text": "Temo que esa exigencia desborde nuestras competencias.",
+            "translation_pt": "Receio que essa exigência extrapole nossas competências."
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "Valeria",
+            "line": "Apreciamos su propuesta, pero el calendario de pagos nos resulta inasumible."
+          },
+          {
+            "speaker": "Mateo",
+            "line": "Entiendo su inquietud; sin embargo, no podemos asumir todo el riesgo financiero."
+          },
+          {
+            "speaker": "Valeria",
+            "line": "Si adelantamos un 15% adicional, ¿tendríamos margen de maniobra en los hitos de entrega?"
+          },
+          {
+            "speaker": "Mateo",
+            "line": "A tenor de esa concesión, podríamos postergar la entrega final dos semanas."
+          },
+          {
+            "speaker": "Valeria",
+            "line": "Me parece un punto medio razonable. Redactemos la adenda."
+          },
+          {
+            "speaker": "Mateo",
+            "line": "Perfecto, siempre que quede blindada la cláusula de penalización."
+          }
+        ],
+        "quiz": [
+          {
+            "question": "Qual expressão significa 'empacar' ou 'ficar paralisada' uma negociação?",
+            "options": [
+              "desencallar",
+              "encallar",
+              "inamovible",
+              "arbitraje"
+            ],
+            "answer": "encallar"
+          },
+          {
+            "question": "Complete: 'Aceptaremos el plazo, ______ y cuando mantengan la tarifa.'",
+            "options": [
+              "por tanto",
+              "siempre",
+              "inclusive",
+              "visto"
+            ],
+            "answer": "siempre"
+          },
+          {
+            "question": "O que expressa a locução 'a tenor de'?",
+            "options": [
+              "Em contradição com",
+              "A despeito de",
+              "Em conformidade com",
+              "Por medo de"
+            ],
+            "answer": "Em conformidade com"
+          },
+          {
+            "question": "O termo 'condición sine qua non' refere-se a:",
+            "options": [
+              "Uma sugestão opcional",
+              "Um requisito indispensável",
+              "Um erro contratual",
+              "Um adiamento"
+            ],
+            "answer": "Um requisito indispensável"
+          },
+          {
+            "question": "Traduza para o espanhol com precisão formal: 'margem de manobra'.",
+            "options": [
+              "margen de maniobra",
+              "borde de acción",
+              "orilla de manejo",
+              "espacio de empuje"
+            ],
+            "answer": "margen de maniobra"
+          }
+        ]
+      }
+    },
+    {
+      "day": 2,
+      "theme": "Storytelling: matices narrativos y tiempos del pasado",
+      "objective_pt": "Aprender a encadear narrativas complexas alternando pretérito indefinido, imperfecto e pluscuamperfecto com conectores de suspense e causa.",
+      "kind": "lesson",
+      "content": {
+        "vocabulary": [
+          {
+            "term": "de buenas a primeras",
+            "translation_pt": "do nada / de repente",
+            "example": "De buenas a primeras, la sala quedó en absoluto silencio."
+          },
+          {
+            "term": "dar un vuelco",
+            "translation_pt": "dar uma reviravolta",
+            "example": "Su carrera dio un vuelco inesperado tras aquel discurso."
+          },
+          {
+            "term": "a toro pasado",
+            "translation_pt": "depois do fato consumado",
+            "example": "A toro pasado es muy fácil decir qué debimos haber hecho."
+          },
+          {
+            "term": "desenlace",
+            "translation_pt": "desfecho",
+            "example": "Nadie en el auditorio anticipaba semejante desenlace."
+          },
+          {
+            "term": "hilo conductor",
+            "translation_pt": "fio condutor",
+            "example": "El hilo conductor del relato fue la resiliência comunitaria."
+          },
+          {
+            "term": "rememorar",
+            "translation_pt": "rememorar / evocar",
+            "example": "El autor rememoró los años de exilio con nostalgia contenida."
+          },
+          {
+            "term": "dar por sentado",
+            "translation_pt": "tomar como certo / dar como garantido",
+            "example": "Dábamos por sentado que la reunión transcurriría sin incidentes."
+          },
+          {
+            "term": "peripecias",
+            "translation_pt": "peripécias / desventuras",
+            "example": "Tras incontables peripecias, consiguieron fondear el barco."
+          },
+          {
+            "term": "entre bambalinas",
+            "translation_pt": "nos bastidores",
+            "example": "Lo que aconteció entre bambalinas fue todavía más turbio."
+          },
+          {
+            "term": "a trompicones",
+            "translation_pt": "aos trancos e barrancos",
+            "example": "El proyecto avanzó a trompicones durante el primer semestre."
+          },
+          {
+            "term": "vislumbrar",
+            "translation_pt": "vislumbrar / entrever",
+            "example": "Apenas se vislumbraba una solución viable entre tanta confusión."
+          },
+          {
+            "term": "poner en jaque",
+            "translation_pt": "colocar em xeque",
+            "example": "Aquel imprevisto puso en jaque toda la estrategia logística."
+          }
+        ],
+        "phrases": [
+          {
+            "text": "Apenas hubo terminado de hablar, estalló el murmullo.",
+            "translation_pt": "Mal havia terminado de falar, explodiu o burburinho."
+          },
+          {
+            "text": "De haberlo previsto, habríamos tomado otros recaudos.",
+            "translation_pt": "Se tivéssemos previsto isso, teríamos tomado outros cuidados."
+          },
+          {
+            "text": "Fue entonces cuando comprendí la magnitud del problema.",
+            "translation_pt": "Foi então que compreendi a magnitude do problema."
+          },
+          {
+            "text": "Resulta que no todo era tan idílico como nos pintaban.",
+            "translation_pt": "Acontece que nem tudo era tão idílico quanto nos pintavam."
+          },
+          {
+            "text": "Por increíble que pareciese, nadie dio la voz de alarma.",
+            "translation_pt": "Por mais incrível que parecesse, ninguém deu o alarme."
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "Clara",
+            "line": "Recuerdo aquella cumbre de 2018 como si fuera ayer; todo pendía de un hilo."
+          },
+          {
+            "speaker": "Joaquín",
+            "line": "Cierto, dábamos por sentado que firmarían, pero de buenas a primeras cambiaron los términos."
+          },
+          {
+            "speaker": "Clara",
+            "line": "Exacto. Y entre bambalinas, los asesores corrían de un despacho a otro desquiciados."
+          },
+          {
+            "speaker": "Joaquín",
+            "line": "¿Cómo lograron desencallar la situación antes del amanecer?"
+          },
+          {
+            "speaker": "Clara",
+            "line": "A trompicones, la verdad. Una concesión de última hora dio un vuelco al desenlace."
+          },
+          {
+            "speaker": "Joaquín",
+            "line": "A toro pasado parece una jugada brillante, pero fue pura ruleta rusa."
+          }
+        ],
+        "quiz": [
+          {
+            "question": "A expressão 'a toro pasado' equivale em português a:",
+            "options": [
+              "Antes da hora",
+              "Com facilidade",
+              "Depois da coisa consumada / 'depois de acontecido'",
+              "Em segredo absoluto"
+            ],
+            "answer": "Depois da coisa consumada / 'depois de acontecido'"
+          },
+          {
+            "question": "Qual locução denota avançar com solavancos, tropeços ou dificuldades?",
+            "options": [
+              "A trompicones",
+              "Entre bambalinas",
+              "A hurtadillas",
+              "De buenas a primeras"
+            ],
+            "answer": "A trompicones"
+          },
+          {
+            "question": "Identifique a estrutura temporal que expressa anterioridade imediata no passado:",
+            "options": [
+              "Apenas hubo terminado",
+              "Terminaba apenas",
+              "Habiendo de terminar",
+              "Estará terminado"
+            ],
+            "answer": "Apenas hubo terminado"
+          },
+          {
+            "question": "O termo 'desenlace' traduz-se comumente como:",
+            "options": [
+              "Nó górdio",
+              "Desfecho / conclusão",
+              "Ponto de partida",
+              "Desânimo"
+            ],
+            "answer": "Desfecho / conclusão"
+          },
+          {
+            "question": "Em 'dar por sentado', o sentido é:",
+            "options": [
+              "Recusar peremptoriamente",
+              "Convidar para sentar",
+              "Presumir como certo",
+              "Sentar-se à mesa"
+            ],
+            "answer": "Presumir como certo"
+          }
+        ]
+      }
+    },
+    {
+      "day": 3,
+      "theme": "Hipotéticos complejos y condicionales irreales",
+      "objective_pt": "Empregar com fluidez estruturas hipotéticas avançadas com pretérito pluscuamperfecto de subjuntivo, 'de + infinitivo composto' e fórmulas restritivas.",
+      "kind": "lesson",
+      "content": {
+        "vocabulary": [
+          {
+            "term": "a no ser que",
+            "translation_pt": "a não ser que / a menos que",
+            "example": "No aprobaremos el balance, a no ser que auditen la cuenta filial."
+          },
+          {
+            "term": "de haber sabido",
+            "translation_pt": "se soubesse / tivesse sabido",
+            "example": "De haber sabido su solvencia dudosa, no firmábamos."
+          },
+          {
+            "term": "en el supuesto de que",
+            "translation_pt": "na hipótese de que",
+            "example": "En el supuesto de que dimita el director, asumirá la adjunta."
+          },
+          {
+            "term": "por si acaso",
+            "translation_pt": "pelo sim, pelo não / por via das dúvidas",
+            "example": "Llevaremos un perito judicial, por si acaso."
+          },
+          {
+            "term": "con tal de que",
+            "translation_pt": "contanto que",
+            "example": "Aceptamos cooperar con tal de que respeten los derechos de autor."
+          },
+          {
+            "term": "de mediar",
+            "translation_pt": "se houver / caso interceda",
+            "example": "De mediar un acuerdo extrajudicial, retiraríamos la demanda."
+          },
+          {
+            "term": "inverosímil",
+            "translation_pt": "inverossímil",
+            "example": "Ese escenario financiero resulta del todo inverosímil."
+          },
+          {
+            "term": "conjetura",
+            "translation_pt": "conjetura / suposição",
+            "example": "No formulemos conjeturas sin disponer de cifras auditadas."
+          },
+          {
+            "term": "hacer cábalas",
+            "translation_pt": "fazer suposições / especular",
+            "example": "Es inútil hacer cábalas sobre la decisión del tribunal."
+          },
+          {
+            "term": "hipotético",
+            "translation_pt": "hipotético",
+            "example": "En un hipotético caso de quiebra, intervendría el Estado."
+          },
+          {
+            "term": "a poco que",
+            "translation_pt": "por pouco que / com que apenas",
+            "example": "A poco que mejore la coyuntura, recuperaremos margen."
+          },
+          {
+            "term": "plausible",
+            "translation_pt": "plausível / aceitável",
+            "example": "Presentaron una explicación técnica bastante plausible."
+          }
+        ],
+        "phrases": [
+          {
+            "text": "De habernos percatado a tiempo, otro gallo cantaría.",
+            "translation_pt": "Se tivéssemos percebido a tempo, a história seria outra."
+          },
+          {
+            "text": "A poco que se esfuercen, cerrarán la operación con éxito.",
+            "translation_pt": "Com um mínimo de esforço, fecharão o negócio com sucesso."
+          },
+          {
+            "text": "Siempre y cuando no alteren el pacto, seguiremos adelante.",
+            "translation_pt": "Desde que não alterem o pacto, seguiremos em frente."
+          },
+          {
+            "text": "En caso de haber discrepancias, recurriremos al dictamen técnico.",
+            "translation_pt": "Caso haja discrepâncias, recorreremos ao laudo técnico."
+          },
+          {
+            "text": "Por mucho que insistan, no reconsideraremos la negativa.",
+            "translation_pt": "Por mais que insistam, não reconsideraremos a negativa."
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "Lorena",
+            "line": "De haber sabido que las tasas subirían tanto, habríamos liquidado la deuda antes."
+          },
+          {
+            "speaker": "Ignacio",
+            "line": "Cierto, pero en el supuesto de que refinancien el tramo B, amortiguaremos el golpe."
+          },
+          {
+            "speaker": "Lorena",
+            "line": "A no ser que los acreedores impongan intereses draconianos, claro."
+          },
+          {
+            "speaker": "Ignacio",
+            "line": "A poco que mostremos solvencia operativa, aceptarán nuestra propuesta."
+          },
+          {
+            "speaker": "Lorena",
+            "line": "No hagamos cábalas infundadas; esperemos al informe pericial."
+          },
+          {
+            "speaker": "Ignacio",
+            "line": "De mediar voluntad política, cerraremos el trato este viernes."
+          }
+        ],
+        "quiz": [
+          {
+            "question": "A estrutura 'De haber sabido...' equivale a qual construção com subjuntivo?",
+            "options": [
+              "Si supe...",
+              "Si hubiera sabido...",
+              "Si sabría...",
+              "Como supe..."
+            ],
+            "answer": "Si hubiera sabido..."
+          },
+          {
+            "question": "Qual conector exige subjuntivo e significa 'a menos que'?",
+            "options": [
+              "A no ser que",
+              "Puesto que",
+              "Ya que",
+              "Dado que"
+            ],
+            "answer": "A no ser que"
+          },
+          {
+            "question": "A locução 'otro gallo cantaría' expressa idiomaticamente:",
+            "options": [
+              "O despertar da manhã",
+              "Uma situação que teria sido muito diferente",
+              "Um canto desafinado",
+              "Uma fofoca entre sócios"
+            ],
+            "answer": "Uma situação que teria sido muito diferente"
+          },
+          {
+            "question": "Complete: 'A poco que ellos ______ (colaborar), concluiremos el informe.'",
+            "options": [
+              "colaboran",
+              "colaboren",
+              "colaboraban",
+              "colaborarían"
+            ],
+            "answer": "colaboren"
+          },
+          {
+            "question": "'Hacer cábalas' corresponde em português a:",
+            "options": [
+              "Cozinhar lentamente",
+              "Especular / tecer hipóteses",
+              "Fazer contas exatas",
+              "Prestar juramento"
+            ],
+            "answer": "Especular / tecer hipóteses"
+          }
+        ]
+      }
+    },
+    {
+      "day": 4,
+      "theme": "Registro formal vs. informal y fórmulas protocolarias",
+      "objective_pt": "Distinguir e dominar registros de formalidade no tratamento (tú vs. usted/excelencia) e no estilo epistolar e discursivo.",
+      "kind": "lesson",
+      "content": {
+        "vocabulary": [
+          {
+            "term": "deferencia",
+            "translation_pt": "deferência / cortesia",
+            "example": "Tuvieron la deferencia de recibirnos fuera de agenda."
+          },
+          {
+            "term": "tutear",
+            "translation_pt": "tratar por 'tú' (informal)",
+            "example": "En esta empresa es habitual tutear a los directores generales."
+          },
+          {
+            "term": "tratar de usted",
+            "translation_pt": "tratar formalmente por 'você/o senhor'",
+            "example": "A los miembros del tribunal se les debe tratar de usted."
+          },
+          {
+            "term": "acusar recibo",
+            "translation_pt": "acusar recebimento",
+            "example": "Le ruego tenga a bien acusar recibo de la presente misiva."
+          },
+          {
+            "term": "a quien corresponda",
+            "translation_pt": "a quem possa interessar",
+            "example": "El certificado se expidió con el encabezado 'A quien corresponda'."
+          },
+          {
+            "term": "distinguido",
+            "translation_pt": "prezado / ilustre",
+            "example": "Distinguido señor ministro, me dirijo a usted con motivo de..."
+          },
+          {
+            "term": "desparpajo",
+            "translation_pt": "desenvoltura / desinibição informal",
+            "example": "Habló ante los embajadores con un desparpajo asombroso."
+          },
+          {
+            "term": "formalismo",
+            "translation_pt": "formalismo / protocolo",
+            "example": "Prescindamos de formalismos innecesarios y vayamos al grano."
+          },
+          {
+            "term": "estar de sobremesa",
+            "translation_pt": "conversar à mesa após refeição",
+            "example": "En la sobremesa salieron a relucir comentarios más distendidos."
+          },
+          {
+            "term": "despropósito",
+            "translation_pt": "absurdo / disparate",
+            "example": "Emplear tacos en un discurso oficial constituye un despropósito."
+          },
+          {
+            "term": "quedar a su entera disposición",
+            "translation_pt": "ficar à sua inteira disposição",
+            "example": "Quedo a su entera disposición para cualquier aclaración."
+          },
+          {
+            "term": "atentamente",
+            "translation_pt": "atenciosamente",
+            "example": "Se despidió con un clásico 'Le saluda atentamente'."
+          }
+        ],
+        "phrases": [
+          {
+            "text": "Le agradecería encarecidamente que me remitiera dicho informe.",
+            "translation_pt": "Agradeceria imensamente se me enviasse o referido relatório."
+          },
+          {
+            "text": "¿Le importaría que nos tuteáramos?",
+            "translation_pt": "Você se importaria se nos tratássemos por você (tú)?"
+          },
+          {
+            "text": "Tenga a bien considerar la propuesta adjunta.",
+            "translation_pt": "Tenha a gentileza de considerar a proposta anexa."
+          },
+          {
+            "text": "Sin otro particular, le saluda cordialmente.",
+            "translation_pt": "Sem mais para o momento, subscrevo-me cordialmente."
+          },
+          {
+            "text": "No se tome a pecho un comentario vertido en tono coloquial.",
+            "translation_pt": "Não leve a mal um comentário feito em tom coloquial."
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "D. Gonzalo",
+            "line": "Estimada Dra. Menéndez, es un honor recibirla en nuestra sede."
+          },
+          {
+            "speaker": "Dra. Menéndez",
+            "line": "El honor es mío, D. Gonzalo. Le agradezco enormemente su deferencia."
+          },
+          {
+            "speaker": "D. Gonzalo",
+            "line": "Por favor, siéntase cómoda; si le parece oportuno, podemos tutearnos."
+          },
+          {
+            "speaker": "Dra. Menéndez",
+            "line": "Se lo agradezco, Gonzalo; agilizará sin duda nuestra deliberación de hoy."
+          },
+          {
+            "speaker": "D. Gonzalo",
+            "line": "Perfecto. Entremos en materia sobre el expediente de licitación pública."
+          },
+          {
+            "speaker": "Dra. Menéndez",
+            "line": "De acuerdo. Te remití las enmiendas anoche; espero hayas podido revisarlas."
+          }
+        ],
+        "quiz": [
+          {
+            "question": "Qual fórmula de encerramento é eminentemente formal em correspondências?",
+            "options": [
+              "Un abrazo muy fuerte",
+              "Le saluda atentamente",
+              "Nos vemos pronto",
+              "Hasta lueguito"
+            ],
+            "answer": "Le saluda atentamente"
+          },
+          {
+            "question": "O que significa o verbo 'tutear'?",
+            "options": [
+              "Falar aos gritos",
+              "Tratar alguém pela segunda pessoa informal ('tú')",
+              "Chamar alguém pelo sobrenome",
+              "Impor silêncio"
+            ],
+            "answer": "Tratar alguém pela segunda pessoa informal ('tú')"
+          },
+          {
+            "question": "A expressão 'tener a bien' denota:",
+            "options": [
+              "Estar com febre",
+              "Ter a gentileza/dignar-se a fazer algo",
+              "Ser financeiramente abastado",
+              "Guardar segredo"
+            ],
+            "answer": "Ter a gentileza/dignar-se a fazer algo"
+          },
+          {
+            "question": "Em correspondência profissional, a tradução de 'acusar recebimento' é:",
+            "options": [
+              "Denunciar recepción",
+              "Acusar recibo",
+              "Cobrar el envío",
+              "Reclamar paquete"
+            ],
+            "answer": "Acusar recibo"
+          },
+          {
+            "question": "A frase '¿Le importaría que nos tuteáramos?' expressa uma proposta para:",
+            "options": [
+              "Adiar a reunião",
+              "Passar do registro formal ('usted') para o informal ('tú')",
+              "Falar em voz baixa",
+              "Contratar um tradutor"
+            ],
+            "answer": "Passar do registro formal ('usted') para o informal ('tú')"
+          }
+        ]
+      }
+    },
+    {
+      "day": 5,
+      "theme": "Modismos avanzados, refranes y falsos amigos sutiles",
+      "objective_pt": "Dominar expressões idiomáticas avançadas e evitar armadilhas de falsos amigos frequentes entre o português brasileiro e o espanhol culto.",
+      "kind": "lesson",
+      "content": {
+        "vocabulary": [
+          {
+            "term": "hacer la vista gorda",
+            "translation_pt": "fazer vista grossa",
+            "example": "Las autoridades hicieron la vista gorda ante las anomalías."
+          },
+          {
+            "term": "dorar la píldora",
+            "translation_pt": "dourar a pílula / suavizar más notícias",
+            "example": "No me dores la píldora y dime la verdad sobre el déficit."
+          },
+          {
+            "term": "tirar la toalla",
+            "translation_pt": "jogar a toalha / desistir",
+            "example": "Pese a las trabas burocráticas, no pensamos tirar la toalla."
+          },
+          {
+            "term": "constatar",
+            "translation_pt": "constatar / comprovar",
+            "example": "Pudimos constatar que las firmas habían sido falsificadas."
+          },
+          {
+            "term": "acordar",
+            "translation_pt": "entrar em acordo / decidir (não confundir com acordar do sono)",
+            "example": "Ambos países acordaron rebajar los aranceles aduaneros."
+          },
+          {
+            "term": "desperdigado",
+            "translation_pt": "espalhado / disperso",
+            "example": "Los archivos quedaron desperdigados por todo el departamento."
+          },
+          {
+            "term": "dar gato por liebre",
+            "translation_pt": "vender gato por lebre / enganar",
+            "example": "Exige auditoría técnica; no dejes que te den gato por liebre."
+          },
+          {
+            "term": "estar en ascuas",
+            "translation_pt": "estar em suspense / em brasas",
+            "example": "Nos tuvieron en ascuas hasta la medianoche del fallo judicial."
+          },
+          {
+            "term": "poner el grito en el cielo",
+            "translation_pt": "gritar aos quatro ventos / protestar energicamente",
+            "example": "La patronal puso el grito en el cielo por la nueva tasa."
+          },
+          {
+            "term": "irse por las ramas",
+            "translation_pt": "sair pela tangente / enrolar",
+            "example": "Contesta con precisión y no te vayas por las ramas."
+          },
+          {
+            "term": "presunto",
+            "translation_pt": "suposto / presumido (não presunto de comer)",
+            "example": "Se interrogó al presunto autor del ciberataque."
+          },
+          {
+            "term": "rubro",
+            "translation_pt": "setor / ramo / categoria",
+            "example": "Nuestra inversión abarca el rubro energético y agropecuario."
+          }
+        ],
+        "phrases": [
+          {
+            "text": "Al pan, pan, y al vino, vino: hablemos sin eufemismos.",
+            "translation_pt": "Pão, pão, queijo, queijo: falemos sem eufemismos."
+          },
+          {
+            "text": "No mezclemos churras con merinas en esta auditoría.",
+            "translation_pt": "Não misturemos alhos com bugalhos nesta auditoria."
+          },
+          {
+            "text": "Más vale prevenir que curar, reza el refrán.",
+            "translation_pt": "Antes prevenir do que remediar, diz o ditado."
+          },
+          {
+            "text": "Nos dieron gato por liebre con esa subcontrata técnica.",
+            "translation_pt": "Venderam-nos gato por lebre com essa subcontratação técnica."
+          },
+          {
+            "text": "El directivo puso el dedo en la llaga sobre la fuga de capitales.",
+            "translation_pt": "O executivo colocou o dedo na ferida sobre a fuga de capitais."
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "Esteban",
+            "line": "La junta directiva está en ascuas a la espera de los balances trimestrales."
+          },
+          {
+            "speaker": "Raquel",
+            "line": "No tiene sentido dorarles la píldora; los números son deficientes."
+          },
+          {
+            "speaker": "Esteban",
+            "line": "Si se los decimos así de crudo, van a poner el grito en el cielo."
+          },
+          {
+            "speaker": "Raquel",
+            "line": "Al pan, pan, y al vino, vino. No podemos hacer la vista gorda ante un desfalco."
+          },
+          {
+            "speaker": "Esteban",
+            "line": "Tienes razón. Si nos vamos por las ramas, perderemos toda credibilidad."
+          },
+          {
+            "speaker": "Raquel",
+            "line": "Exacto; además, acordamos actuar con absoluta transparencia."
+          }
+        ],
+        "quiz": [
+          {
+            "question": "O falso amigo 'acordar' em espanhol formal significa:",
+            "options": [
+              "Despertar do sono",
+              "Lembrar de algo",
+              "Decidir em comum acordo / estabelecer",
+              "Esquecer um compromisso"
+            ],
+            "answer": "Decidir em comum acordo / estabelecer"
+          },
+          {
+            "question": "Qual modismo espanhol equivale a 'misturar alhos com bugalhos'?",
+            "options": [
+              "Mezclar churras con merinas",
+              "Echar leña al fuego",
+              "Pedir peras al olmo",
+              "Hacer de tripas corazón"
+            ],
+            "answer": "Mezclar churras con merinas"
+          },
+          {
+            "question": "'Estar en ascuas' significa:",
+            "options": [
+              "Sentir muito calor",
+              "Estar em estado de grande ansiedade ou suspense",
+              "Estar extremamente zangado",
+              "Ficar falido"
+            ],
+            "answer": "Estar em estado de grande ansiedade ou suspense"
+          },
+          {
+            "question": "O termo 'presunto' em espanhol jurídico/jornalístico significa:",
+            "options": [
+              "Fiambre de porco",
+              "Pessoa morta",
+              "Suposto / suspeito presumível",
+              "Culpado comprovado"
+            ],
+            "answer": "Suposto / suspeito presumível"
+          },
+          {
+            "question": "A expressão 'poner el dedo en la llaga' quer dizer:",
+            "options": [
+              "Ferir fisicamente alguém",
+              "Identificar com precisão o cerne do problema incômodo",
+              "Cometer um erro infantil",
+              "Curar uma doença"
+            ],
+            "answer": "Identificar com precisão o cerne do problema incômodo"
+          }
+        ]
+      }
+    },
+    {
+      "day": 6,
+      "theme": "Debates y argumentación crítica: refutación y concesión",
+      "objective_pt": "Articular argumentos de alta densidade intelectual utilizando marcadores de contraposição, concessão e refutação elegante.",
+      "kind": "lesson",
+      "content": {
+        "vocabulary": [
+          {
+            "term": "rebatir",
+            "translation_pt": "rebater / refutar",
+            "example": "El portavoz rebatió las acusaciones con datos empíricos."
+          },
+          {
+            "term": "falacia",
+            "translation_pt": "falácia",
+            "example": "Identificamos una falacia ad hominem en su réplica."
+          },
+          {
+            "term": "a pesar de que",
+            "translation_pt": "apesar de que / embora",
+            "example": "A pesar de que discrepo, reconozco la solidez de su tesis."
+          },
+          {
+            "term": "discrepancia",
+            "translation_pt": "discrepância / divergência",
+            "example": "Nuestra discrepancia radica en el método, no en el fin."
+          },
+          {
+            "term": "socavar",
+            "translation_pt": "solapar / minar",
+            "example": "Esa filtración socava la credibilidade institucional."
+          },
+          {
+            "term": "sesgado",
+            "translation_pt": "tendencioso / enviesado",
+            "example": "El informe presenta un enfoque claramente sesgado."
+          },
+          {
+            "term": "por mucho que",
+            "translation_pt": "por mais que",
+            "example": "Por mucho que argumenten lo contrario, la ley es diáfana."
+          },
+          {
+            "term": "sostener",
+            "translation_pt": "sustentar / defender",
+            "example": "Sostengo que el mercado no se autorregulará en este caso."
+          },
+          {
+            "term": "declinación",
+            "translation_pt": "declínio / recusa",
+            "example": "Su declinación a comparecer suscitó suspicacias."
+          },
+          {
+            "term": "carecer de",
+            "translation_pt": "carecer de / não ter",
+            "example": "Sus afirmaciones carecen de respaldo estadístico."
+          },
+          {
+            "term": "punto flaco",
+            "translation_pt": "ponto fraco",
+            "example": "Ese es el punto flaco de la reforma propuesta."
+          },
+          {
+            "term": "dar crédito",
+            "translation_pt": "dar crédito / acreditar",
+            "example": "Cuesta dar crédito a unas justificaciones tan pueriles."
+          }
+        ],
+        "phrases": [
+          {
+            "text": "No es que me oponga a la medida, sino que dudo de su viabilidad.",
+            "translation_pt": "Não que eu me oponha à medida, mas duvido de sua viabilidade."
+          },
+          {
+            "text": "Aun admitiendo su premisa, la conclusión sigue siendo falaz.",
+            "translation_pt": "Mesmo admitindo sua premissa, a conclusão continua sendo falaciosa."
+          },
+          {
+            "text": "Conviene matizar esa aseveración antes de darla por válida.",
+            "translation_pt": "Convém matizar essa afirmação antes de tomá-la como válida."
+          },
+          {
+            "text": "Disiento categóricamente de su interpretación de los hechos.",
+            "translation_pt": "Discordo categoricamente da sua interpretação dos fatos."
+          },
+          {
+            "text": "No podemos soslayar el impacto sociolaboral de esta decisión.",
+            "translation_pt": "Não podemos ignorar/negligenciar o impacto sociolaboral desta decisão."
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "Miriam",
+            "line": "Sostengo que el incremento de aranceles protegerá la industria doméstica."
+          },
+          {
+            "speaker": "Felipe",
+            "line": "Aun admitiendo esa premisa inicial, las represalias arancelarias socavarán las exportaciones."
+          },
+          {
+            "speaker": "Miriam",
+            "line": "No es que ignore ese riesgo, sino que contamos con mecanismos compensatorios."
+          },
+          {
+            "speaker": "Felipe",
+            "line": "Por mucho que afirmen tenerlos, esos fondos carecen de dotación presupuestaria real."
+          },
+          {
+            "speaker": "Miriam",
+            "line": "Conviene matizar: la asignación se aprobará en el próximo ejercicio fiscal."
+          },
+          {
+            "speaker": "Felipe",
+            "line": "Disiento. Supeditar la estabilidad del sector a una promesa legislativa es temerario."
+          }
+        ],
+        "quiz": [
+          {
+            "question": "Qual estrutura expressa concessão com verbo no subjuntivo?",
+            "options": [
+              "Por mucho que afirmen",
+              "Dado que afirman",
+              "Puesto que afirmaron",
+              "Visto que afirman"
+            ],
+            "answer": "Por mucho que afirmen"
+          },
+          {
+            "question": "O conector 'no es que... sino que...' rege, respectivamente:",
+            "options": [
+              "Indicativo e Indicativo",
+              "Subjuntivo e Indicativo",
+              "Subjuntivo e Subjuntivo",
+              "Infinitivo e Gerúndio"
+            ],
+            "answer": "Subjuntivo e Indicativo"
+          },
+          {
+            "question": "O verbo 'soslayar' traduz-se comumente em português como:",
+            "options": [
+              "Destacar",
+              "Contornar / esquivar / ignorar",
+              "Assinar",
+              "Aprofundar"
+            ],
+            "answer": "Contornar / esquivar / ignorar"
+          },
+          {
+            "question": "O termo 'sesgado' refere-se a algo:",
+            "options": [
+              "Cortado em linha reta",
+              "Enviesado / tendencioso",
+              "Cientificamente neutro",
+              "Amplo e transparente"
+            ],
+            "answer": "Enviesado / tendencioso"
+          },
+          {
+            "question": "Dizer 'disiento categóricamente' significa:",
+            "options": [
+              "Concordo plenamente",
+              "Discordo de modo enfático e absoluto",
+              "Sinto dor de cabeça",
+              "Abstenho-me da votação"
+            ],
+            "answer": "Discordo de modo enfático e absoluto"
+          }
+        ]
+      }
+    },
+    {
+      "day": 7,
+      "theme": "Repaso semanal I: consolidación de matices y pragmática",
+      "objective_pt": "Consolidar o vocabulário, as perífrases subjuntivas e os modismos trabalhados nos primeiros seis dias de curso.",
+      "kind": "review",
+      "content": {
+        "vocabulary": [],
+        "phrases": [],
+        "dialogue": [],
+        "quiz": [
+          {
+            "question": "Em uma negociação, quando nenhuma das partes quer ceder, diz-se que as negociações...",
+            "options": [
+              "desencallaron",
+              "encallaron",
+              "acordaron",
+              "desperdigaron"
+            ],
+            "answer": "encallaron"
+          },
+          {
+            "question": "'De haber sabido el precio, no lo habríamos comprado'. A frase expressa:",
+            "options": [
+              "Um fato real presente",
+              "Uma hipótese irreal no passado",
+              "Uma probabilidade futura",
+              "Um imperativo categórico"
+            ],
+            "answer": "Uma hipótese irreal no passado"
+          },
+          {
+            "question": "A expressão 'a toro pasado' critica:",
+            "options": [
+              "Quem opina com sabedoria somente depois que o fato já ocorreu",
+              "Quem enfrenta desafios perigosos",
+              "Quem trabalha na pecuária",
+              "Quem desiste logo no início da corrida"
+            ],
+            "answer": "Quem opina com sabedoria somente depois que o fato já ocorreu"
+          },
+          {
+            "question": "Como se traduz adequadamente 'dorar la píldora'?",
+            "options": [
+              "Tomar remédio na hora",
+              "Pintar uma parede de dourado",
+              "Adoçar ou disfarçar uma má notícia",
+              "Vender medicamentos caros"
+            ],
+            "answer": "Adoçar ou disfarçar uma má notícia"
+          },
+          {
+            "question": "O conector 'a no ser que' exige qual modo verbal?",
+            "options": [
+              "Indicativo",
+              "Subjuntivo",
+              "Condicional simples",
+              "Imperativo"
+            ],
+            "answer": "Subjuntivo"
+          },
+          {
+            "question": "O verbo 'tutear' consiste em:",
+            "options": [
+              "Tratar alguém por 'usted'",
+              "Tratar alguém informalmente por 'tú'",
+              "Interromper a fala de alguém",
+              "Fazer um cumprimento formal"
+            ],
+            "answer": "Tratar alguém informalmente por 'tú'"
+          },
+          {
+            "question": "Em termos contratuais, 'condición sine qua non' significa:",
+            "options": [
+              "Cláusula facultativa",
+              "Condição dispensável mediante multa",
+              "Requisito estritamente indispensável",
+              "Assinatura digital"
+            ],
+            "answer": "Requisito estritamente indispensável"
+          },
+          {
+            "question": "O que significa 'poner el grito en el cielo'?",
+            "options": [
+              "Cantar em coral lírico",
+              "Protestar com grande indignação",
+              "Rezar em momentos de aflição",
+              "Comemorar um gol"
+            ],
+            "answer": "Protestar com grande indignação"
+          },
+          {
+            "question": "Em 'No es que no quiera invertir, sino que no dispongo de liquidez', o verbo 'quiera' está no:",
+            "options": [
+              "Pretérito imperfeito do indicativo",
+              "Presente do subjuntivo",
+              "Futuro do subjuntivo",
+              "Presente do indicativo"
+            ],
+            "answer": "Presente do subjuntivo"
+          },
+          {
+            "question": "A locução 'a trompicones' transmite a ideia de algo que ocorre:",
+            "options": [
+              "Com velocidade e precisão",
+              "Aos trancos e barrancos, com tropeços",
+              "Em total sigilo",
+              "Sem nenhum custo"
+            ],
+            "answer": "Aos trancos e barrancos, com tropeços"
+          },
+          {
+            "question": "Qual é o sentido de 'socavar' em um contexto argumentativo ou institucional?",
+            "options": [
+              "Reforçar as bases",
+              "Solapar / enfraquecer progressivamente",
+              "Construir alicerces",
+              "Elogiar publicamente"
+            ],
+            "answer": "Solapar / enfraquecer progressivamente"
+          },
+          {
+            "question": "A expressão idiomática 'hacer la vista gorda' significa:",
+            "options": [
+              "Fingir que não viu uma infração",
+              "Usar óculos com grau excessivo",
+              "Enxergar com muita nitidez",
+              "Fechar os olhos para descansar"
+            ],
+            "answer": "Fingir que não viu uma infração"
+          }
+        ]
+      }
+    },
+    {
+      "day": 8,
+      "theme": "Presentaciones ejecutivas y oratoria persuasiva",
+      "objective_pt": "Dominar técnicas de retórica corporativa, conectores de transição de alto impacto e apresentação de dados analíticos em espanhol.",
+      "kind": "lesson",
+      "content": {
+        "vocabulary": [
+          {
+            "term": "desglosar",
+            "translation_pt": "detalhar / discriminar em itens",
+            "example": "A continuación, desglosaremos las partidas presupuestarias."
+          },
+          {
+            "term": "punto de inflexión",
+            "translation_pt": "ponto de virada / inflexão",
+            "example": "El lanzamiento del software supuso un punto de inflexión."
+          },
+          {
+            "term": "elocuencia",
+            "translation_pt": "eloquência",
+            "example": "Defendió el plan estratégico con notable elocuencia."
+          },
+          {
+            "term": "hacer hincapié",
+            "translation_pt": "enfatizar / frisar",
+            "example": "Quisiera hacer hincapié en la tasa de retención de clientes."
+          },
+          {
+            "term": "disrupción",
+            "translation_pt": "disrupção / inovação radical",
+            "example": "Operamos en un sector expuesto a una constante disrupción."
+          },
+          {
+            "term": "vertiginoso",
+            "translation_pt": "vertiginoso / acelerado",
+            "example": "Hemos experimentado un crecimiento vertiginoso en Asia."
+          },
+          {
+            "term": "revertir",
+            "translation_pt": "reverter",
+            "example": "Estas medidas buscan revertir la curva descendente de ventas."
+          },
+          {
+            "term": "escalabilidad",
+            "translation_pt": "escalabilidade",
+            "example": "El modelo de negocio destaca por su elevada escalabilidad."
+          },
+          {
+            "term": "cuota de mercado",
+            "translation_pt": "participação de mercado / market share",
+            "example": "Logramos ganar tres puntos de cuota de mercado."
+          },
+          {
+            "term": "sintetizar",
+            "translation_pt": "sintetizar / resumir",
+            "example": "Para sintetizar lo expuesto, les remito a la última diapositiva."
+          },
+          {
+            "term": "fructífero",
+            "translation_pt": "frutífero / produtivo",
+            "example": "Confiamos en que la alianza resulte sumamente fructífera."
+          },
+          {
+            "term": "lucro cesante",
+            "translation_pt": "lucros cessantes",
+            "example": "La paralización de la planta generó un gravoso lucro cesante."
+          }
+        ],
+        "phrases": [
+          {
+            "text": "Dicho esto, pasemos a examinar los ratios de solvencia.",
+            "translation_pt": "Dito isso, passemos a examinar os índices de solvência."
+          },
+          {
+            "text": "No quisiera extenderme en demasía sobre este apartado.",
+            "translation_pt": "Não gostaria de me estender demasiadamente sobre este tópico."
+          },
+          {
+            "text": "Como bien ilustra la gráfica de barras, la tendencia es nítida.",
+            "translation_pt": "Como bem ilustra o gráfico de barras, a tendência é nítida."
+          },
+          {
+            "text": "Cabe subrayar que los resultados superaron las expectativas.",
+            "translation_pt": "Cabe ressaltar que os resultados superaram as expectativas."
+          },
+          {
+            "text": "Cedo la palabra a mi colega para abordar el plano financiero.",
+            "translation_pt": "Passo a palavra ao meu colega para abordar o plano financeiro."
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "Alonso",
+            "line": "Buenos días. Quisiera hacer hincapié en que este año marca un punto de inflexión corporativo."
+          },
+          {
+            "speaker": "Beatriz",
+            "line": "¿A qué atribuyen ese crecimiento vertiginoso en el segmento corporativo?"
+          },
+          {
+            "speaker": "Alonso",
+            "line": "Fundamentalmente a la escalabilidad de la plataforma. Si desglosamos las ventas, lo verán claro."
+          },
+          {
+            "speaker": "Beatriz",
+            "line": "Sin embargo, el lucro cesante del segundo trimestre no parece del todo absorbido."
+          },
+          {
+            "speaker": "Alonso",
+            "line": "Dicho esto, cabe subrayar que el plan de contingencia revirtió la tendencia en tiempo récord."
+          },
+          {
+            "speaker": "Beatriz",
+            "line": "Excelente síntesis; los números respaldan su tesis."
+          }
+        ],
+        "quiz": [
+          {
+            "question": "Qual locução significa enfocar com ênfase especial em um ponto?",
+            "options": [
+              "Hacer hincapié",
+              "Echar de menos",
+              "Darse por vencido",
+              "Meter baza"
+            ],
+            "answer": "Hacer hincapié"
+          },
+          {
+            "question": "Como se diz 'participação de mercado' em espanhol técnico?",
+            "options": [
+              "Cuota de mercado",
+              "Tasa de plaza",
+              "Porción de calle",
+              "Corte comercial"
+            ],
+            "answer": "Cuota de mercado"
+          },
+          {
+            "question": "A palavra 'desglosar' expressa:",
+            "options": [
+              "Rasgar um papel",
+              "Dividir e analisar minuciosamente partes de um todo",
+              "Esconder despesas",
+              "Perder o rumo da fala"
+            ],
+            "answer": "Dividir e analisar minuciosamente partes de um todo"
+          },
+          {
+            "question": "A expressão 'cedo la palabra' é usada para:",
+            "options": [
+              "Pedir demissão",
+              "Passar a vez de falar a outro interlocutor",
+              "Calar-se por censura",
+              "Retirar o que disse"
+            ],
+            "answer": "Passar a vez de falar a outro interlocutor"
+          },
+          {
+            "question": "Em apresentações, a fórmula 'Dicho esto...' funciona como:",
+            "options": [
+              "Um pedido de desculpas",
+              "Um conector de transição tópica",
+              "Uma ordem agressiva",
+              "Uma negação absoluta"
+            ],
+            "answer": "Um conector de transição tópica"
+          }
+        ]
+      }
+    },
+    {
+      "day": 9,
+      "theme": "Matices emocionales, ironía y atenuación pragmática",
+      "objective_pt": "Aprender a expressar ironia refinada, desacordo polido e atenuação pragmática com o futuro de conjetura e orações concessivas.",
+      "kind": "lesson",
+      "content": {
+        "vocabulary": [
+          {
+            "term": "atenuar",
+            "translation_pt": "atenuar / suavizar",
+            "example": "Usó el condicional para atenuar la contundencia de la orden."
+          },
+          {
+            "term": "ironía",
+            "translation_pt": "ironia",
+            "example": "Su comentario rezumaba una fina ironía británica."
+          },
+          {
+            "term": "mordaz",
+            "translation_pt": "mordaz / sarcástico",
+            "example": "Lanzó una crítica mordaz contra el triunfalismo del gobierno."
+          },
+          {
+            "term": "tibio",
+            "translation_pt": "morno / hesitante / sem firmeza",
+            "example": "Su respuesta ante la polémica fue excesivamente tibia."
+          },
+          {
+            "term": "paño tibio",
+            "translation_pt": "panos quentes / medida inócua",
+            "example": "No recurramos a paños tibios frente a una falta grave."
+          },
+          {
+            "term": "insinuar",
+            "translation_pt": "insinuar",
+            "example": "¿Estás insinuando que adulteramos el balance?"
+          },
+          {
+            "term": "tergiversar",
+            "translation_pt": "distorcer / deturpar",
+            "example": "Tergiversó mis palabras para desacreditar el proyecto."
+          },
+          {
+            "term": "desdén",
+            "translation_pt": "desdém / desprezo",
+            "example": "Trató la sugerencia técnica con ostensible desdén."
+          },
+          {
+            "term": "diplomático",
+            "translation_pt": "diplomático / polido",
+            "example": "Fue muy diplomático al rechazar la oferta de adquisición."
+          },
+          {
+            "term": "echar balones fuera",
+            "translation_pt": "desconversar / chutar para escanteio",
+            "example": "Cuando le preguntaron por los fondos, echó balones fuera."
+          },
+          {
+            "term": "no ser para tanto",
+            "translation_pt": "não ser para tanto / não ser tão grave",
+            "example": "El desajuste presupuestario no es para tanto."
+          },
+          {
+            "term": "hacer sombra",
+            "translation_pt": "ofuscar / fazer sombra",
+            "example": "El nuevo fichaje le hace sombra a la directora adjunta."
+          }
+        ],
+        "phrases": [
+          {
+            "text": "Tendrá sus motivos, digo yo, para no haber comparecido.",
+            "translation_pt": "Terá lá seus motivos, imagino eu, para não ter comparecido."
+          },
+          {
+            "text": "No seré yo quien le lleve la contraria en semejante tesitura.",
+            "translation_pt": "Não serei eu a contrariá-lo em semelhante conjuntura."
+          },
+          {
+            "text": "Me atrevería a insinuar que el cálculo adolece de optimismo.",
+            "translation_pt": "Eu me atreveria a insinuar que o cálculo peca por otimismo."
+          },
+          {
+            "text": "Vaya por delante mi reconocimiento, aunque discrepe del fondo.",
+            "translation_pt": "Fique registrado de antemão meu reconhecimento, embora discorde do mérito."
+          },
+          {
+            "text": "Estará muy ocupado, porque ni se ha dignado contestar el correo.",
+            "translation_pt": "Estará muito ocupado, pois nem se dignou a responder ao e-mail."
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "Germán",
+            "line": "Curiosa 'reestructuración'; han despedido al 40% del equipo júnior."
+          },
+          {
+            "speaker": "Patricia",
+            "line": "Tendrá sus razones la dirección ejecutiva, aunque el método sea cuestionable."
+          },
+          {
+            "speaker": "Germán",
+            "line": "¿Razones? Echaron balones fuera en la asamblea sin dar una sola cifra concreta."
+          },
+          {
+            "speaker": "Patricia",
+            "line": "Me atrevería a decir que no quisieron sembrar el pânico en el mercado bursátil."
+          },
+          {
+            "speaker": "Germán",
+            "line": "Vaya eufemismo. Aplicar paños tibios a una crisis de gobernanza no la resolverá."
+          },
+          {
+            "speaker": "Patricia",
+            "line": "No seré yo quien defienda su mutismo, pero convendría no atizar el fuego."
+          }
+        ],
+        "quiz": [
+          {
+            "question": "Na frase 'Tendrá sus motivos para ausentarse', o futuro composto expressa:",
+            "options": [
+              "Certeza no futuro distante",
+              "Probabilidade ou conjetura no presente",
+              "Uma ordem imperativa",
+              "Uma condição impossível"
+            ],
+            "answer": "Probabilidade ou conjetura no presente"
+          },
+          {
+            "question": "Qual expressão idiomática denota esquivar-se de uma pergunta incômoda?",
+            "options": [
+              "Echar balones fuera",
+              "Poner el grito en el cielo",
+              "Hacer hincapié",
+              "Atar cabos"
+            ],
+            "answer": "Echar balones fuera"
+          },
+          {
+            "question": "A expressão 'paños tibios' refere-se a:",
+            "options": [
+              "Toalhas quentes de spa",
+              "Medidas paliativas e brandas demais para o problema",
+              "Críticas violentas",
+              "Elogios pomposos"
+            ],
+            "answer": "Medidas paliativas e brandas demais para o problema"
+          },
+          {
+            "question": "O verbo 'tergiversar' significa:",
+            "options": [
+              "Compreender com perfeição",
+              "Distorcer propositadamente o sentido dos fatos",
+              "Caminhar para trás",
+              "Argumentar sem falhas"
+            ],
+            "answer": "Distorcer propositadamente o sentido dos fatos"
+          },
+          {
+            "question": "O que indica a fórmula 'No seré yo quien...'?",
+            "options": [
+              "Atenuação polida ou ironia para se abster de discordar abertamente",
+              "Uma confissão de crime",
+              "Um anúncio de aposentadoria",
+              "Um ataque pessoal agressivo"
+            ],
+            "answer": "Atenuação polida ou ironia para se abster de discordar abertamente"
+          }
+        ]
+      }
+    },
+    {
+      "day": 10,
+      "theme": "Lenguaje jurídico, contratos y marco normativo",
+      "objective_pt": "Dominar o repertório de cláusulas contratuais, perífrases jurídicas e termos burocráticos essenciais no mundo hispânico.",
+      "kind": "lesson",
+      "content": {
+        "vocabulary": [
+          {
+            "term": "suscribir",
+            "translation_pt": "firmar / assinar",
+            "example": "Las partes suscriben el presente contrato en duplicado ejemplar."
+          },
+          {
+            "term": "rescindir",
+            "translation_pt": "rescindir",
+            "example": "Cualquier incumplimiento facultará a rescindir el pacto."
+          },
+          {
+            "term": "vigencia",
+            "translation_pt": "vigência",
+            "example": "El convenio entrará en vigencia a partir del primer día hábil."
+          },
+          {
+            "term": "fuerza mayor",
+            "translation_pt": "força maior",
+            "example": "Salvo caso fortuito o de fuerza mayor debidamente acreditado."
+          },
+          {
+            "term": "subsanar",
+            "translation_pt": "sanar / corrigir (falha)",
+            "example": "La empresa dispone de diez días para subsanar los defectos."
+          },
+          {
+            "term": "dolo",
+            "translation_pt": "dolo / má-fé deliberada",
+            "example": "La auditoría no halló dolo en la omisión de las facturas."
+          },
+          {
+            "term": "indemnización",
+            "translation_pt": "indenização",
+            "example": "Reclamarán una indemnización por daños y perjuicios."
+          },
+          {
+            "term": "jurisdicción",
+            "translation_pt": "jurisdição / foro",
+            "example": "Las partes se someten a la jurisdicción de los tribunales de Madrid."
+          },
+          {
+            "term": "de pleno derecho",
+            "translation_pt": "de pleno direito",
+            "example": "La cláusula abusiva quedará anulada de pleno derecho."
+          },
+          {
+            "term": "prescripción",
+            "translation_pt": "prescrição",
+            "example": "El delito societario no ha alcanzado el plazo de prescripción."
+          },
+          {
+            "term": "testaferro",
+            "translation_pt": "laranja / testa de ferro",
+            "example": "El inmueble fue adquirido a través de un testaferro."
+          },
+          {
+            "term": "compareciente",
+            "translation_pt": "comparecente",
+            "example": "El notario dio fe de la identidad de los comparecientes."
+          }
+        ],
+        "phrases": [
+          {
+            "text": "A todos los efectos oportunos y legales que correspondan.",
+            "translation_pt": "Para todos os efeitos oportunos e legais cabíveis."
+          },
+          {
+            "text": "En prueba de conformidad, firman el presente documento.",
+            "translation_pt": "Em sinal de concordância, assinam o presente documento."
+          },
+          {
+            "text": "Queda expresamente prohibida la cesión de este contrato a terceros.",
+            "translation_pt": "Fica expressamente proibida a cessão deste contrato a terceiros."
+          },
+          {
+            "text": "Las controversias se dirimirán mediante arbitraje institucional.",
+            "translation_pt": "As controvérsias serão dirimidas mediante arbitragem institucional."
+          },
+          {
+            "text": "El presente contrato deja sin efecto cualquier acuerdo previo.",
+            "translation_pt": "O presente contrato invalida qualquer acordo prévio."
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "Letrado Díaz",
+            "line": "Antes de suscribir el contrato marco, debemos revisar la cláusula de fuerza mayor."
+          },
+          {
+            "speaker": "Letrada Mora",
+            "line": "Coincido. La redacción actual no contempla catástrofes informáticas o ciberataques."
+          },
+          {
+            "speaker": "Letrado Díaz",
+            "line": "Propondré una adenda para subsanar ese vacío y fijar un plazo de subsanación de 48 horas."
+          },
+          {
+            "speaker": "Letrada Mora",
+            "line": "¿Qué tribunal asumirá la jurisdicción en caso de que surjan controversias insolubles?"
+          },
+          {
+            "speaker": "Letrado Díaz",
+            "line": "Ambas partes acordaron someterse a la Corte de Arbitraje de Madrid."
+          },
+          {
+            "speaker": "Letrada Mora",
+            "line": "Excelente. En cuanto corrijamos el texto, lo elevarán a escritura pública."
+          }
+        ],
+        "quiz": [
+          {
+            "question": "O termo 'subsanar' em linguagem jurídica e corporativa significa:",
+            "options": [
+              "Pagar adiantado",
+              "Sanar / retificar uma falta ou irregularidade",
+              "Recusar a citação",
+              "Subornar"
+            ],
+            "answer": "Sanar / retificar uma falta ou irregularidade"
+          },
+          {
+            "question": "Em contratos em espanhol, a expressão 'suscribir' traduz-se como:",
+            "options": [
+              "Inscrever-se em canal",
+              "Assinar / firmar o acordo",
+              "Cancelar o plano",
+              "Pedir vista"
+            ],
+            "answer": "Assinar / firmar o acordo"
+          },
+          {
+            "question": "A expressão 'daños y perjuicios' equivale juridicamente ao português:",
+            "options": [
+              "Perdas e danos",
+              "Crimes e castigos",
+              "Lucros e proventos",
+              "Taxas judiciais"
+            ],
+            "answer": "Perdas e danos"
+          },
+          {
+            "question": "Como se denomina a pessoa interposta ilegalmente para ocultar o verdadeiro titular (o 'laranja')?",
+            "options": [
+              "Albacea",
+              "Testaferro",
+              "Síndico",
+              "Mandatario"
+            ],
+            "answer": "Testaferro"
+          },
+          {
+            "question": "Qual frase formal costuma encerrar a leitura de contratos antes da assinatura?",
+            "options": [
+              "En prueba de conformidad, firman...",
+              "Que sea lo que Dios quiera...",
+              "Sin nada más que añadir por hoy...",
+              "Nos vamos a comer..."
+            ],
+            "answer": "En prueba de conformidad, firman..."
+          }
+        ]
+      }
+    },
+    {
+      "day": 11,
+      "theme": "Periodismo de opinión y análisis sociopolítico",
+      "objective_pt": "Desenvolver vocabulário jornalístico de alto escalão, estruturas impessoais com 'se' e adjetivação analítica apurada.",
+      "kind": "lesson",
+      "content": {
+        "vocabulary": [
+          {
+            "term": "polarización",
+            "translation_pt": "polarização",
+            "example": "La polarización ideológica tensiona el debate parlamentario."
+          },
+          {
+            "term": "coyuntura",
+            "translation_pt": "conjuntura",
+            "example": "En la actual coyuntura geopolítica, la cautela es imperativa."
+          },
+          {
+            "term": "desafección",
+            "translation_pt": "desapego / desilusão / desafeto",
+            "example": "Crece la desafección ciudadana hacia la clase política."
+          },
+          {
+            "term": "hegemonía",
+            "translation_pt": "hegemonia",
+            "example": "El auge tecnológico desafía la hegemonía de los gigantes tradicionales."
+          },
+          {
+            "term": "editorializar",
+            "translation_pt": "manifestar opinião editorial",
+            "example": "El periódico evitó editorializar sobre la moción de censura."
+          },
+          {
+            "term": "crispación",
+            "translation_pt": "crispação / tensão irritada",
+            "example": "La crispación política dificulta alcanzar consensos básicos."
+          },
+          {
+            "term": "populismo punitivo",
+            "translation_pt": "populismo penal / punitivo",
+            "example": "Algunos partidos recurren al populismo punitivo tras el suceso."
+          },
+          {
+            "term": "discurso maniqueo",
+            "translation_pt": "discurso maniqueísta",
+            "example": "Rechazamos ese discurso maniqueo de buenos contra malos."
+          },
+          {
+            "term": "hacer mella",
+            "translation_pt": "abalar / surtir efeito negativo",
+            "example": "Las sanciones comenzaron a hacer mella en la economía estatal."
+          },
+          {
+            "term": "eclosión",
+            "translation_pt": "eclosão / surgimento",
+            "example": "Asistimos a una eclosión de plataformas digitales independientes."
+          },
+          {
+            "term": "vituperar",
+            "translation_pt": "vituperar / censurar asperamente",
+            "example": "La oposición vituperó duramente la política fiscal del gabinete."
+          },
+          {
+            "term": "calado",
+            "translation_pt": "alcance / profundidade / envergadura",
+            "example": "Se avecinan transformaciones estructurales de gran calado."
+          }
+        ],
+        "phrases": [
+          {
+            "text": "Se vislumbra un horizonte convulso en el panorama parlamentario.",
+            "translation_pt": "Vislumbra-se um horizonte conturbado no panorama parlamentar."
+          },
+          {
+            "text": "A tenor de las encuestas más recientes, el electorado vira al centro.",
+            "translation_pt": "A teor das pesquisas mais recentes, o eleitorado migra para o centro."
+          },
+          {
+            "text": "No es baladí el papel que desempeñan las redes de desinformación.",
+            "translation_pt": "Não é banal o papel desempenhado pelas redes de desinformação."
+          },
+          {
+            "text": "Cabe preguntarse si el pacto resistirá las tensiones internas.",
+            "translation_pt": "Cabe perguntar se o pacto resistirá às tensões internas."
+          },
+          {
+            "text": "La medida, lejos de apaciguar los ánimos, desató una oleada de críticas.",
+            "translation_pt": "A medida, longe de apaziguar os ânimos, desencadeou uma onda de críticas."
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "Ernesto",
+            "line": "La columna que publicaste hoy sobre la desafección ciudadana no dejará indiferente a nadie."
+          },
+          {
+            "speaker": "Sonia",
+            "line": "Quise denunciar ese discurso maniqueo que solo alimenta la crispación."
+          },
+          {
+            "speaker": "Ernesto",
+            "line": "¿Crees que los recortes presupuestarios harán mella en la cohesión de la coalición?"
+          },
+          {
+            "speaker": "Sonia",
+            "line": "Indudablemente. Son medidas de gran calado que chocan con sus promesas de campaña."
+          },
+          {
+            "speaker": "Ernesto",
+            "line": "No es baladí tampoco la postura beligerante de la prensa opositora."
+          },
+          {
+            "speaker": "Sonia",
+            "line": "Cierto, pero la ciudadanía empieza a estar inmunizada frente a tanto vituperio."
+          }
+        ],
+        "quiz": [
+          {
+            "question": "A expressão 'hacer mella' traduz-se no contexto opinativo por:",
+            "options": [
+              "Fazer consertos técnicos",
+              "Causar dano, impacto ou abalo moral/econômico",
+              "Fazer um elogio tímido",
+              "Desistir de acusar"
+            ],
+            "answer": "Causar dano, impacto ou abalo moral/econômico"
+          },
+          {
+            "question": "O termo 'no es baladí' significa exatamente:",
+            "options": [
+              "Não é de graça",
+              "Não é trivial / insignificante",
+              "Não é dançável",
+              "Não é verdadeiro"
+            ],
+            "answer": "Não é trivial / insignificante"
+          },
+          {
+            "question": "'Medidas de gran calado' refere-se a medidas que são:",
+            "options": [
+              "Profundas / de grande envergadura",
+              "Secretas e silenciosas",
+              "Ineficazes a curto prazo",
+              "Banalizadas pela imprensa"
+            ],
+            "answer": "Profundas / de grande envergadura"
+          },
+          {
+            "question": "Qual substantivo expressa clima de tensão hostil permanente no debate público?",
+            "options": [
+              "Desapego",
+              "Crispación",
+              "Eclosión",
+              "Consenso"
+            ],
+            "answer": "Crispación"
+          },
+          {
+            "question": "O adjetivo 'maniqueo' descreve um raciocínio que:",
+            "options": [
+              "Usa argumentos matemáticos",
+              "Reduz tudo a uma dicotomia simplista de bem contra mal",
+              "É repleto de ambiguidade calculada",
+              "Baseia-se em fatos históricos comprovados"
+            ],
+            "answer": "Reduz tudo a uma dicotomia simplista de bem contra mal"
+          }
+        ]
+      }
+    },
+    {
+      "day": 12,
+      "theme": "Gestión de crisis, conflictos y diplomacia corporativa",
+      "objective_pt": "Aprender a intermediar disputas severas, gerenciar vazamentos e acidentes corporativos com linguagem sóbria e resolutiva.",
+      "kind": "lesson",
+      "content": {
+        "vocabulary": [
+          {
+            "term": "mitigar",
+            "translation_pt": "mitigar / atenuar",
+            "example": "Implementamos un protocolo urgente para mitigar el impacto ambiental."
+          },
+          {
+            "term": "comunicado de prensa",
+            "translation_pt": "comunicado à imprensa",
+            "example": "El gabinete emitirá un comunicado de prensa antes de la apertura bursátil."
+          },
+          {
+            "term": "cortina de humo",
+            "translation_pt": "cortina de fumaça",
+            "example": "Aquella acusación resultó ser una burda cortina de humo."
+          },
+          {
+            "term": "depurar responsabilidades",
+            "translation_pt": "apurar responsabilidades",
+            "example": "Llegaremos hasta el fondo para depurar responsabilidades internas."
+          },
+          {
+            "term": "reputacional",
+            "translation_pt": "reputacional",
+            "example": "El daño reputacional que sufrió la marca tardará años en repararse."
+          },
+          {
+            "term": "cortar de raíz",
+            "translation_pt": "cortar pela raiz",
+            "example": "Debemos cortar de raíz las malas prácticas comerciales."
+          },
+          {
+            "term": "vocero",
+            "translation_pt": "porta-voz",
+            "example": "El vocero oficial declinó responder a preguntas fuera de pauta."
+          },
+          {
+            "term": "soslayo",
+            "translation_pt": "oblíquo / de soslaio",
+            "example": "Miró el informe de soslayo con evidente nerviosismo."
+          },
+          {
+            "term": "contención",
+            "translation_pt": "contenção",
+            "example": "Las medidas de contención contuvieron la estampida de accionistas."
+          },
+          {
+            "term": "dirimir",
+            "translation_pt": "dirimir / solucionar",
+            "example": "Reunieron a los socios fundadores para dirimir la disputa."
+          },
+          {
+            "term": "infundado",
+            "translation_pt": "infundado / sem cabimento",
+            "example": "Esos rumores de bancarrota son totalmente infundados."
+          },
+          {
+            "term": "hacer acopio de",
+            "translation_pt": "juntar / reunir em quantidade (paciência, dados)",
+            "example": "Habrá que hacer acopio de paciencia ante las críticas."
+          }
+        ],
+        "phrases": [
+          {
+            "text": "Lamentamos profundamente los perjuicios ocasionados por este incidente.",
+            "translation_pt": "Lamentamos profundamente os prejuízos causados por este incidente."
+          },
+          {
+            "text": "Actuaremos con la máxima diligencia y transparencia informativa.",
+            "translation_pt": "Atuaremos com a máxima diligência e transparência informativa."
+          },
+          {
+            "text": "No cejaremos en nuestro empeño hasta esclarecer lo acontecido.",
+            "translation_pt": "Não desistiremos do nosso empenho até esclarecer o ocorrido."
+          },
+          {
+            "text": "Hacemos un llamamiento a la calma mientras concluyen las pericias.",
+            "translation_pt": "Fazemos um apelo à calma enquanto se concluem as perícias."
+          },
+          {
+            "text": "Cualquier especulación carece de fundamento en esta fase preliminar.",
+            "translation_pt": "Qualquer especulação carece de fundamento nesta fase preliminar."
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "Directora",
+            "line": "La filtración del código fuente nos coloca en una situación crítica ante los inversores."
+          },
+          {
+            "speaker": "Asesor",
+            "line": "Conviene emitir un comunicado de prensa de inmediato y no echar balones fuera."
+          },
+          {
+            "speaker": "Directora",
+            "line": "¿Cómo mitigamos el impacto reputacional antes de la junta extraordinaria?"
+          },
+          {
+            "speaker": "Asesor",
+            "line": "Anunciando una auditoría forense independiente para depurar responsabilidades."
+          },
+          {
+            "speaker": "Directora",
+            "line": "Bien. No toleraré que parezca una cortina de humo; cortaremos de raíz el problema."
+          },
+          {
+            "speaker": "Asesor",
+            "line": "Exacto; mostraremos que actuamos con diligencia intachable y rigor ético."
+          }
+        ],
+        "quiz": [
+          {
+            "question": "A expressão 'depurar responsabilidades' significa:",
+            "options": [
+              "Perdoar todos os funcionários",
+              "Investigar e punir os verdadeiros culpados",
+              "Pagar bônus aos diretores",
+              "Fechar a empresa"
+            ],
+            "answer": "Investigar e punir os verdadeiros culpados"
+          },
+          {
+            "question": "O que denota uma 'cortina de humo' na linguagem corporativa?",
+            "options": [
+              "Um sistema de combate a incêndio",
+              "Um artifício para desviar a atenção do problema real",
+              "Um erro de cálculo na contabilidade",
+              "Um contrato confidencial"
+            ],
+            "answer": "Um artifício para desviar a atenção do problema real"
+          },
+          {
+            "question": "'No cejar en el empeño' expressa:",
+            "options": [
+              "Não insistir mais",
+              "Não desistir do esforço ou objetivo",
+              "Falir imediatamente",
+              "Recusar assistência técnica"
+            ],
+            "answer": "Não desistir do esforço ou objetivo"
+          },
+          {
+            "question": "Qual verbo significa resolver ou liquidar definitivamente uma controvérsia?",
+            "options": [
+              "Dirimir",
+              "Insinuar",
+              "Desgajar",
+              "Vituperar"
+            ],
+            "answer": "Dirimir"
+          },
+          {
+            "question": "O substantivo 'vocero' corresponde em português a:",
+            "options": [
+              "Voz rouca",
+              "Porta-voz",
+              "Acionista minoritário",
+              "Juiz de paz"
+            ],
+            "answer": "Porta-voz"
+          }
+        ]
+      }
+    },
+    {
+      "day": 13,
+      "theme": "Coloquialismos urbanos, giros sociolingüísticos y argot",
+      "objective_pt": "Compreender variações diatópicas e sociolinguísticas avançadas (Espanha, Argentina, México) e decodificar conversas espontâneas com naturalidade.",
+      "kind": "lesson",
+      "content": {
+        "vocabulary": [
+          {
+            "term": "molar",
+            "translation_pt": "ser muito legal / maneiro (Espanha)",
+            "example": "Esa nueva interfaz mola un montón."
+          },
+          {
+            "term": "curro",
+            "translation_pt": "trabalho / trampo (Espanha)",
+            "example": "Tiene dos curros para poder pagar el máster."
+          },
+          {
+            "term": "pasta",
+            "translation_pt": "grana / dinheiro (Espanha)",
+            "example": "El billete de avión costó una pasta gansa."
+          },
+          {
+            "term": "laburo",
+            "translation_pt": "trabalho / trampo (Rioplatense)",
+            "example": "Estoy hasta las manos con el laburo nuevo."
+          },
+          {
+            "term": "guita",
+            "translation_pt": "grana / grana preta (Rioplatense)",
+            "example": "No le quedó ni una moneda de guita tras las vacaciones."
+          },
+          {
+            "term": "chamba",
+            "translation_pt": "trabalho / bico (México/Andino)",
+            "example": "Salió una chamba interesante en Guadalajara."
+          },
+          {
+            "term": "bronca",
+            "translation_pt": "confusão / briga / problema (Geral)",
+            "example": "No busques bronca con el encargado del turno."
+          },
+          {
+            "term": "pringar",
+            "translation_pt": "fazer hora extra / fazer o trabalho pesado (Espanha)",
+            "example": "Me tocó pringar todo el fin de semana."
+          },
+          {
+            "term": "cargante",
+            "translation_pt": "chato / inconveniente / maçante",
+            "example": "Ese consultor se pone sumamente cargante con las métricas."
+          },
+          {
+            "term": "estar hasta las narices",
+            "translation_pt": "estar por aqui / de saco cheio",
+            "example": "Estoy hasta las narices de las promesas incumplidas."
+          },
+          {
+            "term": "posta",
+            "translation_pt": "verdade / sério / posta (Argentina)",
+            "example": "Te digo la posta, ese acuerdo es ruinoso."
+          },
+          {
+            "term": "dar la lata",
+            "translation_pt": "encher o saco / amolar",
+            "example": "Deja de dar la lata con el mismo tema de siempre."
+          }
+        ],
+        "phrases": [
+          {
+            "text": "No me rayes la cabeza con supuestos imaginarios.",
+            "translation_pt": "Não esquente minha cabeça com suposições imaginárias."
+          },
+          {
+            "text": "Eso te va a salir por un ojo de la cara.",
+            "translation_pt": "Isso vai te custar os olhos da cara."
+          },
+          {
+            "text": "Está cantado que no van a llegar a tiempo.",
+            "translation_pt": "Está na cara que não vão chegar a tempo."
+          },
+          {
+            "text": "Se armó un quilombo bárbaro a la salida de la fábrica.",
+            "translation_pt": "Armou-se uma confusão tremenda na saída da fábrica."
+          },
+          {
+            "text": "Tómatelo con calma, que no hay bronca.",
+            "translation_pt": "Leve numa boa, não tem problema nenhum."
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "Marta (Esp)",
+            "line": "Menudo pringue me ha tocado hoy en el curro; estoy hasta las narices."
+          },
+          {
+            "speaker": "Lucas (Arg)",
+            "line": "Tranquila, che. Yo en mi laburo nuevo también tengo un quilombo tremendo."
+          },
+          {
+            "speaker": "Marta (Esp)",
+            "line": "Es que el cliente pide cambios a cada hora y da la lata sin parar."
+          },
+          {
+            "speaker": "Lucas (Arg)",
+            "line": "Decile la posta: si quiere más horas, que ponga más guita."
+          },
+          {
+            "speaker": "Marta (Esp)",
+            "line": "Totalmente. Eso mola, pero mi jefe teme perder la cuenta."
+          },
+          {
+            "speaker": "Lucas (Arg)",
+            "line": "Si se deja pisotear, le va a costar un ojo de la cara a la agencia."
+          }
+        ],
+        "quiz": [
+          {
+            "question": "Qual das seguintes palavras significa 'trabalho' no espanhol coloquial da Espanha?",
+            "options": [
+              "Curro",
+              "Laburo",
+              "Chamba",
+              "Pega"
+            ],
+            "answer": "Curro"
+          },
+          {
+            "question": "No espanhol rioplatense (Argentina/Uruguai), 'decir la posta' equivale a:",
+            "options": [
+              "Contar uma mentira",
+              "Dizer a verdade crua e direta",
+              "Fazer uma aposta esportiva",
+              "Escrever uma carta de correio"
+            ],
+            "answer": "Dizer a verdade crua e direta"
+          },
+          {
+            "question": "A expressão 'dar la lata' significa:",
+            "options": [
+              "Reciclar recipientes",
+              "Importunar / amolar alguém com insistência",
+              "Dar esmola",
+              "Presentear comida enlatada"
+            ],
+            "answer": "Importunar / amolar alguém com insistência"
+          },
+          {
+            "question": "O termo 'guita' na Argentina e 'pasta' na Espanha referem-se informalmente a:",
+            "options": [
+              "Dinheiro",
+              "Macarrão",
+              "Remédio",
+              "Comida"
+            ],
+            "answer": "Dinheiro"
+          },
+          {
+            "question": "A frase idiomática 'está cantado' significa:",
+            "options": [
+              "Foi musicado",
+              "É evidente / previsível / está na cara",
+              "Foi elogiado",
+              "Está proibido"
+            ],
+            "answer": "É evidente / previsível / está na cara"
+          }
+        ]
+      }
+    },
+    {
+      "day": 14,
+      "theme": "Repaso semanal II: persuasión, oratoria, leyes y registros",
+      "objective_pt": "Revisar criticamente os conteúdos dos dias 8 a 13, integrando oratória persuasiva, jargão jurídico, jornalismo e variações sociolinguísticas.",
+      "kind": "review",
+      "content": {
+        "vocabulary": [],
+        "phrases": [],
+        "dialogue": [],
+        "quiz": [
+          {
+            "question": "O que significa 'hacer hincapié' em uma apresentação de negócios?",
+            "options": [
+              "Dar um passo atrás",
+              "Ressaltar / enfatizar um ponto",
+              "Concluir abruptamente",
+              "Mudar de assunto"
+            ],
+            "answer": "Ressaltar / enfatizar um ponto"
+          },
+          {
+            "question": "Na frase 'Habrá salido ya del despacho', o futuro composto expressa:",
+            "options": [
+              "Uma certeza futura",
+              "Uma conjetura sobre um fato passado",
+              "Uma ordem imperativa",
+              "Um desejo irrealizável"
+            ],
+            "answer": "Uma conjetura sobre um fato passado"
+          },
+          {
+            "question": "Em contratos, o que significa a ação de 'subsanar'?",
+            "options": [
+              "Romper unilateralmente",
+              "Corrigir / remediar uma omissão ou falha",
+              "Assinar diante do notário",
+              "Aplicar sanção penal"
+            ],
+            "answer": "Corrigir / remediar uma omissão ou falha"
+          },
+          {
+            "question": "Qual palavra designa a pessoa interposta ilegalmente para ocultar o dono real de bens?",
+            "options": [
+              "Testaferro",
+              "Apoderado",
+              "Fiscal",
+              "Letrado"
+            ],
+            "answer": "Testaferro"
+          },
+          {
+            "question": "A expressão 'echar balones fuera' é usada quando alguém:",
+            "options": [
+              "Joga futebol",
+              "Desconversa e evita assumir responsabilidade",
+              "Reconhece o erro abertamente",
+              "Chora de emoção"
+            ],
+            "answer": "Desconversa e evita assumir responsabilidade"
+          },
+          {
+            "question": "'Reformas de gran calado' são reformas que possuem:",
+            "options": [
+              "Caráter superficial",
+              "Elevada profundidade e envergadura",
+              "Baixo custo orçamentário",
+              "Natureza estritamente náutica"
+            ],
+            "answer": "Elevada profundidade e envergadura"
+          },
+          {
+            "question": "Em gestão de crise, o que busca o procedimento de 'depurar responsabilidades'?",
+            "options": [
+              "Encobrir o erro",
+              "Investigar os fatos para imputar a culpa aos verdadeiros responsáveis",
+              "Aumentar a verba de relações públicas",
+              "Demitir todos aleatoriamente"
+            ],
+            "answer": "Investigar os fatos para imputar a culpa aos verdadeiros responsáveis"
+          },
+          {
+            "question": "O vocábulo 'chamba' no México equivale coloquialmente a:",
+            "options": [
+              "Comida apimentada",
+              "Trabalho / emprego",
+              "Carro quebrado",
+              "Festa barulhenta"
+            ],
+            "answer": "Trabalho / emprego"
+          },
+          {
+            "question": "Em linguagem jornalística, o termo 'crispación' define:",
+            "options": [
+              "Um clima de serenidade",
+              "Tensão agressiva e atrito constante",
+              "Uma crise econômica superada",
+              "Um pacto institucional amplo"
+            ],
+            "answer": "Tensão agressiva e atrito constante"
+          },
+          {
+            "question": "O que significa dizer que algo 'cuesta un ojo de la cara'?",
+            "options": [
+              "Provoca dor física",
+              "É excessivamente caro / custa uma fortuna",
+              "Exige atenção visual",
+              "É de péssima qualidade"
+            ],
+            "answer": "É excessivamente caro / custa uma fortuna"
+          },
+          {
+            "question": "A locução 'a todos los efectos oportunos' é típica do registro:",
+            "options": [
+              "Coloquial familiar",
+              "Jurídico-formal",
+              "Infantil",
+              "Literário poético"
+            ],
+            "answer": "Jurídico-formal"
+          },
+          {
+            "question": "A frase 'No es baladí la cuestión' significa que a questão:",
+            "options": [
+              "É tola e sem relevância",
+              "Não tem qualquer importância",
+              "É de suma relevância / não é desprezível",
+              "Não tem solução"
+            ],
+            "answer": "É de suma relevância / não é desprezível"
+          }
+        ]
+      }
+    },
+    {
+      "day": 15,
+      "theme": "Evaluación final integral: competencia comunicativa C1",
+      "objective_pt": "Avaliar integralmente a competência pragmática, o domínio de registros formais/informais, a sintaxe hipotética e os modismos do nível C1.",
+      "kind": "final",
+      "content": {
+        "vocabulary": [],
+        "phrases": [],
+        "dialogue": [
+          {
+            "speaker": "Presidenta",
+            "line": "A tenor del informe pericial, no podemos soslayar el déficit ni dorarle la píldora a los inversores."
+          },
+          {
+            "speaker": "Consejero",
+            "line": "De haber sabido el alcance del lucro cesante, habríamos suscrito una cláusula de salvaguarda más estricta."
+          },
+          {
+            "speaker": "Presidenta",
+            "line": "A toro pasado las conjeturas huelgan. Lo prioritario ahora es no encallar en reproches estériles."
+          },
+          {
+            "speaker": "Consejero",
+            "line": "Coincido plenamente. Si desglosamos la deuda y actuamos con diligencia, mitigaremos el daño reputacional."
+          },
+          {
+            "speaker": "Presidenta",
+            "line": "Al pan, pan, y al vino, vino: compareceré ante los medios sin echar balones fuera."
+          },
+          {
+            "speaker": "Consejero",
+            "line": "Una postura valiente; cortar de raíz la especulación es la única vía para recuperar la confianza del mercado."
+          }
+        ],
+        "quiz": [
+          {
+            "question": "No diálogo, a frase 'a toro pasado las conjeturas huelgan' expressa que:",
+            "options": [
+              "As hipóteses são urgentes agora",
+              "Depois do fato consumado, conjeturas são inúteis / desnecessárias",
+              "O touro escapou da fazenda",
+              "A reunião deve ser transferida para a arena"
+            ],
+            "answer": "Depois do fato consumado, conjeturas são inúteis / desnecessárias"
+          },
+          {
+            "question": "A estrutura 'De haber sabido... habríamos suscrito...' exemplifica:",
+            "options": [
+              "Oração condicional irreal do pretérito",
+              "Presente contínuo de cortesia",
+              "Futuro de probabilidade",
+              "Imperativo negativo formal"
+            ],
+            "answer": "Oração condicional irreal do pretérito"
+          },
+          {
+            "question": "No contexto da gestão de crises, o que significa 'cortar de raíz'?",
+            "options": [
+              "Podar o jardim da sede",
+              "Eliminar o problema desde sua origem e sem hesitação",
+              "Cortar salários dos diretores",
+              "Interromper as comunicações telefônicas"
+            ],
+            "answer": "Eliminar o problema desde sua origem e sem hesitação"
+          },
+          {
+            "question": "Complete a concessiva formal: 'Por mucho que ______ (insistir) el acreedor, la ley ampara nuestro plan de pagos.'",
+            "options": [
+              "insiste",
+              "insista",
+              "insistió",
+              "insistiría"
+            ],
+            "answer": "insista"
+          },
+          {
+            "question": "Qual conector argumentativo exige indicativo na oração que o segue imediatamente?",
+            "options": [
+              "A no ser que",
+              "Con tal de que",
+              "Puesto que",
+              "A condición de que"
+            ],
+            "answer": "Puesto que"
+          },
+          {
+            "question": "No registro culto, o falso amigo 'presunto culpable' significa:",
+            "options": [
+              "Réu que confessou o crime",
+              "Suposto culpado / sobre quem recai presunção",
+              "Culpado já condenado e preso",
+              "Alguém que agiu em legítima defesa"
+            ],
+            "answer": "Suposto culpado / sobre quem recai presunção"
+          },
+          {
+            "question": "Como se diz formalmente em espanhol 'chamar a atenção enfaticamente para algo'?",
+            "options": [
+              "Hacer la vista gorda",
+              "Hacer hincapié en",
+              "Estar en ascuas",
+              "Tirar la toalla"
+            ],
+            "answer": "Hacer hincapié en"
+          },
+          {
+            "question": "No espanhol rioplatense contemporâneo, a palavra 'laburo' corresponde a:",
+            "options": [
+              "Descanso",
+              "Trabalho",
+              "Almoço",
+              "Briga"
+            ],
+            "answer": "Trabalho"
+          },
+          {
+            "question": "Em 'No es que rechace tu propuesta, sino que carece de fondos', o verbo 'rechace' está no subjuntivo porque:",
+            "options": [
+              "Expressa um fato comprovado",
+              "A estrutura 'no es que' nega uma justificativa e exige subjuntivo",
+              "Vem depois da palavra 'propuesta'",
+              "É uma regra aleatória de concordância"
+            ],
+            "answer": "A estrutura 'no es que' nega uma justificativa e exige subjuntivo"
+          },
+          {
+            "question": "O substantivo 'lucro cesante' refere-se ao:",
+            "options": [
+              "Lucro extraordinário inesperado",
+              "Ganho financeiro que se deixou de auferir devido a dano ou paralisação",
+              "Pagamento de impostos atrasados",
+              "Investimento em títulos públicos"
+            ],
+            "answer": "Ganho financeiro que se deixou de auferir devido a dano ou paralisação"
+          },
+          {
+            "question": "O que indica a expressão 'dorar la píldora'?",
+            "options": [
+              "Apresentar uma realidade dura de forma suavizada e enganosa",
+              "Fabricar medicamentos dourados",
+              "Elogiar sinceramente um colega",
+              "Exagerar um problema pequeno"
+            ],
+            "answer": "Apresentar uma realidade dura de forma suavizada e enganosa"
+          },
+          {
+            "question": "A expressão idiomática 'hacer la vista gorda' significa:",
+            "options": [
+              "Engordar repentinamente",
+              "Fingir deliberadamente não ver uma irregularidade",
+              "Fazer exame oftalmológico",
+              "Observar atentamente através de lupa"
+            ],
+            "answer": "Fingir deliberadamente não ver uma irregularidade"
+          },
+          {
+            "question": "A expressão 'soslayar un problema' traduz-se como:",
+            "options": [
+              "Esquivar-se do problema / contorná-lo",
+              "Enfrentar o problema abertamente",
+              "Criar um novo problema",
+              "Contratar consultores"
+            ],
+            "answer": "Esquivar-se do problema / contorná-lo"
+          },
+          {
+            "question": "A fórmula protocolar 'Tenga a bien remitirme los antecedentes' expressa:",
+            "options": [
+              "Uma ofensa disfarçada",
+              "Um pedido muito cortês e formal de envio de documentos",
+              "Uma ordem militar obrigatória",
+              "Um cancelamento contratual"
+            ],
+            "answer": "Um pedido muito cortês e formal de envio de documentos"
+          },
+          {
+            "question": "Dizer que um argumento é uma 'falacia ad hominem' implica que o emissor:",
+            "options": [
+              "Apresentou dados estatísticos perfeitos",
+              "Atacou a pessoa do debatedor em vez de refutar o argumento substantivo",
+              "Fez uma citação em latim clássico",
+              "Provou sua tese com brilhantismo"
+            ],
+            "answer": "Atacou a pessoa do debatedor em vez de refutar o argumento substantivo"
+          }
+        ]
+      }
+    }
+  ]
+}
