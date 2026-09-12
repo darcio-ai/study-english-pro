@@ -1,0 +1,2774 @@
+{
+  "days": [
+    {
+      "day": 1,
+      "theme": "Travel and Transportation",
+      "objective_pt": "Aprender vocabulário essencial para navegar em aeroportos e estações de trem.",
+      "kind": "lesson",
+      "content": {
+        "vocabulary": [
+          {
+            "term": "Boarding pass",
+            "translation_pt": "Cartão de embarque",
+            "example": "Please show your boarding pass at the gate."
+          },
+          {
+            "term": "Layover",
+            "translation_pt": "Escala",
+            "example": "We have a two-hour layover in London."
+          },
+          {
+            "term": "Departure",
+            "translation_pt": "Partida",
+            "example": "The departure time is scheduled for 8 AM."
+          },
+          {
+            "term": "Arrival",
+            "translation_pt": "Chegada",
+            "example": "What is your estimated time of arrival?"
+          },
+          {
+            "term": "Gate",
+            "translation_pt": "Portão",
+            "example": "The flight is boarding at gate 12."
+          },
+          {
+            "term": "Luggage",
+            "translation_pt": "Bagagem",
+            "example": "Is this your carry-on luggage?"
+          },
+          {
+            "term": "Delay",
+            "translation_pt": "Atraso",
+            "example": "The train is experiencing a minor delay."
+          },
+          {
+            "term": "Book",
+            "translation_pt": "Reservar",
+            "example": "I need to book a flight for next month."
+          },
+          {
+            "term": "Platform",
+            "translation_pt": "Plataforma/Plataforma de trem",
+            "example": "Which platform does the train leave from?"
+          },
+          {
+            "term": "Ticket",
+            "translation_pt": "Bilhete/Passagem",
+            "example": "I bought a round-trip ticket."
+          },
+          {
+            "term": "Customs",
+            "translation_pt": "Alfândega",
+            "example": "You need to clear customs after landing."
+          },
+          {
+            "term": "Terminal",
+            "translation_pt": "Terminal",
+            "example": "Go to terminal 3 for international flights."
+          },
+          {
+            "term": "Schedule",
+            "translation_pt": "Horário/Cronograma",
+            "example": "Check the schedule online."
+          },
+          {
+            "term": "Check-in",
+            "translation_pt": "Check-in",
+            "example": "Have you done the online check-in yet?"
+          },
+          {
+            "term": "Fare",
+            "translation_pt": "Tarifa",
+            "example": "The bus fare is two dollars."
+          }
+        ],
+        "phrases": [
+          {
+            "text": "Is this seat taken?",
+            "translation_pt": "Este assento está ocupado?"
+          },
+          {
+            "text": "Where can I find a taxi?",
+            "translation_pt": "Onde posso encontrar um táxi?"
+          },
+          {
+            "text": "How long is the flight?",
+            "translation_pt": "Quanto tempo dura o voo?"
+          },
+          {
+            "text": "Could you help me with my bags?",
+            "translation_pt": "Poderia me ajudar com as minhas malas?"
+          },
+          {
+            "text": "Is there a shuttle to the hotel?",
+            "translation_pt": "Tem transporte para o hotel?"
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "A",
+            "line": "Excuse me, is this the gate for London?"
+          },
+          {
+            "speaker": "B",
+            "line": "Yes, it is. But the flight is delayed."
+          },
+          {
+            "speaker": "A",
+            "line": "Oh no! Do you know for how long?"
+          },
+          {
+            "speaker": "B",
+            "line": "About forty minutes, according to the screen."
+          },
+          {
+            "speaker": "A",
+            "line": "Okay, thank you for the information."
+          },
+          {
+            "speaker": "B",
+            "line": "You're welcome. Have a safe trip."
+          },
+          {
+            "speaker": "A",
+            "line": "Thanks, I hope so!"
+          },
+          {
+            "speaker": "B",
+            "line": "Enjoy your flight."
+          }
+        ],
+        "quiz": [
+          {
+            "question": "What is the synonym for 'departure'?",
+            "options": [
+              "Arrival",
+              "Leaving",
+              "Booking",
+              "Gate"
+            ],
+            "answer": "Leaving"
+          },
+          {
+            "question": "Where do you go after landing to declare goods?",
+            "options": [
+              "Gate",
+              "Terminal",
+              "Customs",
+              "Schedule"
+            ],
+            "answer": "Customs"
+          },
+          {
+            "question": "What is the document you use to board a plane?",
+            "options": [
+              "Fare",
+              "Boarding pass",
+              "Platform",
+              "Layover"
+            ],
+            "answer": "Boarding pass"
+          },
+          {
+            "question": "What does 'delay' mean?",
+            "options": [
+              "Atraso",
+              "Adiantamento",
+              "Cancelamento",
+              "Reserva"
+            ],
+            "answer": "Atraso"
+          },
+          {
+            "question": "Where do trains stop?",
+            "options": [
+              "Terminal",
+              "Gate",
+              "Platform",
+              "Customs"
+            ],
+            "answer": "Platform"
+          }
+        ]
+      }
+    },
+    {
+      "day": 2,
+      "theme": "Shopping and Prices",
+      "objective_pt": "Dominar o vocabulário para fazer compras e perguntar sobre preços e tamanhos.",
+      "kind": "lesson",
+      "content": {
+        "vocabulary": [
+          {
+            "term": "Discount",
+            "translation_pt": "Desconto",
+            "example": "Is there a discount for students?"
+          },
+          {
+            "term": "Receipt",
+            "translation_pt": "Recibo/Cupom fiscal",
+            "example": "Could I have a receipt, please?"
+          },
+          {
+            "term": "Refund",
+            "translation_pt": "Reembolso",
+            "example": "Can I get a refund if it doesn't fit?"
+          },
+          {
+            "term": "Fitting room",
+            "translation_pt": "Provador",
+            "example": "Where is the fitting room?"
+          },
+          {
+            "term": "Size",
+            "translation_pt": "Tamanho",
+            "example": "Do you have this in a larger size?"
+          },
+          {
+            "term": "Available",
+            "translation_pt": "Disponível",
+            "example": "Is this item available in red?"
+          },
+          {
+            "term": "Checkout",
+            "translation_pt": "Caixa",
+            "example": "The checkout is at the front."
+          },
+          {
+            "term": "Affordable",
+            "translation_pt": "Acessível/Barato",
+            "example": "That brand is very affordable."
+          },
+          {
+            "term": "Sale",
+            "translation_pt": "Promoção/Liquidação",
+            "example": "Is this shirt on sale?"
+          },
+          {
+            "term": "Expensive",
+            "translation_pt": "Caro",
+            "example": "This watch is a bit expensive."
+          },
+          {
+            "term": "Change",
+            "translation_pt": "Troco",
+            "example": "Keep the change."
+          },
+          {
+            "term": "Try on",
+            "translation_pt": "Experimentar",
+            "example": "May I try on these shoes?"
+          },
+          {
+            "term": "Item",
+            "translation_pt": "Item/Artigo",
+            "example": "How many items are you buying?"
+          },
+          {
+            "term": "Stock",
+            "translation_pt": "Estoque",
+            "example": "It is out of stock right now."
+          },
+          {
+            "term": "Cash",
+            "translation_pt": "Dinheiro em espécie",
+            "example": "Do you accept cash?"
+          }
+        ],
+        "phrases": [
+          {
+            "text": "How much does this cost?",
+            "translation_pt": "Quanto isso custa?"
+          },
+          {
+            "text": "Do you take credit cards?",
+            "translation_pt": "Vocês aceitam cartão de crédito?"
+          },
+          {
+            "text": "It’s a bit too big for me.",
+            "translation_pt": "Está um pouco grande demais para mim."
+          },
+          {
+            "text": "Can I exchange this for another one?",
+            "translation_pt": "Posso trocar isso por outro?"
+          },
+          {
+            "text": "I’m just looking, thanks.",
+            "translation_pt": "Estou só olhando, obrigado."
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "A",
+            "line": "Excuse me, do you have this in medium?"
+          },
+          {
+            "speaker": "B",
+            "line": "Let me check the stock for you."
+          },
+          {
+            "speaker": "A",
+            "line": "Thank you, I'd like to try it on."
+          },
+          {
+            "speaker": "B",
+            "line": "Yes, we have it. The fitting room is over there."
+          },
+          {
+            "speaker": "A",
+            "line": "It fits perfectly. How much is it?"
+          },
+          {
+            "speaker": "B",
+            "line": "It is forty dollars."
+          },
+          {
+            "speaker": "A",
+            "line": "Do you have any discount for cash?"
+          },
+          {
+            "speaker": "B",
+            "line": "No, sorry, the price is fixed."
+          }
+        ],
+        "quiz": [
+          {
+            "question": "What is the place where you try clothes?",
+            "options": [
+              "Checkout",
+              "Fitting room",
+              "Stock",
+              "Receipt"
+            ],
+            "answer": "Fitting room"
+          },
+          {
+            "question": "What do you call money returned when you pay more than the price?",
+            "options": [
+              "Discount",
+              "Refund",
+              "Change",
+              "Sale"
+            ],
+            "answer": "Change"
+          },
+          {
+            "question": "How do you say 'promoção' in English?",
+            "options": [
+              "Sale",
+              "Expensive",
+              "Item",
+              "Stock"
+            ],
+            "answer": "Sale"
+          },
+          {
+            "question": "What do you ask for if you want your money back?",
+            "options": [
+              "Discount",
+              "Receipt",
+              "Refund",
+              "Change"
+            ],
+            "answer": "Refund"
+          },
+          {
+            "question": "Which verb is used for clothes?",
+            "options": [
+              "Try on",
+              "Take",
+              "Pay",
+              "Exchange"
+            ],
+            "answer": "Try on"
+          }
+        ]
+      }
+    },
+    {
+      "day": 3,
+      "theme": "Making Plans",
+      "objective_pt": "Praticar o uso de 'going to' e 'will' para organizar eventos e compromissos.",
+      "kind": "lesson",
+      "content": {
+        "vocabulary": [
+          {
+            "term": "Appointment",
+            "translation_pt": "Compromisso/Consulta",
+            "example": "I have an appointment at 2 PM."
+          },
+          {
+            "term": "Schedule",
+            "translation_pt": "Agendar",
+            "example": "Let's schedule a meeting."
+          },
+          {
+            "term": "Cancel",
+            "translation_pt": "Cancelar",
+            "example": "I need to cancel our dinner."
+          },
+          {
+            "term": "Postpone",
+            "translation_pt": "Adiar",
+            "example": "Can we postpone until Friday?"
+          },
+          {
+            "term": "Available",
+            "translation_pt": "Disponível",
+            "example": "Are you available this weekend?"
+          },
+          {
+            "term": "Reminder",
+            "translation_pt": "Lembrete",
+            "example": "Set a reminder for the party."
+          },
+          {
+            "term": "Confirm",
+            "translation_pt": "Confirmar",
+            "example": "Please confirm your attendance."
+          },
+          {
+            "term": "Attend",
+            "translation_pt": "Comparecer",
+            "example": "I cannot attend the event."
+          },
+          {
+            "term": "Gathering",
+            "translation_pt": "Encontro/Reunião informal",
+            "example": "We are having a small gathering."
+          },
+          {
+            "term": "Suggest",
+            "translation_pt": "Sugerir",
+            "example": "What do you suggest?"
+          },
+          {
+            "term": "Proposal",
+            "translation_pt": "Proposta",
+            "example": "Do you agree with my proposal?"
+          },
+          {
+            "term": "Free time",
+            "translation_pt": "Tempo livre",
+            "example": "What do you do in your free time?"
+          },
+          {
+            "term": "Catch up",
+            "translation_pt": "Colocar o papo em dia",
+            "example": "Let's catch up soon."
+          },
+          {
+            "term": "Invitation",
+            "translation_pt": "Convite",
+            "example": "Thank you for the invitation."
+          },
+          {
+            "term": "Event",
+            "translation_pt": "Evento",
+            "example": "The event starts at seven."
+          }
+        ],
+        "phrases": [
+          {
+            "text": "Are you free on Saturday?",
+            "translation_pt": "Você está livre no sábado?"
+          },
+          {
+            "text": "How about lunch tomorrow?",
+            "translation_pt": "Que tal almoçarmos amanhã?"
+          },
+          {
+            "text": "That sounds like a great plan.",
+            "translation_pt": "Isso parece um ótimo plano."
+          },
+          {
+            "text": "I’m afraid I can’t make it.",
+            "translation_pt": "Receio não poder comparecer."
+          },
+          {
+            "text": "Let’s keep in touch.",
+            "translation_pt": "Vamos nos manter em contato."
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "A",
+            "line": "Hey, are you free this weekend?"
+          },
+          {
+            "speaker": "B",
+            "line": "I think so. Why, what's up?"
+          },
+          {
+            "speaker": "A",
+            "line": "I'm going to have a small gathering."
+          },
+          {
+            "speaker": "B",
+            "line": "That sounds fun! What time?"
+          },
+          {
+            "speaker": "A",
+            "line": "Around eight o'clock on Saturday."
+          },
+          {
+            "speaker": "B",
+            "line": "I'll be there! Can I bring anything?"
+          },
+          {
+            "speaker": "A",
+            "line": "Just yourself and some drinks."
+          },
+          {
+            "speaker": "B",
+            "line": "Perfect, see you then!"
+          }
+        ],
+        "quiz": [
+          {
+            "question": "What is the synonym for 'postpone'?",
+            "options": [
+              "Cancel",
+              "Delay",
+              "Schedule",
+              "Attend"
+            ],
+            "answer": "Delay"
+          },
+          {
+            "question": "What do you say when you can't go to an event?",
+            "options": [
+              "I'll be there",
+              "I'm free",
+              "I can't make it",
+              "I'll confirm"
+            ],
+            "answer": "I can't make it"
+          },
+          {
+            "question": "Which verb means to make a meeting happen at a later time?",
+            "options": [
+              "Cancel",
+              "Postpone",
+              "Confirm",
+              "Suggest"
+            ],
+            "answer": "Postpone"
+          },
+          {
+            "question": "How do you ask about someone's availability?",
+            "options": [
+              "Are you free?",
+              "Can you cancel?",
+              "What time is it?",
+              "Do you suggest?"
+            ],
+            "answer": "Are you free?"
+          },
+          {
+            "question": "What is a synonym for 'gathering'?",
+            "options": [
+              "Appointment",
+              "Event",
+              "Reminder",
+              "Proposal"
+            ],
+            "answer": "Event"
+          }
+        ]
+      }
+    },
+    {
+      "day": 4,
+      "theme": "Past Experiences",
+      "objective_pt": "Utilizar o Simple Past e o Present Perfect para relatar experiências passadas.",
+      "kind": "lesson",
+      "content": {
+        "vocabulary": [
+          {
+            "term": "Experience",
+            "translation_pt": "Experiência",
+            "example": "That was a great experience."
+          },
+          {
+            "term": "Recall",
+            "translation_pt": "Relembrar",
+            "example": "I can't recall his name."
+          },
+          {
+            "term": "Memorable",
+            "translation_pt": "Memorável",
+            "example": "It was a memorable trip."
+          },
+          {
+            "term": "Story",
+            "translation_pt": "História",
+            "example": "He told us a funny story."
+          },
+          {
+            "term": "Chance",
+            "translation_pt": "Oportunidade/Chance",
+            "example": "I had a chance to travel."
+          },
+          {
+            "term": "Used to",
+            "translation_pt": "Costumava",
+            "example": "I used to live in Brazil."
+          },
+          {
+            "term": "Never",
+            "translation_pt": "Nunca",
+            "example": "I have never been there."
+          },
+          {
+            "term": "Once",
+            "translation_pt": "Uma vez",
+            "example": "I visited it once."
+          },
+          {
+            "term": "Already",
+            "translation_pt": "Já",
+            "example": "I have already finished."
+          },
+          {
+            "term": "Yet",
+            "translation_pt": "Ainda",
+            "example": "Have you seen it yet?"
+          },
+          {
+            "term": "Eventful",
+            "translation_pt": "Cheio de acontecimentos",
+            "example": "The day was very eventful."
+          },
+          {
+            "term": "Forgot",
+            "translation_pt": "Esqueci",
+            "example": "I forgot my keys."
+          },
+          {
+            "term": "Remembered",
+            "translation_pt": "Lembrei",
+            "example": "I remembered to call him."
+          },
+          {
+            "term": "Happen",
+            "translation_pt": "Acontecer",
+            "example": "What happened to you?"
+          },
+          {
+            "term": "Previous",
+            "translation_pt": "Anterior",
+            "example": "In my previous job..."
+          }
+        ],
+        "phrases": [
+          {
+            "text": "I have been there before.",
+            "translation_pt": "Eu estive lá antes."
+          },
+          {
+            "text": "When I was a kid...",
+            "translation_pt": "Quando eu era criança..."
+          },
+          {
+            "text": "Believe it or not...",
+            "translation_pt": "Acredite ou não..."
+          },
+          {
+            "text": "I’ll never forget that.",
+            "translation_pt": "Eu nunca vou esquecer isso."
+          },
+          {
+            "text": "Did you ever try?",
+            "translation_pt": "Você já tentou?"
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "A",
+            "line": "Have you ever been to Europe?"
+          },
+          {
+            "speaker": "B",
+            "line": "Yes, I went there three years ago."
+          },
+          {
+            "speaker": "A",
+            "line": "Which city did you like the most?"
+          },
+          {
+            "speaker": "B",
+            "line": "Paris was amazing. I'll never forget it."
+          },
+          {
+            "speaker": "A",
+            "line": "I've always wanted to go there."
+          },
+          {
+            "speaker": "B",
+            "line": "You should definitely go. It's beautiful."
+          },
+          {
+            "speaker": "A",
+            "line": "Maybe next year if I have the money."
+          },
+          {
+            "speaker": "B",
+            "line": "Start saving now, it's worth it!"
+          }
+        ],
+        "quiz": [
+          {
+            "question": "Which tense is used for finished actions?",
+            "options": [
+              "Simple Past",
+              "Present Perfect",
+              "Future",
+              "Present"
+            ],
+            "answer": "Simple Past"
+          },
+          {
+            "question": "What is the opposite of 'remember'?",
+            "options": [
+              "Forgot",
+              "Recall",
+              "Happen",
+              "Story"
+            ],
+            "answer": "Forgot"
+          },
+          {
+            "question": "Which word indicates something that happened at an unspecified time?",
+            "options": [
+              "Already",
+              "Never",
+              "Used to",
+              "Once"
+            ],
+            "answer": "Never"
+          },
+          {
+            "question": "How do you say 'costumava'?",
+            "options": [
+              "Already",
+              "Used to",
+              "Once",
+              "Previous"
+            ],
+            "answer": "Used to"
+          },
+          {
+            "question": "What is a 'memorable' moment?",
+            "options": [
+              "A sad one",
+              "A forgotten one",
+              "A moment worth remembering",
+              "A boring one"
+            ],
+            "answer": "A moment worth remembering"
+          }
+        ]
+      }
+    },
+    {
+      "day": 5,
+      "theme": "Opinions and Preferences",
+      "objective_pt": "Aprender a expressar opiniões, concordar e discordar de forma educada.",
+      "kind": "lesson",
+      "content": {
+        "vocabulary": [
+          {
+            "term": "Opinion",
+            "translation_pt": "Opinião",
+            "example": "What is your opinion?"
+          },
+          {
+            "term": "Agree",
+            "translation_pt": "Concordar",
+            "example": "I totally agree with you."
+          },
+          {
+            "term": "Disagree",
+            "translation_pt": "Discordar",
+            "example": "I’m afraid I disagree."
+          },
+          {
+            "term": "Viewpoint",
+            "translation_pt": "Ponto de vista",
+            "example": "That’s an interesting viewpoint."
+          },
+          {
+            "term": "Preference",
+            "translation_pt": "Preferência",
+            "example": "What is your preference?"
+          },
+          {
+            "term": "Believe",
+            "translation_pt": "Acreditar",
+            "example": "I believe this is better."
+          },
+          {
+            "term": "Think",
+            "translation_pt": "Achar/Pensar",
+            "example": "What do you think of it?"
+          },
+          {
+            "term": "Support",
+            "translation_pt": "Apoiar",
+            "example": "I support your decision."
+          },
+          {
+            "term": "Reason",
+            "translation_pt": "Razão/Motivo",
+            "example": "What is the reason for this?"
+          },
+          {
+            "term": "Strongly",
+            "translation_pt": "Fortemente",
+            "example": "I strongly believe in this."
+          },
+          {
+            "term": "Point",
+            "translation_pt": "Ponto/Argumento",
+            "example": "You have a point there."
+          },
+          {
+            "term": "Fair",
+            "translation_pt": "Justo",
+            "example": "That sounds fair."
+          },
+          {
+            "term": "Judgment",
+            "translation_pt": "Julgamento",
+            "example": "Don't be quick to judge."
+          },
+          {
+            "term": "Concern",
+            "translation_pt": "Preocupação",
+            "example": "That is my main concern."
+          },
+          {
+            "term": "Consider",
+            "translation_pt": "Considerar",
+            "example": "Please consider my offer."
+          }
+        ],
+        "phrases": [
+          {
+            "text": "In my opinion...",
+            "translation_pt": "Na minha opinião..."
+          },
+          {
+            "text": "I see what you mean.",
+            "translation_pt": "Entendo o que você quer dizer."
+          },
+          {
+            "text": "That’s a good point.",
+            "translation_pt": "Esse é um bom ponto."
+          },
+          {
+            "text": "I’m not so sure about that.",
+            "translation_pt": "Não tenho tanta certeza disso."
+          },
+          {
+            "text": "Exactly!",
+            "translation_pt": "Exatamente!"
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "A",
+            "line": "I think remote work is much better."
+          },
+          {
+            "speaker": "B",
+            "line": "I disagree. I prefer the office."
+          },
+          {
+            "speaker": "A",
+            "line": "Why? You save so much time commuting."
+          },
+          {
+            "speaker": "B",
+            "line": "That's true, but I miss the social contact."
+          },
+          {
+            "speaker": "A",
+            "line": "I see your point. It can be lonely."
+          },
+          {
+            "speaker": "B",
+            "line": "Exactly! I prefer a hybrid model."
+          },
+          {
+            "speaker": "A",
+            "line": "That sounds like a fair compromise."
+          },
+          {
+            "speaker": "B",
+            "line": "I agree completely."
+          }
+        ],
+        "quiz": [
+          {
+            "question": "What does 'I see what you mean' express?",
+            "options": [
+              "Disagreement",
+              "Confusion",
+              "Understanding",
+              "Anger"
+            ],
+            "answer": "Understanding"
+          },
+          {
+            "question": "How to say you have the same opinion?",
+            "options": [
+              "I disagree",
+              "I agree",
+              "I doubt",
+              "I judge"
+            ],
+            "answer": "I agree"
+          },
+          {
+            "question": "What is a 'viewpoint'?",
+            "options": [
+              "A building",
+              "An opinion",
+              "A concern",
+              "A reason"
+            ],
+            "answer": "An opinion"
+          },
+          {
+            "question": "What is a 'fair' deal?",
+            "options": [
+              "Expensive",
+              "Unjust",
+              "Equitable",
+              "Long"
+            ],
+            "answer": "Equitable"
+          },
+          {
+            "question": "Which verb is used for thinking?",
+            "options": [
+              "Support",
+              "Think",
+              "Agree",
+              "Consider"
+            ],
+            "answer": "Think"
+          }
+        ]
+      }
+    },
+    {
+      "day": 6,
+      "theme": "Work Small Talk",
+      "objective_pt": "Aprender a conversar de maneira informal no ambiente de trabalho.",
+      "kind": "lesson",
+      "content": {
+        "vocabulary": [
+          {
+            "term": "Colleague",
+            "translation_pt": "Colega de trabalho",
+            "example": "He is a great colleague."
+          },
+          {
+            "term": "Deadline",
+            "translation_pt": "Prazo final",
+            "example": "The deadline is tomorrow."
+          },
+          {
+            "term": "Project",
+            "translation_pt": "Projeto",
+            "example": "How is the project going?"
+          },
+          {
+            "term": "Meeting",
+            "translation_pt": "Reunião",
+            "example": "I have a meeting at ten."
+          },
+          {
+            "term": "Task",
+            "translation_pt": "Tarefa",
+            "example": "I have many tasks today."
+          },
+          {
+            "term": "Weekend",
+            "translation_pt": "Fim de semana",
+            "example": "Did you enjoy your weekend?"
+          },
+          {
+            "term": "Busy",
+            "translation_pt": "Ocupado",
+            "example": "I am very busy today."
+          },
+          {
+            "term": "Break",
+            "translation_pt": "Pausa/Intervalo",
+            "example": "Let's take a coffee break."
+          },
+          {
+            "term": "Update",
+            "translation_pt": "Atualização",
+            "example": "Send me an update later."
+          },
+          {
+            "term": "Workload",
+            "translation_pt": "Carga de trabalho",
+            "example": "The workload is heavy."
+          },
+          {
+            "term": "Office",
+            "translation_pt": "Escritório",
+            "example": "See you at the office."
+          },
+          {
+            "term": "Goal",
+            "translation_pt": "Meta/Objetivo",
+            "example": "Our goal is to finish early."
+          },
+          {
+            "term": "Feedback",
+            "translation_pt": "Feedback/Retorno",
+            "example": "Thanks for the feedback."
+          },
+          {
+            "term": "Coffee",
+            "translation_pt": "Café",
+            "example": "Do you want some coffee?"
+          },
+          {
+            "term": "Commute",
+            "translation_pt": "Trajeto (casa-trabalho)",
+            "example": "My commute is long."
+          }
+        ],
+        "phrases": [
+          {
+            "text": "How is your day going?",
+            "translation_pt": "Como está o seu dia?"
+          },
+          {
+            "text": "Working hard or hardly working?",
+            "translation_pt": "Trabalhando muito ou pouco?"
+          },
+          {
+            "text": "Do you have any plans for the weekend?",
+            "translation_pt": "Tem planos para o fim de semana?"
+          },
+          {
+            "text": "Could you give me a hand?",
+            "translation_pt": "Poderia me dar uma ajuda?"
+          },
+          {
+            "text": "I'm looking forward to it.",
+            "translation_pt": "Estou ansioso por isso."
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "A",
+            "line": "Morning, how is your day going?"
+          },
+          {
+            "speaker": "B",
+            "line": "It's busy, but fine. How about you?"
+          },
+          {
+            "speaker": "A",
+            "line": "Same here. That project deadline is close."
+          },
+          {
+            "speaker": "B",
+            "line": "I know. Do you need any help?"
+          },
+          {
+            "speaker": "A",
+            "line": "No, I'm okay, but thanks for asking."
+          },
+          {
+            "speaker": "B",
+            "line": "Sure thing. Do you have plans for the weekend?"
+          },
+          {
+            "speaker": "A",
+            "line": "Yes, I'm going to the beach."
+          },
+          {
+            "speaker": "B",
+            "line": "That sounds relaxing!"
+          }
+        ],
+        "quiz": [
+          {
+            "question": "What is a 'deadline'?",
+            "options": [
+              "Coffee break",
+              "Project name",
+              "Due date",
+              "Office"
+            ],
+            "answer": "Due date"
+          },
+          {
+            "question": "What do you call a person you work with?",
+            "options": [
+              "Stranger",
+              "Colleague",
+              "Friend",
+              "Client"
+            ],
+            "answer": "Colleague"
+          },
+          {
+            "question": "What is a 'workload'?",
+            "options": [
+              "The amount of work",
+              "A break",
+              "A task",
+              "A goal"
+            ],
+            "answer": "The amount of work"
+          },
+          {
+            "question": "How do you ask for help in a friendly way?",
+            "options": [
+              "Do it for me",
+              "Give me a hand",
+              "I need you",
+              "Stop working"
+            ],
+            "answer": "Give me a hand"
+          },
+          {
+            "question": "What is a coffee break?",
+            "options": [
+              "A meeting",
+              "A short rest",
+              "A deadline",
+              "A new project"
+            ],
+            "answer": "A short rest"
+          }
+        ]
+      }
+    },
+    {
+      "day": 7,
+      "theme": "Weekly Review",
+      "objective_pt": "Revisar todo o conteúdo aprendido na primeira semana.",
+      "kind": "review",
+      "content": {
+        "vocabulary": [],
+        "phrases": [],
+        "dialogue": [],
+        "quiz": [
+          {
+            "question": "What is the document for boarding?",
+            "options": [
+              "Ticket",
+              "Boarding pass",
+              "Passport",
+              "Receipt"
+            ],
+            "answer": "Boarding pass"
+          },
+          {
+            "question": "Where do you try on clothes?",
+            "options": [
+              "Checkout",
+              "Fitting room",
+              "Stock",
+              "Store"
+            ],
+            "answer": "Fitting room"
+          },
+          {
+            "question": "How to say 'adiar'?",
+            "options": [
+              "Cancel",
+              "Postpone",
+              "Schedule",
+              "Suggest"
+            ],
+            "answer": "Postpone"
+          },
+          {
+            "question": "Which tense relates to past experiences?",
+            "options": [
+              "Present",
+              "Future",
+              "Simple Past",
+              "Present Perfect"
+            ],
+            "answer": "Present Perfect"
+          },
+          {
+            "question": "If you agree, what do you say?",
+            "options": [
+              "I disagree",
+              "I see",
+              "Exactly",
+              "No"
+            ],
+            "answer": "Exactly"
+          },
+          {
+            "question": "What is a colleague?",
+            "options": [
+              "A boss",
+              "A workmate",
+              "A customer",
+              "A stranger"
+            ],
+            "answer": "A workmate"
+          },
+          {
+            "question": "How do you call the money given back?",
+            "options": [
+              "Change",
+              "Sale",
+              "Discount",
+              "Refund"
+            ],
+            "answer": "Change"
+          },
+          {
+            "question": "What is the opposite of expensive?",
+            "options": [
+              "Affordable",
+              "Sale",
+              "Cheap",
+              "Available"
+            ],
+            "answer": "Affordable"
+          },
+          {
+            "question": "What does 'I can't make it' mean?",
+            "options": [
+              "I can't do it",
+              "I can't attend",
+              "I'm busy",
+              "I'm late"
+            ],
+            "answer": "I can't attend"
+          },
+          {
+            "question": "What word implies a task due date?",
+            "options": [
+              "Deadline",
+              "Meeting",
+              "Project",
+              "Goal"
+            ],
+            "answer": "Deadline"
+          },
+          {
+            "question": "How do you ask about preferences?",
+            "options": [
+              "What do you like?",
+              "Are you free?",
+              "Can you help?",
+              "What do you think?"
+            ],
+            "answer": "What do you like?"
+          },
+          {
+            "question": "What is a 'layover'?",
+            "options": [
+              "A flight",
+              "A stopover",
+              "A luggage",
+              "A ticket"
+            ],
+            "answer": "A stopover"
+          }
+        ]
+      }
+    },
+    {
+      "day": 8,
+      "theme": "Phone Calls",
+      "objective_pt": "Aprender a realizar e receber chamadas telefônicas em inglês.",
+      "kind": "lesson",
+      "content": {
+        "vocabulary": [
+          {
+            "term": "Call",
+            "translation_pt": "Ligar",
+            "example": "I will call you back."
+          },
+          {
+            "term": "Receiver",
+            "translation_pt": "Receptor/Aquele que recebe",
+            "example": "The receiver is busy."
+          },
+          {
+            "term": "Message",
+            "translation_pt": "Mensagem",
+            "example": "Can I leave a message?"
+          },
+          {
+            "term": "Extension",
+            "translation_pt": "Ramal",
+            "example": "Dial extension 204."
+          },
+          {
+            "term": "Hold",
+            "translation_pt": "Esperar na linha",
+            "example": "Please hold for a moment."
+          },
+          {
+            "term": "Hang up",
+            "translation_pt": "Desligar",
+            "example": "Don't hang up yet."
+          },
+          {
+            "term": "Connection",
+            "translation_pt": "Conexão",
+            "example": "The connection is bad."
+          },
+          {
+            "term": "Available",
+            "translation_pt": "Disponível",
+            "example": "Is Mr. Smith available?"
+          },
+          {
+            "term": "Put through",
+            "translation_pt": "Transferir (ligação)",
+            "example": "Let me put you through."
+          },
+          {
+            "term": "Voicemail",
+            "translation_pt": "Caixa postal",
+            "example": "Leave a message on my voicemail."
+          },
+          {
+            "term": "Operator",
+            "translation_pt": "Operador",
+            "example": "Ask the operator for help."
+          },
+          {
+            "term": "Busy signal",
+            "translation_pt": "Sinal de ocupado",
+            "example": "I keep getting a busy signal."
+          },
+          {
+            "term": "Ring",
+            "translation_pt": "Tocar",
+            "example": "The phone is ringing."
+          },
+          {
+            "term": "Mobile",
+            "translation_pt": "Celular",
+            "example": "Is this your mobile number?"
+          },
+          {
+            "term": "Inquiry",
+            "translation_pt": "Consulta/Pergunta",
+            "example": "This is a simple inquiry."
+          }
+        ],
+        "phrases": [
+          {
+            "text": "May I speak to...?",
+            "translation_pt": "Posso falar com...?"
+          },
+          {
+            "text": "I’m calling about...",
+            "translation_pt": "Estou ligando sobre..."
+          },
+          {
+            "text": "Can you hear me?",
+            "translation_pt": "Você consegue me ouvir?"
+          },
+          {
+            "text": "I’ll call you back later.",
+            "translation_pt": "Vou te retornar mais tarde."
+          },
+          {
+            "text": "Thanks for calling.",
+            "translation_pt": "Obrigado por ligar."
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "A",
+            "line": "Hello, can I speak to John?"
+          },
+          {
+            "speaker": "B",
+            "line": "He is in a meeting right now."
+          },
+          {
+            "speaker": "A",
+            "line": "Could you leave him a message?"
+          },
+          {
+            "speaker": "B",
+            "line": "Sure, what is the message?"
+          },
+          {
+            "speaker": "A",
+            "line": "Please tell him to call me back."
+          },
+          {
+            "speaker": "B",
+            "line": "Certainly. May I have your name?"
+          },
+          {
+            "speaker": "A",
+            "line": "It's Sarah from Marketing."
+          },
+          {
+            "speaker": "B",
+            "line": "Okay, I'll let him know."
+          }
+        ],
+        "quiz": [
+          {
+            "question": "What does 'hold' mean on the phone?",
+            "options": [
+              "Hang up",
+              "Stay on the line",
+              "Speak louder",
+              "Call back"
+            ],
+            "answer": "Stay on the line"
+          },
+          {
+            "question": "What is a 'ramal'?",
+            "options": [
+              "Phone",
+              "Voicemail",
+              "Extension",
+              "Operator"
+            ],
+            "answer": "Extension"
+          },
+          {
+            "question": "How to say 'desligar'?",
+            "options": [
+              "Call back",
+              "Hold",
+              "Hang up",
+              "Ring"
+            ],
+            "answer": "Hang up"
+          },
+          {
+            "question": "What do you use if no one answers?",
+            "options": [
+              "Hold",
+              "Voicemail",
+              "Message",
+              "Operator"
+            ],
+            "answer": "Voicemail"
+          },
+          {
+            "question": "Which phrase is correct to ask for someone?",
+            "options": [
+              "Can I speak to?",
+              "I call you?",
+              "Is it you?",
+              "You speak to me?"
+            ],
+            "answer": "Can I speak to?"
+          }
+        ]
+      }
+    },
+    {
+      "day": 9,
+      "theme": "Directions and Navigation",
+      "objective_pt": "Aprender a pedir e dar instruções de localização.",
+      "kind": "lesson",
+      "content": {
+        "vocabulary": [
+          {
+            "term": "Turn",
+            "translation_pt": "Virar",
+            "example": "Turn left at the corner."
+          },
+          {
+            "term": "Straight",
+            "translation_pt": "Direto/Em frente",
+            "example": "Go straight ahead."
+          },
+          {
+            "term": "Corner",
+            "translation_pt": "Esquina",
+            "example": "It is on the corner."
+          },
+          {
+            "term": "Block",
+            "translation_pt": "Quarteirão",
+            "example": "It is two blocks away."
+          },
+          {
+            "term": "Cross",
+            "translation_pt": "Atravessar",
+            "example": "Cross the street here."
+          },
+          {
+            "term": "Intersection",
+            "translation_pt": "Cruzamento",
+            "example": "At the intersection, turn right."
+          },
+          {
+            "term": "Opposite",
+            "translation_pt": "Oposto/Em frente a",
+            "example": "It is opposite the bank."
+          },
+          {
+            "term": "Nearby",
+            "translation_pt": "Perto",
+            "example": "Is there a cafe nearby?"
+          },
+          {
+            "term": "Far",
+            "translation_pt": "Longe",
+            "example": "It is not too far."
+          },
+          {
+            "term": "Shortcut",
+            "translation_pt": "Atalho",
+            "example": "Take this shortcut."
+          },
+          {
+            "term": "Directly",
+            "translation_pt": "Diretamente",
+            "example": "It is directly behind you."
+          },
+          {
+            "term": "Between",
+            "translation_pt": "Entre",
+            "example": "The park is between the library and school."
+          },
+          {
+            "term": "Along",
+            "translation_pt": "Ao longo de",
+            "example": "Walk along this road."
+          },
+          {
+            "term": "Signs",
+            "translation_pt": "Placas/Sinais",
+            "example": "Follow the signs."
+          },
+          {
+            "term": "Location",
+            "translation_pt": "Localização",
+            "example": "What is the location?"
+          }
+        ],
+        "phrases": [
+          {
+            "text": "Excuse me, how do I get to...?",
+            "translation_pt": "Com licença, como chego a...?"
+          },
+          {
+            "text": "Turn right at the light.",
+            "translation_pt": "Vire à direita no sinal."
+          },
+          {
+            "text": "It’s on your left.",
+            "translation_pt": "Fica à sua esquerda."
+          },
+          {
+            "text": "You can't miss it.",
+            "translation_pt": "Você não tem como errar."
+          },
+          {
+            "text": "Is it within walking distance?",
+            "translation_pt": "Dá para ir a pé?"
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "A",
+            "line": "Excuse me, how do I get to the museum?"
+          },
+          {
+            "speaker": "B",
+            "line": "Go straight and turn left at the corner."
+          },
+          {
+            "speaker": "A",
+            "line": "Is it far from here?"
+          },
+          {
+            "speaker": "B",
+            "line": "No, it's just two blocks away."
+          },
+          {
+            "speaker": "A",
+            "line": "Is it on the right side?"
+          },
+          {
+            "speaker": "B",
+            "line": "Yes, it is opposite the bank."
+          },
+          {
+            "speaker": "A",
+            "line": "Thank you for the help!"
+          },
+          {
+            "speaker": "B",
+            "line": "You're welcome!"
+          }
+        ],
+        "quiz": [
+          {
+            "question": "What is a 'quarteirão'?",
+            "options": [
+              "Corner",
+              "Block",
+              "Intersection",
+              "Street"
+            ],
+            "answer": "Block"
+          },
+          {
+            "question": "How to say 'virar à esquerda'?",
+            "options": [
+              "Turn right",
+              "Turn left",
+              "Go straight",
+              "Cross"
+            ],
+            "answer": "Turn left"
+          },
+          {
+            "question": "What is a 'cruzamento'?",
+            "options": [
+              "Corner",
+              "Intersection",
+              "Block",
+              "Side"
+            ],
+            "answer": "Intersection"
+          },
+          {
+            "question": "What does 'walking distance' mean?",
+            "options": [
+              "Requires a car",
+              "Very far",
+              "Easy to walk",
+              "A shortcut"
+            ],
+            "answer": "Easy to walk"
+          },
+          {
+            "question": "Where is the post office? It is ... the bank and the store.",
+            "options": [
+              "Opposite",
+              "Between",
+              "Straight",
+              "Turn"
+            ],
+            "answer": "Between"
+          }
+        ]
+      }
+    },
+    {
+      "day": 10,
+      "theme": "Health and Symptoms",
+      "objective_pt": "Aprender a descrever sintomas e buscar ajuda médica.",
+      "kind": "lesson",
+      "content": {
+        "vocabulary": [
+          {
+            "term": "Symptom",
+            "translation_pt": "Sintoma",
+            "example": "What are your symptoms?"
+          },
+          {
+            "term": "Pain",
+            "translation_pt": "Dor",
+            "example": "I have pain in my back."
+          },
+          {
+            "term": "Headache",
+            "translation_pt": "Dor de cabeça",
+            "example": "I have a bad headache."
+          },
+          {
+            "term": "Fever",
+            "translation_pt": "Febre",
+            "example": "Do you have a fever?"
+          },
+          {
+            "term": "Cold",
+            "translation_pt": "Resfriado",
+            "example": "I caught a cold."
+          },
+          {
+            "term": "Appointment",
+            "translation_pt": "Consulta",
+            "example": "I need a doctor's appointment."
+          },
+          {
+            "term": "Pharmacy",
+            "translation_pt": "Farmácia",
+            "example": "Is there a pharmacy nearby?"
+          },
+          {
+            "term": "Medicine",
+            "translation_pt": "Remédio",
+            "example": "Take this medicine twice a day."
+          },
+          {
+            "term": "Check-up",
+            "translation_pt": "Check-up/Exame",
+            "example": "I am due for a check-up."
+          },
+          {
+            "term": "Allergy",
+            "translation_pt": "Alergia",
+            "example": "I have a nut allergy."
+          },
+          {
+            "term": "Recovery",
+            "translation_pt": "Recuperação",
+            "example": "I wish you a fast recovery."
+          },
+          {
+            "term": "Sore",
+            "translation_pt": "Inflamado/Dolorido",
+            "example": "My throat is sore."
+          },
+          {
+            "term": "Cough",
+            "translation_pt": "Tosse",
+            "example": "Do you have a dry cough?"
+          },
+          {
+            "term": "Emergency",
+            "translation_pt": "Emergência",
+            "example": "Go to the emergency room."
+          },
+          {
+            "term": "Prescription",
+            "translation_pt": "Receita médica",
+            "example": "Do you have a prescription?"
+          }
+        ],
+        "phrases": [
+          {
+            "text": "I don't feel well.",
+            "translation_pt": "Não me sinto bem."
+          },
+          {
+            "text": "I have a stomach ache.",
+            "translation_pt": "Estou com dor de estômago."
+          },
+          {
+            "text": "How often should I take this?",
+            "translation_pt": "Com que frequência devo tomar isto?"
+          },
+          {
+            "text": "It hurts right here.",
+            "translation_pt": "Dói bem aqui."
+          },
+          {
+            "text": "I need to see a doctor.",
+            "translation_pt": "Preciso ver um médico."
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "A",
+            "line": "I don't feel well today."
+          },
+          {
+            "speaker": "B",
+            "line": "What's wrong? Do you have a fever?"
+          },
+          {
+            "speaker": "A",
+            "line": "No fever, but I have a bad headache."
+          },
+          {
+            "speaker": "B",
+            "line": "Maybe you should see a doctor."
+          },
+          {
+            "speaker": "A",
+            "line": "I'll go to the pharmacy first."
+          },
+          {
+            "speaker": "B",
+            "line": "That's a good idea. Take care!"
+          },
+          {
+            "speaker": "A",
+            "line": "Thanks, I hope it's just a cold."
+          },
+          {
+            "speaker": "B",
+            "line": "Get well soon!"
+          }
+        ],
+        "quiz": [
+          {
+            "question": "What is 'remédio' in English?",
+            "options": [
+              "Symptom",
+              "Pharmacy",
+              "Medicine",
+              "Doctor"
+            ],
+            "answer": "Medicine"
+          },
+          {
+            "question": "How to say 'dor de cabeça'?",
+            "options": [
+              "Stomach ache",
+              "Headache",
+              "Sore throat",
+              "Pain"
+            ],
+            "answer": "Headache"
+          },
+          {
+            "question": "What do you need to buy prescription medicine?",
+            "options": [
+              "Symptom",
+              "Prescription",
+              "Emergency",
+              "Appointment"
+            ],
+            "answer": "Prescription"
+          },
+          {
+            "question": "Where do you go in a medical emergency?",
+            "options": [
+              "Pharmacy",
+              "Emergency room",
+              "Check-up",
+              "Office"
+            ],
+            "answer": "Emergency room"
+          },
+          {
+            "question": "What does 'sore' mean?",
+            "options": [
+              "Happy",
+              "Healthy",
+              "Painful",
+              "Feverish"
+            ],
+            "answer": "Painful"
+          }
+        ]
+      }
+    },
+    {
+      "day": 11,
+      "theme": "Money and Banking",
+      "objective_pt": "Aprender vocabulário financeiro para lidar com bancos e pagamentos.",
+      "kind": "lesson",
+      "content": {
+        "vocabulary": [
+          {
+            "term": "Withdraw",
+            "translation_pt": "Sacar (dinheiro)",
+            "example": "I need to withdraw money."
+          },
+          {
+            "term": "Deposit",
+            "translation_pt": "Depositar",
+            "example": "I want to deposit a check."
+          },
+          {
+            "term": "Account",
+            "translation_pt": "Conta",
+            "example": "Check your bank account."
+          },
+          {
+            "term": "Balance",
+            "translation_pt": "Saldo",
+            "example": "What is my current balance?"
+          },
+          {
+            "term": "Exchange",
+            "translation_pt": "Câmbio",
+            "example": "Where can I exchange currency?"
+          },
+          {
+            "term": "Rate",
+            "translation_pt": "Taxa",
+            "example": "What is the exchange rate?"
+          },
+          {
+            "term": "Fee",
+            "translation_pt": "Tarifa/Taxa",
+            "example": "Is there a service fee?"
+          },
+          {
+            "term": "Transfer",
+            "translation_pt": "Transferência",
+            "example": "I made a bank transfer."
+          },
+          {
+            "term": "Credit card",
+            "translation_pt": "Cartão de crédito",
+            "example": "Can I pay by credit card?"
+          },
+          {
+            "term": "Debit card",
+            "translation_pt": "Cartão de débito",
+            "example": "I prefer using my debit card."
+          },
+          {
+            "term": "Cashier",
+            "translation_pt": "Caixa (pessoa)",
+            "example": "Talk to the cashier."
+          },
+          {
+            "term": "Saving",
+            "translation_pt": "Poupança/Economia",
+            "example": "I am saving for a trip."
+          },
+          {
+            "term": "Loan",
+            "translation_pt": "Empréstimo",
+            "example": "I need a loan."
+          },
+          {
+            "term": "Transaction",
+            "translation_pt": "Transação",
+            "example": "The transaction was successful."
+          },
+          {
+            "term": "Statement",
+            "translation_pt": "Extrato",
+            "example": "I reviewed my bank statement."
+          }
+        ],
+        "phrases": [
+          {
+            "text": "I’d like to withdraw some money.",
+            "translation_pt": "Gostaria de sacar um dinheiro."
+          },
+          {
+            "text": "What is the exchange rate today?",
+            "translation_pt": "Qual a taxa de câmbio hoje?"
+          },
+          {
+            "text": "Is there a fee for this?",
+            "translation_pt": "Tem uma taxa para isso?"
+          },
+          {
+            "text": "I’d like to check my balance.",
+            "translation_pt": "Gostaria de checar meu saldo."
+          },
+          {
+            "text": "Can you help me with this transfer?",
+            "translation_pt": "Pode me ajudar com esta transferência?"
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "A",
+            "line": "I'd like to withdraw 100 dollars."
+          },
+          {
+            "speaker": "B",
+            "line": "Sure, which account?"
+          },
+          {
+            "speaker": "A",
+            "line": "From my checking account, please."
+          },
+          {
+            "speaker": "B",
+            "line": "Anything else?"
+          },
+          {
+            "speaker": "A",
+            "line": "Yes, what is the fee for international transfers?"
+          },
+          {
+            "speaker": "B",
+            "line": "It depends on the amount."
+          },
+          {
+            "speaker": "A",
+            "line": "Okay, I'll check online later."
+          },
+          {
+            "speaker": "B",
+            "line": "Here is your money. Have a good day."
+          }
+        ],
+        "quiz": [
+          {
+            "question": "What is a 'balance'?",
+            "options": [
+              "A loan",
+              "A transaction",
+              "Account money amount",
+              "A bank fee"
+            ],
+            "answer": "Account money amount"
+          },
+          {
+            "question": "What verb is used to take money from a bank?",
+            "options": [
+              "Deposit",
+              "Withdraw",
+              "Save",
+              "Transfer"
+            ],
+            "answer": "Withdraw"
+          },
+          {
+            "question": "What is an 'extrato' in English?",
+            "options": [
+              "Balance",
+              "Statement",
+              "Rate",
+              "Fee"
+            ],
+            "answer": "Statement"
+          },
+          {
+            "question": "What do you call 'taxa de câmbio'?",
+            "options": [
+              "Account rate",
+              "Exchange rate",
+              "Money fee",
+              "Transfer rate"
+            ],
+            "answer": "Exchange rate"
+          },
+          {
+            "question": "What is a 'fee'?",
+            "options": [
+              "A discount",
+              "A type of card",
+              "A service charge",
+              "A deposit"
+            ],
+            "answer": "A service charge"
+          }
+        ]
+      }
+    },
+    {
+      "day": 12,
+      "theme": "Opinions and Debates",
+      "objective_pt": "Aprofundar a habilidade de argumentar e defender pontos de vista.",
+      "kind": "lesson",
+      "content": {
+        "vocabulary": [
+          {
+            "term": "Argument",
+            "translation_pt": "Argumento/Discussão",
+            "example": "That is a strong argument."
+          },
+          {
+            "term": "Debate",
+            "translation_pt": "Debate",
+            "example": "We had a long debate."
+          },
+          {
+            "term": "Persuade",
+            "translation_pt": "Persuadir",
+            "example": "It is hard to persuade him."
+          },
+          {
+            "term": "Evidence",
+            "translation_pt": "Evidência/Prova",
+            "example": "Do you have any evidence?"
+          },
+          {
+            "term": "Opponent",
+            "translation_pt": "Oponente",
+            "example": "He is a tough opponent."
+          },
+          {
+            "term": "Contradict",
+            "translation_pt": "Contradizer",
+            "example": "Don't contradict yourself."
+          },
+          {
+            "term": "Issue",
+            "translation_pt": "Problema/Questão",
+            "example": "That is a controversial issue."
+          },
+          {
+            "term": "Perspective",
+            "translation_pt": "Perspectiva",
+            "example": "From my perspective, it's fine."
+          },
+          {
+            "term": "Convince",
+            "translation_pt": "Convencer",
+            "example": "I'm convinced now."
+          },
+          {
+            "term": "Validity",
+            "translation_pt": "Validade",
+            "example": "I doubt the validity of this."
+          },
+          {
+            "term": "Neutral",
+            "translation_pt": "Neutro",
+            "example": "I prefer to stay neutral."
+          },
+          {
+            "term": "Support",
+            "translation_pt": "Apoiar",
+            "example": "Support your answer with facts."
+          },
+          {
+            "term": "Common ground",
+            "translation_pt": "Terreno comum/Acordo",
+            "example": "Let's find common ground."
+          },
+          {
+            "term": "Insight",
+            "translation_pt": "Percepção/Ideia",
+            "example": "That was a deep insight."
+          },
+          {
+            "term": "Bias",
+            "translation_pt": "Viés/Tendência",
+            "example": "He has a clear bias."
+          }
+        ],
+        "phrases": [
+          {
+            "text": "From my point of view...",
+            "translation_pt": "Do meu ponto de vista..."
+          },
+          {
+            "text": "I am convinced that...",
+            "translation_pt": "Estou convencido de que..."
+          },
+          {
+            "text": "That is a valid point.",
+            "translation_pt": "Esse é um ponto válido."
+          },
+          {
+            "text": "Let's agree to disagree.",
+            "translation_pt": "Vamos concordar em discordar."
+          },
+          {
+            "text": "What makes you say that?",
+            "translation_pt": "O que te faz dizer isso?"
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "A",
+            "line": "I believe we should switch to paperless."
+          },
+          {
+            "speaker": "B",
+            "line": "I'm not so sure. Why?"
+          },
+          {
+            "speaker": "A",
+            "line": "It's better for the environment."
+          },
+          {
+            "speaker": "B",
+            "line": "That's a valid point, but it's not practical."
+          },
+          {
+            "speaker": "A",
+            "line": "What makes you say that?"
+          },
+          {
+            "speaker": "B",
+            "line": "We need physical copies for legal reasons."
+          },
+          {
+            "speaker": "A",
+            "line": "I see. Maybe we find common ground."
+          },
+          {
+            "speaker": "B",
+            "line": "I agree. A hybrid system?"
+          }
+        ],
+        "quiz": [
+          {
+            "question": "What does 'agree to disagree' mean?",
+            "options": [
+              "To argue forever",
+              "To stop debating",
+              "To change your mind",
+              "To agree completely"
+            ],
+            "answer": "To stop debating"
+          },
+          {
+            "question": "What is a 'perspectiva'?",
+            "options": [
+              "Debate",
+              "Perspective",
+              "Bias",
+              "Evidence"
+            ],
+            "answer": "Perspective"
+          },
+          {
+            "question": "What is the synonym of 'prove'?",
+            "options": [
+              "Convince",
+              "Contradict",
+              "Support",
+              "Debate"
+            ],
+            "answer": "Support"
+          },
+          {
+            "question": "What is a 'common ground'?",
+            "options": [
+              "A shared place",
+              "A shared opinion",
+              "A debate",
+              "A bias"
+            ],
+            "answer": "A shared opinion"
+          },
+          {
+            "question": "What means to be 'neutral'?",
+            "options": [
+              "Having a bias",
+              "Supporting one side",
+              "Not taking sides",
+              "Contradicting"
+            ],
+            "answer": "Not taking sides"
+          }
+        ]
+      }
+    },
+    {
+      "day": 13,
+      "theme": "Travel and Hobbies",
+      "objective_pt": "Conversar sobre viagens e interesses pessoais.",
+      "kind": "lesson",
+      "content": {
+        "vocabulary": [
+          {
+            "term": "Destination",
+            "translation_pt": "Destino",
+            "example": "What is your favorite destination?"
+          },
+          {
+            "term": "Leisure",
+            "translation_pt": "Lazer",
+            "example": "I like reading for leisure."
+          },
+          {
+            "term": "Sightseeing",
+            "translation_pt": "Passeio turístico",
+            "example": "We went sightseeing in Rome."
+          },
+          {
+            "term": "Adventure",
+            "translation_pt": "Aventura",
+            "example": "I love outdoor adventure."
+          },
+          {
+            "term": "Relaxing",
+            "translation_pt": "Relaxante",
+            "example": "It was a very relaxing trip."
+          },
+          {
+            "term": "Explore",
+            "translation_pt": "Explorar",
+            "example": "I want to explore the city."
+          },
+          {
+            "term": "Interest",
+            "translation_pt": "Interesse",
+            "example": "Do you have any interest in sports?"
+          },
+          {
+            "term": "Recommendation",
+            "translation_pt": "Recomendação",
+            "example": "Do you have any recommendations?"
+          },
+          {
+            "term": "Itinerary",
+            "translation_pt": "Itinerário/Roteiro",
+            "example": "Show me your itinerary."
+          },
+          {
+            "term": "Custom",
+            "translation_pt": "Costume",
+            "example": "I like learning about local customs."
+          },
+          {
+            "term": "Budget",
+            "translation_pt": "Orçamento",
+            "example": "My budget is tight."
+          },
+          {
+            "term": "Culture",
+            "translation_pt": "Cultura",
+            "example": "I love learning about new cultures."
+          },
+          {
+            "term": "Activity",
+            "translation_pt": "Atividade",
+            "example": "What activities can I do here?"
+          },
+          {
+            "term": "Host",
+            "translation_pt": "Anfitrião",
+            "example": "My host was very friendly."
+          },
+          {
+            "term": "Scenic",
+            "translation_pt": "Cênico/Bonito",
+            "example": "The view was very scenic."
+          }
+        ],
+        "phrases": [
+          {
+            "text": "What do you like to do in your free time?",
+            "translation_pt": "O que você gosta de fazer no tempo livre?"
+          },
+          {
+            "text": "I’m really into photography.",
+            "translation_pt": "Eu gosto muito de fotografia."
+          },
+          {
+            "text": "Where is the best place to visit?",
+            "translation_pt": "Qual o melhor lugar para visitar?"
+          },
+          {
+            "text": "I prefer relaxing to sightseeing.",
+            "translation_pt": "Prefiro relaxar do que passear."
+          },
+          {
+            "text": "That is on my bucket list.",
+            "translation_pt": "Isso está na minha lista de desejos."
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "A",
+            "line": "Do you like traveling?"
+          },
+          {
+            "speaker": "B",
+            "line": "I love it! What about you?"
+          },
+          {
+            "speaker": "A",
+            "line": "Me too. I prefer nature and adventure."
+          },
+          {
+            "speaker": "B",
+            "line": "That's cool. I prefer cities and culture."
+          },
+          {
+            "speaker": "A",
+            "line": "Any recommendations for next year?"
+          },
+          {
+            "speaker": "B",
+            "line": "You should visit Japan."
+          },
+          {
+            "speaker": "A",
+            "line": "It's already on my bucket list."
+          },
+          {
+            "speaker": "B",
+            "line": "It is such an amazing place."
+          }
+        ],
+        "quiz": [
+          {
+            "question": "What is 'sightseeing'?",
+            "options": [
+              "Relaxing",
+              "Working",
+              "Visiting landmarks",
+              "Exploring nature"
+            ],
+            "answer": "Visiting landmarks"
+          },
+          {
+            "question": "What is a 'bucket list'?",
+            "options": [
+              "A trash list",
+              "A travel budget",
+              "A list of goals",
+              "A list of hobbies"
+            ],
+            "answer": "A list of goals"
+          },
+          {
+            "question": "How to say 'itinerário'?",
+            "options": [
+              "Activity",
+              "Itinerary",
+              "Budget",
+              "Adventure"
+            ],
+            "answer": "Itinerary"
+          },
+          {
+            "question": "What is the synonym of 'leisure'?",
+            "options": [
+              "Work",
+              "Free time",
+              "Adventure",
+              "Custom"
+            ],
+            "answer": "Free time"
+          },
+          {
+            "question": "If you are 'into' something, you:",
+            "options": [
+              "Hate it",
+              "Are curious",
+              "Like it a lot",
+              "Are scared of it"
+            ],
+            "answer": "Like it a lot"
+          }
+        ]
+      }
+    },
+    {
+      "day": 14,
+      "theme": "Weekly Review",
+      "objective_pt": "Revisar o conteúdo da segunda semana de estudos.",
+      "kind": "review",
+      "content": {
+        "vocabulary": [],
+        "phrases": [],
+        "dialogue": [],
+        "quiz": [
+          {
+            "question": "What is an extension on a phone?",
+            "options": [
+              "Ramal",
+              "Volume",
+              "Signal",
+              "Call"
+            ],
+            "answer": "Ramal"
+          },
+          {
+            "question": "How to give directions for 'atravessar'?",
+            "options": [
+              "Turn",
+              "Cross",
+              "Along",
+              "Straight"
+            ],
+            "answer": "Cross"
+          },
+          {
+            "question": "What do you call a 'tosse'?",
+            "options": [
+              "Cold",
+              "Pain",
+              "Cough",
+              "Sore"
+            ],
+            "answer": "Cough"
+          },
+          {
+            "question": "What is 'sacar dinheiro'?",
+            "options": [
+              "Deposit",
+              "Withdraw",
+              "Transfer",
+              "Balance"
+            ],
+            "answer": "Withdraw"
+          },
+          {
+            "question": "How to say 'discordar' politely?",
+            "options": [
+              "I agree to disagree",
+              "You're wrong",
+              "No way",
+              "I hate it"
+            ],
+            "answer": "I agree to disagree"
+          },
+          {
+            "question": "What is 'sightseeing'?",
+            "options": [
+              "Travel",
+              "Tourism",
+              "Work",
+              "Rest"
+            ],
+            "answer": "Tourism"
+          },
+          {
+            "question": "What do you leave if someone is not available?",
+            "options": [
+              "A fee",
+              "A message",
+              "A rate",
+              "A bank account"
+            ],
+            "answer": "A message"
+          },
+          {
+            "question": "What is a 'quarteirão'?",
+            "options": [
+              "Street",
+              "Block",
+              "Corner",
+              "Road"
+            ],
+            "answer": "Block"
+          },
+          {
+            "question": "What is a 'prescription'?",
+            "options": [
+              "A symptom",
+              "A doctor's note",
+              "Medicine",
+              "An allergy"
+            ],
+            "answer": "A doctor's note"
+          },
+          {
+            "question": "What is a bank 'statement'?",
+            "options": [
+              "Balance",
+              "Loan",
+              "Transfer",
+              "Extrato"
+            ],
+            "answer": "Extrato"
+          },
+          {
+            "question": "What does it mean to be 'convicted'?",
+            "options": [
+              "Persuaded",
+              "Neutral",
+              "Biased",
+              "Opposed"
+            ],
+            "answer": "Persuaded"
+          },
+          {
+            "question": "What do you do if you are 'into' photography?",
+            "options": [
+              "Like it",
+              "Dislike it",
+              "Avoid it",
+              "Study it"
+            ],
+            "answer": "Like it"
+          }
+        ]
+      }
+    },
+    {
+      "day": 15,
+      "theme": "Final Assessment",
+      "objective_pt": "Avaliação final cobrindo todos os temas do curso de 15 dias.",
+      "kind": "final",
+      "content": {
+        "vocabulary": [],
+        "phrases": [],
+        "dialogue": [
+          {
+            "speaker": "A",
+            "line": "Hey, do you have any plans for the weekend?"
+          },
+          {
+            "speaker": "B",
+            "line": "I'm thinking of visiting the museum downtown."
+          },
+          {
+            "speaker": "A",
+            "line": "That sounds great! How do I get there?"
+          },
+          {
+            "speaker": "B",
+            "line": "Go straight and turn left at the corner."
+          },
+          {
+            "speaker": "A",
+            "line": "Perfect, thanks for the advice."
+          },
+          {
+            "speaker": "B",
+            "line": "You're welcome, see you later!"
+          }
+        ],
+        "quiz": [
+          {
+            "question": "What is the document for plane boarding?",
+            "options": [
+              "Ticket",
+              "Boarding pass",
+              "Passport",
+              "Receipt"
+            ],
+            "answer": "Boarding pass"
+          },
+          {
+            "question": "Where to try on clothes?",
+            "options": [
+              "Checkout",
+              "Fitting room",
+              "Store",
+              "Stock"
+            ],
+            "answer": "Fitting room"
+          },
+          {
+            "question": "Meaning of 'postpone'?",
+            "options": [
+              "Cancel",
+              "Delay",
+              "Schedule",
+              "Suggest"
+            ],
+            "answer": "Delay"
+          },
+          {
+            "question": "Tense for past experiences?",
+            "options": [
+              "Past",
+              "Present",
+              "Future",
+              "Present Perfect"
+            ],
+            "answer": "Present Perfect"
+          },
+          {
+            "question": "What is a colleague?",
+            "options": [
+              "Boss",
+              "Workmate",
+              "Friend",
+              "Stranger"
+            ],
+            "answer": "Workmate"
+          },
+          {
+            "question": "To hang up the phone means:",
+            "options": [
+              "Answer",
+              "End call",
+              "Wait",
+              "Transfer"
+            ],
+            "answer": "End call"
+          },
+          {
+            "question": "How to say 'atravessar'?",
+            "options": [
+              "Turn",
+              "Cross",
+              "Along",
+              "Straight"
+            ],
+            "answer": "Cross"
+          },
+          {
+            "question": "What is a 'tosse'?",
+            "options": [
+              "Cold",
+              "Pain",
+              "Cough",
+              "Sore"
+            ],
+            "answer": "Cough"
+          },
+          {
+            "question": "Action to get money from a bank:",
+            "options": [
+              "Deposit",
+              "Withdraw",
+              "Transfer",
+              "Account"
+            ],
+            "answer": "Withdraw"
+          },
+          {
+            "question": "What is 'sightseeing'?",
+            "options": [
+              "Travel",
+              "Tourism",
+              "Work",
+              "Rest"
+            ],
+            "answer": "Tourism"
+          },
+          {
+            "question": "Meaning of 'agree to disagree'?",
+            "options": [
+              "Argue",
+              "Stop debating",
+              "Conflict",
+              "Agree"
+            ],
+            "answer": "Stop debating"
+          },
+          {
+            "question": "A doctor's document for medicine:",
+            "options": [
+              "Symptom",
+              "Prescription",
+              "Medicine",
+              "Allergy"
+            ],
+            "answer": "Prescription"
+          },
+          {
+            "question": "A bank statement is:",
+            "options": [
+              "Balance",
+              "Loan",
+              "Transfer",
+              "Extrato"
+            ],
+            "answer": "Extrato"
+          },
+          {
+            "question": "What is a 'ramal'?",
+            "options": [
+              "Phone",
+              "Extension",
+              "Operator",
+              "Message"
+            ],
+            "answer": "Extension"
+          },
+          {
+            "question": "Meaning of 'into' a hobby:",
+            "options": [
+              "Like",
+              "Dislike",
+              "Ignore",
+              "Study"
+            ],
+            "answer": "Like"
+          }
+        ]
+      }
+    }
+  ]
+}

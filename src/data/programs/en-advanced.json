@@ -1,0 +1,2594 @@
+{
+  "days": [
+    {
+      "day": 1,
+      "theme": "Advanced Business Negotiations",
+      "objective_pt": "Dominar táticas e vocabulário persuasivo para negociações formais de alto nível.",
+      "kind": "lesson",
+      "content": {
+        "vocabulary": [
+          {
+            "term": "Leverage",
+            "translation_pt": "Vantagem estratégica",
+            "example": "We need to use our market share as leverage."
+          },
+          {
+            "term": "Concession",
+            "translation_pt": "Concessão",
+            "example": "They were unwilling to make any concessions."
+          },
+          {
+            "term": "Deadlock",
+            "translation_pt": "Impasse",
+            "example": "The negotiations reached a deadlock."
+          },
+          {
+            "term": "Stipulation",
+            "translation_pt": "Estipulação/Condição",
+            "example": "The contract includes a strict stipulation regarding delivery."
+          },
+          {
+            "term": "Mutual",
+            "translation_pt": "Mútuo",
+            "example": "We reached a mutually beneficial agreement."
+          },
+          {
+            "term": "Incentive",
+            "translation_pt": "Incentivo",
+            "example": "The tax cut serves as a strong incentive."
+          },
+          {
+            "term": "Arbitration",
+            "translation_pt": "Arbitragem",
+            "example": "The dispute was settled through binding arbitration."
+          },
+          {
+            "term": "Counteroffer",
+            "translation_pt": "Contraproposta",
+            "example": "They made a counteroffer lower than our expectation."
+          },
+          {
+            "term": "Hardball",
+            "translation_pt": "Jogo duro",
+            "example": "They are playing hardball during this merger."
+          },
+          {
+            "term": "Clause",
+            "translation_pt": "Cláusula",
+            "example": "Check the exit clause in the agreement."
+          },
+          {
+            "term": "Viability",
+            "translation_pt": "Viabilidade",
+            "example": "We must assess the economic viability of this project."
+          },
+          {
+            "term": "Endorsement",
+            "translation_pt": "Aprovação/Aval",
+            "example": "We require a formal endorsement from the board."
+          }
+        ],
+        "phrases": [
+          {
+            "text": "I see where you're coming from, but let's consider...",
+            "translation_pt": "Entendo seu ponto, mas vamos considerar..."
+          },
+          {
+            "text": "We are prepared to walk away if...",
+            "translation_pt": "Estamos dispostos a desistir se..."
+          },
+          {
+            "text": "Let's find common ground.",
+            "translation_pt": "Vamos encontrar um ponto de acordo."
+          },
+          {
+            "text": "Under the current circumstances, it's non-negotiable.",
+            "translation_pt": "Dadas as circunstâncias, isso é inegociável."
+          },
+          {
+            "text": "I'm open to exploring alternative arrangements.",
+            "translation_pt": "Estou aberto a explorar arranjos alternativos."
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "A",
+            "line": "Given the current market volatility, we need more flexibility on pricing."
+          },
+          {
+            "speaker": "B",
+            "line": "I'm afraid our margins are already too thin to offer further concessions."
+          },
+          {
+            "speaker": "A",
+            "line": "If we can't adjust the terms, this deal loses its viability."
+          },
+          {
+            "speaker": "B",
+            "line": "Perhaps we can look at a long-term contract as a trade-off?"
+          },
+          {
+            "speaker": "A",
+            "line": "That would certainly be a step toward mutual understanding."
+          },
+          {
+            "speaker": "B",
+            "line": "Good, let's draft a new clause reflecting that stability."
+          },
+          {
+            "speaker": "A",
+            "line": "Agreed, provided the legal team signs off on it."
+          },
+          {
+            "speaker": "B",
+            "line": "Excellent, let's proceed with that draft."
+          }
+        ],
+        "quiz": [
+          {
+            "question": "What does playing 'hardball' mean?",
+            "options": [
+              "Soft approach",
+              "Aggressive negotiation",
+              "Giving up",
+              "Friendly talk"
+            ],
+            "answer": "Aggressive negotiation"
+          },
+          {
+            "question": "A synonym for 'stipulation' is:",
+            "options": [
+              "Requirement",
+              "Gift",
+              "Suggestion",
+              "Guess"
+            ],
+            "answer": "Requirement"
+          },
+          {
+            "question": "What is 'leverage' in a negotiation context?",
+            "options": [
+              "Weight",
+              "Advantage",
+              "Lever",
+              "Failure"
+            ],
+            "answer": "Advantage"
+          },
+          {
+            "question": "When you have a 'deadlock', what has happened?",
+            "options": [
+              "Success",
+              "Speed",
+              "Impasse",
+              "Expansion"
+            ],
+            "answer": "Impasse"
+          },
+          {
+            "question": "Which phrase indicates a desire for agreement?",
+            "options": [
+              "Walk away",
+              "Common ground",
+              "Hardball",
+              "Deadlock"
+            ],
+            "answer": "Common ground"
+          }
+        ]
+      }
+    },
+    {
+      "day": 2,
+      "theme": "Storytelling and Narrative Techniques",
+      "objective_pt": "Aprender a estruturar narrativas envolventes usando tempos verbais avançados.",
+      "kind": "lesson",
+      "content": {
+        "vocabulary": [
+          {
+            "term": "Enthralling",
+            "translation_pt": "Cativante",
+            "example": "Her speech was absolutely enthralling."
+          },
+          {
+            "term": "Twist",
+            "translation_pt": "Reviravolta",
+            "example": "The story took an unexpected twist."
+          },
+          {
+            "term": "Pacing",
+            "translation_pt": "Ritmo",
+            "example": "The pacing of the novel is perfect."
+          },
+          {
+            "term": "Anecdote",
+            "translation_pt": "Anedota/Relato",
+            "example": "He shared an anecdote about his youth."
+          },
+          {
+            "term": "Climax",
+            "translation_pt": "Clímax",
+            "example": "The action reaches a climax in the final chapter."
+          },
+          {
+            "term": "Unfold",
+            "translation_pt": "Desenrolar",
+            "example": "Watch how the events unfold."
+          },
+          {
+            "term": "Poignant",
+            "translation_pt": "Comovente",
+            "example": "It was a poignant reminder of the past."
+          },
+          {
+            "term": "Suspense",
+            "translation_pt": "Suspense",
+            "example": "The film was full of suspense."
+          },
+          {
+            "term": "Protagonist",
+            "translation_pt": "Protagonista",
+            "example": "The protagonist faces a difficult moral dilemma."
+          },
+          {
+            "term": "Foreshadowing",
+            "translation_pt": "Presságio/Antecipação",
+            "example": "The author used foreshadowing to hint at the end."
+          },
+          {
+            "term": "Vivid",
+            "translation_pt": "Vívido",
+            "example": "He gave a vivid description of the landscape."
+          },
+          {
+            "term": "Outcome",
+            "translation_pt": "Resultado",
+            "example": "We waited anxiously for the outcome."
+          }
+        ],
+        "phrases": [
+          {
+            "text": "As luck would have it...",
+            "translation_pt": "Por sorte... (ou ironicamente, 'para o azar...')"
+          },
+          {
+            "text": "It all started when...",
+            "translation_pt": "Tudo começou quando..."
+          },
+          {
+            "text": "Long story short...",
+            "translation_pt": "Resumindo a história..."
+          },
+          {
+            "text": "The atmosphere was electric.",
+            "translation_pt": "A atmosfera estava eletrizante."
+          },
+          {
+            "text": "Everything culminated in...",
+            "translation_pt": "Tudo culminou em..."
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "A",
+            "line": "I'll never forget the trip to Patagonia; it was truly enthralling."
+          },
+          {
+            "speaker": "B",
+            "line": "Tell me, did everything go according to plan?"
+          },
+          {
+            "speaker": "A",
+            "line": "Hardly! As luck would have it, we lost our luggage in Buenos Aires."
+          },
+          {
+            "speaker": "B",
+            "line": "Oh no, that sounds like a nightmare start!"
+          },
+          {
+            "speaker": "A",
+            "line": "It was, but the journey unfolded in such a beautiful way afterward."
+          },
+          {
+            "speaker": "B",
+            "line": "I'm dying to hear the rest, tell me about the climax of the hike."
+          },
+          {
+            "speaker": "A",
+            "line": "Well, we reached the glacier just as the sun set. It was vivid."
+          },
+          {
+            "speaker": "B",
+            "line": "That sounds like a scene from a movie."
+          }
+        ],
+        "quiz": [
+          {
+            "question": "What is 'pacing' in a story?",
+            "options": [
+              "Character names",
+              "Speed of events",
+              "The setting",
+              "The author"
+            ],
+            "answer": "Speed of events"
+          },
+          {
+            "question": "What does 'unfold' mean?",
+            "options": [
+              "To fold paper",
+              "To happen",
+              "To hide",
+              "To regret"
+            ],
+            "answer": "To happen"
+          },
+          {
+            "question": "What is 'foreshadowing'?",
+            "options": [
+              "Ending",
+              "Hinting at the future",
+              "The protagonist",
+              "The climax"
+            ],
+            "answer": "Hinting at the future"
+          },
+          {
+            "question": "An 'anecdote' is a:",
+            "options": [
+              "Short story",
+              "Main plot",
+              "Long chapter",
+              "Falsehood"
+            ],
+            "answer": "Short story"
+          },
+          {
+            "question": "Which word describes a 'poignant' moment?",
+            "options": [
+              "Boring",
+              "Emotional/Touching",
+              "Loud",
+              "Fast"
+            ],
+            "answer": "Emotional/Touching"
+          }
+        ]
+      }
+    },
+    {
+      "day": 3,
+      "theme": "Hypotheticals and Conditionals",
+      "objective_pt": "Usar estruturas condicionais avançadas para falar de cenários hipotéticos e arrependimentos.",
+      "kind": "lesson",
+      "content": {
+        "vocabulary": [
+          {
+            "term": "Conceivable",
+            "translation_pt": "Concebível",
+            "example": "It is conceivable that the project might fail."
+          },
+          {
+            "term": "Theoretical",
+            "translation_pt": "Teórico",
+            "example": "This is purely a theoretical approach."
+          },
+          {
+            "term": "Ramification",
+            "translation_pt": "Ramificação/Consequência",
+            "example": "Consider the long-term ramifications of your choice."
+          },
+          {
+            "term": "Hypothetically",
+            "translation_pt": "Hipoteticamente",
+            "example": "Hypothetically, what would you do?"
+          },
+          {
+            "term": "Scenario",
+            "translation_pt": "Cenário",
+            "example": "Let's look at the worst-case scenario."
+          },
+          {
+            "term": "Supposition",
+            "translation_pt": "Suposição",
+            "example": "This is based on mere supposition."
+          },
+          {
+            "term": "Counterfactual",
+            "translation_pt": "Contrafactual",
+            "example": "History is full of counterfactual questions."
+          },
+          {
+            "term": "Foreseeable",
+            "translation_pt": "Previsível",
+            "example": "There are no foreseeable issues."
+          },
+          {
+            "term": "Implicit",
+            "translation_pt": "Implícito",
+            "example": "There was an implicit warning in his tone."
+          },
+          {
+            "term": "Unintended",
+            "translation_pt": "Não intencional",
+            "example": "They caused unintended consequences."
+          },
+          {
+            "term": "Speculate",
+            "translation_pt": "Especular",
+            "example": "It is useless to speculate on the future."
+          },
+          {
+            "term": "Contingency",
+            "translation_pt": "Contingência",
+            "example": "We have a contingency plan in place."
+          }
+        ],
+        "phrases": [
+          {
+            "text": "If I were in your shoes...",
+            "translation_pt": "Se eu estivesse no seu lugar..."
+          },
+          {
+            "text": "Should you need any assistance...",
+            "translation_pt": "Caso precise de ajuda..."
+          },
+          {
+            "text": "Were it not for...",
+            "translation_pt": "Se não fosse por..."
+          },
+          {
+            "text": "Had I known, I would have...",
+            "translation_pt": "Se eu soubesse, eu teria..."
+          },
+          {
+            "text": "Suppose we went ahead with...",
+            "translation_pt": "Suponha que seguíssemos em frente com..."
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "A",
+            "line": "Had I known about the budget cuts earlier, I wouldn't have hired more staff."
+          },
+          {
+            "speaker": "B",
+            "line": "But were it not for those hires, we wouldn't have met the deadline."
+          },
+          {
+            "speaker": "A",
+            "line": "That's true, but hypothetically, could we have outsourced?"
+          },
+          {
+            "speaker": "B",
+            "line": "Possibly, but the ramifications of that might have been even worse."
+          },
+          {
+            "speaker": "A",
+            "line": "Fair point. Suppose we move forward with the current team."
+          },
+          {
+            "speaker": "B",
+            "line": "It’s a conceivable path, as long as we watch the spending."
+          },
+          {
+            "speaker": "A",
+            "line": "I agree. Let's draft a contingency plan just in case."
+          },
+          {
+            "speaker": "B",
+            "line": "Excellent, safety first."
+          }
+        ],
+        "quiz": [
+          {
+            "question": "What does 'contingency' mean?",
+            "options": [
+              "Emergency plan",
+              "Budget",
+              "Strategy",
+              "Result"
+            ],
+            "answer": "Emergency plan"
+          },
+          {
+            "question": "If you say 'Had I known', what time frame are you talking about?",
+            "options": [
+              "Future",
+              "Present",
+              "Past",
+              "Never"
+            ],
+            "answer": "Past"
+          },
+          {
+            "question": "'Were it not for' is a formal way to say:",
+            "options": [
+              "Because of",
+              "Without",
+              "With",
+              "Next to"
+            ],
+            "answer": "Without"
+          },
+          {
+            "question": "A 'ramification' is similar to:",
+            "options": [
+              "Consequence",
+              "Beginning",
+              "Start",
+              "Root"
+            ],
+            "answer": "Consequence"
+          },
+          {
+            "question": "What does 'conceivable' mean?",
+            "options": [
+              "Impossible",
+              "Possible to imagine",
+              "Expensive",
+              "Useless"
+            ],
+            "answer": "Possible to imagine"
+          }
+        ]
+      }
+    },
+    {
+      "day": 4,
+      "theme": "Register: Formal vs Informal",
+      "objective_pt": "Aprender a adaptar o tom e o vocabulário dependendo do público e do ambiente.",
+      "kind": "lesson",
+      "content": {
+        "vocabulary": [
+          {
+            "term": "Colloquial",
+            "translation_pt": "Coloquial",
+            "example": "Avoid colloquial language in your essay."
+          },
+          {
+            "term": "Professional",
+            "translation_pt": "Profissional",
+            "example": "She maintained a professional demeanor."
+          },
+          {
+            "term": "Candid",
+            "translation_pt": "Sincero/Franco",
+            "example": "I appreciate your candid feedback."
+          },
+          {
+            "term": "Pompous",
+            "translation_pt": "Pomposo/Pretensioso",
+            "example": "Don't sound so pompous in the email."
+          },
+          {
+            "term": "Casual",
+            "translation_pt": "Casual",
+            "example": "It was just a casual conversation."
+          },
+          {
+            "term": "Precise",
+            "translation_pt": "Preciso",
+            "example": "Use precise terminology for the report."
+          },
+          {
+            "term": "Slang",
+            "translation_pt": "Gíria",
+            "example": "He used too much slang for the presentation."
+          },
+          {
+            "term": "Diplomatic",
+            "translation_pt": "Diplomático",
+            "example": "We need a diplomatic way to say no."
+          },
+          {
+            "term": "Abrupt",
+            "translation_pt": "Abrupto/Grosseiro",
+            "example": "His tone was too abrupt."
+          },
+          {
+            "term": "Polished",
+            "translation_pt": "Polido/Refinado",
+            "example": "The final speech was very polished."
+          },
+          {
+            "term": "Vernacular",
+            "translation_pt": "Vernáculo/Linguagem comum",
+            "example": "He spoke in the local vernacular."
+          },
+          {
+            "term": "Tone",
+            "translation_pt": "Tom",
+            "example": "Adjust your tone for the client."
+          }
+        ],
+        "phrases": [
+          {
+            "text": "I’m touching base regarding...",
+            "translation_pt": "Entrando em contato sobre..."
+          },
+          {
+            "text": "What’s up?",
+            "translation_pt": "E aí?"
+          },
+          {
+            "text": "I would be grateful if you could...",
+            "translation_pt": "Eu ficaria grato se você pudesse..."
+          },
+          {
+            "text": "Sorry for the bother.",
+            "translation_pt": "Desculpe o incômodo."
+          },
+          {
+            "text": "Kindly advise.",
+            "translation_pt": "Por favor, oriente-me."
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "A",
+            "line": "Hey, what’s up with the project status?"
+          },
+          {
+            "speaker": "B",
+            "line": "I’m sorry, I should probably use a more professional tone here."
+          },
+          {
+            "speaker": "A",
+            "line": "No worries, but the client is quite formal."
+          },
+          {
+            "speaker": "B",
+            "line": "Understood. I shall provide an update on the progress shortly."
+          },
+          {
+            "speaker": "A",
+            "line": "Much better. Let’s keep it polished and precise."
+          },
+          {
+            "speaker": "B",
+            "line": "Agreed. I will be candid about our current delays."
+          },
+          {
+            "speaker": "A",
+            "line": "Good, honesty is usually the best policy."
+          },
+          {
+            "speaker": "B",
+            "line": "I’ll make sure to sound diplomatic too."
+          }
+        ],
+        "quiz": [
+          {
+            "question": "What is 'colloquial' language?",
+            "options": [
+              "Formal",
+              "Informal/Everyday",
+              "Scientific",
+              "Silent"
+            ],
+            "answer": "Informal/Everyday"
+          },
+          {
+            "question": "If someone is being 'candid', they are:",
+            "options": [
+              "Lying",
+              "Quiet",
+              "Honest/Frank",
+              "Aggressive"
+            ],
+            "answer": "Honest/Frank"
+          },
+          {
+            "question": "'Touching base' is an expression used for:",
+            "options": [
+              "Starting a fight",
+              "Making contact",
+              "Leaving",
+              "Sleeping"
+            ],
+            "answer": "Making contact"
+          },
+          {
+            "question": "Which word describes a 'pompous' person?",
+            "options": [
+              "Humorous",
+              "Pretentious",
+              "Smart",
+              "Kind"
+            ],
+            "answer": "Pretentious"
+          },
+          {
+            "question": "What does 'diplomatic' imply?",
+            "options": [
+              "Avoiding conflict",
+              "Being loud",
+              "Being rude",
+              "Working abroad"
+            ],
+            "answer": "Avoiding conflict"
+          }
+        ]
+      }
+    },
+    {
+      "day": 5,
+      "theme": "Idioms and Figurative Language",
+      "objective_pt": "Compreender e aplicar expressões idiomáticas para soar mais natural e fluente.",
+      "kind": "lesson",
+      "content": {
+        "vocabulary": [
+          {
+            "term": "Backtrack",
+            "translation_pt": "Voltar atrás",
+            "example": "He had to backtrack on his promise."
+          },
+          {
+            "term": "Cornerstone",
+            "translation_pt": "Pedra angular/Base",
+            "example": "Innovation is the cornerstone of our company."
+          },
+          {
+            "term": "Cut corners",
+            "translation_pt": "Economizar esforços/Atalhos",
+            "example": "We cannot cut corners on safety."
+          },
+          {
+            "term": "Elephant in the room",
+            "translation_pt": "O assunto óbvio que ninguém quer falar",
+            "example": "We need to address the elephant in the room."
+          },
+          {
+            "term": "Graveyard shift",
+            "translation_pt": "Turno da madrugada",
+            "example": "He works the graveyard shift."
+          },
+          {
+            "term": "Hit the nail on the head",
+            "translation_pt": "Acertar em cheio",
+            "example": "You hit the nail on the head."
+          },
+          {
+            "term": "Level playing field",
+            "translation_pt": "Igualdade de condições",
+            "example": "We want a level playing field."
+          },
+          {
+            "term": "Out of the loop",
+            "translation_pt": "Por fora (desinformado)",
+            "example": "I feel out of the loop."
+          },
+          {
+            "term": "Red tape",
+            "translation_pt": "Burocracia",
+            "example": "The project is stuck in red tape."
+          },
+          {
+            "term": "Shot in the dark",
+            "translation_pt": "Um chute (tentativa sem base)",
+            "example": "It was just a shot in the dark."
+          },
+          {
+            "term": "Tall order",
+            "translation_pt": "Tarefa difícil",
+            "example": "Completing this in a week is a tall order."
+          },
+          {
+            "term": "Up in the air",
+            "translation_pt": "Indeciso/Em aberto",
+            "example": "The plans are still up in the air."
+          }
+        ],
+        "phrases": [
+          {
+            "text": "Don't beat around the bush.",
+            "translation_pt": "Não enrole / Vá direto ao ponto."
+          },
+          {
+            "text": "That’s a no-brainer.",
+            "translation_pt": "Essa é fácil/óbvia."
+          },
+          {
+            "text": "Call it a day.",
+            "translation_pt": "Encerrar o dia/trabalho."
+          },
+          {
+            "text": "Read between the lines.",
+            "translation_pt": "Ler nas entrelinhas."
+          },
+          {
+            "text": "Get on the same page.",
+            "translation_pt": "Entrar em sintonia."
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "A",
+            "line": "I feel like we're ignoring the elephant in the room regarding the budget."
+          },
+          {
+            "speaker": "B",
+            "line": "You hit the nail on the head; we're definitely overspending."
+          },
+          {
+            "speaker": "A",
+            "line": "It's a tall order to fix this before the deadline."
+          },
+          {
+            "speaker": "B",
+            "line": "But we can't cut corners just to finish on time."
+          },
+          {
+            "speaker": "A",
+            "line": "Exactly. Let's not beat around the bush; we need more funding."
+          },
+          {
+            "speaker": "B",
+            "line": "I agree. Shall we call it a day and meet tomorrow?"
+          },
+          {
+            "speaker": "A",
+            "line": "Yes, let's meet when we're all on the same page."
+          },
+          {
+            "speaker": "B",
+            "line": "Agreed. See you then."
+          }
+        ],
+        "quiz": [
+          {
+            "question": "What does 'red tape' refer to?",
+            "options": [
+              "Decoration",
+              "Bureaucracy",
+              "Red clothing",
+              "A type of glue"
+            ],
+            "answer": "Bureaucracy"
+          },
+          {
+            "question": "To 'hit the nail on the head' means:",
+            "options": [
+              "To be aggressive",
+              "To be exactly right",
+              "To fail",
+              "To build something"
+            ],
+            "answer": "To be exactly right"
+          },
+          {
+            "question": "What is a 'tall order'?",
+            "options": [
+              "A large menu",
+              "A difficult request",
+              "A good strategy",
+              "A tall person"
+            ],
+            "answer": "A difficult request"
+          },
+          {
+            "question": "What does 'up in the air' mean?",
+            "options": [
+              "Flying",
+              "Resolved",
+              "Uncertain",
+              "Dangerous"
+            ],
+            "answer": "Uncertain"
+          },
+          {
+            "question": "What does 'cut corners' imply?",
+            "options": [
+              "Being lazy",
+              "Saving effort poorly",
+              "Using tools",
+              "Finishing early"
+            ],
+            "answer": "Saving effort poorly"
+          }
+        ]
+      }
+    },
+    {
+      "day": 6,
+      "theme": "Debates and Argumentation",
+      "objective_pt": "Aprimorar a capacidade de sustentar argumentos e refutar pontos de vista com elegância.",
+      "kind": "lesson",
+      "content": {
+        "vocabulary": [
+          {
+            "term": "Advocate",
+            "translation_pt": "Defender",
+            "example": "I advocate for cleaner energy policies."
+          },
+          {
+            "term": "Fallacy",
+            "translation_pt": "Falácia",
+            "example": "That argument is based on a logical fallacy."
+          },
+          {
+            "term": "Grievance",
+            "translation_pt": "Queixa/Reclamação",
+            "example": "They filed a formal grievance."
+          },
+          {
+            "term": "Impartial",
+            "translation_pt": "Imparcial",
+            "example": "We need an impartial judge."
+          },
+          {
+            "term": "Justification",
+            "translation_pt": "Justificativa",
+            "example": "What is your justification for this?"
+          },
+          {
+            "term": "Mitigate",
+            "translation_pt": "Mitigar/Amenizar",
+            "example": "We need to mitigate the risks."
+          },
+          {
+            "term": "Nuance",
+            "translation_pt": "Nuance/Sutileza",
+            "example": "The situation requires careful nuance."
+          },
+          {
+            "term": "Opposing",
+            "translation_pt": "Oposto/Contrário",
+            "example": "They have opposing views."
+          },
+          {
+            "term": "Persuasive",
+            "translation_pt": "Persuasivo",
+            "example": "She gave a very persuasive speech."
+          },
+          {
+            "term": "Rebuttal",
+            "translation_pt": "Refutação",
+            "example": "His rebuttal was very effective."
+          },
+          {
+            "term": "Subjective",
+            "translation_pt": "Subjetivo",
+            "example": "Beauty is subjective."
+          },
+          {
+            "term": "Valid",
+            "translation_pt": "Válido",
+            "example": "That is a valid point."
+          }
+        ],
+        "phrases": [
+          {
+            "text": "I beg to differ.",
+            "translation_pt": "Eu discordo respeitosamente."
+          },
+          {
+            "text": "That is a fair assessment, but...",
+            "translation_pt": "Essa é uma avaliação justa, mas..."
+          },
+          {
+            "text": "Could you provide evidence for that?",
+            "translation_pt": "Poderia fornecer evidências para isso?"
+          },
+          {
+            "text": "From a different perspective...",
+            "translation_pt": "De uma perspectiva diferente..."
+          },
+          {
+            "text": "I see the merits of your argument.",
+            "translation_pt": "Vejo os méritos do seu argumento."
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "A",
+            "line": "I advocate for remote work as a permanent solution."
+          },
+          {
+            "speaker": "B",
+            "line": "I beg to differ; in-person interaction is vital for team culture."
+          },
+          {
+            "speaker": "A",
+            "line": "That’s a fair point, but don't you think flexibility increases productivity?"
+          },
+          {
+            "speaker": "B",
+            "line": "It’s subjective; some perform better in a structured office environment."
+          },
+          {
+            "speaker": "A",
+            "line": "Is there any evidence to support that claim?"
+          },
+          {
+            "speaker": "B",
+            "line": "There are several studies, though I admit the nuance is important."
+          },
+          {
+            "speaker": "A",
+            "line": "I see the merits of your argument, perhaps a hybrid model works?"
+          },
+          {
+            "speaker": "B",
+            "line": "That could be a valid way to mitigate both concerns."
+          }
+        ],
+        "quiz": [
+          {
+            "question": "What is a 'rebuttal'?",
+            "options": [
+              "An agreement",
+              "A counter-argument",
+              "A greeting",
+              "A question"
+            ],
+            "answer": "A counter-argument"
+          },
+          {
+            "question": "If someone is 'impartial', they are:",
+            "options": [
+              "Biased",
+              "Neutral",
+              "Emotional",
+              "Angry"
+            ],
+            "answer": "Neutral"
+          },
+          {
+            "question": "What is a 'fallacy'?",
+            "options": [
+              "A truth",
+              "A faulty argument",
+              "A fact",
+              "A joke"
+            ],
+            "answer": "A faulty argument"
+          },
+          {
+            "question": "What does 'mitigate' mean?",
+            "options": [
+              "To increase",
+              "To soften/lessen",
+              "To create",
+              "To hide"
+            ],
+            "answer": "To soften/lessen"
+          },
+          {
+            "question": "Which phrase is used to disagree politely?",
+            "options": [
+              "I beg to differ",
+              "You're wrong",
+              "Shut up",
+              "Whatever"
+            ],
+            "answer": "I beg to differ"
+          }
+        ]
+      }
+    },
+    {
+      "day": 7,
+      "theme": "Weekly Review",
+      "objective_pt": "Revisar o conteúdo dos dias 1 a 6.",
+      "kind": "review",
+      "content": {
+        "vocabulary": [],
+        "phrases": [],
+        "dialogue": [],
+        "quiz": [
+          {
+            "question": "What does 'leverage' mean in business?",
+            "options": [
+              "Weight",
+              "Advantage",
+              "Money",
+              "Powerless"
+            ],
+            "answer": "Advantage"
+          },
+          {
+            "question": "A 'twists' in a story refers to:",
+            "options": [
+              "The end",
+              "A surprise turn",
+              "The beginning",
+              "The author"
+            ],
+            "answer": "A surprise turn"
+          },
+          {
+            "question": "'Had I known' is which conditional?",
+            "options": [
+              "Zero",
+              "First",
+              "Third",
+              "Second"
+            ],
+            "answer": "Third"
+          },
+          {
+            "question": "Which word is 'formal'?",
+            "options": [
+              "Hey",
+              "What's up",
+              "Greetings",
+              "Yo"
+            ],
+            "answer": "Greetings"
+          },
+          {
+            "question": "'Cut corners' means:",
+            "options": [
+              "To be precise",
+              "To be fast",
+              "To save effort improperly",
+              "To be fair"
+            ],
+            "answer": "To save effort improperly"
+          },
+          {
+            "question": "What is a 'rebuttal'?",
+            "options": [
+              "Refutation",
+              "Acceptance",
+              "Greeting",
+              "Greeting"
+            ],
+            "answer": "Refutation"
+          },
+          {
+            "question": "What does 'deadlock' mean?",
+            "options": [
+              "Open door",
+              "Locked door",
+              "Stalemate",
+              "Victory"
+            ],
+            "answer": "Stalemate"
+          },
+          {
+            "question": "A 'protagonist' is:",
+            "options": [
+              "Main character",
+              "Villain",
+              "Narrator",
+              "Director"
+            ],
+            "answer": "Main character"
+          },
+          {
+            "question": "Which word describes a 'candid' person?",
+            "options": [
+              "Deceptive",
+              "Frank/Honest",
+              "Lazy",
+              "Quiet"
+            ],
+            "answer": "Frank/Honest"
+          },
+          {
+            "question": "'Beat around the bush' means:",
+            "options": [
+              "Being direct",
+              "Being indirect",
+              "Being smart",
+              "Being lazy"
+            ],
+            "answer": "Being indirect"
+          },
+          {
+            "question": "'Impartial' means:",
+            "options": [
+              "Biased",
+              "Unbiased",
+              "Wrong",
+              "Partial"
+            ],
+            "answer": "Unbiased"
+          },
+          {
+            "question": "'Red tape' relates to:",
+            "options": [
+              "Fashion",
+              "Bureaucracy",
+              "Construction",
+              "Art"
+            ],
+            "answer": "Bureaucracy"
+          }
+        ]
+      }
+    },
+    {
+      "day": 8,
+      "theme": "Public Speaking and Presentations",
+      "objective_pt": "Desenvolver técnicas para apresentações impactantes e claras.",
+      "kind": "lesson",
+      "content": {
+        "vocabulary": [
+          {
+            "term": "Articulate",
+            "translation_pt": "Articular/Bem falante",
+            "example": "She is very articulate."
+          },
+          {
+            "term": "Body language",
+            "translation_pt": "Linguagem corporal",
+            "example": "Watch your body language."
+          },
+          {
+            "term": "Captivate",
+            "translation_pt": "Cativar",
+            "example": "He tried to captivate the audience."
+          },
+          {
+            "term": "Concise",
+            "translation_pt": "Conciso",
+            "example": "Be concise in your summary."
+          },
+          {
+            "term": "Delivery",
+            "translation_pt": "Entrega/Execução",
+            "example": "His delivery was powerful."
+          },
+          {
+            "term": "Engaging",
+            "translation_pt": "Envolvente",
+            "example": "The presentation was engaging."
+          },
+          {
+            "term": "Eye contact",
+            "translation_pt": "Contato visual",
+            "example": "Maintain eye contact."
+          },
+          {
+            "term": "Gesture",
+            "translation_pt": "Gesto",
+            "example": "Use hand gestures to emphasize."
+          },
+          {
+            "term": "Insight",
+            "translation_pt": "Percepção/Insight",
+            "example": "That was an interesting insight."
+          },
+          {
+            "term": "Modulate",
+            "translation_pt": "Modular (a voz)",
+            "example": "Modulate your voice for effect."
+          },
+          {
+            "term": "Persuade",
+            "translation_pt": "Persuadir",
+            "example": "He failed to persuade the board."
+          },
+          {
+            "term": "Visual aid",
+            "translation_pt": "Recurso visual",
+            "example": "Use a clear visual aid."
+          }
+        ],
+        "phrases": [
+          {
+            "text": "Let’s take a closer look at...",
+            "translation_pt": "Vamos analisar mais de perto..."
+          },
+          {
+            "text": "Does that make sense?",
+            "translation_pt": "Isso faz sentido?"
+          },
+          {
+            "text": "Moving on to the next point...",
+            "translation_pt": "Passando para o próximo ponto..."
+          },
+          {
+            "text": "In a nutshell...",
+            "translation_pt": "Em poucas palavras..."
+          },
+          {
+            "text": "I’d like to draw your attention to...",
+            "translation_pt": "Gostaria de chamar sua atenção para..."
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "A",
+            "line": "How was your rehearsal for the big presentation?"
+          },
+          {
+            "speaker": "B",
+            "line": "A bit shaky. I need to be more concise with my slides."
+          },
+          {
+            "speaker": "A",
+            "line": "Try to modulate your voice to keep the audience engaged."
+          },
+          {
+            "speaker": "B",
+            "line": "Good tip. And should I use more hand gestures?"
+          },
+          {
+            "speaker": "A",
+            "line": "Yes, but keep it natural. Also, don't forget eye contact."
+          },
+          {
+            "speaker": "B",
+            "line": "Right. I want to captivate them from the start."
+          },
+          {
+            "speaker": "A",
+            "line": "You have great insights; just focus on your delivery."
+          },
+          {
+            "speaker": "B",
+            "line": "Thanks, that makes me feel much more confident."
+          }
+        ],
+        "quiz": [
+          {
+            "question": "What does 'concise' mean?",
+            "options": [
+              "Long",
+              "Short and clear",
+              "Complex",
+              "Confusing"
+            ],
+            "answer": "Short and clear"
+          },
+          {
+            "question": "Why 'modulate' your voice?",
+            "options": [
+              "To be quiet",
+              "To create effect",
+              "To shout",
+              "To hide"
+            ],
+            "answer": "To create effect"
+          },
+          {
+            "question": "'In a nutshell' is a synonym for:",
+            "options": [
+              "Finally",
+              "Basically/In summary",
+              "First",
+              "Maybe"
+            ],
+            "answer": "Basically/In summary"
+          },
+          {
+            "question": "What is an 'engaging' presentation?",
+            "options": [
+              "Boring",
+              "Interactive/Interesting",
+              "Fast",
+              "Quiet"
+            ],
+            "answer": "Interactive/Interesting"
+          },
+          {
+            "question": "What does 'articulate' mean?",
+            "options": [
+              "Fluent/Clear speaker",
+              "Shy",
+              "Angry",
+              "Loud"
+            ],
+            "answer": "Fluent/Clear speaker"
+          }
+        ]
+      }
+    },
+    {
+      "day": 9,
+      "theme": "Expressing Opinions and Disagreement",
+      "objective_pt": "Aprender formas elegantes e assertivas de discordar ou dar opiniões.",
+      "kind": "lesson",
+      "content": {
+        "vocabulary": [
+          {
+            "term": "Assertive",
+            "translation_pt": "Assertivo",
+            "example": "He is very assertive."
+          },
+          {
+            "term": "Controversial",
+            "translation_pt": "Controverso",
+            "example": "It is a controversial topic."
+          },
+          {
+            "term": "Conviction",
+            "translation_pt": "Convicção",
+            "example": "He spoke with conviction."
+          },
+          {
+            "term": "Defensive",
+            "translation_pt": "Defensivo",
+            "example": "Don't be so defensive."
+          },
+          {
+            "term": "Dissent",
+            "translation_pt": "Dissenso/Discordância",
+            "example": "There was some dissent in the room."
+          },
+          {
+            "term": "Empathetic",
+            "translation_pt": "Empático",
+            "example": "We need an empathetic approach."
+          },
+          {
+            "term": "Hesitant",
+            "translation_pt": "Hesitante",
+            "example": "She was hesitant to agree."
+          },
+          {
+            "term": "Objective",
+            "translation_pt": "Objetivo",
+            "example": "Try to remain objective."
+          },
+          {
+            "term": "Open-minded",
+            "translation_pt": "De mente aberta",
+            "example": "Please be open-minded."
+          },
+          {
+            "term": "Perspective",
+            "translation_pt": "Perspectiva",
+            "example": "That's an interesting perspective."
+          },
+          {
+            "term": "Stance",
+            "translation_pt": "Posição/Postura",
+            "example": "What is your stance on this?"
+          },
+          {
+            "term": "Tactful",
+            "translation_pt": "Tato/Delicadeza",
+            "example": "He was very tactful."
+          }
+        ],
+        "phrases": [
+          {
+            "text": "I’m of the opinion that...",
+            "translation_pt": "Sou da opinião que..."
+          },
+          {
+            "text": "I’m not entirely convinced.",
+            "translation_pt": "Não estou totalmente convencido."
+          },
+          {
+            "text": "I see it differently.",
+            "translation_pt": "Eu vejo de outra forma."
+          },
+          {
+            "text": "Let’s agree to disagree.",
+            "translation_pt": "Vamos concordar em discordar."
+          },
+          {
+            "text": "To be perfectly honest...",
+            "translation_pt": "Para ser perfeitamente honesto..."
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "A",
+            "line": "What is your stance on the new policy?"
+          },
+          {
+            "speaker": "B",
+            "line": "To be perfectly honest, I’m not entirely convinced it will work."
+          },
+          {
+            "speaker": "A",
+            "line": "Why are you so hesitant about it?"
+          },
+          {
+            "speaker": "B",
+            "line": "I feel it lacks an empathetic approach to staff needs."
+          },
+          {
+            "speaker": "A",
+            "line": "I see it differently; I think it’s necessary for growth."
+          },
+          {
+            "speaker": "B",
+            "line": "Perhaps. Let’s agree to disagree for now."
+          },
+          {
+            "speaker": "A",
+            "line": "Fair enough. Let's keep an open-minded attitude."
+          },
+          {
+            "speaker": "B",
+            "line": "Agreed, let’s revisit this later."
+          }
+        ],
+        "quiz": [
+          {
+            "question": "What is a 'stance'?",
+            "options": [
+              "Dance",
+              "Position/Opinion",
+              "Seat",
+              "Friend"
+            ],
+            "answer": "Position/Opinion"
+          },
+          {
+            "question": "What does 'tactful' mean?",
+            "options": [
+              "Rude",
+              "Delicate/Considerate",
+              "Loud",
+              "Fast"
+            ],
+            "answer": "Delicate/Considerate"
+          },
+          {
+            "question": "If you are 'hesitant', you are:",
+            "options": [
+              "Sure",
+              "Unsure/Delayed",
+              "Angry",
+              "Happy"
+            ],
+            "answer": "Unsure/Delayed"
+          },
+          {
+            "question": "What is 'dissent'?",
+            "options": [
+              "Agreement",
+              "Disagreement",
+              "Support",
+              "Victory"
+            ],
+            "answer": "Disagreement"
+          },
+          {
+            "question": "What is being 'open-minded'?",
+            "options": [
+              "Stubborn",
+              "Receptive to ideas",
+              "Narrow-minded",
+              "Tired"
+            ],
+            "answer": "Receptive to ideas"
+          }
+        ]
+      }
+    },
+    {
+      "day": 10,
+      "theme": "Workplace Communication",
+      "objective_pt": "Dominar o vocabulário para e-mails, reuniões e conflitos no escritório.",
+      "kind": "lesson",
+      "content": {
+        "vocabulary": [
+          {
+            "term": "Agenda",
+            "translation_pt": "Pauta",
+            "example": "What is the agenda for today?"
+          },
+          {
+            "term": "Collaborate",
+            "translation_pt": "Colaborar",
+            "example": "We need to collaborate more."
+          },
+          {
+            "term": "Deadline",
+            "translation_pt": "Prazo",
+            "example": "The deadline is tomorrow."
+          },
+          {
+            "term": "Feedback",
+            "translation_pt": "Retorno/Avaliação",
+            "example": "I need your feedback."
+          },
+          {
+            "term": "Follow-up",
+            "translation_pt": "Acompanhamento",
+            "example": "Send a follow-up email."
+          },
+          {
+            "term": "Implement",
+            "translation_pt": "Implementar",
+            "example": "We will implement the plan."
+          },
+          {
+            "term": "Logistics",
+            "translation_pt": "Logística",
+            "example": "The logistics are complicated."
+          },
+          {
+            "term": "Milestone",
+            "translation_pt": "Marco",
+            "example": "We reached a major milestone."
+          },
+          {
+            "term": "Prioritize",
+            "translation_pt": "Priorizar",
+            "example": "Prioritize your tasks."
+          },
+          {
+            "term": "Proposal",
+            "translation_pt": "Proposta",
+            "example": "I submitted a new proposal."
+          },
+          {
+            "term": "Resolution",
+            "translation_pt": "Resolução",
+            "example": "We need a quick resolution."
+          },
+          {
+            "term": "Streamline",
+            "translation_pt": "Otimizar/Simplificar",
+            "example": "Let's streamline the process."
+          }
+        ],
+        "phrases": [
+          {
+            "text": "Let’s circle back to this.",
+            "translation_pt": "Vamos retomar isso depois."
+          },
+          {
+            "text": "I’m swamped right now.",
+            "translation_pt": "Estou atolado de trabalho agora."
+          },
+          {
+            "text": "Does this align with our goals?",
+            "translation_pt": "Isso se alinha com nossos objetivos?"
+          },
+          {
+            "text": "Could you CC me on that?",
+            "translation_pt": "Pode me colocar em cópia nisso?"
+          },
+          {
+            "text": "Let’s touch base later.",
+            "translation_pt": "Vamos nos falar depois."
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "A",
+            "line": "We need to prioritize this proposal before the deadline."
+          },
+          {
+            "speaker": "B",
+            "line": "I agree, but the logistics are quite complex."
+          },
+          {
+            "speaker": "A",
+            "line": "Can we streamline the process to save time?"
+          },
+          {
+            "speaker": "B",
+            "line": "Yes, I'll implement a few changes today."
+          },
+          {
+            "speaker": "A",
+            "line": "Good. Could you follow-up with the team on this?"
+          },
+          {
+            "speaker": "B",
+            "line": "Sure. I’ll send an email and CC you on it."
+          },
+          {
+            "speaker": "A",
+            "line": "Perfect. Let’s reach this milestone by Friday."
+          },
+          {
+            "speaker": "B",
+            "line": "That sounds like a plan."
+          }
+        ],
+        "quiz": [
+          {
+            "question": "What is a 'deadline'?",
+            "options": [
+              "A line",
+              "A due date",
+              "A meeting",
+              "A phone call"
+            ],
+            "answer": "A due date"
+          },
+          {
+            "question": "What does 'streamline' mean?",
+            "options": [
+              "To make complex",
+              "To simplify",
+              "To stop",
+              "To print"
+            ],
+            "answer": "To simplify"
+          },
+          {
+            "question": "'CC me on that' means:",
+            "options": [
+              "Call me",
+              "Copy me",
+              "Cancel",
+              "Clean it"
+            ],
+            "answer": "Copy me"
+          },
+          {
+            "question": "A 'milestone' is:",
+            "options": [
+              "A heavy stone",
+              "A major goal/achievement",
+              "A time limit",
+              "A penalty"
+            ],
+            "answer": "A major goal/achievement"
+          },
+          {
+            "question": "What is an 'agenda'?",
+            "options": [
+              "A diary",
+              "A list of topics",
+              "A plan",
+              "A person"
+            ],
+            "answer": "A list of topics"
+          }
+        ]
+      }
+    },
+    {
+      "day": 11,
+      "theme": "Giving Advice and Recommendations",
+      "objective_pt": "Aprender a dar conselhos de forma adequada e profissional.",
+      "kind": "lesson",
+      "content": {
+        "vocabulary": [
+          {
+            "term": "Advise",
+            "translation_pt": "Aconselhar",
+            "example": "I would advise against it."
+          },
+          {
+            "term": "Cautious",
+            "translation_pt": "Cauteloso",
+            "example": "Be cautious with this decision."
+          },
+          {
+            "term": "Consider",
+            "translation_pt": "Considerar",
+            "example": "Consider the alternatives."
+          },
+          {
+            "term": "Encourage",
+            "translation_pt": "Encorajar",
+            "example": "I encourage you to try."
+          },
+          {
+            "term": "Guidance",
+            "translation_pt": "Orientação",
+            "example": "I need your guidance."
+          },
+          {
+            "term": "Implies",
+            "translation_pt": "Implica",
+            "example": "It implies a risk."
+          },
+          {
+            "term": "Option",
+            "translation_pt": "Opção",
+            "example": "You have many options."
+          },
+          {
+            "term": "Perspective",
+            "translation_pt": "Perspectiva",
+            "example": "Gain a new perspective."
+          },
+          {
+            "term": "Pros and cons",
+            "translation_pt": "Prós e contras",
+            "example": "Weigh the pros and cons."
+          },
+          {
+            "term": "Recommend",
+            "translation_pt": "Recomendar",
+            "example": "I recommend this course."
+          },
+          {
+            "term": "Suggest",
+            "translation_pt": "Sugerir",
+            "example": "I suggest we meet early."
+          },
+          {
+            "term": "Valuable",
+            "translation_pt": "Valioso",
+            "example": "This is valuable advice."
+          }
+        ],
+        "phrases": [
+          {
+            "text": "If I were you, I would...",
+            "translation_pt": "Se eu fosse você, eu..."
+          },
+          {
+            "text": "You might want to consider...",
+            "translation_pt": "Você talvez queira considerar..."
+          },
+          {
+            "text": "It’s well worth exploring...",
+            "translation_pt": "Vale muito a pena explorar..."
+          },
+          {
+            "text": "I’d highly recommend...",
+            "translation_pt": "Eu recomendo fortemente..."
+          },
+          {
+            "text": "My advice would be to...",
+            "translation_pt": "Meu conselho seria..."
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "A",
+            "line": "I’m struggling with my career path. What do you suggest?"
+          },
+          {
+            "speaker": "B",
+            "line": "You might want to consider gaining some new skills first."
+          },
+          {
+            "speaker": "A",
+            "line": "That sounds like valuable advice. Should I quit?"
+          },
+          {
+            "speaker": "B",
+            "line": "No, I would advise against that until you have a plan."
+          },
+          {
+            "speaker": "A",
+            "line": "Fair enough. What about the pros and cons?"
+          },
+          {
+            "speaker": "B",
+            "line": "I recommend you list them out to get a better perspective."
+          },
+          {
+            "speaker": "A",
+            "line": "That’s a great idea. Thanks for the guidance."
+          },
+          {
+            "speaker": "B",
+            "line": "You're very welcome."
+          }
+        ],
+        "quiz": [
+          {
+            "question": "What are 'pros and cons'?",
+            "options": [
+              "Good and bad points",
+              "Winners and losers",
+              "Past and future",
+              "Beginnings"
+            ],
+            "answer": "Good and bad points"
+          },
+          {
+            "question": "What does 'advise against' mean?",
+            "options": [
+              "To suggest doing it",
+              "To warn against doing it",
+              "To ignore",
+              "To help"
+            ],
+            "answer": "To warn against doing it"
+          },
+          {
+            "question": "What is 'guidance'?",
+            "options": [
+              "Money",
+              "Direction/Advice",
+              "A map",
+              "A guard"
+            ],
+            "answer": "Direction/Advice"
+          },
+          {
+            "question": "How do you 'weigh' pros and cons?",
+            "options": [
+              "Use a scale",
+              "Consider them carefully",
+              "Throw them away",
+              "Memorize them"
+            ],
+            "answer": "Consider them carefully"
+          },
+          {
+            "question": "What is a synonym for 'recommend'?",
+            "options": [
+              "Suggest",
+              "Refuse",
+              "Deny",
+              "Avoid"
+            ],
+            "answer": "Suggest"
+          }
+        ]
+      }
+    },
+    {
+      "day": 12,
+      "theme": "Cross-Cultural Communication",
+      "objective_pt": "Entender nuances culturais para evitar mal-entendidos globais.",
+      "kind": "lesson",
+      "content": {
+        "vocabulary": [
+          {
+            "term": "Ambiguity",
+            "translation_pt": "Ambiguidade",
+            "example": "Avoid ambiguity in contracts."
+          },
+          {
+            "term": "Barrier",
+            "translation_pt": "Barreira",
+            "example": "Language is a barrier."
+          },
+          {
+            "term": "Context",
+            "translation_pt": "Contexto",
+            "example": "Consider the cultural context."
+          },
+          {
+            "term": "Diversity",
+            "translation_pt": "Diversidade",
+            "example": "We value diversity."
+          },
+          {
+            "term": "Etiquette",
+            "translation_pt": "Etiqueta",
+            "example": "Learn local etiquette."
+          },
+          {
+            "term": "Global",
+            "translation_pt": "Global",
+            "example": "We are a global team."
+          },
+          {
+            "term": "Implicit",
+            "translation_pt": "Implícito",
+            "example": "The meaning is implicit."
+          },
+          {
+            "term": "Inclusive",
+            "translation_pt": "Inclusivo",
+            "example": "Create an inclusive environment."
+          },
+          {
+            "term": "Intercultural",
+            "translation_pt": "Intercultural",
+            "example": "Intercultural skills are vital."
+          },
+          {
+            "term": "Misinterpretation",
+            "translation_pt": "Má interpretação",
+            "example": "Avoid misinterpretation."
+          },
+          {
+            "term": "Nuance",
+            "translation_pt": "Nuance/Sutileza",
+            "example": "Notice the cultural nuance."
+          },
+          {
+            "term": "Sensitivity",
+            "translation_pt": "Sensibilidade",
+            "example": "Have cultural sensitivity."
+          }
+        ],
+        "phrases": [
+          {
+            "text": "Could you clarify what you mean by...?",
+            "translation_pt": "Poderia esclarecer o que quer dizer com...?"
+          },
+          {
+            "text": "I’m not familiar with this custom.",
+            "translation_pt": "Não estou familiarizado com este costume."
+          },
+          {
+            "text": "How is this typically handled in your country?",
+            "translation_pt": "Como isso é geralmente tratado no seu país?"
+          },
+          {
+            "text": "I hope I’m not being inappropriate.",
+            "translation_pt": "Espero não estar sendo inapropriado."
+          },
+          {
+            "text": "Let’s bridge the gap.",
+            "translation_pt": "Vamos diminuir a distância/diferença."
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "A",
+            "line": "I feel there's a barrier in our communication."
+          },
+          {
+            "speaker": "B",
+            "line": "It might be due to cultural nuances we aren't aware of."
+          },
+          {
+            "speaker": "A",
+            "line": "Could you clarify your expectations for meetings?"
+          },
+          {
+            "speaker": "B",
+            "line": "In my culture, being direct is key. How about yours?"
+          },
+          {
+            "speaker": "A",
+            "line": "We tend to be a bit more indirect to maintain harmony."
+          },
+          {
+            "speaker": "B",
+            "line": "I see. Let’s try to find an inclusive middle ground."
+          },
+          {
+            "speaker": "A",
+            "line": "Agreed, sensitivity to these differences is helpful."
+          },
+          {
+            "speaker": "B",
+            "line": "Let’s bridge the gap."
+          }
+        ],
+        "quiz": [
+          {
+            "question": "What is 'etiquette'?",
+            "options": [
+              "Rules of behavior",
+              "A label",
+              "Food",
+              "Fashion"
+            ],
+            "answer": "Rules of behavior"
+          },
+          {
+            "question": "What is 'ambiguity'?",
+            "options": [
+              "Clarity",
+              "Uncertainty/Vagueness",
+              "Logic",
+              "Truth"
+            ],
+            "answer": "Uncertainty/Vagueness"
+          },
+          {
+            "question": "Why is 'context' important?",
+            "options": [
+              "It explains the setting",
+              "It's expensive",
+              "It's annoying",
+              "It's irrelevant"
+            ],
+            "answer": "It explains the setting"
+          },
+          {
+            "question": "What does 'inclusive' mean?",
+            "options": [
+              "Exclusive",
+              "Welcoming everyone",
+              "Restricted",
+              "Loud"
+            ],
+            "answer": "Welcoming everyone"
+          },
+          {
+            "question": "What is 'misinterpretation'?",
+            "options": [
+              "Correct understanding",
+              "Wrong understanding",
+              "Translation",
+              "Knowledge"
+            ],
+            "answer": "Wrong understanding"
+          }
+        ]
+      }
+    },
+    {
+      "day": 13,
+      "theme": "Problem-Solving and Decision Making",
+      "objective_pt": "Aprender a articular soluções e decisões em ambientes complexos.",
+      "kind": "lesson",
+      "content": {
+        "vocabulary": [
+          {
+            "term": "Analyze",
+            "translation_pt": "Analisar",
+            "example": "We must analyze the data."
+          },
+          {
+            "term": "Brainstorm",
+            "translation_pt": "Fazer um brainstorming",
+            "example": "Let's brainstorm ideas."
+          },
+          {
+            "term": "Criteria",
+            "translation_pt": "Critérios",
+            "example": "What are the criteria?"
+          },
+          {
+            "term": "Decision",
+            "translation_pt": "Decisão",
+            "example": "We need a final decision."
+          },
+          {
+            "term": "Evaluate",
+            "translation_pt": "Avaliar",
+            "example": "Evaluate the risks."
+          },
+          {
+            "term": "Feasible",
+            "translation_pt": "Viável",
+            "example": "Is this solution feasible?"
+          },
+          {
+            "term": "Implementation",
+            "translation_pt": "Implementação",
+            "example": "Plan the implementation."
+          },
+          {
+            "term": "Logical",
+            "translation_pt": "Lógico",
+            "example": "That is a logical conclusion."
+          },
+          {
+            "term": "Obstacle",
+            "translation_pt": "Obstáculo",
+            "example": "Identify every obstacle."
+          },
+          {
+            "term": "Outcome",
+            "translation_pt": "Resultado",
+            "example": "What is the expected outcome?"
+          },
+          {
+            "term": "Strategic",
+            "translation_pt": "Estratégico",
+            "example": "Take a strategic approach."
+          },
+          {
+            "term": "Trade-off",
+            "translation_pt": "Troca/Compensação",
+            "example": "There is a trade-off involved."
+          }
+        ],
+        "phrases": [
+          {
+            "text": "Let’s think outside the box.",
+            "translation_pt": "Vamos pensar fora da caixa."
+          },
+          {
+            "text": "What is the root cause?",
+            "translation_pt": "Qual é a causa raiz?"
+          },
+          {
+            "text": "Let's weigh the options.",
+            "translation_pt": "Vamos pesar as opções."
+          },
+          {
+            "text": "This seems like a solid solution.",
+            "translation_pt": "Essa parece uma solução sólida."
+          },
+          {
+            "text": "What are the implications?",
+            "translation_pt": "Quais são as implicações?"
+          }
+        ],
+        "dialogue": [
+          {
+            "speaker": "A",
+            "line": "We need a strategic way to overcome this obstacle."
+          },
+          {
+            "speaker": "B",
+            "line": "Let’s brainstorm some ideas. What’s the root cause?"
+          },
+          {
+            "speaker": "A",
+            "line": "It’s unclear, but the outcome is definitely negative."
+          },
+          {
+            "speaker": "B",
+            "line": "Let’s analyze the data and weigh our options."
+          },
+          {
+            "speaker": "A",
+            "line": "Is the proposal feasible for the current budget?"
+          },
+          {
+            "speaker": "B",
+            "line": "There is a trade-off, but it is our best shot."
+          },
+          {
+            "speaker": "A",
+            "line": "Okay, let's proceed with the implementation."
+          },
+          {
+            "speaker": "B",
+            "line": "Agreed, let's get to work."
+          }
+        ],
+        "quiz": [
+          {
+            "question": "What is a 'feasible' idea?",
+            "options": [
+              "Impossible",
+              "Possible/Practical",
+              "Expensive",
+              "Funny"
+            ],
+            "answer": "Possible/Practical"
+          },
+          {
+            "question": "What is a 'trade-off'?",
+            "options": [
+              "A deal with gain and loss",
+              "A profit",
+              "A loss",
+              "A victory"
+            ],
+            "answer": "A deal with gain and loss"
+          },
+          {
+            "question": "What does 'brainstorm' mean?",
+            "options": [
+              "A headache",
+              "Generating ideas",
+              "Arguing",
+              "Sleeping"
+            ],
+            "answer": "Generating ideas"
+          },
+          {
+            "question": "'Outside the box' means:",
+            "options": [
+              "Inside a room",
+              "Creative/Unconventional",
+              "Strict",
+              "Old-fashioned"
+            ],
+            "answer": "Creative/Unconventional"
+          },
+          {
+            "question": "What is the 'root cause'?",
+            "options": [
+              "The symptom",
+              "The fundamental origin",
+              "The result",
+              "The cost"
+            ],
+            "answer": "The fundamental origin"
+          }
+        ]
+      }
+    },
+    {
+      "day": 14,
+      "theme": "Weekly Review",
+      "objective_pt": "Revisar o conteúdo dos dias 8 a 13.",
+      "kind": "review",
+      "content": {
+        "vocabulary": [],
+        "phrases": [],
+        "dialogue": [],
+        "quiz": [
+          {
+            "question": "What does 'concise' mean in a speech?",
+            "options": [
+              "Long",
+              "Clear/Short",
+              "Loud",
+              "Fast"
+            ],
+            "answer": "Clear/Short"
+          },
+          {
+            "question": "What does 'stance' mean?",
+            "options": [
+              "A dance move",
+              "A position/view",
+              "A seat",
+              "A tool"
+            ],
+            "answer": "A position/view"
+          },
+          {
+            "question": "What does 'CC me' mean in email?",
+            "options": [
+              "Copy me",
+              "Cancel me",
+              "Call me",
+              "Check me"
+            ],
+            "answer": "Copy me"
+          },
+          {
+            "question": "What does 'pros and cons' mean?",
+            "options": [
+              "Friends",
+              "Good and bad points",
+              "Winners",
+              "Opponents"
+            ],
+            "answer": "Good and bad points"
+          },
+          {
+            "question": "What is 'etiquette'?",
+            "options": [
+              "Rules of behavior",
+              "Food",
+              "Clothing",
+              "Language"
+            ],
+            "answer": "Rules of behavior"
+          },
+          {
+            "question": "What is a 'feasible' project?",
+            "options": [
+              "Expensive",
+              "Practical/Doable",
+              "Impossible",
+              "Small"
+            ],
+            "answer": "Practical/Doable"
+          },
+          {
+            "question": "What is 'brainstorming'?",
+            "options": [
+              "Thinking ideas",
+              "Fighting",
+              "Eating",
+              "Running"
+            ],
+            "answer": "Thinking ideas"
+          },
+          {
+            "question": "What does 'inclusive' imply?",
+            "options": [
+              "Restricted",
+              "Welcoming all",
+              "Expensive",
+              "Secret"
+            ],
+            "answer": "Welcoming all"
+          },
+          {
+            "question": "What is an 'obstacle'?",
+            "options": [
+              "A goal",
+              "A helper",
+              "A barrier/difficulty",
+              "A tool"
+            ],
+            "answer": "A barrier/difficulty"
+          },
+          {
+            "question": "What does 'tactful' mean?",
+            "options": [
+              "Rude",
+              "Sensitive/Polite",
+              "Loud",
+              "Angry"
+            ],
+            "answer": "Sensitive/Polite"
+          },
+          {
+            "question": "What does 'modulate' mean?",
+            "options": [
+              "Change volume/tone",
+              "Keep silent",
+              "Speak loudly",
+              "Run"
+            ],
+            "answer": "Change volume/tone"
+          },
+          {
+            "question": "What is 'feedback'?",
+            "options": [
+              "A meal",
+              "Evaluation/Input",
+              "A gift",
+              "A noise"
+            ],
+            "answer": "Evaluation/Input"
+          }
+        ]
+      }
+    },
+    {
+      "day": 15,
+      "theme": "Final Assessment",
+      "objective_pt": "Avaliação final cobrindo todos os temas abordados no programa.",
+      "kind": "final",
+      "content": {
+        "vocabulary": [],
+        "phrases": [],
+        "dialogue": [
+          {
+            "speaker": "A",
+            "line": "I've reviewed the proposal, but I'm still not convinced by the timeline."
+          },
+          {
+            "speaker": "B",
+            "line": "I see your point, but given the constraints, this is the most feasible route."
+          },
+          {
+            "speaker": "A",
+            "line": "Could we look at a hybrid model to mitigate the risks?"
+          },
+          {
+            "speaker": "B",
+            "line": "That's a valid suggestion. Let's weigh the pros and cons tomorrow."
+          },
+          {
+            "speaker": "A",
+            "line": "Great. I'll make sure to have the data ready for our discussion."
+          },
+          {
+            "speaker": "B",
+            "line": "Perfect. Let's aim to reach a final resolution then."
+          }
+        ],
+        "quiz": [
+          {
+            "question": "What is a 'deadlock'?",
+            "options": [
+              "Stalemate",
+              "Victory",
+              "Agreement",
+              "Failure"
+            ],
+            "answer": "Stalemate"
+          },
+          {
+            "question": "What is 'foreshadowing'?",
+            "options": [
+              "Hinting at the future",
+              "Ending",
+              "Main plot",
+              "A character"
+            ],
+            "answer": "Hinting at the future"
+          },
+          {
+            "question": "'Had I known' is what conditional?",
+            "options": [
+              "First",
+              "Second",
+              "Third",
+              "Zero"
+            ],
+            "answer": "Third"
+          },
+          {
+            "question": "What is a 'rebuttal'?",
+            "options": [
+              "Counter-argument",
+              "Greeting",
+              "Joke",
+              "Truth"
+            ],
+            "answer": "Counter-argument"
+          },
+          {
+            "question": "What is 'red tape'?",
+            "options": [
+              "Bureaucracy",
+              "Decoration",
+              "Clothing",
+              "Art"
+            ],
+            "answer": "Bureaucracy"
+          },
+          {
+            "question": "What does 'concise' mean?",
+            "options": [
+              "Clear and brief",
+              "Very long",
+              "Difficult",
+              "Loud"
+            ],
+            "answer": "Clear and brief"
+          },
+          {
+            "question": "What does 'stance' mean?",
+            "options": [
+              "Viewpoint",
+              "Dance",
+              "Tool",
+              "Seat"
+            ],
+            "answer": "Viewpoint"
+          },
+          {
+            "question": "What are 'pros and cons'?",
+            "options": [
+              "Good and bad points",
+              "Winners",
+              "Opponents",
+              "Friends"
+            ],
+            "answer": "Good and bad points"
+          },
+          {
+            "question": "What is 'etiquette'?",
+            "options": [
+              "Behavior rules",
+              "Labels",
+              "Food",
+              "Fashion"
+            ],
+            "answer": "Behavior rules"
+          },
+          {
+            "question": "What does 'feasible' mean?",
+            "options": [
+              "Practical/Doable",
+              "Impossible",
+              "Expensive",
+              "Small"
+            ],
+            "answer": "Practical/Doable"
+          },
+          {
+            "question": "What does 'brainstorm' mean?",
+            "options": [
+              "Generating ideas",
+              "Fighting",
+              "Eating",
+              "Running"
+            ],
+            "answer": "Generating ideas"
+          },
+          {
+            "question": "What does 'inclusive' mean?",
+            "options": [
+              "Welcoming all",
+              "Restricted",
+              "Loud",
+              "Small"
+            ],
+            "answer": "Welcoming all"
+          },
+          {
+            "question": "What is an 'obstacle'?",
+            "options": [
+              "Difficulty/Barrier",
+              "Goal",
+              "Helper",
+              "Tool"
+            ],
+            "answer": "Difficulty/Barrier"
+          },
+          {
+            "question": "What does 'tactful' mean?",
+            "options": [
+              "Polite/Sensitive",
+              "Rude",
+              "Loud",
+              "Fast"
+            ],
+            "answer": "Polite/Sensitive"
+          },
+          {
+            "question": "What does 'modulate' mean?",
+            "options": [
+              "Adjust tone/volume",
+              "Keep silent",
+              "Shout",
+              "Ignore"
+            ],
+            "answer": "Adjust tone/volume"
+          }
+        ]
+      }
+    }
+  ]
+}
