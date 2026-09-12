@@ -14,6 +14,7 @@ import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/
 import { Route as AuthRouteImport } from './routes/auth'
 import { Route as AuthenticatedAchievementsRouteImport } from './routes/_authenticated/achievements'
 import { Route as AuthenticatedDashboardRouteImport } from './routes/_authenticated/dashboard'
+import { Route as AuthenticatedDesafioRouteImport } from './routes/_authenticated/desafio'
 import { Route as AuthenticatedExerciseRouteImport } from './routes/_authenticated/exercise'
 import { Route as AuthenticatedInicioRouteImport } from './routes/_authenticated/inicio'
 import { Route as AuthenticatedLessonsRouteImport } from './routes/_authenticated/lessons'
@@ -52,6 +53,11 @@ const AuthenticatedAchievementsRoute =
 const AuthenticatedDashboardRoute = AuthenticatedDashboardRouteImport.update({
   id: '/dashboard',
   path: '/dashboard',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
+const AuthenticatedDesafioRoute = AuthenticatedDesafioRouteImport.update({
+  id: '/desafio',
+  path: '/desafio',
   getParentRoute: () => AuthenticatedRouteRoute,
 } as any)
 const AuthenticatedExerciseRoute = AuthenticatedExerciseRouteImport.update({
@@ -131,6 +137,7 @@ export interface FileRoutesByFullPath {
   '/auth': typeof AuthRoute
   '/achievements': typeof AuthenticatedAchievementsRoute
   '/dashboard': typeof AuthenticatedDashboardRoute
+  '/desafio': typeof AuthenticatedDesafioRoute
   '/exercise': typeof AuthenticatedExerciseRoute
   '/inicio': typeof AuthenticatedInicioRoute
   '/lessons': typeof AuthenticatedLessonsRoute
@@ -151,6 +158,7 @@ export interface FileRoutesByTo {
   '/auth': typeof AuthRoute
   '/achievements': typeof AuthenticatedAchievementsRoute
   '/dashboard': typeof AuthenticatedDashboardRoute
+  '/desafio': typeof AuthenticatedDesafioRoute
   '/exercise': typeof AuthenticatedExerciseRoute
   '/inicio': typeof AuthenticatedInicioRoute
   '/lessons': typeof AuthenticatedLessonsRoute
@@ -173,6 +181,7 @@ export interface FileRoutesById {
   '/auth': typeof AuthRoute
   '/_authenticated/achievements': typeof AuthenticatedAchievementsRoute
   '/_authenticated/dashboard': typeof AuthenticatedDashboardRoute
+  '/_authenticated/desafio': typeof AuthenticatedDesafioRoute
   '/_authenticated/exercise': typeof AuthenticatedExerciseRoute
   '/_authenticated/inicio': typeof AuthenticatedInicioRoute
   '/_authenticated/lessons': typeof AuthenticatedLessonsRoute
@@ -195,6 +204,7 @@ export interface FileRouteTypes {
     | '/auth'
     | '/achievements'
     | '/dashboard'
+    | '/desafio'
     | '/exercise'
     | '/inicio'
     | '/lessons'
@@ -215,6 +225,7 @@ export interface FileRouteTypes {
     | '/auth'
     | '/achievements'
     | '/dashboard'
+    | '/desafio'
     | '/exercise'
     | '/inicio'
     | '/lessons'
@@ -236,6 +247,7 @@ export interface FileRouteTypes {
     | '/auth'
     | '/_authenticated/achievements'
     | '/_authenticated/dashboard'
+    | '/_authenticated/desafio'
     | '/_authenticated/exercise'
     | '/_authenticated/inicio'
     | '/_authenticated/lessons'
@@ -293,6 +305,13 @@ declare module '@tanstack/react-router' {
       path: '/dashboard'
       fullPath: '/dashboard'
       preLoaderRoute: typeof AuthenticatedDashboardRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/desafio': {
+      id: '/_authenticated/desafio'
+      path: '/desafio'
+      fullPath: '/desafio'
+      preLoaderRoute: typeof AuthenticatedDesafioRouteImport
       parentRoute: typeof AuthenticatedRouteRoute
     }
     '/_authenticated/exercise': {
@@ -399,6 +418,7 @@ declare module '@tanstack/react-router' {
 interface AuthenticatedRouteRouteChildren {
   AuthenticatedAchievementsRoute: typeof AuthenticatedAchievementsRoute
   AuthenticatedDashboardRoute: typeof AuthenticatedDashboardRoute
+  AuthenticatedDesafioRoute: typeof AuthenticatedDesafioRoute
   AuthenticatedExerciseRoute: typeof AuthenticatedExerciseRoute
   AuthenticatedInicioRoute: typeof AuthenticatedInicioRoute
   AuthenticatedLessonsRoute: typeof AuthenticatedLessonsRoute
@@ -418,6 +438,7 @@ interface AuthenticatedRouteRouteChildren {
 const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
   AuthenticatedAchievementsRoute: AuthenticatedAchievementsRoute,
   AuthenticatedDashboardRoute: AuthenticatedDashboardRoute,
+  AuthenticatedDesafioRoute: AuthenticatedDesafioRoute,
   AuthenticatedExerciseRoute: AuthenticatedExerciseRoute,
   AuthenticatedInicioRoute: AuthenticatedInicioRoute,
   AuthenticatedLessonsRoute: AuthenticatedLessonsRoute,
