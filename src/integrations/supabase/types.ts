@@ -235,6 +235,77 @@ export type Database = {
         }
         Relationships: []
       }
+      program_days: {
+        Row: {
+          content: Json
+          created_at: string | null
+          day: number
+          id: string
+          kind: string
+          objective_pt: string
+          program_id: string
+          theme: string
+        }
+        Insert: {
+          content?: Json
+          created_at?: string | null
+          day: number
+          id?: string
+          kind?: string
+          objective_pt: string
+          program_id: string
+          theme: string
+        }
+        Update: {
+          content?: Json
+          created_at?: string | null
+          day?: number
+          id?: string
+          kind?: string
+          objective_pt?: string
+          program_id?: string
+          theme?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "program_days_program_id_fkey"
+            columns: ["program_id"]
+            isOneToOne: false
+            referencedRelation: "programs"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      programs: {
+        Row: {
+          created_at: string | null
+          description_pt: string
+          emoji: string | null
+          id: string
+          language: string
+          level: string
+          title: string
+        }
+        Insert: {
+          created_at?: string | null
+          description_pt: string
+          emoji?: string | null
+          id?: string
+          language?: string
+          level: string
+          title: string
+        }
+        Update: {
+          created_at?: string | null
+          description_pt?: string
+          emoji?: string | null
+          id?: string
+          language?: string
+          level?: string
+          title?: string
+        }
+        Relationships: []
+      }
       reading_texts: {
         Row: {
           body: string
@@ -456,6 +527,47 @@ export type Database = {
             columns: ["lesson_id"]
             isOneToOne: false
             referencedRelation: "lessons"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      user_program_progress: {
+        Row: {
+          completed_days: number[]
+          current_day: number
+          id: string
+          program_id: string
+          started_at: string | null
+          status: string
+          updated_at: string | null
+          user_id: string
+        }
+        Insert: {
+          completed_days?: number[]
+          current_day?: number
+          id?: string
+          program_id: string
+          started_at?: string | null
+          status?: string
+          updated_at?: string | null
+          user_id: string
+        }
+        Update: {
+          completed_days?: number[]
+          current_day?: number
+          id?: string
+          program_id?: string
+          started_at?: string | null
+          status?: string
+          updated_at?: string | null
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "user_program_progress_program_id_fkey"
+            columns: ["program_id"]
+            isOneToOne: false
+            referencedRelation: "programs"
             referencedColumns: ["id"]
           },
         ]
