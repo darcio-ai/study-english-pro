@@ -24,13 +24,13 @@ import {
 export const Route = createFileRoute("/_authenticated/plano")({
   head: () => ({
     meta: [
-      { title: "Plano e calendário de estudos — EnglishUp" },
+      { title: "Plano e calendário de estudos — English Up PRO" },
       {
         name: "description",
         content:
           "Monte seu calendário de estudos, defina metas diárias, agende sessões e acompanhe o resumo semanal de progresso.",
       },
-      { property: "og:title", content: "Plano e calendário de estudos — EnglishUp" },
+      { property: "og:title", content: "Plano e calendário de estudos — English Up PRO" },
       {
         property: "og:description",
         content: "Metas diárias, sessões agendadas, lembretes opcionais e resumo semanal do seu progresso.",

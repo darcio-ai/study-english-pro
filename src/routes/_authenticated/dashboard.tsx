@@ -14,7 +14,7 @@ import { TRACK_EMOJI, TRACK_LABEL, type Track } from "@/lib/learning";
 
 
 export const Route = createFileRoute("/_authenticated/dashboard")({
-  head: () => ({ meta: [{ title: "Dashboard — EnglishUp" }] }),
+  head: () => ({ meta: [{ title: "Dashboard — English Up PRO" }] }),
   component: Dashboard,
 });
 

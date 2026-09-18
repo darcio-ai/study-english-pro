@@ -1,7 +1,7 @@
 {
-  "name": "EnglishUp — Inglês para brasileiros",
-  "short_name": "EnglishUp",
-  "description": "Pratique inglês com correção de IA em português.",
+  "name": "English Up PRO — Inglês e Espanhol para brasileiros",
+  "short_name": "English Up PRO",
+  "description": "Pratique inglês e espanhol com correção de IA em português.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",

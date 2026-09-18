@@ -31,16 +31,16 @@ import {
 export const Route = createFileRoute("/_authenticated/inicio")({
   head: () => ({
     meta: [
-      { title: "O que vamos praticar hoje? — EnglishUp" },
+      { title: "O que vamos praticar hoje? — English Up PRO" },
       {
         name: "description",
         content:
           "Escolha como estudar hoje: lições, prática livre de escrita, escuta, fala e leitura, revisão ou vocabulário.",
       },
-      { property: "og:title", content: "O que vamos praticar hoje? — EnglishUp" },
+      { property: "og:title", content: "O que vamos praticar hoje? — English Up PRO" },
       {
         property: "og:description",
-        content: "Escolha sua prática do dia no EnglishUp: lições, escuta, fala, leitura e revisão.",
+        content: "Escolha sua prática do dia no English Up PRO: lições, escuta, fala, leitura e revisão.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },

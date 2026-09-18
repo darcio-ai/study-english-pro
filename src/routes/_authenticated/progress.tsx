@@ -16,7 +16,7 @@ import {
 import { supabase } from "@/integrations/supabase/client";
 
 export const Route = createFileRoute("/_authenticated/progress")({
-  head: () => ({ meta: [{ title: "Progresso — EnglishUp" }] }),
+  head: () => ({ meta: [{ title: "Progresso — English Up PRO" }] }),
   component: ProgressPage,
 });
 

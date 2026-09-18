@@ -15,7 +15,7 @@ import { LANGUAGE_VOICE, type Language } from "@/lib/learning";
 
 
 export const Route = createFileRoute("/_authenticated/listening")({
-  head: () => ({ meta: [{ title: "Listening — EnglishUp" }] }),
+  head: () => ({ meta: [{ title: "Listening — English Up PRO" }] }),
   component: ListeningPage,
 });
 

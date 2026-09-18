@@ -21,7 +21,7 @@ import { upsertReviewQueue, addXp, xpForScore, checkAndGrantAchievements } from 
 import { LevelPill, type Level } from "@/components/englishup";
 
 export const Route = createFileRoute("/_authenticated/review")({
-  head: () => ({ meta: [{ title: "Revisão — EnglishUp" }] }),
+  head: () => ({ meta: [{ title: "Revisão — English Up PRO" }] }),
   component: ReviewPage,
 });
 

@@ -10,7 +10,7 @@ import { synthesizeSpeech } from "@/lib/tts.functions";
 import { nextInterval } from "@/lib/learning";
 
 export const Route = createFileRoute("/_authenticated/vocabulary")({
-  head: () => ({ meta: [{ title: "Vocabulário — EnglishUp" }] }),
+  head: () => ({ meta: [{ title: "Vocabulário — English Up PRO" }] }),
   component: VocabularyPage,
 });
 

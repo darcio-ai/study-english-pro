@@ -21,7 +21,7 @@ import type { Language } from "@/lib/learning";
 
 
 export const Route = createFileRoute("/_authenticated/speaking-free")({
-  head: () => ({ meta: [{ title: "Conversação — EnglishUp" }] }),
+  head: () => ({ meta: [{ title: "Conversação — English Up PRO" }] }),
   component: SpeakingFreePage,
 });
 
