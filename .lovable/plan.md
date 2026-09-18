@@ -36,3 +36,8 @@ Substituir o nome atual (EnglishUp) por **English Up PRO** em toda a interface e
 - `bunx tsgo --noEmit` sem erros.
 - Confirmar via busca que não resta "EnglishUp" em textos/metadados visíveis.
 - Conferir no preview: nome na tela de login, título da aba e manifest.
+
+## Endereço do app
+
+- Ao publicar, mudar o endereço para `english-up-pro.lovable.app`.
+- O endereço antigo deixa de responder; quem tiver o app instalado deve reabrir/reinstalar pelo novo link.
