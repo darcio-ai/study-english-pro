@@ -85,7 +85,7 @@ function AuthPage() {
       <div className="w-full max-w-sm">
         <div className="text-center mb-6 sm:mb-8">
           <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">
-            English Up PRO <span className="text-xl sm:text-2xl">🇧🇷→🇺🇸</span>
+            English Up PRO <span className="text-xl sm:text-2xl">🇺🇸🇪🇸</span>
           </h1>
           <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
             Pratique inglês com correção de IA em português
