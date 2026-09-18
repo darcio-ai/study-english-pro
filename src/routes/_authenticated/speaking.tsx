@@ -22,7 +22,7 @@ import { LANGUAGE_VOICE, type Language } from "@/lib/learning";
 
 
 export const Route = createFileRoute("/_authenticated/speaking")({
-  head: () => ({ meta: [{ title: "Speaking — EnglishUp" }] }),
+  head: () => ({ meta: [{ title: "Speaking — English Up PRO" }] }),
   component: SpeakingPage,
 });
 

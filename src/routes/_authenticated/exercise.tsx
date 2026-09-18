@@ -18,7 +18,7 @@ import {
 } from "@/components/englishup";
 
 export const Route = createFileRoute("/_authenticated/exercise")({
-  head: () => ({ meta: [{ title: "Praticar — EnglishUp" }] }),
+  head: () => ({ meta: [{ title: "Praticar — English Up PRO" }] }),
   component: ExercisePage,
 });
 

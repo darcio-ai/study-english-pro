@@ -8,7 +8,7 @@ import { LevelPill, type Level } from "@/components/englishup";
 import { SKILL_META, diagnoseSkills, fetchCoachAttempts } from "@/lib/recommendations";
 
 export const Route = createFileRoute("/_authenticated/weaknesses")({
-  head: () => ({ meta: [{ title: "Mural de Fraquezas — EnglishUp" }] }),
+  head: () => ({ meta: [{ title: "Mural de Fraquezas — English Up PRO" }] }),
   component: WeaknessesPage,
 });
 

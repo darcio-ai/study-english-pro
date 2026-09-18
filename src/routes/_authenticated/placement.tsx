@@ -8,7 +8,7 @@ import { PLACEMENT_QUESTIONS, calculateLevel } from "@/lib/placement-questions";
 import { LEVEL_LABEL, type Level } from "@/components/englishup";
 
 export const Route = createFileRoute("/_authenticated/placement")({
-  head: () => ({ meta: [{ title: "Teste de Nível — EnglishUp" }] }),
+  head: () => ({ meta: [{ title: "Teste de Nível — English Up PRO" }] }),
   component: PlacementPage,
 });
 

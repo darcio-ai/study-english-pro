@@ -20,12 +20,12 @@ import {
 export const Route = createFileRoute("/_authenticated/desafio")({
   head: () => ({
     meta: [
-      { title: "Desafio 15 dias — EnglishUp" },
+      { title: "Desafio 15 dias — English Up PRO" },
       {
         name: "description",
         content: "Programa guiado de 15 dias com vocabulário, frases, diálogos e quiz diário, em inglês ou espanhol.",
       },
-      { property: "og:title", content: "Desafio 15 dias — EnglishUp" },
+      { property: "og:title", content: "Desafio 15 dias — English Up PRO" },
       {
         property: "og:description",
         content: "15 dias de estudo guiado, 15 a 20 minutos por dia, com revisões e teste final.",

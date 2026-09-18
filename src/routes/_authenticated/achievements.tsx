@@ -5,7 +5,7 @@ import { ArrowLeft, Lock } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 
 export const Route = createFileRoute("/_authenticated/achievements")({
-  head: () => ({ meta: [{ title: "Conquistas — EnglishUp" }] }),
+  head: () => ({ meta: [{ title: "Conquistas — English Up PRO" }] }),
   component: AchievementsPage,
 });
 

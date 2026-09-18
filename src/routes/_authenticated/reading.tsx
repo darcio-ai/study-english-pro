@@ -14,7 +14,7 @@ import { addXp, checkAndGrantAchievements, TRACK_EMOJI, TRACK_LABEL, type Track 
 
 
 export const Route = createFileRoute("/_authenticated/reading")({
-  head: () => ({ meta: [{ title: "Leitura — EnglishUp" }] }),
+  head: () => ({ meta: [{ title: "Leitura — English Up PRO" }] }),
   component: ReadingPage,
 });
 
